@@ -68,6 +68,11 @@
                     <param id="0" name="Mouse button">0</param>
                     <param id="1" name="Click type">0</param>
                 </condition>
+                <condition disabled="1" id="-7" name="Compare instance variable" sid="675821729685833" type="Player">
+                    <param id="0" name="Instance variable">Pistol_ammo</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="0" name="Spawn another object" sid="681257061013065" type="Player">
@@ -78,6 +83,10 @@
                 <action id="-22" name="Set angle toward position" sid="810278101606226" type="bullet_player">
                     <param id="0" name="X">mouse.X</param>
                     <param id="1" name="Y">mouse.Y</param>
+                </action>
+                <action id="-12" name="Subtract from" sid="800372085649857" type="Player">
+                    <param id="0" name="Instance variable">Pistol_ammo</param>
+                    <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>
@@ -186,6 +195,27 @@
             <actions>
                 <action behavior="Platform" id="1" name="Set max speed" sid="974775181761451" type="Player">
                     <param id="0" name="Max Speed">360</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="348255153168473">
+            <conditions>
+                <condition disabled="1" id="0" name="On key pressed" sid="550151829392453" type="Keyboard">
+                    <param id="0" name="Key">82</param>
+                </condition>
+                <condition disabled="1" id="-7" name="Compare instance variable" sid="686663223772568" type="Player">
+                    <param id="0" name="Instance variable">Pistol_ammo</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">7</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="570454649438853" type="System">
+                    <param id="0" name="Seconds">2.5</param>
+                </action>
+                <action id="-10" name="Set value" sid="343214698710054" type="Player">
+                    <param id="0" name="Instance variable">Pistol_ammo</param>
+                    <param id="1" name="Value">7</param>
                 </action>
             </actions>
         </event-block>
