@@ -219,5 +219,29 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="910442961541336">
+            <conditions>
+                <condition id="2" name="Mouse button is down" sid="572489318245257" type="Mouse">
+                    <param id="0" name="Mouse button">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="ScrollTo" id="1" name="Set enabled" sid="687324191416346" type="Aim">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="645178702816181">
+            <conditions>
+                <condition id="2" inverted="1" name="Mouse button is down" sid="860111371951958" type="Mouse">
+                    <param id="0" name="Mouse button">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="ScrollTo" id="1" name="Set enabled" sid="538462780750765" type="Aim">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
