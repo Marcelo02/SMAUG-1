@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
+        <comment>Movimentação Player</comment>
         <event-block sid="603046528305302">
             <conditions>
                 <condition id="2" name="Key is down" sid="718505573658323" type="Keyboard">
@@ -49,19 +50,31 @@
                 <action behavior="Platform" id="12" name="Fall through" sid="840494193613629" type="Player" />
             </actions>
         </event-block>
-        <event-block sid="798053565341336">
+        <event-block sid="464371481533332">
             <conditions>
-                <condition id="-16" name="Is on layer" sid="370327673579829" type="Aim">
-                    <param id="0" name="Layer">3</param>
+                <condition id="2" name="Key is down" sid="786638694904477" type="Keyboard">
+                    <param id="0" name="Key">16</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-3" name="Set position" sid="859698063236800" type="Aim">
-                    <param id="0" name="X">mouse.X</param>
-                    <param id="1" name="Y">mouse.Y</param>
+                <action behavior="Platform" id="1" name="Set max speed" sid="142328303308175" type="Player">
+                    <param id="0" name="Max Speed">550</param>
                 </action>
             </actions>
         </event-block>
+        <event-block sid="242151349251897">
+            <conditions>
+                <condition id="2" inverted="1" name="Key is down" sid="353661746386859" type="Keyboard">
+                    <param id="0" name="Key">16</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="1" name="Set max speed" sid="974775181761451" type="Player">
+                    <param id="0" name="Max Speed">360</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Sistema de tiro</comment>
         <event-block sid="852706111621082">
             <conditions>
                 <condition id="0" name="On click" sid="503084630787811" type="Mouse">
@@ -87,6 +100,19 @@
                 <action id="-12" name="Subtract from" sid="800372085649857" type="Player">
                     <param id="0" name="Instance variable">Pistol_ammo</param>
                     <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="798053565341336">
+            <conditions>
+                <condition id="-16" name="Is on layer" sid="370327673579829" type="Aim">
+                    <param id="0" name="Layer">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="859698063236800" type="Aim">
+                    <param id="0" name="X">mouse.X</param>
+                    <param id="1" name="Y">mouse.Y</param>
                 </action>
             </actions>
         </event-block>
@@ -124,6 +150,32 @@
                 </action>
             </actions>
         </event-block>
+        <comment>Sistema de Mira</comment>
+        <event-block sid="910442961541336">
+            <conditions>
+                <condition id="2" name="Mouse button is down" sid="572489318245257" type="Mouse">
+                    <param id="0" name="Mouse button">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="ScrollTo" id="1" name="Set enabled" sid="687324191416346" type="Aim">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="645178702816181">
+            <conditions>
+                <condition id="2" inverted="1" name="Mouse button is down" sid="860111371951958" type="Mouse">
+                    <param id="0" name="Mouse button">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="ScrollTo" id="1" name="Set enabled" sid="538462780750765" type="Aim">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Inimigo 1: A turret</comment>
         <event-block sid="604271559194613">
             <conditions>
                 <condition id="-16" name="Is on layer" sid="623097307772426" type="Enemy_1">
@@ -174,30 +226,7 @@
                 <action id="-9" name="Destroy" sid="303095127771547" type="Enemy_1" />
             </actions>
         </event-block>
-        <event-block sid="464371481533332">
-            <conditions>
-                <condition id="2" name="Key is down" sid="786638694904477" type="Keyboard">
-                    <param id="0" name="Key">16</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Platform" id="1" name="Set max speed" sid="142328303308175" type="Player">
-                    <param id="0" name="Max Speed">550</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="242151349251897">
-            <conditions>
-                <condition id="2" inverted="1" name="Key is down" sid="353661746386859" type="Keyboard">
-                    <param id="0" name="Key">16</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Platform" id="1" name="Set max speed" sid="974775181761451" type="Player">
-                    <param id="0" name="Max Speed">360</param>
-                </action>
-            </actions>
-        </event-block>
+        <comment>Sistema de Munição da pistola (WIP)</comment>
         <event-block sid="348255153168473">
             <conditions>
                 <condition disabled="1" id="0" name="On key pressed" sid="550151829392453" type="Keyboard">
@@ -216,30 +245,6 @@
                 <action id="-10" name="Set value" sid="343214698710054" type="Player">
                     <param id="0" name="Instance variable">Pistol_ammo</param>
                     <param id="1" name="Value">7</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="910442961541336">
-            <conditions>
-                <condition id="2" name="Mouse button is down" sid="572489318245257" type="Mouse">
-                    <param id="0" name="Mouse button">2</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="ScrollTo" id="1" name="Set enabled" sid="687324191416346" type="Aim">
-                    <param id="0" name="State">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="645178702816181">
-            <conditions>
-                <condition id="2" inverted="1" name="Mouse button is down" sid="860111371951958" type="Mouse">
-                    <param id="0" name="Mouse button">2</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="ScrollTo" id="1" name="Set enabled" sid="538462780750765" type="Aim">
-                    <param id="0" name="State">0</param>
                 </action>
             </actions>
         </event-block>
