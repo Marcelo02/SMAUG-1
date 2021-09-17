@@ -13,10 +13,46 @@
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
-        <layer name="BG" sid="642531732976536">
+        <layer name="BG3" sid="851061036395349">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>0</transparent>
+            <parallax>
+                <x>0.3</x>
+                <y>0.3</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances />
+            <effects />
+        </layer>
+        <layer name="BG2" sid="897149732222047">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>0.7</x>
+                <y>0.7</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances />
+            <effects />
+        </layer>
+        <layer name="BG1" sid="642531732976536">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
             <parallax>
                 <x>1</x>
                 <y>1</y>
@@ -250,7 +286,7 @@
                     <behavior-instances>
                         <behavior-instance type="Bullet">
                             <properties>
-                                <speed>500</speed>
+                                <speed>1500</speed>
                                 <acceleration>0</acceleration>
                                 <gravity>0</gravity>
                                 <bounce-off-solids>No</bounce-off-solids>
@@ -262,10 +298,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>104.605224609</x>
+                        <x>145.489868164</x>
                         <y>1882.835449219</y>
                         <z>0</z>
-                        <width>18</width>
+                        <width>100</width>
                         <height>4</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -284,7 +320,7 @@
                     <behavior-instances>
                         <behavior-instance type="Bullet">
                             <properties>
-                                <speed>900</speed>
+                                <speed>4000</speed>
                                 <acceleration>0</acceleration>
                                 <gravity>0</gravity>
                                 <bounce-off-solids>No</bounce-off-solids>
@@ -299,7 +335,7 @@
                         <x>105.612297058</x>
                         <y>1874.612426758</y>
                         <z>0</z>
-                        <width>18</width>
+                        <width>180</width>
                         <height>4</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -369,9 +405,9 @@
                                 <max-speed>360</max-speed>
                                 <acceleration>10000</acceleration>
                                 <deceleration>5000</deceleration>
-                                <jump-strength>650</jump-strength>
-                                <gravity>2000</gravity>
-                                <max-fall-speed>1000</max-fall-speed>
+                                <jump-strength>500</jump-strength>
+                                <gravity>2150</gravity>
+                                <max-fall-speed>2000</max-fall-speed>
                                 <double-jump>Disabled</double-jump>
                                 <jump-sustain>200</jump-sustain>
                                 <default-controls>No</default-controls>
@@ -390,8 +426,8 @@
                         <x>70.725746155</x>
                         <y>1758.736816406</y>
                         <z>0</z>
-                        <width>20.159999847</width>
-                        <height>50.400001526</height>
+                        <width>30</width>
+                        <height>52</height>
                         <depth>0</depth>
                         <hotspotX>0.496031731</hotspotX>
                         <hotspotY>0.496031731</hotspotY>
@@ -496,8 +532,8 @@
                         <x>143.189178467</x>
                         <y>1635.38293457</y>
                         <z>0</z>
-                        <width>11.577649117</width>
-                        <height>11.577649117</height>
+                        <width>10</width>
+                        <height>10</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>

@@ -3,6 +3,31 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
+        <comment>Navegadores usam a tecla Ctrl para atalhos como &quot;favoritar&quot; ou &quot;fechar aba&quot;, como Ctrl será a tecla de agachar,estes eventos servem para bloquear o navegador de usar Ctrl para seus atalhos enquanto o jogo esta aberto. Não adicione ações neles.</comment>
+        <event-block sid="839263917236752">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="588757974920878" type="Keyboard">
+                    <param id="0" name="Key">65</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="319271365306365">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="172953214465896" type="Keyboard">
+                    <param id="0" name="Key">83</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="658074490474729">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="990363957475619" type="Keyboard">
+                    <param id="0" name="Key">68</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
         <comment>Movimentação Player</comment>
         <event-block sid="603046528305302">
             <conditions>
@@ -64,7 +89,7 @@
         </event-block>
         <event-block sid="242151349251897">
             <conditions>
-                <condition id="2" inverted="1" name="Key is down" sid="353661746386859" type="Keyboard">
+                <condition id="3" name="On key released" sid="353661746386859" type="Keyboard">
                     <param id="0" name="Key">16</param>
                 </condition>
             </conditions>
@@ -90,7 +115,7 @@
             <actions>
                 <action id="0" name="Spawn another object" sid="681257061013065" type="Player">
                     <param id="0" name="Object">bullet_player</param>
-                    <param id="1" name="Layer">2</param>
+                    <param id="1" name="Layer">3</param>
                     <param id="2" name="Image point">0</param>
                 </action>
                 <action id="-22" name="Set angle toward position" sid="810278101606226" type="bullet_player">
@@ -105,9 +130,7 @@
         </event-block>
         <event-block sid="798053565341336">
             <conditions>
-                <condition id="-16" name="Is on layer" sid="370327673579829" type="Aim">
-                    <param id="0" name="Layer">3</param>
-                </condition>
+                <condition id="-1" name="Every tick" sid="370327673579829" type="System" />
             </conditions>
             <actions>
                 <action id="-3" name="Set position" sid="859698063236800" type="Aim">
@@ -161,11 +184,15 @@
                 <action behavior="ScrollTo" id="1" name="Set enabled" sid="687324191416346" type="Aim">
                     <param id="0" name="State">1</param>
                 </action>
+                <action id="-7" name="Set size" sid="553560330156448" type="Aim">
+                    <param id="0" name="Width">15</param>
+                    <param id="1" name="Height">15</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="645178702816181">
             <conditions>
-                <condition id="2" inverted="1" name="Mouse button is down" sid="860111371951958" type="Mouse">
+                <condition id="3" name="On button released" sid="860111371951958" type="Mouse">
                     <param id="0" name="Mouse button">2</param>
                 </condition>
             </conditions>
@@ -173,14 +200,16 @@
                 <action behavior="ScrollTo" id="1" name="Set enabled" sid="538462780750765" type="Aim">
                     <param id="0" name="State">0</param>
                 </action>
+                <action id="-7" name="Set size" sid="823645201218437" type="Aim">
+                    <param id="0" name="Width">10</param>
+                    <param id="1" name="Height">10</param>
+                </action>
             </actions>
         </event-block>
         <comment>Inimigo 1: A turret</comment>
         <event-block sid="604271559194613">
             <conditions>
-                <condition id="-16" name="Is on layer" sid="623097307772426" type="Enemy_1">
-                    <param id="0" name="Layer">2</param>
-                </condition>
+                <condition id="-1" name="Every tick" sid="623097307772426" type="System" />
             </conditions>
             <actions>
                 <action behavior="Turret" id="0" name="Acquire target" sid="206770842335024" type="Enemy_1">
@@ -195,7 +224,7 @@
             <actions>
                 <action id="0" name="Spawn another object" sid="966349448334296" type="Enemy_1">
                     <param id="0" name="Object">bullet_enemy</param>
-                    <param id="1" name="Layer">2</param>
+                    <param id="1" name="Layer">3</param>
                     <param id="2" name="Image point">0</param>
                 </action>
             </actions>
