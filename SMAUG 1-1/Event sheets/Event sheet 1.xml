@@ -192,7 +192,7 @@
         </event-block>
         <event-block sid="645178702816181">
             <conditions>
-                <condition id="3" name="On button released" sid="860111371951958" type="Mouse">
+                <condition id="2" inverted="1" name="Mouse button is down" sid="860111371951958" type="Mouse">
                     <param id="0" name="Mouse button">2</param>
                 </condition>
             </conditions>
