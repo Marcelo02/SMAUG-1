@@ -330,7 +330,7 @@
                 <action id="-9" name="Destroy" sid="167053238466302" type="bullet_enemy" />
             </actions>
         </event-block>
-        <comment>Sistema de Munição da pistola (WIP)</comment>
+        <comment>Sistema de Munição da pistola</comment>
         <event-block sid="348255153168473">
             <conditions>
                 <condition id="0" name="On key pressed" sid="550151829392453" type="Keyboard">
@@ -358,7 +358,7 @@
             </conditions>
             <actions>
                 <action id="0" name="Set text" sid="107710405746063" type="Ammo">
-                    <param id="0" name="Text">&quot;Ammo:&quot;&amp;Pistol_ammo</param>
+                    <param id="0" name="Text">&quot;Ammo:&quot;&amp;Pistol_ammo &amp;&quot;/7&quot;</param>
                 </action>
             </actions>
         </event-block>
