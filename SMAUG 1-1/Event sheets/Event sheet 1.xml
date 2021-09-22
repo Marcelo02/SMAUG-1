@@ -29,6 +29,14 @@
             </conditions>
             <actions />
         </event-block>
+        <event-block sid="646783848725148">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="608356266407586" type="Keyboard">
+                    <param id="0" name="Key">17</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
         <comment>Movimentação Player</comment>
         <event-block sid="603046528305302">
             <conditions>
