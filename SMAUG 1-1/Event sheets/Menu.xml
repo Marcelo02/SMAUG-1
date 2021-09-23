@@ -94,7 +94,11 @@
                                     <param id="2" name="Value">&quot;Load&quot;</param>
                                 </condition>
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="237166510854990" type="System">
+                                    <param id="0" name="Layout">MenuTeclas</param>
+                                </action>
+                            </actions>
                         </event-block>
                         <event-block sid="611893963505439">
                             <conditions>

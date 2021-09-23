@@ -384,5 +384,18 @@
                 </action>
             </actions>
         </event-block>
+        <comment>Interação com o menu</comment>
+        <event-block sid="346726265483208">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="975080926610942" type="Keyboard">
+                    <param id="0" name="Key">27</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="693939328912408" type="System">
+                    <param id="0" name="Layout">Menu</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

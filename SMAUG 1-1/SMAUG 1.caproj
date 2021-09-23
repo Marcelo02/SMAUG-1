@@ -178,67 +178,118 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder name="Menu" />
+        <object-folder name="Menu">
+            <object-type name="OpçaoMenu" sid="781360183141348">
+                <plugin id="Spritefont2" />
+                <instance-variables>
+                    <instance-variable name="opcao" sid="178672443964602" type="number" />
+                    <instance-variable name="Acao" sid="802094019191673" type="string" />
+                </instance-variables>
+                <effects>
+                    <effect-type name="Brightness">
+                        <effect id="brightness" />
+                    </effect-type>
+                </effects>
+                <texture />
+            </object-type>
+            <object-type name="Sprite" sid="767295164228407">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="660277358144610" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.502778" original-source="C:\Users\gabriel_local\Pictures\Camera Roll\WIN_20210923_12_50_17_Pro.jpg" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Cursor2" sid="614972773046677">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="opcaoselecionada" sid="199805296302019" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="399709449825290" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501319" original-source="C:\Users\gabriel_local\Downloads\cursor-png-1145.png">
+                            <collision-poly>
+                                <point x="0.5" y="0.184697" />
+                                <point x="0.678571" y="0.308707" />
+                                <point x="0.826923" y="0.498681" />
+                                <point x="0.739011" y="0.74934" />
+                                <point x="0.5" y="0.810026" />
+                                <point x="0.326923" y="0.686016" />
+                                <point x="0.173077" y="0.498681" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="MenuTeclas">
+            <object-type name="Sprite4" sid="613864681812041">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="789982517834852" speed="5">
+                        <frame duration="1" hotspotX="0.4875" hotspotY="0.496875" original-source="C:\Users\gabriel_local\Downloads\New Piskel (1).png">
+                            <collision-poly>
+                                <point x="0.0625" y="0.04375" />
+                                <point x="0.39375" y="0.05" />
+                                <point x="0.8625" y="0.04375" />
+                                <point x="0.843751" y="0.18125" />
+                                <point x="0.0625001" y="0.18125" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
         <object-type name="Mouse" sid="769142461874338">
             <plugin id="Mouse" />
         </object-type>
         <object-type name="Keyboard" sid="719673609030617">
             <plugin id="Keyboard" />
         </object-type>
-        <object-type name="Sprite" sid="767295164228407">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="660277358144610" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.502778" original-source="C:\Users\gabriel_local\Pictures\Camera Roll\WIN_20210923_12_50_17_Pro.jpg" />
-                </animation>
-            </animation-folder>
+        <object-type name="Browser" sid="611965736044737">
+            <plugin id="Browser" />
         </object-type>
-        <object-type name="Cursor2" sid="614972773046677">
+        <object-type name="Text" sid="946223529720358">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Sprite3" sid="517800948979802">
             <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="opcaoselecionada" sid="199805296302019" type="number" />
-            </instance-variables>
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="399709449825290" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.501319" original-source="C:\Users\gabriel_local\Downloads\cursor-png-1145.png">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="894051158801607" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gabriel_local\Downloads\New Piskel.png">
                         <collision-poly>
-                            <point x="0.5" y="0.184697" />
-                            <point x="0.678571" y="0.308707" />
-                            <point x="0.826923" y="0.498681" />
-                            <point x="0.739011" y="0.74934" />
-                            <point x="0.5" y="0.810026" />
-                            <point x="0.326923" y="0.686016" />
-                            <point x="0.173077" y="0.498681" />
+                            <point x="0.0625" y="0.0625" />
+                            <point x="0.5" y="0.03125" />
+                            <point x="0.875" y="0.125" />
+                            <point x="0.1875" y="0.1875" />
+                            <point x="0.8125" y="0.1875" />
                         </collision-poly>
                     </frame>
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="OpçaoMenu" sid="781360183141348">
+        <object-type name="Text2" sid="324265027116197">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="SpriteFont" sid="516516618267488">
             <plugin id="Spritefont2" />
-            <instance-variables>
-                <instance-variable name="opcao" sid="178672443964602" type="number" />
-                <instance-variable name="Acao" sid="802094019191673" type="string" />
-            </instance-variables>
-            <effects>
-                <effect-type name="Brightness">
-                    <effect id="brightness" />
-                </effect-type>
-            </effects>
             <texture />
         </object-type>
-        <object-type name="Browser" sid="611965736044737">
-            <plugin id="Browser" />
+        <object-type name="SpriteFont2" sid="606809001159170">
+            <plugin id="Spritefont2" />
+            <texture />
         </object-type>
     </object-folder>
     <families />
     <layout-folder>
         <layout>Menu.xml</layout>
         <layout>Teste.xml</layout>
+        <layout>MenuTeclas.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Main.xml</event-sheet>
         <event-sheet>Menu.xml</event-sheet>
+        <event-sheet>MenuTeclas.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="4" />
