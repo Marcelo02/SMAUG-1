@@ -13,6 +13,7 @@
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
     </used-plugins>
     <used-behaviors>
@@ -25,7 +26,9 @@
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
-    <used-effects />
+    <used-effects>
+        <effect author="Scirra" id="brightness">Brightness</effect>
+    </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
@@ -52,139 +55,186 @@
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder>
-        <object-type name="Player" sid="159176319173233">
-            <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable comment="0=andando; 1=correndo" name="Correndo" sid="951860907033998" type="number" />
-                <instance-variable comment="0=de pé; 1=agachada" name="Agachando" sid="483017643976326" type="number" />
-            </instance-variables>
-            <behaviors>
-                <behavior-type name="BoundToLayout" sid="999814832154253">
-                    <behavior id="bound" />
-                </behavior-type>
-                <behavior-type name="Platform" sid="928856813328354">
-                    <behavior id="Platform" />
-                </behavior-type>
-                <behavior-type name="ScrollTo" sid="476700256356866">
-                    <behavior id="scrollto" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="801194729870401" speed="5">
-                    <frame duration="1" hotspotX="0.496032" hotspotY="0.496032" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Wall" sid="863989105778875">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Solid" sid="508985323757393">
-                    <behavior id="solid" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="397447465349740" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Plataform" sid="493014022648547">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Jumpthru" sid="889254980755433">
-                    <behavior id="jumpthru" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="980154693183218" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
+        <object-folder name="objetos jogo">
+            <object-type name="Aim" sid="791744138467326">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="ScrollTo" sid="208244282265025">
+                        <behavior id="scrollto" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="397904654121539" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Ammo" sid="823159024849677">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="Braço" sid="495835837900849">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="586059349740031">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="599619897456000" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="bullet_enemy" sid="429431086594449">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Bullet" sid="430470952615467">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="812710405817926" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="bullet_player" sid="791930900094714">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Bullet" sid="373104497560506">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="992655586569412" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Enemy_1" sid="694590275614471">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable comment="Life total of enemy" name="Life_turret" sid="659221338730407" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Turret" sid="373438193090406">
+                        <behavior id="Turret" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="759988522244812" speed="5">
+                        <frame duration="1" hotspotX="0.12" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Plataform" sid="493014022648547">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Jumpthru" sid="889254980755433">
+                        <behavior id="jumpthru" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="980154693183218" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Player" sid="159176319173233">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable comment="0=andando; 1=correndo" name="Correndo" sid="951860907033998" type="number" />
+                    <instance-variable comment="0=de pé; 1=agachada" name="Agachando" sid="483017643976326" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="BoundToLayout" sid="999814832154253">
+                        <behavior id="bound" />
+                    </behavior-type>
+                    <behavior-type name="Platform" sid="928856813328354">
+                        <behavior id="Platform" />
+                    </behavior-type>
+                    <behavior-type name="ScrollTo" sid="476700256356866">
+                        <behavior id="scrollto" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="801194729870401" speed="5">
+                        <frame duration="1" hotspotX="0.496032" hotspotY="0.496032" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Wall" sid="863989105778875">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="508985323757393">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="397447465349740" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Menu" />
+        <object-type name="Mouse" sid="769142461874338">
+            <plugin id="Mouse" />
         </object-type>
         <object-type name="Keyboard" sid="719673609030617">
             <plugin id="Keyboard" />
         </object-type>
-        <object-type name="Aim" sid="791744138467326">
+        <object-type name="Sprite" sid="767295164228407">
             <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="ScrollTo" sid="208244282265025">
-                    <behavior id="scrollto" />
-                </behavior-type>
-            </behaviors>
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="397904654121539" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="660277358144610" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.502463" original-source="C:\Users\gabriel_local\Downloads\download (4).jpg" />
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Mouse" sid="769142461874338">
-            <plugin id="Mouse" />
-        </object-type>
-        <object-type name="bullet_player" sid="791930900094714">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Bullet" sid="373104497560506">
-                    <behavior id="Bullet" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="992655586569412" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Enemy_1" sid="694590275614471">
+        <object-type name="Cursor2" sid="614972773046677">
             <plugin id="Sprite" />
             <instance-variables>
-                <instance-variable comment="Life total of enemy" name="Life_turret" sid="659221338730407" type="number" />
+                <instance-variable name="opcaoselecionada" sid="199805296302019" type="number" />
             </instance-variables>
-            <behaviors>
-                <behavior-type name="Turret" sid="373438193090406">
-                    <behavior id="Turret" />
-                </behavior-type>
-            </behaviors>
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="759988522244812" speed="5">
-                    <frame duration="1" hotspotX="0.12" hotspotY="0.5" />
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="399709449825290" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501319" original-source="C:\Users\gabriel_local\Downloads\cursor-png-1145.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.184697" />
+                            <point x="0.678571" y="0.308707" />
+                            <point x="0.826923" y="0.498681" />
+                            <point x="0.739011" y="0.74934" />
+                            <point x="0.5" y="0.810026" />
+                            <point x="0.326923" y="0.686016" />
+                            <point x="0.173077" y="0.498681" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="bullet_enemy" sid="429431086594449">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Bullet" sid="430470952615467">
-                    <behavior id="Bullet" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="812710405817926" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Ammo" sid="823159024849677">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="Braço" sid="495835837900849">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Pin" sid="586059349740031">
-                    <behavior id="Pin" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="599619897456000" speed="5">
-                    <frame duration="1" hotspotX="0" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
+        <object-type name="OpçaoMenu" sid="781360183141348">
+            <plugin id="Spritefont2" />
+            <instance-variables>
+                <instance-variable name="opcao" sid="178672443964602" type="number" />
+                <instance-variable name="Acao" sid="802094019191673" type="string" />
+            </instance-variables>
+            <effects>
+                <effect-type name="Brightness">
+                    <effect id="brightness" />
+                </effect-type>
+            </effects>
+            <texture />
         </object-type>
     </object-folder>
     <families />
     <layout-folder>
         <layout>Teste.xml</layout>
+        <layout>Menu.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Main.xml</event-sheet>
+        <event-sheet>Menu.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="4" />

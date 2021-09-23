@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Menu</name>
+    <events>
+        <event-block sid="608005419873657">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="861336598814974" type="Keyboard">
+                    <param id="0" name="Key">40</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="538444372195860">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="733383855704837" type="Cursor2">
+                            <param id="0" name="Instance variable">opcaoselecionada</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="876774307726825" type="Cursor2">
+                            <param id="0" name="Instance variable">opcaoselecionada</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="759521590479030">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="326759539118189" type="Keyboard">
+                    <param id="0" name="Key">38</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="393208300877783">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="616982114316994" type="Cursor2">
+                            <param id="0" name="Instance variable">opcaoselecionada</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="917627914580752" type="Cursor2">
+                            <param id="0" name="Instance variable">opcaoselecionada</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="103741519916820">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="571068861855214" type="Keyboard">
+                    <param id="0" name="Key">90</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="347704100714191">
+                    <conditions>
+                        <condition id="-33" name="Pick by comparison" sid="383722859964968" type="System">
+                            <param id="0" name="Object">OpçaoMenu</param>
+                            <param id="1" name="Expression">OpçaoMenu.opcao</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">Cursor2.opcaoselecionada</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="772833223691523">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="551891148140873" type="OpçaoMenu">
+                                    <param id="0" name="Instance variable">Acao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;New&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="103631385380365" type="System">
+                                    <param id="0" name="Layout">Teste</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="512367352481532">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="922782113470204" type="OpçaoMenu">
+                                    <param id="0" name="Instance variable">opcao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Load&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                        </event-block>
+                        <event-block sid="611893963505439">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="203791891977352" type="OpçaoMenu">
+                                    <param id="0" name="Instance variable">opcao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Exit&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="158012045558285">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="478834515388076" type="OpçaoMenu">
+                    <param id="0" name="Instance variable">opcao</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">Cursor2.opcaoselecionada</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="457789983019957" type="Cursor2">
+                    <param id="0" name="Y">OpçaoMenu.Y</param>
+                </action>
+                <action id="-28" name="Set effect parameter" sid="656717826074378" type="OpçaoMenu">
+                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                    <param id="1" name="Parameter index">0</param>
+                    <param id="2" name="Value">200</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="549237469666807">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="762636085290149" type="OpçaoMenu">
+                    <param id="0" name="Instance variable">opcao</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">Cursor2.opcaoselecionada</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-28" name="Set effect parameter" sid="251335617062442" type="OpçaoMenu">
+                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                    <param id="1" name="Parameter index">0</param>
+                    <param id="2" name="Value">100</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

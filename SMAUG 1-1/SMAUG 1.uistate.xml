@@ -10,8 +10,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1" order="0">Teste</layout>
+        <layout order="0">Teste</layout>
+        <layout active="1" order="2">Menu</layout>
         <event-sheet order="1">Main</event-sheet>
+        <event-sheet order="3">Menu</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -22,19 +24,23 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <families-expanded root="1" />
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
+        <folder expanded="0" path="object-folder/objetos jogo/" />
+        <folder expanded="1" path="object-folder/Menu/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
         <folder expanded="1" path="file-folder/" />
         <folder expanded="1" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
-        <folder expanded="1" path="animation-folder/Player/" />
-        <folder expanded="1" path="animation-folder/Wall/" />
-        <folder expanded="1" path="animation-folder/Plataform/" />
         <folder expanded="1" path="animation-folder/Aim/" />
+        <folder expanded="1" path="animation-folder/Braço/" />
+        <folder expanded="1" path="animation-folder/bullet_enemy/" />
         <folder expanded="1" path="animation-folder/bullet_player/" />
         <folder expanded="1" path="animation-folder/Enemy_1/" />
-        <folder expanded="1" path="animation-folder/bullet_enemy/" />
-        <folder expanded="1" path="animation-folder/Braço/" />
+        <folder expanded="1" path="animation-folder/Plataform/" />
+        <folder expanded="1" path="animation-folder/Player/" />
+        <folder expanded="1" path="animation-folder/Wall/" />
+        <folder expanded="1" path="animation-folder/Sprite/" />
+        <folder expanded="1" path="animation-folder/Cursor2/" />
     </folders-expanded>
 </c2uistate>
