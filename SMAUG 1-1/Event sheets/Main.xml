@@ -273,6 +273,28 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="998038350258395">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="823609453884400" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="652439853756476" type="Braço">
+                    <param id="0" name="Pin to">Player</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="136298287376348">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="301942718644683" type="System" />
+            </conditions>
+            <actions>
+                <action id="-22" name="Set angle toward position" sid="287113265407745" type="Braço">
+                    <param id="0" name="X">mouse.X</param>
+                    <param id="1" name="Y">mouse.Y</param>
+                </action>
+            </actions>
+        </event-block>
         <comment>Inimigo 1: A turret</comment>
         <event-block sid="604271559194613">
             <conditions>
