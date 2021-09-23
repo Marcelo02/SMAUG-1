@@ -189,7 +189,7 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="660277358144610" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.502463" original-source="C:\Users\gabriel_local\Downloads\download (4).jpg" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.502778" original-source="C:\Users\gabriel_local\Pictures\Camera Roll\WIN_20210923_12_50_17_Pro.jpg" />
                 </animation>
             </animation-folder>
         </object-type>
