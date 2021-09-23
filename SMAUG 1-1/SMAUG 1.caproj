@@ -177,6 +177,9 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="Vida" sid="889043364202022">
+                <plugin id="Text" />
+            </object-type>
         </object-folder>
         <object-folder name="Menu">
             <object-type name="OpçaoMenu" sid="781360183141348">

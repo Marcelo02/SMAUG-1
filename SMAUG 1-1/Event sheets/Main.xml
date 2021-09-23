@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Main</name>
     <events>
+        <variable constant="0" name="Life" sid="441775076286705" static="0" type="number">10</variable>
         <variable comment="Munição da pistola" constant="0" name="Pistol_ammo" sid="796144984213042" static="0" type="number">7</variable>
         <comment>Navegadores usam a tecla Ctrl para atalhos como &quot;favoritar&quot; ou &quot;fechar aba&quot;, como Ctrl será a tecla de agachar,estes eventos servem para bloquear o navegador de usar Ctrl para seus atalhos enquanto o jogo esta aberto. Não adicione ações neles.</comment>
         <event-block sid="839263917236752">
@@ -394,6 +395,31 @@
             <actions>
                 <action id="-2" name="Go to layout" sid="693939328912408" type="System">
                     <param id="0" name="Layout">Menu</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Vida e Dano</comment>
+        <event-block sid="948721396750595">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="326342262204994" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="257298172354180" type="Vida">
+                    <param id="0" name="Text">&quot;Vida:&quot; &amp;Life</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="452988793133898">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="302108877518874" type="bullet_enemy">
+                    <param id="0" name="Object">Player</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="777128002519843" type="bullet_enemy" />
+                <action id="-11" name="Subtract from" sid="480984625072203" type="System">
+                    <param id="0" name="Variable">Life</param>
+                    <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>
