@@ -10,6 +10,7 @@
     <unique-id>32n957n0kaoez</unique-id>
     <saved-with-version>28000</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -226,11 +227,14 @@
             </effects>
             <texture />
         </object-type>
+        <object-type name="Browser" sid="611965736044737">
+            <plugin id="Browser" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
-        <layout>Teste.xml</layout>
         <layout>Menu.xml</layout>
+        <layout>Teste.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Main.xml</event-sheet>
@@ -239,6 +243,7 @@
     <global-instances>
         <global-instance type="Keyboard" uid="4" />
         <global-instance type="Mouse" uid="6" />
+        <global-instance type="Browser" uid="22" />
     </global-instances>
     <sounds-folder />
     <music-folder />

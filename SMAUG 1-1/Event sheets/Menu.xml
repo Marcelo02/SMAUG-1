@@ -89,7 +89,7 @@
                         <event-block sid="512367352481532">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="922782113470204" type="OpçaoMenu">
-                                    <param id="0" name="Instance variable">opcao</param>
+                                    <param id="0" name="Instance variable">Acao</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;Load&quot;</param>
                                 </condition>
@@ -99,12 +99,14 @@
                         <event-block sid="611893963505439">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="203791891977352" type="OpçaoMenu">
-                                    <param id="0" name="Instance variable">opcao</param>
+                                    <param id="0" name="Instance variable">Acao</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;Exit&quot;</param>
                                 </condition>
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action id="1" name="Close" sid="484056262117793" type="Browser" />
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
