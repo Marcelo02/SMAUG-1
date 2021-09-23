@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>Layout 1</name>
+    <name>Teste</name>
     <sid>812672782322001</sid>
-    <event-sheet>Event sheet 1</event-sheet>
+    <event-sheet>Main</event-sheet>
     <size>
         <width>1500</width>
         <height>1800</height>
@@ -424,8 +424,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>70.725746155</x>
-                        <y>1758.736816406</y>
+                        <x>32.544250488</x>
+                        <y>1755.44934082</y>
                         <z>0</z>
                         <width>30</width>
                         <height>66</height>
