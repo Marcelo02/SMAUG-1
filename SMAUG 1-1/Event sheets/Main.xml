@@ -551,5 +551,18 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="175512563638359">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="820604203941426" type="System">
+                    <param id="0" name="First value">Life</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Second value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="266091085073060" type="Player" />
+                <action id="-9" name="Destroy" sid="750584571406888" type="Braço" />
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
