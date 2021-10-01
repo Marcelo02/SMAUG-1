@@ -222,7 +222,7 @@
                             <param id="0" name="Frame number">1</param>
                         </action>
                         <action behavior="Platform" id="4" name="Set jump strength" sid="977702785210804" type="Player">
-                            <param id="0" name="Jump strength">460</param>
+                            <param id="0" name="Jump strength">600</param>
                         </action>
                         <action behavior="Platform" id="1" name="Set max speed" sid="648016665460743" type="Player">
                             <param id="0" name="Max Speed">220</param>
@@ -242,7 +242,7 @@
                             <param id="0" name="Frame number">0</param>
                         </action>
                         <action behavior="Platform" id="4" name="Set jump strength" sid="580586070710270" type="Player">
-                            <param id="0" name="Jump strength">300</param>
+                            <param id="0" name="Jump strength">500</param>
                         </action>
                     </actions>
                 </event-block>
