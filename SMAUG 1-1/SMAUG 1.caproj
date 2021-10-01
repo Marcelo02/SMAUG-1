@@ -204,11 +204,6 @@
                 <plugin id="TiledBg" />
                 <texture original-source="D:\W10SSD-Energumeno\Pictures\Avi\22490090_1563915713630564_3067223793359292441_n.png" />
             </object-type>
-            <object-type name="Tilemap" sid="563229088235960">
-                <plugin id="Tilemap" />
-                <texture />
-                <tiles />
-            </object-type>
             <object-type name="Sprite2" sid="492556854175204">
                 <plugin id="Sprite" />
                 <animation-folder>
@@ -217,13 +212,15 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="Sprite5" sid="795568338338972">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="130605154957562" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\W10SSD-Energumeno\Pictures\IMG_20181219_185001.jpg" />
-                    </animation>
-                </animation-folder>
+            <object-type name="Tilemap" sid="250599802766333">
+                <plugin id="Tilemap" />
+                <texture />
+                <tiles />
+            </object-type>
+            <object-type name="Tilemap2" sid="427570495412014">
+                <plugin id="Tilemap" />
+                <texture />
+                <tiles />
             </object-type>
         </object-folder>
         <object-folder name="Menu">
