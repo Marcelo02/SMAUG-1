@@ -41,6 +41,7 @@
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
+    <first-layout>L_Menu</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -58,21 +59,26 @@
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder>
-        <object-folder name="objetos jogo">
-            <object-type name="Aim" sid="791744138467326">
+        <object-folder name="Objetos_Gerais">
+            <object-type global="1" name="Aim" sid="791744138467326">
                 <plugin id="Sprite" />
                 <behaviors>
                     <behavior-type name="ScrollTo" sid="208244282265025">
                         <behavior id="scrollto" />
                     </behavior-type>
                 </behaviors>
+                <container>
+                    <type>Player</type>
+                    <type>Braço</type>
+                    <type>Aim</type>
+                </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="397904654121539" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="Ammo" sid="823159024849677">
+            <object-type global="1" name="Ammo" sid="823159024849677">
                 <plugin id="Text" />
             </object-type>
             <object-type name="Braço" sid="495835837900849">
@@ -82,6 +88,11 @@
                         <behavior id="Pin" />
                     </behavior-type>
                 </behaviors>
+                <container>
+                    <type>Player</type>
+                    <type>Braço</type>
+                    <type>Aim</type>
+                </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="599619897456000" speed="5">
                         <frame duration="1" hotspotX="0" hotspotY="0.5" />
@@ -101,7 +112,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="bullet_player" sid="791930900094714">
+            <object-type global="1" name="bullet_player" sid="791930900094714">
                 <plugin id="Sprite" />
                 <behaviors>
                     <behavior-type name="Bullet" sid="373104497560506">
@@ -114,7 +125,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="Enemy_1" sid="694590275614471">
+            <object-type global="1" name="Enemy_1" sid="694590275614471">
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable comment="Life total of enemy" name="Life_turret" sid="659221338730407" type="number" />
@@ -130,7 +141,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="Plataform" sid="493014022648547">
+            <object-type global="1" name="Plataform" sid="493014022648547">
                 <plugin id="Sprite" />
                 <behaviors>
                     <behavior-type name="Jumpthru" sid="889254980755433">
@@ -143,7 +154,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="Player" sid="159176319173233">
+            <object-type global="1" name="Player" sid="159176319173233">
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable comment="0=andando; 1=correndo" name="Correndo" sid="951860907033998" type="number" />
@@ -160,6 +171,11 @@
                         <behavior id="scrollto" />
                     </behavior-type>
                 </behaviors>
+                <container>
+                    <type>Player</type>
+                    <type>Braço</type>
+                    <type>Aim</type>
+                </container>
                 <animation-folder>
                     <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="801194729870401" speed="5">
                         <frame duration="1" hotspotX="0.52381" hotspotY="0.5" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\karla_susplaceholder.png">
@@ -170,7 +186,7 @@
                                 <point x="0.047619" y="0.972222" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.52381" hotspotY="0.25">
+                        <frame duration="1" hotspotX="-1.#IND" hotspotY="-1.#IND">
                             <collision-poly>
                                 <point x="0.0476191" y="0.0416667" />
                                 <point x="0.952381" y="0.0416667" />
@@ -194,30 +210,22 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="Vida" sid="889043364202022">
+            <object-type global="1" name="Vida" sid="889043364202022">
                 <plugin id="Text" />
             </object-type>
-            <object-type name="DEBUG" sid="198438687164198">
+            <object-type global="1" name="DEBUG" sid="198438687164198">
                 <plugin id="Text" />
             </object-type>
             <object-type name="TiledBackground" sid="494622060616355">
                 <plugin id="TiledBg" />
                 <texture original-source="D:\W10SSD-Energumeno\Pictures\Avi\22490090_1563915713630564_3067223793359292441_n.png" />
             </object-type>
-            <object-type name="Sprite2" sid="492556854175204">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="680685588757547" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="Tilemap" sid="250599802766333">
+            <object-type name="TestTiles1" sid="250599802766333">
                 <plugin id="Tilemap" />
                 <texture />
                 <tiles />
             </object-type>
-            <object-type name="Tilemap2" sid="427570495412014">
+            <object-type name="TestTiles2" sid="427570495412014">
                 <plugin id="Tilemap" />
                 <texture />
                 <tiles />
@@ -285,6 +293,35 @@
                 </animation-folder>
             </object-type>
         </object-folder>
+        <object-folder name="Objetos_Andar3">
+            <object-type name="Andar3_Tiles1" sid="612327932399051">
+                <plugin id="Tilemap" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="739600662667463">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <texture />
+                <tiles>
+                    <tile id="9">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0" y="1" />
+                            <point x="1" y="1" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </tile>
+                    <tile id="10">
+                        <collision-poly>
+                            <point x="0" y="0.4375" />
+                            <point x="1" y="0.4375" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </tile>
+                </tiles>
+            </object-type>
+        </object-folder>
         <object-type name="Mouse" sid="769142461874338">
             <plugin id="Mouse" />
         </object-type>
@@ -327,14 +364,16 @@
     </object-folder>
     <families />
     <layout-folder>
-        <layout>Menu.xml</layout>
-        <layout>Teste.xml</layout>
-        <layout>MenuTeclas.xml</layout>
+        <layout>L_Menu.xml</layout>
+        <layout>L_Teste.xml</layout>
+        <layout>L_MenuTeclas.xml</layout>
+        <layout>L_Andar3.xml</layout>
     </layout-folder>
     <event-folder>
-        <event-sheet>Main.xml</event-sheet>
-        <event-sheet>Menu.xml</event-sheet>
-        <event-sheet>MenuTeclas.xml</event-sheet>
+        <event-sheet>ES_Main.xml</event-sheet>
+        <event-sheet>ES_Menu.xml</event-sheet>
+        <event-sheet>ES_MenuTeclas.xml</event-sheet>
+        <event-sheet>ES_Andar3.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="4" />

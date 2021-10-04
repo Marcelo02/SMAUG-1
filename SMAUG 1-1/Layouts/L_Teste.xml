@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>Teste</name>
+    <name>L_Teste</name>
     <sid>812672782322001</sid>
-    <event-sheet>Main</event-sheet>
+    <event-sheet>ES_Main</event-sheet>
     <size>
         <width>1500</width>
         <height>1800</height>
@@ -68,7 +68,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Tilemap2" uid="54">
+                <instance type="TestTiles2" uid="54">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <tile-width>32</tile-width>
@@ -119,7 +119,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Tilemap" uid="53">
+                <instance type="TestTiles1" uid="53">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <tile-width>32</tile-width>

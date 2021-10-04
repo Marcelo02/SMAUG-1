@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>Menu</name>
+    <name>L_Menu</name>
     <sid>565343706412728</sid>
-    <event-sheet>Menu</event-sheet>
+    <event-sheet>ES_Menu</event-sheet>
     <size>
         <width>854</width>
         <height>480</height>
