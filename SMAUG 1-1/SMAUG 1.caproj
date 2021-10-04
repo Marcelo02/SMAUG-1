@@ -159,6 +159,7 @@
                 <instance-variables>
                     <instance-variable comment="0=andando; 1=correndo" name="Correndo" sid="951860907033998" type="number" />
                     <instance-variable comment="0=de pé; 1=agachada" name="Agachando" sid="483017643976326" type="number" />
+                    <instance-variable name="Deslizando" sid="612228518861241" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="BoundToLayout" sid="999814832154253">
@@ -177,7 +178,7 @@
                     <type>Aim</type>
                 </container>
                 <animation-folder>
-                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="801194729870401" speed="5">
+                    <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="801194729870401" speed="5">
                         <frame duration="1" hotspotX="0.52381" hotspotY="0.5" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\karla_susplaceholder.png">
                             <collision-poly>
                                 <point x="0.047619" y="0.0277778" />
@@ -186,12 +187,20 @@
                                 <point x="0.047619" y="0.972222" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="-1.#IND" hotspotY="-1.#IND">
+                        <frame duration="1" hotspotX="0.52381" hotspotY="0.25">
                             <collision-poly>
                                 <point x="0.0476191" y="0.0416667" />
                                 <point x="0.952381" y="0.0416667" />
                                 <point x="0.952381" y="0.958333" />
                                 <point x="0.047619" y="0.958333" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.533333" hotspotY="0.25">
+                            <collision-poly>
+                                <point x="0.2" y="0.0416667" />
+                                <point x="0.833333" y="0.0416667" />
+                                <point x="0.833333" y="0.958333" />
+                                <point x="0.2" y="0.958333" />
                             </collision-poly>
                         </frame>
                     </animation>

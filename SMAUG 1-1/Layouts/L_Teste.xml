@@ -481,6 +481,7 @@
                     <instance-variables>
                         <Correndo>0</Correndo>
                         <Agachando>0</Agachando>
+                        <Deslizando>0</Deslizando>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="BoundToLayout">
@@ -726,7 +727,7 @@
                         <x>2.191177368</x>
                         <y>61.817428589</y>
                         <z>0</z>
-                        <width>384.936737061</width>
+                        <width>848</width>
                         <height>21.673576355</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>

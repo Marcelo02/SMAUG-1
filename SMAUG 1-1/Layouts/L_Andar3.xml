@@ -141,6 +141,7 @@
                     <instance-variables>
                         <Correndo>0</Correndo>
                         <Agachando>0</Agachando>
+                        <Deslizando>0</Deslizando>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="BoundToLayout">
