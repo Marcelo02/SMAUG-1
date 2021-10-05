@@ -55,7 +55,7 @@
         <prop name="Pause on unfocus">Yes</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
         <prop name="Preload sounds">Yes</prop>
-        <prop name="Preview browser">(default)</prop>
+        <prop name="Preview browser">NW.js</prop>
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
@@ -391,12 +391,20 @@
                             <point x="0.875" y="1" />
                         </collision-poly>
                     </tile>
+                    <tile id="8">
+                        <collision-poly>
+                            <point x="0" y="0.875" />
+                            <point x="1" y="0.875" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </tile>
                     <tile id="9">
                         <collision-poly>
-                            <point x="0" y="0" />
+                            <point x="0" y="0.875" />
                             <point x="0" y="1" />
                             <point x="1" y="1" />
-                            <point x="1" y="0" />
+                            <point x="1" y="0.875" />
                         </collision-poly>
                     </tile>
                     <tile id="10">
