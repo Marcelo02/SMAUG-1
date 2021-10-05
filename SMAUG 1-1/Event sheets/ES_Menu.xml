@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>Menu</name>
+    <name>ES_Menu</name>
     <events>
         <event-block sid="608005419873657">
             <conditions>
@@ -82,7 +82,7 @@
                             </conditions>
                             <actions>
                                 <action id="-2" name="Go to layout" sid="103631385380365" type="System">
-                                    <param id="0" name="Layout">Teste</param>
+                                    <param id="0" name="Layout">L_Teste</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -96,7 +96,7 @@
                             </conditions>
                             <actions>
                                 <action id="-2" name="Go to layout" sid="237166510854990" type="System">
-                                    <param id="0" name="Layout">MenuTeclas</param>
+                                    <param id="0" name="Layout">L_MenuTeclas</param>
                                 </action>
                             </actions>
                         </event-block>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>Main</name>
+    <name>ES_Main</name>
     <events>
         <variable constant="0" name="Life" sid="441775076286705" static="0" type="number">10</variable>
         <variable comment="Munição da pistola" constant="0" name="Pistol_ammo" sid="796144984213042" static="0" type="number">7</variable>
@@ -305,6 +305,28 @@
                     <param id="1" name="Value">0</param>
                 </action>
             </actions>
+            <sub-events>
+                <event-block sid="523071063214231">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="515627659355073" type="Keyboard">
+                            <param id="0" name="Key">17</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="177396520559057" type="Player">
+                            <param id="0" name="Instance variable">Deslizando</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="880482508379725" type="System">
+                            <param id="0" name="Seconds">0.45</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="423861120989175" type="Player">
+                            <param id="0" name="Instance variable">Deslizando</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <comment>Sistema de tiro</comment>
         <event-block sid="852706111621082">
@@ -512,7 +534,7 @@
             </conditions>
             <actions>
                 <action id="-2" name="Go to layout" sid="693939328912408" type="System">
-                    <param id="0" name="Layout">Menu</param>
+                    <param id="0" name="Layout">L_Menu</param>
                 </action>
             </actions>
         </event-block>
@@ -547,7 +569,7 @@
             </conditions>
             <actions>
                 <action id="0" name="Set text" sid="132233518124329" type="DEBUG">
-                    <param id="0" name="Text">&quot;Correndo: &quot;&amp;Player.Correndo&amp;&quot;  Agachada: &quot;&amp;Player.Agachando&amp;&quot;   Velocidade: &quot;&amp;Player.Platform.MaxSpeed</param>
+                    <param id="0" name="Text">&quot;Correndo: &quot;&amp;Player.Correndo&amp;&quot;  Agachada: &quot;&amp;Player.Agachando&amp;&quot; Deslizando: &quot;&amp;Player.Deslizando&amp;&quot;  Velocidade: &quot;&amp;Player.Platform.MaxSpeed</param>
                 </action>
             </actions>
         </event-block>

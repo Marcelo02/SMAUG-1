@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>MenuTeclas</name>
+    <name>L_MenuTeclas</name>
     <sid>861580785210235</sid>
-    <event-sheet>MenuTeclas</event-sheet>
+    <event-sheet>ES_MenuTeclas</event-sheet>
     <size>
         <width>854</width>
         <height>480</height>

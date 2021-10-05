@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>Teste</name>
+    <name>L_Teste</name>
     <sid>812672782322001</sid>
-    <event-sheet>Main</event-sheet>
+    <event-sheet>ES_Main</event-sheet>
     <size>
         <width>1500</width>
         <height>1800</height>
@@ -68,7 +68,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Tilemap2" uid="54">
+                <instance type="TestTiles2" uid="54">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <tile-width>32</tile-width>
@@ -119,7 +119,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Tilemap" uid="53">
+                <instance type="TestTiles1" uid="53">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <tile-width>32</tile-width>
@@ -481,6 +481,7 @@
                     <instance-variables>
                         <Correndo>0</Correndo>
                         <Agachando>0</Agachando>
+                        <Deslizando>0</Deslizando>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="BoundToLayout">
@@ -505,6 +506,17 @@
                         <behavior-instance type="ScrollTo">
                             <properties>
                                 <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>200</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>360 degree (smooth)</set-angle>
+                                <default-controls>Yes</default-controls>
+                                <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -726,7 +738,7 @@
                         <x>2.191177368</x>
                         <y>61.817428589</y>
                         <z>0</z>
-                        <width>384.936737061</width>
+                        <width>848</width>
                         <height>21.673576355</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
