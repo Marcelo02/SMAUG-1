@@ -64,6 +64,31 @@
             </conditions>
             <actions />
         </event-block>
+        <event-block sid="780154469662389">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="733354352608010" type="Sprite2">
+                    <param id="0" name="Object">Player</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="740525352523432" type="System">
+                    <param id="0" name="Layout">L_Andar3</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>COMANDO DE DEBUG PARA FLUTUAR, REMOVER NO FINAL DO DESENVOLVIMENTO</comment>
+        <event-block sid="173305970528910">
+            <conditions>
+                <condition id="2" name="Key is down" sid="905536553705085" type="Keyboard">
+                    <param id="0" name="Key">186</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="664118998674063" type="Player">
+                    <param id="0" name="Y">Player.Y-50</param>
+                </action>
+            </actions>
+        </event-block>
         <comment>Movimentação Player</comment>
         <event-block sid="603046528305302">
             <conditions>
@@ -416,7 +441,7 @@
         </event-block>
         <event-block sid="998038350258395">
             <conditions>
-                <condition id="-2" name="On start of layout" sid="823609453884400" type="System" />
+                <condition id="-18" name="On created" sid="823609453884400" type="Player" />
             </conditions>
             <actions>
                 <action behavior="Pin" id="0" name="Pin to object" sid="652439853756476" type="Braço">
