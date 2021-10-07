@@ -5,526 +5,601 @@
     <events>
         <variable constant="0" name="Life" sid="441775076286705" static="0" type="number">10</variable>
         <variable comment="Munição da pistola" constant="0" name="Pistol_ammo" sid="796144984213042" static="0" type="number">7</variable>
-        <comment>Navegadores usam a tecla Ctrl para atalhos como &quot;favoritar&quot; ou &quot;fechar aba&quot;, como Ctrl será a tecla de agachar,estes eventos servem para bloquear o navegador de usar Ctrl para seus atalhos enquanto o jogo esta aberto. Não adicione ações neles.</comment>
-        <comment>Acredito que estes atalhos de navegadores não vão afetar o jogo quanto ele estiver compilado em seu próprio executável, remover eventos na hora de fazer a build</comment>
-        <event-block sid="839263917236752">
-            <conditions>
-                <condition id="0" name="On key pressed" sid="588757974920878" type="Keyboard">
-                    <param id="0" name="Key">65</param>
-                </condition>
-            </conditions>
-            <actions />
-        </event-block>
-        <event-block sid="319271365306365">
-            <conditions>
-                <condition id="0" name="On key pressed" sid="172953214465896" type="Keyboard">
-                    <param id="0" name="Key">83</param>
-                </condition>
-            </conditions>
-            <actions />
-        </event-block>
-        <event-block sid="658074490474729">
-            <conditions>
-                <condition id="0" name="On key pressed" sid="990363957475619" type="Keyboard">
-                    <param id="0" name="Key">68</param>
-                </condition>
-            </conditions>
-            <actions />
-        </event-block>
-        <event-block sid="101365918980380">
-            <conditions>
-                <condition id="0" name="On key pressed" sid="542713509395174" type="Keyboard">
-                    <param id="0" name="Key">32</param>
-                </condition>
-            </conditions>
-            <actions />
-        </event-block>
-        <event-block sid="558775582524189">
-            <conditions>
-                <condition id="0" name="On key pressed" sid="879143115834292" type="Keyboard">
-                    <param id="0" name="Key">16</param>
-                </condition>
-            </conditions>
-            <actions />
-        </event-block>
-        <event-block sid="646783848725148">
-            <conditions>
-                <condition id="0" name="On key pressed" sid="608356266407586" type="Keyboard">
-                    <param id="0" name="Key">17</param>
-                </condition>
-            </conditions>
-            <actions />
-        </event-block>
-        <event-block sid="375752307687612">
-            <conditions>
-                <condition id="0" name="On click" sid="719260427112600" type="Mouse">
-                    <param id="0" name="Mouse button">2</param>
-                    <param id="1" name="Click type">0</param>
-                </condition>
-            </conditions>
-            <actions />
-        </event-block>
-        <comment>Movimentação Player</comment>
-        <event-block sid="603046528305302">
-            <conditions>
-                <condition id="2" name="Key is down" sid="718505573658323" type="Keyboard">
-                    <param id="0" name="Key">68</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Platform" id="7" name="Simulate control" sid="958025980913183" type="Player">
-                    <param id="0" name="Control">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="780554961214597">
-            <conditions>
-                <condition id="2" name="Key is down" sid="394740281444027" type="Keyboard">
-                    <param id="0" name="Key">65</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Platform" id="7" name="Simulate control" sid="660535940035522" type="Player">
-                    <param id="0" name="Control">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="430663763075292">
-            <conditions>
-                <condition id="2" name="Key is down" sid="255514154154811" type="Keyboard">
-                    <param id="0" name="Key">32</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Platform" id="7" name="Simulate control" sid="486523330953231" type="Player">
-                    <param id="0" name="Control">2</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="187617254717265">
-            <conditions>
-                <condition id="2" name="Key is down" sid="811558288709007" type="Keyboard">
-                    <param id="0" name="Key">83</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Platform" id="12" name="Fall through" sid="840494193613629" type="Player" />
-            </actions>
-        </event-block>
-        <comment>Sistema de Movimento que usa as variáveis para executar as ações ao invés de executar as ações quando o botão é apertado, isso serve para estabelecer as regras de movimento de Karla</comment>
-        <comment>Construct executa eventos em sua ordem, se uma variável (velocidade) foi configurada em evento 13, o evento 19 pode sobrescrever essa configuração até que evento 19 não esteja rodando</comment>
-        <event-block sid="713265731149752">
-            <conditions>
-                <condition id="-1" name="Every tick" sid="883671179972868" type="System" />
-            </conditions>
-            <actions />
+        <event-group description="" sid="650791844075514" title="Base">
             <sub-events>
-                <comment>Corrida / Ajusta a velocidade, pra que lado Karla está olhando, e se ela pode atirar dependendo do estado da variável Correndo</comment>
-                <event-block sid="580852263469397">
+                <comment>Navegadores usam a tecla Ctrl para atalhos como &quot;favoritar&quot; ou &quot;fechar aba&quot;, como Ctrl será a tecla de agachar,estes eventos servem para bloquear o navegador de usar Ctrl para seus atalhos enquanto o jogo esta aberto. Não adicione ações neles.</comment>
+                <comment>Acredito que estes atalhos de navegadores não vão afetar o jogo quanto ele estiver compilado em seu próprio executável, remover eventos na hora de fazer a build</comment>
+                <event-block sid="839263917236752">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="722296931787889" type="Player">
-                            <param id="0" name="Instance variable">Correndo</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
+                        <condition id="0" name="On key pressed" sid="588757974920878" type="Keyboard">
+                            <param id="0" name="Key">65</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action behavior="Platform" id="1" name="Set max speed" sid="142328303308175" type="Player">
-                            <param id="0" name="Max Speed">560</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="710447324507348" type="Braço">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="386969475517412">
-                            <conditions>
-                                <condition id="2" name="Key is down" sid="102644464337781" type="Keyboard">
-                                    <param id="0" name="Key">65</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="7" name="Set mirrored" sid="145941155164078" type="Player">
-                                    <param id="0" name="State">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="682866345116990">
-                            <conditions>
-                                <condition id="2" name="Key is down" sid="966561649963945" type="Keyboard">
-                                    <param id="0" name="Key">68</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="7" name="Set mirrored" sid="724967064648194" type="Player">
-                                    <param id="0" name="State">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
+                    <actions />
                 </event-block>
-                <event-block sid="389763694143886">
+                <event-block sid="319271365306365">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="168078984543881" type="Player">
-                            <param id="0" name="Instance variable">Correndo</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
+                        <condition id="0" name="On key pressed" sid="172953214465896" type="Keyboard">
+                            <param id="0" name="Key">83</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action behavior="Platform" id="1" name="Set max speed" sid="974775181761451" type="Player">
-                            <param id="0" name="Max Speed">360</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="536149154286132" type="Braço">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="631237926018202">
-                            <conditions>
-                                <condition id="-1" name="Compare X" sid="683072098071408" type="Aim">
-                                    <param id="0" name="Comparison">2</param>
-                                    <param id="1" name="X co-ordinate">player.X</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="7" name="Set mirrored" sid="209344327884401" type="Player">
-                                    <param id="0" name="State">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="609041012620726">
-                            <conditions>
-                                <condition id="-1" name="Compare X" sid="111825385430220" type="Aim">
-                                    <param id="0" name="Comparison">4</param>
-                                    <param id="1" name="X co-ordinate">player.X</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="7" name="Set mirrored" sid="528716764029427" type="Player">
-                                    <param id="0" name="State">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
+                    <actions />
                 </event-block>
-                <comment>Agachar / Ajusta sprite, velocidade, e alcance de pulo dependendo do estado da variável Agachando</comment>
-                <event-block sid="481028034086428">
+                <event-block sid="658074490474729">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="316705728746623" type="Player">
-                            <param id="0" name="Instance variable">Agachando</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
+                        <condition id="0" name="On key pressed" sid="990363957475619" type="Keyboard">
+                            <param id="0" name="Key">68</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="5" name="Set frame" sid="476713385333627" type="Player">
-                            <param id="0" name="Frame number">1</param>
-                        </action>
-                        <action behavior="Platform" id="4" name="Set jump strength" sid="977702785210804" type="Player">
-                            <param id="0" name="Jump strength">600</param>
-                        </action>
-                        <action behavior="Platform" id="1" name="Set max speed" sid="648016665460743" type="Player">
-                            <param id="0" name="Max Speed">220</param>
-                        </action>
-                    </actions>
+                    <actions />
                 </event-block>
-                <event-block sid="629529831673314">
+                <event-block sid="101365918980380">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="122266132703328" type="Player">
-                            <param id="0" name="Instance variable">Agachando</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
+                        <condition id="0" name="On key pressed" sid="542713509395174" type="Keyboard">
+                            <param id="0" name="Key">32</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="5" name="Set frame" sid="558517856241218" type="Player">
-                            <param id="0" name="Frame number">0</param>
-                        </action>
-                        <action behavior="Platform" id="4" name="Set jump strength" sid="580586070710270" type="Player">
-                            <param id="0" name="Jump strength">500</param>
-                        </action>
-                    </actions>
+                    <actions />
+                </event-block>
+                <event-block sid="558775582524189">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="879143115834292" type="Keyboard">
+                            <param id="0" name="Key">16</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="646783848725148">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="608356266407586" type="Keyboard">
+                            <param id="0" name="Key">17</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="375752307687612">
+                    <conditions>
+                        <condition id="0" name="On click" sid="719260427112600" type="Mouse">
+                            <param id="0" name="Mouse button">2</param>
+                            <param id="1" name="Click type">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
                 </event-block>
             </sub-events>
-        </event-block>
-        <comment>Eventos que alteram a variável</comment>
-        <event-block sid="857546713287400">
-            <conditions>
-                <condition id="3" name="On key released" sid="462893698471475" type="Keyboard">
-                    <param id="0" name="Key">17</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-10" name="Set value" sid="360066167908451" type="Player">
-                    <param id="0" name="Instance variable">Agachando</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="720874041830788">
-            <conditions>
-                <condition id="3" name="On key released" sid="823477283204615" type="Keyboard">
-                    <param id="0" name="Key">16</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-10" name="Set value" sid="691202891998408" type="Player">
-                    <param id="0" name="Instance variable">Correndo</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="605666268008497">
-            <conditions>
-                <condition id="2" name="Key is down" sid="931572889840016" type="Keyboard">
-                    <param id="0" name="Key">17</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-10" name="Set value" sid="836025113098389" type="Player">
-                    <param id="0" name="Instance variable">Agachando</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <comment>Sobescreve evento 23 quando ativo, Karla começa a correr mesmo se Ctrl está apertado (mudar se for possível fazer ela deslizar)</comment>
-        <event-block sid="471540372311781">
-            <conditions>
-                <condition id="2" name="Key is down" sid="829106303005979" type="Keyboard">
-                    <param id="0" name="Key">16</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-10" name="Set value" sid="442996197634607" type="Player">
-                    <param id="0" name="Instance variable">Correndo</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-                <action id="-10" name="Set value" sid="871728377400111" type="Player">
-                    <param id="0" name="Instance variable">Agachando</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-            </actions>
+        </event-group>
+        <event-group description="" sid="217579381342803" title="Movimentação">
             <sub-events>
-                <event-block sid="523071063214231">
+                <event-block sid="603046528305302">
                     <conditions>
-                        <condition id="0" name="On key pressed" sid="515627659355073" type="Keyboard">
+                        <condition id="2" name="Key is down" sid="718505573658323" type="Keyboard">
+                            <param id="0" name="Key">68</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="958025980913183" type="Player">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="780554961214597">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="394740281444027" type="Keyboard">
+                            <param id="0" name="Key">65</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="660535940035522" type="Player">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="430663763075292">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="255514154154811" type="Keyboard">
+                            <param id="0" name="Key">32</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="486523330953231" type="Player">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="187617254717265">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="811558288709007" type="Keyboard">
+                            <param id="0" name="Key">83</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="12" name="Fall through" sid="840494193613629" type="Player" />
+                    </actions>
+                </event-block>
+                <comment>Eventos que alteram a variável</comment>
+                <event-block sid="857546713287400">
+                    <conditions>
+                        <condition id="3" name="On key released" sid="462893698471475" type="Keyboard">
                             <param id="0" name="Key">17</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-10" name="Set value" sid="177396520559057" type="Player">
-                            <param id="0" name="Instance variable">Deslizando</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="880482508379725" type="System">
-                            <param id="0" name="Seconds">0.45</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="423861120989175" type="Player">
-                            <param id="0" name="Instance variable">Deslizando</param>
+                        <action id="-10" name="Set value" sid="360066167908451" type="Player">
+                            <param id="0" name="Instance variable">Agachando</param>
                             <param id="1" name="Value">0</param>
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="720874041830788">
+                    <conditions>
+                        <condition id="3" name="On key released" sid="823477283204615" type="Keyboard">
+                            <param id="0" name="Key">16</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="691202891998408" type="Player">
+                            <param id="0" name="Instance variable">Correndo</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="605666268008497">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="931572889840016" type="Keyboard">
+                            <param id="0" name="Key">17</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="836025113098389" type="Player">
+                            <param id="0" name="Instance variable">Agachando</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Sobescreve evento 23 quando ativo, Karla começa a correr mesmo se Ctrl está apertado (mudar se for possível fazer ela deslizar)</comment>
+                <event-block sid="471540372311781">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="829106303005979" type="Keyboard">
+                            <param id="0" name="Key">16</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="442996197634607" type="Player">
+                            <param id="0" name="Instance variable">Correndo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="871728377400111" type="Player">
+                            <param id="0" name="Instance variable">Agachando</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="523071063214231">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="515627659355073" type="Keyboard">
+                                    <param id="0" name="Key">17</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="177396520559057" type="Player">
+                                    <param id="0" name="Instance variable">Deslizando</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="880482508379725" type="System">
+                                    <param id="0" name="Seconds">0.45</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="423861120989175" type="Player">
+                                    <param id="0" name="Instance variable">Deslizando</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Sistema de Movimento que usa as variáveis para executar as ações ao invés de executar as ações quando o botão é apertado, isso serve para estabelecer as regras de movimento de Karla</comment>
+                        <comment>Construct executa eventos em sua ordem, se uma variável (velocidade) foi configurada em evento 13, o evento 19 pode sobrescrever essa configuração até que evento 19 não esteja rodando</comment>
+                        <event-group description="" sid="527043843427898" title="Variáveis de movimentação">
+                            <sub-events>
+                                <event-block sid="713265731149752">
+                                    <conditions>
+                                        <condition id="-1" name="Every tick" sid="883671179972868" type="System" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <comment>Corrida / Ajusta a velocidade, pra que lado Karla está olhando, e se ela pode atirar dependendo do estado da variável Correndo</comment>
+                                        <event-block sid="580852263469397">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="722296931787889" type="Player">
+                                                    <param id="0" name="Instance variable">Correndo</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Platform" id="1" name="Set max speed" sid="142328303308175" type="Player">
+                                                    <param id="0" name="Max Speed">560</param>
+                                                </action>
+                                                <action id="-15" name="Set visible" sid="710447324507348" type="Braço">
+                                                    <param id="0" name="Visibility">0</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="386969475517412">
+                                                    <conditions>
+                                                        <condition id="2" name="Key is down" sid="102644464337781" type="Keyboard">
+                                                            <param id="0" name="Key">65</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="7" name="Set mirrored" sid="145941155164078" type="Player">
+                                                            <param id="0" name="State">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="682866345116990">
+                                                    <conditions>
+                                                        <condition id="2" name="Key is down" sid="966561649963945" type="Keyboard">
+                                                            <param id="0" name="Key">68</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="7" name="Set mirrored" sid="724967064648194" type="Player">
+                                                            <param id="0" name="State">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="389763694143886">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="168078984543881" type="Player">
+                                                    <param id="0" name="Instance variable">Correndo</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Platform" id="1" name="Set max speed" sid="974775181761451" type="Player">
+                                                    <param id="0" name="Max Speed">360</param>
+                                                </action>
+                                                <action id="-15" name="Set visible" sid="536149154286132" type="Braço">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="631237926018202">
+                                                    <conditions>
+                                                        <condition id="-1" name="Compare X" sid="683072098071408" type="Aim">
+                                                            <param id="0" name="Comparison">2</param>
+                                                            <param id="1" name="X co-ordinate">player.X</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="7" name="Set mirrored" sid="209344327884401" type="Player">
+                                                            <param id="0" name="State">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="609041012620726">
+                                                    <conditions>
+                                                        <condition id="-1" name="Compare X" sid="111825385430220" type="Aim">
+                                                            <param id="0" name="Comparison">4</param>
+                                                            <param id="1" name="X co-ordinate">player.X</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="7" name="Set mirrored" sid="528716764029427" type="Player">
+                                                            <param id="0" name="State">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <comment>Agachar / Ajusta sprite, velocidade, e alcance de pulo dependendo do estado da variável Agachando</comment>
+                                        <event-block sid="481028034086428">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="316705728746623" type="Player">
+                                                    <param id="0" name="Instance variable">Agachando</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="5" name="Set frame" sid="476713385333627" type="Player">
+                                                    <param id="0" name="Frame number">1</param>
+                                                </action>
+                                                <action behavior="Platform" id="4" name="Set jump strength" sid="977702785210804" type="Player">
+                                                    <param id="0" name="Jump strength">600</param>
+                                                </action>
+                                                <action behavior="Platform" id="1" name="Set max speed" sid="648016665460743" type="Player">
+                                                    <param id="0" name="Max Speed">220</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="629529831673314">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="122266132703328" type="Player">
+                                                    <param id="0" name="Instance variable">Agachando</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="5" name="Set frame" sid="558517856241218" type="Player">
+                                                    <param id="0" name="Frame number">0</param>
+                                                </action>
+                                                <action behavior="Platform" id="4" name="Set jump strength" sid="580586070710270" type="Player">
+                                                    <param id="0" name="Jump strength">500</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                    </sub-events>
+                </event-block>
             </sub-events>
-        </event-block>
-        <comment>Sistema de tiro</comment>
-        <event-block sid="852706111621082">
-            <conditions>
-                <condition id="0" name="On click" sid="503084630787811" type="Mouse">
-                    <param id="0" name="Mouse button">0</param>
-                    <param id="1" name="Click type">0</param>
-                </condition>
-                <condition id="-14" name="Compare variable" sid="173995509526839" type="System">
-                    <param id="0" name="Variable">Pistol_ammo</param>
-                    <param id="1" name="Comparison">1</param>
-                    <param id="2" name="Value">0</param>
-                </condition>
-                <condition id="-9" name="Is visible" sid="622579043156853" type="Braço" />
-            </conditions>
-            <actions>
-                <action id="0" name="Spawn another object" sid="681257061013065" type="Player">
-                    <param id="0" name="Object">bullet_player</param>
-                    <param id="1" name="Layer">3</param>
-                    <param id="2" name="Image point">0</param>
-                </action>
-                <action id="-22" name="Set angle toward position" sid="810278101606226" type="bullet_player">
-                    <param id="0" name="X">mouse.X</param>
-                    <param id="1" name="Y">mouse.Y</param>
-                </action>
-                <action id="-11" name="Subtract from" sid="785783556958233" type="System">
-                    <param id="0" name="Variable">Pistol_ammo</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="798053565341336">
-            <conditions>
-                <condition id="-1" name="Every tick" sid="370327673579829" type="System" />
-            </conditions>
-            <actions>
-                <action id="-3" name="Set position" sid="859698063236800" type="Aim">
-                    <param id="0" name="X">mouse.X</param>
-                    <param id="1" name="Y">mouse.Y</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="336422874025768">
-            <conditions>
-                <condition id="-4" name="Is outside layout" sid="486985243759859" type="bullet_player" />
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="837643398097923" type="bullet_player" />
-            </actions>
-        </event-block>
-        <comment>Sistema de Mira, também sobrecreve o evento 24 e ignora o comando de corrida</comment>
-        <event-block sid="910442961541336">
-            <conditions>
-                <condition id="2" name="Mouse button is down" sid="572489318245257" type="Mouse">
-                    <param id="0" name="Mouse button">2</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-10" name="Set value" sid="317555943353631" type="Player">
-                    <param id="0" name="Instance variable">Correndo</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-                <action behavior="ScrollTo" id="1" name="Set enabled" sid="687324191416346" type="Aim">
-                    <param id="0" name="State">1</param>
-                </action>
-                <action id="-7" name="Set size" sid="553560330156448" type="Aim">
-                    <param id="0" name="Width">15</param>
-                    <param id="1" name="Height">15</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="645178702816181">
-            <conditions>
-                <condition id="2" inverted="1" name="Mouse button is down" sid="860111371951958" type="Mouse">
-                    <param id="0" name="Mouse button">2</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="ScrollTo" id="1" name="Set enabled" sid="538462780750765" type="Aim">
-                    <param id="0" name="State">0</param>
-                </action>
-                <action id="-7" name="Set size" sid="823645201218437" type="Aim">
-                    <param id="0" name="Width">10</param>
-                    <param id="1" name="Height">10</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="998038350258395">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="823609453884400" type="System" />
-            </conditions>
-            <actions>
-                <action behavior="Pin" id="0" name="Pin to object" sid="652439853756476" type="Braço">
-                    <param id="0" name="Pin to">Player</param>
-                    <param id="1" name="Mode">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="136298287376348">
-            <conditions>
-                <condition id="-1" name="Every tick" sid="301942718644683" type="System" />
-            </conditions>
-            <actions>
-                <action id="-22" name="Set angle toward position" sid="287113265407745" type="Braço">
-                    <param id="0" name="X">mouse.X</param>
-                    <param id="1" name="Y">mouse.Y</param>
-                </action>
-            </actions>
-        </event-block>
-        <comment>Inimigo 1: A turret</comment>
-        <event-block sid="604271559194613">
-            <conditions>
-                <condition id="-1" name="Every tick" sid="623097307772426" type="System" />
-            </conditions>
-            <actions>
-                <action behavior="Turret" id="0" name="Acquire target" sid="206770842335024" type="Enemy_1">
-                    <param id="0" name="Target">Player</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="134077259478863">
-            <conditions>
-                <condition behavior="Turret" id="1" name="On shoot" sid="170578171129438" type="Enemy_1" />
-            </conditions>
-            <actions>
-                <action id="0" name="Spawn another object" sid="966349448334296" type="Enemy_1">
-                    <param id="0" name="Object">bullet_enemy</param>
-                    <param id="1" name="Layer">3</param>
-                    <param id="2" name="Image point">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="726529855182037">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="687277796100482" type="bullet_player">
-                    <param id="0" name="Object">Enemy_1</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-12" name="Subtract from" sid="637681729678158" type="Enemy_1">
-                    <param id="0" name="Instance variable">Life_turret</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-                <action id="-9" name="Destroy" sid="678509874494837" type="bullet_player" />
-            </actions>
-        </event-block>
-        <event-block sid="907437267614411">
-            <conditions>
-                <condition id="-7" name="Compare instance variable" sid="177826186721773" type="Enemy_1">
-                    <param id="0" name="Instance variable">Life_turret</param>
-                    <param id="1" name="Comparison">3</param>
-                    <param id="2" name="Value">0</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="303095127771547" type="Enemy_1" />
-            </actions>
-        </event-block>
-        <event-block sid="908130180763373">
-            <conditions>
-                <condition id="-4" name="Is outside layout" sid="378045605096670" type="bullet_enemy" />
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="167053238466302" type="bullet_enemy" />
-            </actions>
-        </event-block>
-        <comment>Sistema de Munição da pistola</comment>
-        <event-block sid="348255153168473">
-            <conditions>
-                <condition id="0" name="On key pressed" sid="550151829392453" type="Keyboard">
-                    <param id="0" name="Key">82</param>
-                </condition>
-                <condition id="-14" name="Compare variable" sid="492066416566987" type="System">
-                    <param id="0" name="Variable">Pistol_ammo</param>
-                    <param id="1" name="Comparison">2</param>
-                    <param id="2" name="Value">7</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-16" name="Wait" sid="570454649438853" type="System">
-                    <param id="0" name="Seconds">2.5</param>
-                </action>
-                <action id="-9" name="Set value" sid="708727585031984" type="System">
-                    <param id="0" name="Variable">Pistol_ammo</param>
-                    <param id="1" name="Value">7</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="212222538513135">
-            <conditions>
-                <condition id="-1" name="Every tick" sid="472526470939787" type="System" />
-            </conditions>
-            <actions>
-                <action id="0" name="Set text" sid="107710405746063" type="Ammo">
-                    <param id="0" name="Text">&quot;Ammo:&quot;&amp;Pistol_ammo &amp;&quot;/7&quot;</param>
-                </action>
-            </actions>
-        </event-block>
+        </event-group>
+        <event-group description="" sid="484399364361377" title="Sistema de tiro">
+            <sub-events>
+                <event-block sid="852706111621082">
+                    <conditions>
+                        <condition id="0" name="On click" sid="503084630787811" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="173995509526839" type="System">
+                            <param id="0" name="Variable">Pistol_ammo</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-9" name="Is visible" sid="622579043156853" type="Braço" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="681257061013065" type="Player">
+                            <param id="0" name="Object">bullet_player</param>
+                            <param id="1" name="Layer">3</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-22" name="Set angle toward position" sid="810278101606226" type="bullet_player">
+                            <param id="0" name="X">mouse.X</param>
+                            <param id="1" name="Y">mouse.Y</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="785783556958233" type="System">
+                            <param id="0" name="Variable">Pistol_ammo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="798053565341336">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="370327673579829" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="859698063236800" type="Aim">
+                            <param id="0" name="X">mouse.X</param>
+                            <param id="1" name="Y">mouse.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="336422874025768">
+                    <conditions>
+                        <condition id="-4" name="Is outside layout" sid="486985243759859" type="bullet_player" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="837643398097923" type="bullet_player" />
+                    </actions>
+                </event-block>
+                <comment>Sistema de Mira, também sobrecreve o evento 24 e ignora o comando de corrida</comment>
+                <event-block sid="910442961541336">
+                    <conditions>
+                        <condition id="2" name="Mouse button is down" sid="572489318245257" type="Mouse">
+                            <param id="0" name="Mouse button">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="317555943353631" type="Player">
+                            <param id="0" name="Instance variable">Correndo</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action behavior="ScrollTo" id="1" name="Set enabled" sid="687324191416346" type="Aim">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="553560330156448" type="Aim">
+                            <param id="0" name="Width">15</param>
+                            <param id="1" name="Height">15</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="645178702816181">
+                    <conditions>
+                        <condition id="2" inverted="1" name="Mouse button is down" sid="860111371951958" type="Mouse">
+                            <param id="0" name="Mouse button">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="ScrollTo" id="1" name="Set enabled" sid="538462780750765" type="Aim">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="823645201218437" type="Aim">
+                            <param id="0" name="Width">10</param>
+                            <param id="1" name="Height">10</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="998038350258395">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="823609453884400" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="652439853756476" type="Braço">
+                            <param id="0" name="Pin to">Player</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="136298287376348">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="301942718644683" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-22" name="Set angle toward position" sid="287113265407745" type="Braço">
+                            <param id="0" name="X">mouse.X</param>
+                            <param id="1" name="Y">mouse.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-group description="" sid="302549132968337" title="Sistema de munição">
+                    <sub-events>
+                        <event-block sid="348255153168473">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="550151829392453" type="Keyboard">
+                                    <param id="0" name="Key">82</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="492066416566987" type="System">
+                                    <param id="0" name="Variable">Pistol_ammo</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">7</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="570454649438853" type="System">
+                                    <param id="0" name="Seconds">2.5</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="708727585031984" type="System">
+                                    <param id="0" name="Variable">Pistol_ammo</param>
+                                    <param id="1" name="Value">7</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="212222538513135">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="472526470939787" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="107710405746063" type="Ammo">
+                                    <param id="0" name="Text">&quot;Ammo:&quot;&amp;Pistol_ammo &amp;&quot;/7&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="866921892842023" title="Inimigos">
+            <sub-events>
+                <event-group description="" sid="436427965218869" title="Inimigo 1: A turret">
+                    <sub-events>
+                        <event-block sid="604271559194613">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="623097307772426" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Turret" id="0" name="Acquire target" sid="206770842335024" type="Enemy_1">
+                                    <param id="0" name="Target">Player</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="134077259478863">
+                            <conditions>
+                                <condition behavior="Turret" id="1" name="On shoot" sid="170578171129438" type="Enemy_1" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="966349448334296" type="Enemy_1">
+                                    <param id="0" name="Object">bullet_enemy</param>
+                                    <param id="1" name="Layer">3</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="726529855182037">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="687277796100482" type="bullet_player">
+                                    <param id="0" name="Object">Enemy_1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="637681729678158" type="Enemy_1">
+                                    <param id="0" name="Instance variable">Life_turret</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="678509874494837" type="bullet_player" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="907437267614411">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="177826186721773" type="Enemy_1">
+                                    <param id="0" name="Instance variable">Life_turret</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="303095127771547" type="Enemy_1" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="908130180763373">
+                            <conditions>
+                                <condition id="-4" name="Is outside layout" sid="378045605096670" type="bullet_enemy" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="167053238466302" type="bullet_enemy" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="326128735698974" title="Vida e dano">
+            <sub-events>
+                <event-block sid="948721396750595">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="326342262204994" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="257298172354180" type="Vida">
+                            <param id="0" name="Text">&quot;Vida:&quot; &amp;Life</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="452988793133898">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="302108877518874" type="bullet_enemy">
+                            <param id="0" name="Object">Player</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="777128002519843" type="bullet_enemy" />
+                        <action id="-11" name="Subtract from" sid="480984625072203" type="System">
+                            <param id="0" name="Variable">Life</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="989325346925117">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="410218189791892" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="132233518124329" type="DEBUG">
+                            <param id="0" name="Text">&quot;Correndo: &quot;&amp;Player.Correndo&amp;&quot;  Agachada: &quot;&amp;Player.Agachando&amp;&quot; Deslizando: &quot;&amp;Player.Deslizando&amp;&quot;  Velocidade: &quot;&amp;Player.Platform.MaxSpeed</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="175512563638359">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="820604203941426" type="System">
+                            <param id="0" name="First value">Life</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="266091085073060" type="Player" />
+                        <action id="-9" name="Destroy" sid="750584571406888" type="Braço" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
         <comment>Interação com o menu</comment>
         <event-block sid="346726265483208">
             <conditions>
@@ -536,54 +611,6 @@
                 <action id="-2" name="Go to layout" sid="693939328912408" type="System">
                     <param id="0" name="Layout">L_Menu</param>
                 </action>
-            </actions>
-        </event-block>
-        <comment>Vida e Dano</comment>
-        <event-block sid="948721396750595">
-            <conditions>
-                <condition id="-1" name="Every tick" sid="326342262204994" type="System" />
-            </conditions>
-            <actions>
-                <action id="0" name="Set text" sid="257298172354180" type="Vida">
-                    <param id="0" name="Text">&quot;Vida:&quot; &amp;Life</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="452988793133898">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="302108877518874" type="bullet_enemy">
-                    <param id="0" name="Object">Player</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="777128002519843" type="bullet_enemy" />
-                <action id="-11" name="Subtract from" sid="480984625072203" type="System">
-                    <param id="0" name="Variable">Life</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="989325346925117">
-            <conditions>
-                <condition id="-1" name="Every tick" sid="410218189791892" type="System" />
-            </conditions>
-            <actions>
-                <action id="0" name="Set text" sid="132233518124329" type="DEBUG">
-                    <param id="0" name="Text">&quot;Correndo: &quot;&amp;Player.Correndo&amp;&quot;  Agachada: &quot;&amp;Player.Agachando&amp;&quot; Deslizando: &quot;&amp;Player.Deslizando&amp;&quot;  Velocidade: &quot;&amp;Player.Platform.MaxSpeed</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="175512563638359">
-            <conditions>
-                <condition id="-8" name="Compare two values" sid="820604203941426" type="System">
-                    <param id="0" name="First value">Life</param>
-                    <param id="1" name="Comparison">2</param>
-                    <param id="2" name="Second value">1</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="266091085073060" type="Player" />
-                <action id="-9" name="Destroy" sid="750584571406888" type="Braço" />
             </actions>
         </event-block>
     </events>
