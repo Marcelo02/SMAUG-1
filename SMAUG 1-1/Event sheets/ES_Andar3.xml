@@ -4,5 +4,18 @@
     <name>ES_Andar3</name>
     <events>
         <include>ES_Main</include>
+        <event-block sid="533176635409544">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="648465537646046" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="437057330979691" type="System">
+                    <param id="0" name="Object to create">Player</param>
+                    <param id="1" name="Layer">4</param>
+                    <param id="2" name="X">160</param>
+                    <param id="3" name="Y">4160</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
