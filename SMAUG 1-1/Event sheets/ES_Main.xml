@@ -150,6 +150,46 @@
                     <actions />
                     <sub-events>
                         <comment>Corrida / Ajusta a velocidade, pra que lado Karla está olhando, e se ela pode atirar dependendo do estado da variável Correndo</comment>
+                        <comment>Eventos que alteram a variável</comment>
+                        <event-block sid="857546713287400">
+                            <conditions>
+                                <condition id="3" name="On key released" sid="462893698471475" type="Keyboard">
+                                    <param id="0" name="Key">17</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="360066167908451" type="Player">
+                                    <param id="0" name="Instance variable">Agachando</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="720874041830788">
+                            <conditions>
+                                <condition id="3" name="On key released" sid="823477283204615" type="Keyboard">
+                                    <param id="0" name="Key">16</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="691202891998408" type="Player">
+                                    <param id="0" name="Instance variable">Correndo</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="605666268008497">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="931572889840016" type="Keyboard">
+                                    <param id="0" name="Key">17</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="836025113098389" type="Player">
+                                    <param id="0" name="Instance variable">Agachando</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="580852263469397">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="722296931787889" type="Player">
@@ -316,50 +356,6 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-group description="" sid="842955668976670" title="Variáveis movimentação">
-                            <sub-events>
-                                <comment>Eventos que alteram a variável</comment>
-                                <event-block sid="857546713287400">
-                                    <conditions>
-                                        <condition id="3" name="On key released" sid="462893698471475" type="Keyboard">
-                                            <param id="0" name="Key">17</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="360066167908451" type="Player">
-                                            <param id="0" name="Instance variable">Agachando</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="720874041830788">
-                                    <conditions>
-                                        <condition id="3" name="On key released" sid="823477283204615" type="Keyboard">
-                                            <param id="0" name="Key">16</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="691202891998408" type="Player">
-                                            <param id="0" name="Instance variable">Correndo</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="605666268008497">
-                                    <conditions>
-                                        <condition id="2" name="Key is down" sid="931572889840016" type="Keyboard">
-                                            <param id="0" name="Key">17</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="836025113098389" type="Player">
-                                            <param id="0" name="Instance variable">Agachando</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-group>
                     </sub-events>
                 </event-block>
             </sub-events>
