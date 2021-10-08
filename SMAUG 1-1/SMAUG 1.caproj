@@ -38,7 +38,7 @@
     </configurations>
     <window-size>
         <width>800</width>
-        <height>600</height>
+        <height>450</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
@@ -436,6 +436,22 @@
                             <point x="0.9375" y="0" />
                             <point x="0.9375" y="1" />
                             <point x="0.078125" y="1" />
+                        </collision-poly>
+                    </tile>
+                    <tile id="13">
+                        <collision-poly>
+                            <point x="0" y="0.859375" />
+                            <point x="1" y="0.859375" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </tile>
+                    <tile id="14">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.125" />
+                            <point x="0" y="0.125" />
                         </collision-poly>
                     </tile>
                 </tiles>
