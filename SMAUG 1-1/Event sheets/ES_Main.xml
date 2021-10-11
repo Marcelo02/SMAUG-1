@@ -316,6 +316,66 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <comment>Deslizar / Ajusta sprite, desaceleração e velocidade máxima. Após 100 milisegundos de ativação, ignorar movimento do player até a variável voltar para 0 (inércia do deslizar)</comment>
+                        <event-block sid="319415757994513">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="354182734846897" type="Player">
+                                    <param id="0" name="Instance variable">Deslizando</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="673754791926230" type="Player">
+                                    <param id="0" name="Frame number">2</param>
+                                </action>
+                                <action behavior="Platform" id="3" name="Set deceleration" sid="549096519523956" type="Player">
+                                    <param id="0" name="Deceleration">450</param>
+                                </action>
+                                <action behavior="Platform" id="1" name="Set max speed" sid="317596806036309" type="Player">
+                                    <param id="0" name="Max Speed">600</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="274171153251926" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action behavior="Platform" id="0" name="Set ignoring input" sid="150693293071394" type="Player">
+                                    <param id="0" name="Input">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <comment>Se for necessário adicionar alguma condição</comment>
+                                <event-block sid="618906379118795">
+                                    <conditions>
+                                        <condition id="0" name="On key pressed" sid="605871550709101" type="Keyboard">
+                                            <param id="0" name="Key">17</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="267044447167984" type="Player">
+                                            <param id="0" name="Instance variable">Deslizando</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="841514610149626">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="934275285396087" type="Player">
+                                    <param id="0" name="Instance variable">Deslizando</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="3" name="Set deceleration" sid="914932911154258" type="Player">
+                                    <param id="0" name="Deceleration">5000</param>
+                                </action>
+                                <action behavior="Platform" id="0" name="Set ignoring input" sid="132360300999820" type="Player">
+                                    <param id="0" name="Input">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-block>
                 <event-block sid="471540372311781">
@@ -335,11 +395,16 @@
                         </action>
                     </actions>
                     <sub-events>
-                        <comment>Sobescreve evento 23 quando ativo, Karla começa a correr mesmo se Ctrl está apertado (mudar se for possível fazer ela deslizar)</comment>
+                        <comment>Se jogador apertar Ctrl enquanto segura Shift e estiver se movimentando, deslizar por 350 milisegundos</comment>
                         <event-block sid="523071063214231">
                             <conditions>
                                 <condition id="0" name="On key pressed" sid="515627659355073" type="Keyboard">
                                     <param id="0" name="Key">17</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="990609118368200" type="System">
+                                    <param id="0" name="First value">Player.Platform.Speed</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">0</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -348,7 +413,7 @@
                                     <param id="1" name="Value">1</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="880482508379725" type="System">
-                                    <param id="0" name="Seconds">0.45</param>
+                                    <param id="0" name="Seconds">0.35</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="423861120989175" type="Player">
                                     <param id="0" name="Instance variable">Deslizando</param>
@@ -602,7 +667,7 @@
                     </conditions>
                     <actions>
                         <action id="0" name="Set text" sid="132233518124329" type="DEBUG">
-                            <param id="0" name="Text">&quot;Correndo: &quot;&amp;Player.Correndo&amp;&quot;  Agachada: &quot;&amp;Player.Agachando&amp;&quot; Deslizando: &quot;&amp;Player.Deslizando&amp;&quot;  Velocidade: &quot;&amp;Player.Platform.MaxSpeed</param>
+                            <param id="0" name="Text">&quot;Correndo: &quot;&amp;Player.Correndo&amp;&quot;  Agachada: &quot;&amp;Player.Agachando&amp;&quot; Deslizando: &quot;&amp;Player.Deslizando&amp;&quot;  Velocidade Maxima: &quot;&amp;Player.Platform.MaxSpeed&amp;&quot; Velocidade: &quot;&amp;Player.Platform.Speed</param>
                         </action>
                     </actions>
                 </event-block>

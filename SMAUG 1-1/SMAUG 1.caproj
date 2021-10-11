@@ -163,7 +163,8 @@
                 <instance-variables>
                     <instance-variable comment="0=andando; 1=correndo" name="Correndo" sid="951860907033998" type="number" />
                     <instance-variable comment="0=de pé; 1=agachada" name="Agachando" sid="483017643976326" type="number" />
-                    <instance-variable name="Deslizando" sid="612228518861241" type="number" />
+                    <instance-variable comment="0 = N; 1 = S" name="Deslizando" sid="612228518861241" type="number" />
+                    <instance-variable comment="0 = N; 1 = S;" name="Subindo_Escada" sid="132084229248435" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="BoundToLayout" sid="999814832154253">
