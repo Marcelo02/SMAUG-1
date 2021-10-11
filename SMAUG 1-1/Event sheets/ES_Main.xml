@@ -407,6 +407,9 @@
                                     <param id="2" name="Second value">0</param>
                                 </condition>
                                 <condition behavior="Platform" id="2" name="Is on floor" sid="770211805354055" type="Player" />
+                                <condition id="2" inverted="1" name="Mouse button is down" sid="349651520137153" type="Mouse">
+                                    <param id="0" name="Mouse button">2</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="-10" name="Set value" sid="177396520559057" type="Player">
