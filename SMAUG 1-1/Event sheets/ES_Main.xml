@@ -105,6 +105,9 @@
                         <action behavior="Platform" id="7" name="Simulate control" sid="958025980913183" type="Player">
                             <param id="0" name="Control">1</param>
                         </action>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="903410193129172" type="Player">
+                            <param id="0" name="Control">1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="780554961214597">
@@ -115,6 +118,9 @@
                     </conditions>
                     <actions>
                         <action behavior="Platform" id="7" name="Simulate control" sid="660535940035522" type="Player">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="188362724204387" type="Player">
                             <param id="0" name="Control">0</param>
                         </action>
                     </actions>
@@ -139,6 +145,21 @@
                     </conditions>
                     <actions>
                         <action behavior="Platform" id="12" name="Fall through" sid="840494193613629" type="Player" />
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="145029213871677" type="Player">
+                            <param id="0" name="Control">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="500283535413180">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="552609539157340" type="Keyboard">
+                            <param id="0" name="Key">87</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="130833428831436" type="Player">
+                            <param id="0" name="Control">2</param>
+                        </action>
                     </actions>
                 </event-block>
                 <comment>Sistema de Movimento que usa as variáveis para executar as ações ao invés de executar as ações quando o botão é apertado, isso serve para estabelecer as regras de movimento de Karla</comment>
@@ -377,6 +398,75 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <comment>Movimentação da escada</comment>
+                <event-block sid="283426479087807">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="318886354478006" type="Player">
+                            <param id="0" name="Object">stair_collision</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="563082186570518" type="Climb">
+                            <param id="0" name="Name">&quot;Start&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="855575295202433">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="246822862634677" type="Player">
+                            <param id="0" name="Object">stair_collision</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="372345873651810" type="Climb">
+                            <param id="0" name="Name">&quot;Stop&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="590691237914923">
+                    <conditions>
+                        <condition id="0" name="On function" sid="367531765328444" type="Climb">
+                            <param id="0" name="Name">&quot;Start&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="319730413757459" type="Player">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Platform" id="9" name="Set vector Y" sid="529367868493083" type="Player">
+                            <param id="0" name="Vector Y">0</param>
+                        </action>
+                        <action behavior="Platform" id="8" name="Set vector X" sid="689940174658622" type="Player">
+                            <param id="0" name="Vector X">0</param>
+                        </action>
+                        <action behavior="8Direction" id="8" name="Set enabled" sid="406981280125745" type="Player">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="522645841981610">
+                    <conditions>
+                        <condition id="0" name="On function" sid="202027863255685" type="Climb">
+                            <param id="0" name="Name">&quot;Stop&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="8" name="Set enabled" sid="779603842942925" type="Player">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="8Direction" id="9" name="Set vector X" sid="554165283867163" type="Player">
+                            <param id="0" name="Vector X">0</param>
+                        </action>
+                        <action behavior="8Direction" id="10" name="Set vector Y" sid="314727642868926" type="Player">
+                            <param id="0" name="Vector Y">0</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="853009635903859" type="Player">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block sid="471540372311781">
                     <conditions>
