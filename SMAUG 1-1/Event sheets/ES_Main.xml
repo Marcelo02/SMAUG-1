@@ -406,6 +406,7 @@
                                     <param id="1" name="Comparison">4</param>
                                     <param id="2" name="Second value">0</param>
                                 </condition>
+                                <condition behavior="Platform" id="2" name="Is on floor" sid="770211805354055" type="Player" />
                             </conditions>
                             <actions>
                                 <action id="-10" name="Set value" sid="177396520559057" type="Player">
