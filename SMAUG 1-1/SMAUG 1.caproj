@@ -587,10 +587,10 @@
         <event-sheet>ES_Andar3.xml</event-sheet>
     </event-folder>
     <global-instances>
-        <global-instance type="Keyboard" uid="4" />
-        <global-instance type="Mouse" uid="6" />
-        <global-instance type="Browser" uid="22" />
-        <global-instance type="Climb" uid="55" />
+        <global-instance type="Keyboard" uid="6" />
+        <global-instance type="Mouse" uid="22" />
+        <global-instance type="Browser" uid="65" />
+        <global-instance type="Climb" uid="66" />
     </global-instances>
     <sounds-folder />
     <music-folder />
