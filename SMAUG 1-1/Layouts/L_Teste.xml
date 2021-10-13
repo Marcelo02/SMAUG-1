@@ -536,7 +536,7 @@
                                 <max-speed>360</max-speed>
                                 <acceleration>10000</acceleration>
                                 <deceleration>5000</deceleration>
-                                <directions>8 directions</directions>
+                                <directions>4 directions</directions>
                                 <set-angle>No</set-angle>
                                 <default-controls>Yes</default-controls>
                                 <initial-state>Disabled</initial-state>
