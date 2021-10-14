@@ -23,8 +23,10 @@
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="Turret" version="1">Turret</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
@@ -258,6 +260,31 @@
             </object-type>
             <object-type name="Climb" sid="766996371627090">
                 <plugin id="Function" />
+            </object-type>
+            <object-type name="Enemy_2" sid="140634118855420">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Idle" sid="915020940382890" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="LineOfSight" sid="578113254332937">
+                        <behavior id="LOS" />
+                    </behavior-type>
+                    <behavior-type name="Sine" sid="340694400671270">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                    <behavior-type name="BoundToLayout" sid="487060990560388">
+                        <behavior id="bound" />
+                    </behavior-type>
+                    <behavior-type name="Bullet" sid="577223454725012">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="556319363987611" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
             </object-type>
         </object-folder>
         <object-folder name="Menu">
