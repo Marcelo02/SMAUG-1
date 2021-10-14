@@ -306,7 +306,7 @@
                         <opacity>0.5</opacity>
                     </world>
                 </instance>
-                <instance type="Andar3_terrainPlatform" uid="57">
+                <instance type="Andar3_terrainPlatform" uid="4">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <tile-width>16</tile-width>
