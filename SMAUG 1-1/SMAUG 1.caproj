@@ -23,6 +23,7 @@
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
@@ -182,6 +183,9 @@
                     <behavior-type name="8Direction" sid="780911791156198">
                         <behavior id="EightDir" />
                     </behavior-type>
+                    <behavior-type name="Flash" sid="824379114578306">
+                        <behavior id="Flash" />
+                    </behavior-type>
                 </behaviors>
                 <container>
                     <type>Player</type>
@@ -265,6 +269,7 @@
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="Idle" sid="915020940382890" type="number" />
+                    <instance-variable name="Vida" sid="188850948528738" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="LineOfSight" sid="578113254332937">

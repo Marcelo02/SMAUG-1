@@ -734,6 +734,7 @@
                                 <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="456093024948317" type="Enemy_2">
                                     <param id="0" name="Object">Player</param>
                                 </condition>
+                                <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="140194519830938" type="Player" />
                             </conditions>
                             <actions>
                                 <action id="-10" name="Set value" sid="978411677259279" type="Enemy_2">
@@ -781,6 +782,47 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="795304729197750">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="195995452947236" type="bullet_player">
+                                    <param id="0" name="Object">Enemy_2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="115827165718969" type="Enemy_2">
+                                    <param id="0" name="Instance variable">Vida</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="776121498532852" type="bullet_player" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="324242708445914">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="437437908123687" type="Enemy_2">
+                                    <param id="0" name="Instance variable">Vida</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="884051197443498" type="Enemy_2" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="975773471397015">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="748455851790860" type="Enemy_2">
+                                    <param id="0" name="Object">Player</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="914986823067121" type="Enemy_2" />
+                                <action behavior="Flash" id="0" name="Flash" sid="155732642817072" type="Player">
+                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                    <param id="2" name="Duration">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-group>
             </sub-events>
@@ -802,12 +844,18 @@
                         <condition id="0" name="On collision with another object" sid="302108877518874" type="bullet_enemy">
                             <param id="0" name="Object">Player</param>
                         </condition>
+                        <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="411622310836467" type="Player" />
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="777128002519843" type="bullet_enemy" />
                         <action id="-11" name="Subtract from" sid="480984625072203" type="System">
                             <param id="0" name="Variable">Life</param>
                             <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="Flash" id="0" name="Flash" sid="450981846813350" type="Player">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">2</param>
                         </action>
                     </actions>
                 </event-block>
