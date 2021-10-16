@@ -835,7 +835,7 @@
                     </conditions>
                     <actions>
                         <action id="0" name="Set text" sid="257298172354180" type="Vida">
-                            <param id="0" name="Text">&quot;Vida:&quot; &amp;Life</param>
+                            <param id="0" name="Text">&quot;Vida:&quot;  &amp;Life</param>
                         </action>
                     </actions>
                 </event-block>
