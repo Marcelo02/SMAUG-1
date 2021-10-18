@@ -869,6 +869,27 @@
                         </action>
                     </actions>
                 </event-block>
+                <comment>Barra de vida</comment>
+                <event-block sid="667963947854660">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="188744449807762" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-5" name="Set width" sid="204329915879285" type="Lifebar">
+                            <param id="0" name="Width">self.maxwidth</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="620969186764158">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="715926028679784" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-5" name="Set width" sid="297259062533274" type="Lifebar">
+                            <param id="0" name="Width">self.maxwidth/10*Life</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="175512563638359">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="820604203941426" type="System">
@@ -895,6 +916,16 @@
                 <action id="-2" name="Go to layout" sid="693939328912408" type="System">
                     <param id="0" name="Layout">L_Menu</param>
                 </action>
+            </actions>
+        </event-block>
+        <event-block sid="296601220670220">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="551869759321157" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="940880675191698" type="Lifebar" />
+                <action id="-9" name="Destroy" sid="100385483816078" type="Vida" />
+                <action id="-9" name="Destroy" sid="375133169022820" type="DEBUG" />
             </actions>
         </event-block>
     </events>
