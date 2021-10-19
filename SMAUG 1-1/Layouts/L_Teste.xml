@@ -420,8 +420,8 @@
                         <width>40</width>
                         <height>9</height>
                         <depth>0</depth>
-                        <hotspotX>0.119999997</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>2.375999928</hotspotX>
+                        <hotspotY>-0.096000001</hotspotY>
                         <angle>-1.57079649</angle>
                         <opacity>1</opacity>
                     </world>
@@ -754,7 +754,7 @@
                         <behavior-instance type="LineOfSight">
                             <properties>
                                 <obstacles>Solids</obstacles>
-                                <range>500</range>
+                                <range>300</range>
                                 <cone-of-view>360</cone-of-view>
                                 <use-collision-cells>Yes</use-collision-cells>
                             </properties>
@@ -835,10 +835,14 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <Dir>Right</Dir>
+                        <Atacando>0</Atacando>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
                             <properties>
-                                <max-speed>330</max-speed>
+                                <max-speed>80</max-speed>
                                 <acceleration>1500</acceleration>
                                 <deceleration>1500</deceleration>
                                 <jump-strength>650</jump-strength>
@@ -851,18 +855,114 @@
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="DestroyOutsideLayout" />
+                        <behavior-instance type="LineOfSight">
+                            <properties>
+                                <obstacles>Solids</obstacles>
+                                <range>300</range>
+                                <cone-of-view>360</cone-of-view>
+                                <use-collision-cells>Yes</use-collision-cells>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1008</x>
-                        <y>1712</y>
+                        <x>912</x>
+                        <y>1581</y>
                         <z>0</z>
                         <width>25</width>
                         <height>45</height>
                         <depth>0</depth>
-                        <hotspotX>5.952381134</hotspotX>
-                        <hotspotY>3.472222328</hotspotY>
+                        <hotspotX>0.523809552</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Pivot_Point" uid="71">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <ID>Right</ID>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>800</x>
+                        <y>1584</y>
+                        <z>0</z>
+                        <width>22.627416611</width>
+                        <height>22.627416611</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Pivot_Point" uid="72">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <ID>Left</ID>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1008</x>
+                        <y>1584</y>
+                        <z>0</z>
+                        <width>22.627416611</width>
+                        <height>22.627416611</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Enemy_Arm" uid="73">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                        <behavior-instance type="Turret">
+                            <properties>
+                                <range>300</range>
+                                <rate-of-fire>1</rate-of-fire>
+                                <rotate>Yes</rotate>
+                                <rotate-speed>180</rotate-speed>
+                                <target-mode>First in range</target-mode>
+                                <predictive-aim>No</predictive-aim>
+                                <projectile-speed>500</projectile-speed>
+                                <initial-state>Enabled</initial-state>
+                                <use-collision-cells>Yes</use-collision-cells>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1232</x>
+                        <y>1888</y>
+                        <z>0</z>
+                        <width>35</width>
+                        <height>4</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

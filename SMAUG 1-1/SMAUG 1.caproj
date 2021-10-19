@@ -322,6 +322,10 @@
             </object-type>
             <object-type name="Enemy_4" sid="145454034215377">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Dir" sid="112560891309022" type="string" />
+                    <instance-variable name="Atacando" sid="368639267162695" type="number" />
+                </instance-variables>
                 <behaviors>
                     <behavior-type name="Platform" sid="630640943218123">
                         <behavior id="Platform" />
@@ -329,10 +333,13 @@
                     <behavior-type name="DestroyOutsideLayout" sid="744604100580163">
                         <behavior id="destroy" />
                     </behavior-type>
+                    <behavior-type name="LineOfSight" sid="354684391561277">
+                        <behavior id="LOS" />
+                    </behavior-type>
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="914723938692249" speed="5">
-                        <frame duration="1" hotspotX="5.95238" hotspotY="3.47222">
+                        <frame duration="1" hotspotX="0.52381" hotspotY="0.5">
                             <collision-poly>
                                 <point x="0.047619" y="0.0277778" />
                                 <point x="0.952381" y="0.0277778" />
@@ -341,6 +348,33 @@
                                 <point x="0.047619" y="0.972222" />
                             </collision-poly>
                         </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Pivot_Point" sid="102290850108523">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="ID" sid="539052566764154" type="string" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="729259214730971" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Enemy_Arm" sid="811285426138110">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="982382922083622">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                    <behavior-type name="Turret" sid="543515143350758">
+                        <behavior id="Turret" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="379200796735014" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
             </object-type>
