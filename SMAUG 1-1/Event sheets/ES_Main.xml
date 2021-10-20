@@ -1112,5 +1112,31 @@
                 <action id="-9" name="Destroy" sid="102795097937720" type="DEBUG" />
             </actions>
         </event-block>
+        <comment>Criar HUD quando o layout começa</comment>
+        <event-block sid="297477123984476">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="849117450305836" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="432681965014136" type="System">
+                    <param id="0" name="Object to create">Vida</param>
+                    <param id="1" name="Layer">5</param>
+                    <param id="2" name="X">0</param>
+                    <param id="3" name="Y">0</param>
+                </action>
+                <action id="-3" name="Create object" sid="305109178889575" type="System">
+                    <param id="0" name="Object to create">Ammo</param>
+                    <param id="1" name="Layer">5</param>
+                    <param id="2" name="X">0</param>
+                    <param id="3" name="Y">32</param>
+                </action>
+                <action id="-3" name="Create object" sid="772061511085906" type="System">
+                    <param id="0" name="Object to create">DEBUG</param>
+                    <param id="1" name="Layer">5</param>
+                    <param id="2" name="X">0</param>
+                    <param id="3" name="Y">62</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
