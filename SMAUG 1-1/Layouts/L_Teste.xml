@@ -546,6 +546,7 @@
                         <Agachando>0</Agachando>
                         <Deslizando>0</Deslizando>
                         <Subindo_Escada>0</Subindo_Escada>
+                        <Recarregando>0</Recarregando>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="BoundToLayout">
@@ -838,6 +839,7 @@
                     <instance-variables>
                         <Dir>Right</Dir>
                         <Atacando>0</Atacando>
+                        <Life>3</Life>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">

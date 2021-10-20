@@ -561,6 +561,7 @@
                         </action>
                     </actions>
                 </event-block>
+                <comment>Colisão das balas em objetos sólidos</comment>
                 <event-block any="1" sid="336422874025768">
                     <conditions>
                         <condition id="-4" name="Is outside layout" sid="486985243759859" type="bullet_player" />
@@ -660,14 +661,27 @@
                                     <param id="1" name="Comparison">2</param>
                                     <param id="2" name="Value">7</param>
                                 </condition>
+                                <condition id="-7" name="Compare instance variable" sid="359478904991292" type="Player">
+                                    <param id="0" name="Instance variable">Recarregando</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions>
-                                <action id="-16" name="Wait" sid="570454649438853" type="System">
+                                <action id="-10" name="Set value" sid="578502606509704" type="Player">
+                                    <param id="0" name="Instance variable">Recarregando</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="764602559725011" type="System">
                                     <param id="0" name="Seconds">2.5</param>
                                 </action>
-                                <action id="-9" name="Set value" sid="708727585031984" type="System">
+                                <action id="-9" name="Set value" sid="626535039440954" type="System">
                                     <param id="0" name="Variable">Pistol_ammo</param>
                                     <param id="1" name="Value">7</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="698096057967691" type="Player">
+                                    <param id="0" name="Instance variable">Recarregando</param>
+                                    <param id="1" name="Value">0</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -983,6 +997,33 @@
                                     <param id="1" name="Layer">4</param>
                                     <param id="2" name="Image point">0</param>
                                 </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="601213375517147">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="609753662528297" type="bullet_player">
+                                    <param id="0" name="Object">Enemy_4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="318852394022649" type="Enemy_4">
+                                    <param id="0" name="Instance variable">Life</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="946785768859376" type="bullet_player" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="362113489377674">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="770918660811334" type="Enemy_4">
+                                    <param id="0" name="Instance variable">Life</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="588031585977986" type="Enemy_4" />
+                                <action id="-9" name="Destroy" sid="238102190374816" type="Enemy_Arm" />
                             </actions>
                         </event-block>
                     </sub-events>

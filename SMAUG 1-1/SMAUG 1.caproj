@@ -170,6 +170,7 @@
                     <instance-variable comment="0=de pé; 1=agachada" name="Agachando" sid="483017643976326" type="number" />
                     <instance-variable comment="0 = N; 1 = S" name="Deslizando" sid="612228518861241" type="number" />
                     <instance-variable comment="0 = N; 1 = S;" name="Subindo_Escada" sid="132084229248435" type="number" />
+                    <instance-variable name="Recarregando" sid="461316750234606" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="BoundToLayout" sid="999814832154253">
@@ -325,6 +326,7 @@
                 <instance-variables>
                     <instance-variable name="Dir" sid="112560891309022" type="string" />
                     <instance-variable name="Atacando" sid="368639267162695" type="number" />
+                    <instance-variable name="Life" sid="509103160525295" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Platform" sid="630640943218123">
