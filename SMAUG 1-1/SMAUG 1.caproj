@@ -637,9 +637,6 @@
         <object-type name="Browser" sid="611965736044737">
             <plugin id="Browser" />
         </object-type>
-        <object-type name="Text" sid="946223529720358">
-            <plugin id="Text" />
-        </object-type>
         <object-type name="Sprite3" sid="517800948979802">
             <plugin id="Sprite" />
             <animation-folder>
@@ -655,9 +652,6 @@
                     </frame>
                 </animation>
             </animation-folder>
-        </object-type>
-        <object-type name="Text2" sid="324265027116197">
-            <plugin id="Text" />
         </object-type>
         <object-type name="SpriteFont" sid="516516618267488">
             <plugin id="Spritefont2" />

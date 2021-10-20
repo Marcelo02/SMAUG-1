@@ -847,6 +847,7 @@
                 </event-group>
                 <event-group description="" sid="670326600129185" title="Inimigo 4: Atirador">
                     <sub-events>
+                        <comment>Comando de movimento</comment>
                         <event-block sid="735061134626306">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="166251855700064" type="Enemy_4">
@@ -904,6 +905,7 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <comment>Mudança para modo de ataque</comment>
                         <event-block sid="614912649418857">
                             <conditions>
                                 <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="123774270847094" type="Enemy_4">
@@ -942,27 +944,50 @@
                                     <param id="0" name="Target">Player</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="591852790586854">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="197434220643814" type="Player">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="X co-ordinate">enemy_4.X</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="7" name="Set mirrored" sid="732488733194354" type="Enemy_4">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="387534249535147">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="536582392347627" type="Player">
+                                            <param id="0" name="Comparison">4</param>
+                                            <param id="1" name="X co-ordinate">enemy_4.X</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="7" name="Set mirrored" sid="910828668364947" type="Enemy_4">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
-                    </sub-events>
-                </event-group>
-                <event-group description="" sid="159050392427719" title="Inimigo 3: Torreta armadilha">
-                    <sub-events>
-                        <comment>WIP</comment>
-                        <event-block sid="526582466085716">
+                        <event-block sid="400107237429923">
                             <conditions>
-                                <condition id="1" name="Is overlapping another object" sid="659150074911017" type="Trap">
-                                    <param id="0" name="Object">Player</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="973628743843996" type="Trap">
-                                    <param id="0" name="Instance variable">Trap_ID</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">Enemy_3.Enemy_ID</param>
-                                </condition>
+                                <condition behavior="Turret" id="1" name="On shoot" sid="791131929103164" type="Enemy_Arm" />
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="985341271381263" type="Enemy_Arm">
+                                    <param id="0" name="Object">bullet_enemy</param>
+                                    <param id="1" name="Layer">4</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-group>
+                <event-group description="" sid="159050392427719" title="Inimigo 3: Torreta armadilha" />
             </sub-events>
         </event-group>
         <event-group description="" sid="950073288918438" title="Vida e dano">
@@ -1033,6 +1058,17 @@
                 <action id="-2" name="Go to layout" sid="693939328912408" type="System">
                     <param id="0" name="Layout">L_Menu</param>
                 </action>
+            </actions>
+        </event-block>
+        <comment>Destruir a HUD quando acabar o Layout</comment>
+        <event-block sid="239776340733817">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="286867389621552" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="785605196624685" type="Ammo" />
+                <action id="-9" name="Destroy" sid="662591618806128" type="Vida" />
+                <action id="-9" name="Destroy" sid="102795097937720" type="DEBUG" />
             </actions>
         </event-block>
     </events>
