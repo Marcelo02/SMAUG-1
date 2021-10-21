@@ -20,68 +20,9 @@
         </event-block>
         <event-group description="" sid="514908993439039" title="Base">
             <sub-events>
-                <comment>Navegadores usam a tecla Ctrl para atalhos como &quot;favoritar&quot; ou &quot;fechar aba&quot;, como Ctrl será a tecla de agachar,estes eventos servem para bloquear o navegador de usar Ctrl para seus atalhos enquanto o jogo esta aberto. Não adicione ações neles.</comment>
-                <comment>Acredito que estes atalhos de navegadores não vão afetar o jogo quanto ele estiver compilado em seu próprio executável, remover eventos na hora de fazer a build</comment>
-                <event-block sid="839263917236752">
-                    <conditions>
-                        <condition id="0" name="On key pressed" sid="588757974920878" type="Keyboard">
-                            <param id="0" name="Key">65</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                </event-block>
-                <event-block sid="319271365306365">
-                    <conditions>
-                        <condition id="0" name="On key pressed" sid="172953214465896" type="Keyboard">
-                            <param id="0" name="Key">83</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                </event-block>
-                <event-block sid="658074490474729">
-                    <conditions>
-                        <condition id="0" name="On key pressed" sid="990363957475619" type="Keyboard">
-                            <param id="0" name="Key">68</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                </event-block>
-                <event-block sid="101365918980380">
-                    <conditions>
-                        <condition id="0" name="On key pressed" sid="542713509395174" type="Keyboard">
-                            <param id="0" name="Key">32</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                </event-block>
-                <event-block sid="558775582524189">
-                    <conditions>
-                        <condition id="0" name="On key pressed" sid="879143115834292" type="Keyboard">
-                            <param id="0" name="Key">16</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                </event-block>
-                <event-block sid="646783848725148">
-                    <conditions>
-                        <condition id="0" name="On key pressed" sid="608356266407586" type="Keyboard">
-                            <param id="0" name="Key">17</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                </event-block>
-                <event-block sid="375752307687612">
-                    <conditions>
-                        <condition id="0" name="On click" sid="719260427112600" type="Mouse">
-                            <param id="0" name="Mouse button">2</param>
-                            <param id="1" name="Click type">0</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                </event-block>
                 <event-block sid="780154469662389">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="733354352608010" type="Sprite2">
+                        <condition id="0" name="On collision with another object" sid="733354352608010" type="takemeto_andar3">
                             <param id="0" name="Object">Player</param>
                         </condition>
                     </conditions>
@@ -568,6 +509,9 @@
                         <condition id="0" name="On collision with another object" sid="796651571292447" type="bullet_player">
                             <param id="0" name="Object">Wall</param>
                         </condition>
+                        <condition id="0" name="On collision with another object" sid="321143616867432" type="bullet_player">
+                            <param id="0" name="Object">covr_crate</param>
+                        </condition>
                         <condition id="1" name="Is overlapping another object" sid="289345154463998" type="bullet_player">
                             <param id="0" name="Object">Andar3_Tiles1</param>
                         </condition>
@@ -769,6 +713,7 @@
                                     <param id="0" name="Object">Player</param>
                                 </condition>
                                 <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="140194519830938" type="Player" />
+                                <condition id="-9" name="Is visible" sid="533145209093624" type="Player" />
                             </conditions>
                             <actions>
                                 <action id="-10" name="Set value" sid="978411677259279" type="Enemy_2">
@@ -925,6 +870,7 @@
                                 <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="123774270847094" type="Enemy_4">
                                     <param id="0" name="Object">Player</param>
                                 </condition>
+                                <condition id="-9" name="Is visible" sid="957323095696009" type="Player" />
                             </conditions>
                             <actions>
                                 <action id="-10" name="Set value" sid="740323268528467" type="Enemy_4">
