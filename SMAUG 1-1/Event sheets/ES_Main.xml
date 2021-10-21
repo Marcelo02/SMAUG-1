@@ -561,12 +561,33 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="336422874025768">
+                <comment>Colisão das balas em objetos sólidos</comment>
+                <event-block any="1" sid="336422874025768">
                     <conditions>
                         <condition id="-4" name="Is outside layout" sid="486985243759859" type="bullet_player" />
+                        <condition id="0" name="On collision with another object" sid="796651571292447" type="bullet_player">
+                            <param id="0" name="Object">Wall</param>
+                        </condition>
+                        <condition id="1" name="Is overlapping another object" sid="289345154463998" type="bullet_player">
+                            <param id="0" name="Object">Andar3_Tiles1</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="837643398097923" type="bullet_player" />
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="826012261720970">
+                    <conditions>
+                        <condition id="-4" name="Is outside layout" sid="889909369241702" type="bullet_enemy" />
+                        <condition id="0" name="On collision with another object" sid="566104974759665" type="bullet_enemy">
+                            <param id="0" name="Object">Wall</param>
+                        </condition>
+                        <condition id="1" name="Is overlapping another object" sid="523092160278021" type="bullet_enemy">
+                            <param id="0" name="Object">Andar3_Tiles1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="486573718459020" type="bullet_enemy" />
                     </actions>
                 </event-block>
                 <comment>Sistema de Mira, também sobrecreve o evento 24 e ignora o comando de corrida</comment>
@@ -640,14 +661,27 @@
                                     <param id="1" name="Comparison">2</param>
                                     <param id="2" name="Value">7</param>
                                 </condition>
+                                <condition id="-7" name="Compare instance variable" sid="359478904991292" type="Player">
+                                    <param id="0" name="Instance variable">Recarregando</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions>
-                                <action id="-16" name="Wait" sid="570454649438853" type="System">
+                                <action id="-10" name="Set value" sid="578502606509704" type="Player">
+                                    <param id="0" name="Instance variable">Recarregando</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="764602559725011" type="System">
                                     <param id="0" name="Seconds">2.5</param>
                                 </action>
-                                <action id="-9" name="Set value" sid="708727585031984" type="System">
+                                <action id="-9" name="Set value" sid="626535039440954" type="System">
                                     <param id="0" name="Variable">Pistol_ammo</param>
                                     <param id="1" name="Value">7</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="698096057967691" type="Player">
+                                    <param id="0" name="Instance variable">Recarregando</param>
+                                    <param id="1" name="Value">0</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -671,7 +705,7 @@
                     <sub-events>
                         <event-block sid="604271559194613">
                             <conditions>
-                                <condition id="-1" name="Every tick" sid="623097307772426" type="System" />
+                                <condition id="-2" name="On start of layout" sid="623097307772426" type="System" />
                             </conditions>
                             <actions>
                                 <action behavior="Turret" id="0" name="Acquire target" sid="206770842335024" type="Enemy_1">
@@ -825,6 +859,176 @@
                         </event-block>
                     </sub-events>
                 </event-group>
+                <event-group description="" sid="670326600129185" title="Inimigo 4: Atirador">
+                    <sub-events>
+                        <comment>Comando de movimento</comment>
+                        <event-block sid="735061134626306">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="166251855700064" type="Enemy_4">
+                                    <param id="0" name="Instance variable">Dir</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Left&quot;</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="986975406809831" type="Enemy_4">
+                                    <param id="0" name="Instance variable">Atacando</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="414570613471599" type="Enemy_4">
+                                    <param id="0" name="Control">0</param>
+                                </action>
+                                <action id="7" name="Set mirrored" sid="729039263408533" type="Enemy_4">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="910756143828256">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="514092470225276" type="Enemy_4">
+                                    <param id="0" name="Instance variable">Dir</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Right&quot;</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="550932781233208" type="Enemy_4">
+                                    <param id="0" name="Instance variable">Atacando</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="118682400450252" type="Enemy_4">
+                                    <param id="0" name="Control">1</param>
+                                </action>
+                                <action id="7" name="Set mirrored" sid="357988616825259" type="Enemy_4">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="691891858727821">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="896412850681520" type="Enemy_4">
+                                    <param id="0" name="Object">Pivot_Point</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="796982314998363" type="Enemy_4">
+                                    <param id="0" name="Instance variable">Dir</param>
+                                    <param id="1" name="Value">Pivot_Point.ID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Mudança para modo de ataque</comment>
+                        <event-block sid="614912649418857">
+                            <conditions>
+                                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="123774270847094" type="Enemy_4">
+                                    <param id="0" name="Object">Player</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="740323268528467" type="Enemy_4">
+                                    <param id="0" name="Instance variable">Atacando</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="691402722825399" type="Enemy_4">
+                                    <param id="0" name="Object">Enemy_Arm</param>
+                                    <param id="1" name="Layer">4</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="887732959184139" type="Enemy_Arm">
+                                    <param id="0" name="Pin to">Enemy_Arm</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action behavior="LineOfSight" id="1" name="Set cone of view" sid="361479966627870" type="Enemy_4">
+                                    <param id="0" name="Cone of view">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="138177583223066">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="898720910357228" type="Enemy_4">
+                                    <param id="0" name="Instance variable">Atacando</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Turret" id="0" name="Acquire target" sid="476869193932934" type="Enemy_Arm">
+                                    <param id="0" name="Target">Player</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="591852790586854">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="197434220643814" type="Player">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="X co-ordinate">enemy_4.X</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="7" name="Set mirrored" sid="732488733194354" type="Enemy_4">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="387534249535147">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="536582392347627" type="Player">
+                                            <param id="0" name="Comparison">4</param>
+                                            <param id="1" name="X co-ordinate">enemy_4.X</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="7" name="Set mirrored" sid="910828668364947" type="Enemy_4">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="400107237429923">
+                            <conditions>
+                                <condition behavior="Turret" id="1" name="On shoot" sid="791131929103164" type="Enemy_Arm" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="985341271381263" type="Enemy_Arm">
+                                    <param id="0" name="Object">bullet_enemy</param>
+                                    <param id="1" name="Layer">4</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="601213375517147">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="609753662528297" type="bullet_player">
+                                    <param id="0" name="Object">Enemy_4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="318852394022649" type="Enemy_4">
+                                    <param id="0" name="Instance variable">Life</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="946785768859376" type="bullet_player" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="362113489377674">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="770918660811334" type="Enemy_4">
+                                    <param id="0" name="Instance variable">Life</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="588031585977986" type="Enemy_4" />
+                                <action id="-9" name="Destroy" sid="238102190374816" type="Enemy_Arm" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="159050392427719" title="Inimigo 3: Torreta armadilha" />
             </sub-events>
         </event-group>
         <event-group description="" sid="950073288918438" title="Vida e dano">
@@ -894,6 +1098,43 @@
             <actions>
                 <action id="-2" name="Go to layout" sid="693939328912408" type="System">
                     <param id="0" name="Layout">L_Menu</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Destruir a HUD quando acabar o Layout</comment>
+        <event-block sid="239776340733817">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="286867389621552" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="785605196624685" type="Ammo" />
+                <action id="-9" name="Destroy" sid="662591618806128" type="Vida" />
+                <action id="-9" name="Destroy" sid="102795097937720" type="DEBUG" />
+            </actions>
+        </event-block>
+        <comment>Criar HUD quando o layout começa</comment>
+        <event-block sid="297477123984476">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="849117450305836" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="432681965014136" type="System">
+                    <param id="0" name="Object to create">Vida</param>
+                    <param id="1" name="Layer">5</param>
+                    <param id="2" name="X">0</param>
+                    <param id="3" name="Y">0</param>
+                </action>
+                <action id="-3" name="Create object" sid="305109178889575" type="System">
+                    <param id="0" name="Object to create">Ammo</param>
+                    <param id="1" name="Layer">5</param>
+                    <param id="2" name="X">0</param>
+                    <param id="3" name="Y">32</param>
+                </action>
+                <action id="-3" name="Create object" sid="772061511085906" type="System">
+                    <param id="0" name="Object to create">DEBUG</param>
+                    <param id="1" name="Layer">5</param>
+                    <param id="2" name="X">0</param>
+                    <param id="3" name="Y">62</param>
                 </action>
             </actions>
         </event-block>
