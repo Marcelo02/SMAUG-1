@@ -15,7 +15,228 @@
                     <param id="2" name="X">744</param>
                     <param id="3" name="Y">4632</param>
                 </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="499742744565590" type="show_press_e">
+                    <param id="0" name="Pin to">Player</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
             </actions>
+        </event-block>
+        <event-block sid="578707450615292">
+            <conditions>
+                <condition id="1" inverted="1" name="Is overlapping another object" sid="803999047136859" type="trigger_elevator">
+                    <param id="0" name="Object">Player</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="121967236056758" type="show_press_e">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="327748915448901" type="show_press_e">
+                    <param id="0" name="Instance variable">heshere_elevator</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="881691879280134">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="446175118558655" type="trigger_elevator">
+                    <param id="0" name="Object">Player</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="548392810588930" type="show_press_e">
+                    <param id="0" name="Text">&quot;Aperte E para subir elevador&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="774567759150282" type="show_press_e">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="686170037736509" type="show_press_e">
+                    <param id="0" name="Instance variable">heshere_elevator</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="561318699572058" type="show_press_e">
+                    <param id="0" name="Instance variable">heshere_elevator_id</param>
+                    <param id="1" name="Value">trigger_elevator.UID</param>
+                </action>
+                <action id="0" name="Set text" sid="121709306970609" type="elevator_debug">
+                    <param id="0" name="Text">&quot;is he here? &quot; &amp; show_press_e.heshere_elevator &amp; &quot; is he in?&quot; &amp; trigger_elevator.hesin &amp; &quot; heshereid: &quot; &amp; show_press_e.heshere_elevator_id </param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="236947820817608">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="342353976114342" type="trigger_elevator">
+                    <param id="0" name="Instance variable">hesin</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="0" name="Set ignoring input" sid="775055269076301" type="Player">
+                    <param id="0" name="Input">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="112833972139187" type="Player">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="978354451662292" type="Braço">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action disabled="1" id="11" name="Set collisions enabled" sid="509845151997679" type="Player">
+                    <param id="0" name="Collisions">0</param>
+                </action>
+                <action id="0" name="Set text" sid="394897162398703" type="show_press_e">
+                    <param id="0" name="Text">&quot;Selecione andar com W e S&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="894933053473344">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="107872750596888" type="trigger_elevator">
+                    <param id="0" name="Instance variable">hesin</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="0" name="Set ignoring input" sid="852854775241558" type="Player">
+                    <param id="0" name="Input">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="729523939031183" type="Player">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action disabled="1" id="11" name="Set collisions enabled" sid="587859682780525" type="Player">
+                    <param id="0" name="Collisions">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="812871898468279">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="100231919213537" type="Keyboard">
+                    <param id="0" name="Key">69</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="375759112638963" type="trigger_elevator">
+                    <param id="0" name="Instance variable">hesin</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="592250593725162" type="show_press_e">
+                    <param id="0" name="Instance variable">heshere_elevator</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="665456801760557" type="trigger_elevator">
+                    <param id="0" name="Instance variable">hesin</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="614344705780542" type="Braço">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="457388972828404">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="495497405338311" type="Keyboard">
+                    <param id="0" name="Key">69</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="862379014468592" type="show_press_e">
+                    <param id="0" name="Instance variable">heshere_elevator</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="924327678360298" type="trigger_elevator">
+                    <param id="0" name="Instance variable">hesin</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="905126719492530">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="853458134508365" type="Keyboard">
+                    <param id="0" name="Key">83</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="928918803020435" type="trigger_elevator">
+                    <param id="0" name="Instance variable">hesin</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="406785303275688">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="757921231598372" type="show_press_e">
+                            <param id="0" name="Instance variable">heshere_elevator_id</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">61</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="622325805100733" type="Player">
+                            <param id="0" name="Y">Player.Y + 320</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="766798629201220">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="710849427502852" type="show_press_e">
+                            <param id="0" name="Instance variable">heshere_elevator_id</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">74</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="722612052239083" type="Player">
+                            <param id="0" name="Y">Player.Y + 320</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="846916002230851">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="444943243403431" type="Keyboard">
+                    <param id="0" name="Key">87</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="979197415617785" type="trigger_elevator">
+                    <param id="0" name="Instance variable">hesin</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="726485500951891">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="744731266947292" type="show_press_e">
+                            <param id="0" name="Instance variable">heshere_elevator_id</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">74</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="613576187899764" type="Player">
+                            <param id="0" name="Y">Player.Y - 320</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="381269993871032">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="245013448514095" type="show_press_e">
+                            <param id="0" name="Instance variable">heshere_elevator_id</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">75</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="959989060065442" type="Player">
+                            <param id="0" name="Y">Player.Y -320</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>

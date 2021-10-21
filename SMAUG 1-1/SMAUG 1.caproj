@@ -380,6 +380,27 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="takemeto_andar3" sid="335243222489758">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="699926311638470" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="covr_crate" sid="780255769124291">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="822147251793365">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="922725071137818" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Menu">
             <object-type name="OpçaoMenu" sid="781360183141348">
@@ -721,6 +742,45 @@
                     </tile>
                 </tiles>
             </object-type>
+            <object-type name="trigger_elevator" sid="539329383886170">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable comment="Andar atual" name="current_floor_id" sid="950867848764422" type="number" />
+                    <instance-variable comment="Vá para o andar" name="goto" sid="856225640514456" type="number" />
+                    <instance-variable name="buildingX" sid="332064318543203" type="number" />
+                    <instance-variable name="current_floor_y" sid="847107014931898" type="number" />
+                    <instance-variable name="hesin" sid="208935596247156" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="229442898935844" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="bg3_andar3" sid="811943371708756">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="466131842641663" speed="5">
+                        <frame duration="1" hotspotX="0.500963" hotspotY="0.5" original-source="D:\W10SSD-Energumeno\Pictures\IMG_20181109_204824.jpg" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="bg2_andar3" sid="546127582343957">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="469770644974107" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="sewergate" sid="693371545720600">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="965643991406839" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-type name="Mouse" sid="769142461874338">
             <plugin id="Mouse" />
@@ -755,29 +815,20 @@
             <plugin id="Spritefont2" />
             <texture />
         </object-type>
-        <object-type name="Sprite2" sid="335243222489758">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="699926311638470" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
+        <object-type name="show_press_e" sid="887299648304240">
+            <plugin id="Text" />
+            <instance-variables>
+                <instance-variable name="heshere_elevator" sid="325067990121547" type="number" />
+                <instance-variable name="heshere_elevator_id" sid="367539121838980" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Pin" sid="769588642525022">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
         </object-type>
-        <object-type name="Sprite5" sid="811943371708756">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="466131842641663" speed="5">
-                    <frame duration="1" hotspotX="0.500963" hotspotY="0.5" original-source="D:\W10SSD-Energumeno\Pictures\IMG_20181109_204824.jpg" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sprite6" sid="546127582343957">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="469770644974107" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
+        <object-type name="elevator_debug" sid="132053200704265">
+            <plugin id="Text" />
         </object-type>
     </object-folder>
     <families />
