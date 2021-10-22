@@ -387,14 +387,13 @@
             <instances>
                 <instance type="Enemy_3" uid="68">
                     <properties>
-                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
                         <Life_turret>3</Life_turret>
-                        <Enemy_ID>0</Enemy_ID>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Turret">
@@ -406,7 +405,7 @@
                                 <target-mode>First in range</target-mode>
                                 <predictive-aim>No</predictive-aim>
                                 <projectile-speed>500</projectile-speed>
-                                <initial-state>Disabled</initial-state>
+                                <initial-state>Enabled</initial-state>
                                 <use-collision-cells>Yes</use-collision-cells>
                             </properties>
                         </behavior-instance>
@@ -414,8 +413,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1120</x>
-                        <y>1888</y>
+                        <x>1184</x>
+                        <y>1952</y>
                         <z>0</z>
                         <width>40</width>
                         <height>9</height>
@@ -792,7 +791,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>832</x>
+                        <x>816</x>
                         <y>1712</y>
                         <z>0</z>
                         <width>48</width>
