@@ -651,7 +651,6 @@
                     </properties>
                     <instance-variables>
                         <Life_turret>3</Life_turret>
-                        <Enemy_ID>0</Enemy_ID>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Turret">

@@ -400,6 +400,13 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="Lifebar" sid="186378353466850">
+                <plugin id="TiledBg" />
+                <instance-variables>
+                    <instance-variable name="MaxWidth" sid="677645419118565" type="number" />
+                </instance-variables>
+                <texture />
+            </object-type>
         </object-folder>
         <object-folder name="Menu">
             <object-type name="OpçaoMenu" sid="781360183141348">
