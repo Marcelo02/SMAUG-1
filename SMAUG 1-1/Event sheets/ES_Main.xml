@@ -509,15 +509,22 @@
                         <condition id="0" name="On collision with another object" sid="796651571292447" type="bullet_player">
                             <param id="0" name="Object">Wall</param>
                         </condition>
-                        <condition id="0" name="On collision with another object" sid="321143616867432" type="bullet_player">
-                            <param id="0" name="Object">covr_crate</param>
-                        </condition>
                         <condition id="1" name="Is overlapping another object" sid="289345154463998" type="bullet_player">
                             <param id="0" name="Object">Andar3_Tiles1</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="837643398097923" type="bullet_player" />
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="547099538642837">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="872794191164653" type="bullet_player">
+                            <param id="0" name="Object">covr_crate</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="346936208609715" type="bullet_player" />
                     </actions>
                 </event-block>
                 <event-block any="1" sid="826012261720970">
