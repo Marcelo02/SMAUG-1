@@ -238,5 +238,31 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <event-block sid="778015183755168">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="315982509745020" type="Player">
+                    <param id="0" name="Object">gate_sewer</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="368815116354716" type="Player">
+                    <param id="0" name="Object">gate_apartment</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="668580574949774">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="240734449933109" type="Player">
+                    <param id="0" name="Object">gate_apartments2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="266070334376404" type="Player">
+                    <param id="0" name="Object">gate_sewer2</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

@@ -541,6 +541,16 @@
                         <action id="-9" name="Destroy" sid="486573718459020" type="bullet_enemy" />
                     </actions>
                 </event-block>
+                <event-block any="1" sid="896227199814761">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="663153111881777" type="bullet_enemy">
+                            <param id="0" name="Object">covr_crate</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="304412581172406" type="bullet_enemy" />
+                    </actions>
+                </event-block>
                 <comment>Sistema de Mira, também sobrecreve o evento 24 e ignora o comando de corrida</comment>
                 <event-block sid="910442961541336">
                     <conditions>
