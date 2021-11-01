@@ -10,14 +10,14 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="2">L_MenuTeclas</layout>
-        <layout order="4">L_Menu</layout>
-        <layout order="6">L_Teste</layout>
-        <layout active="1" order="8">L_Andar3</layout>
-        <event-sheet order="1">ES_MenuTeclas</event-sheet>
-        <event-sheet order="3">ES_Menu</event-sheet>
-        <event-sheet order="5">ES_Main</event-sheet>
-        <event-sheet order="7">ES_Andar3</event-sheet>
+        <layout order="1">L_MenuTeclas</layout>
+        <layout order="3">L_Menu</layout>
+        <layout order="5">L_Teste</layout>
+        <layout active="1" order="7">L_Andar3</layout>
+        <event-sheet order="0">ES_MenuTeclas</event-sheet>
+        <event-sheet order="2">ES_Menu</event-sheet>
+        <event-sheet order="4">ES_Main</event-sheet>
+        <event-sheet order="6">ES_Andar3</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -61,7 +61,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/trigger_elevator/" />
         <folder expanded="1" path="animation-folder/bg3_andar3/" />
         <folder expanded="1" path="animation-folder/bg2_andar3/" />
-        <folder expanded="1" path="animation-folder/sewergate/" />
+        <folder expanded="1" path="animation-folder/gate_sewer/" />
+        <folder expanded="1" path="animation-folder/gate_apartment/" />
+        <folder expanded="1" path="animation-folder/gate_apartments2/" />
+        <folder expanded="1" path="animation-folder/gate_sewer2/" />
         <folder expanded="1" path="animation-folder/Sprite3/" />
     </folders-expanded>
 </c2uistate>
