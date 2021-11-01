@@ -415,6 +415,11 @@
                     <instance-variable name="opcao" sid="178672443964602" type="number" />
                     <instance-variable name="Acao" sid="802094019191673" type="string" />
                 </instance-variables>
+                <behaviors>
+                    <behavior-type name="Sine" sid="236239011284445">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
                 <effects>
                     <effect-type name="Brightness">
                         <effect id="brightness" />
