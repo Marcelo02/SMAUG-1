@@ -509,9 +509,6 @@
                         <condition id="0" name="On collision with another object" sid="796651571292447" type="bullet_player">
                             <param id="0" name="Object">Wall</param>
                         </condition>
-                        <condition id="1" name="Is overlapping another object" sid="289345154463998" type="bullet_player">
-                            <param id="0" name="Object">Andar3_Tiles1</param>
-                        </condition>
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="837643398097923" type="bullet_player" />
@@ -527,14 +524,21 @@
                         <action id="-9" name="Destroy" sid="346936208609715" type="bullet_player" />
                     </actions>
                 </event-block>
+                <event-block sid="101013276987383">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="809092823911310" type="bullet_player">
+                            <param id="0" name="Object">Andar3_Tiles1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="802680152077214" type="bullet_player" />
+                    </actions>
+                </event-block>
                 <event-block any="1" sid="826012261720970">
                     <conditions>
                         <condition id="-4" name="Is outside layout" sid="889909369241702" type="bullet_enemy" />
                         <condition id="0" name="On collision with another object" sid="566104974759665" type="bullet_enemy">
                             <param id="0" name="Object">Wall</param>
-                        </condition>
-                        <condition id="1" name="Is overlapping another object" sid="523092160278021" type="bullet_enemy">
-                            <param id="0" name="Object">Andar3_Tiles1</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -549,6 +553,16 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="304412581172406" type="bullet_enemy" />
+                    </actions>
+                </event-block>
+                <event-block sid="427336249136125">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="638035796806016" type="bullet_enemy">
+                            <param id="0" name="Object">Andar3_Tiles1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="777426555677961" type="bullet_enemy" />
                     </actions>
                 </event-block>
                 <comment>Sistema de Mira, também sobrecreve o evento 24 e ignora o comando de corrida</comment>
