@@ -13,10 +13,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout order="1">L_MenuTeclas</layout>
         <layout order="3">L_Menu</layout>
         <layout order="5">L_Teste</layout>
-        <layout order="7">L_Andar3</layout>
+        <layout active="1" order="7">L_Andar3</layout>
         <event-sheet order="0">ES_MenuTeclas</event-sheet>
         <event-sheet order="2">ES_Menu</event-sheet>
-        <event-sheet active="1" order="4">ES_Main</event-sheet>
+        <event-sheet order="4">ES_Main</event-sheet>
         <event-sheet order="6">ES_Andar3</event-sheet>
     </open-tabs>
     <properties>
@@ -66,5 +66,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/gate_apartments2/" />
         <folder expanded="1" path="animation-folder/gate_sewer2/" />
         <folder expanded="1" path="animation-folder/Sprite3/" />
+        <folder expanded="1" path="animation-folder/andar3_tirolesa/" />
     </folders-expanded>
 </c2uistate>
