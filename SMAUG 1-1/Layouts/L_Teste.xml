@@ -506,6 +506,7 @@
                         <Deslizando>0</Deslizando>
                         <Subindo_Escada>0</Subindo_Escada>
                         <Recarregando>0</Recarregando>
+                        <Conversando>0</Conversando>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="BoundToLayout">
