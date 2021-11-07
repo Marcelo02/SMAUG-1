@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>ES_Andar3</name>
     <events>
+        <variable constant="0" name="Mission_State" sid="300560232764394" static="0" type="number">0</variable>
         <include>ES_Main</include>
         <event-block sid="533176635409544">
             <conditions>
@@ -359,6 +360,24 @@
                         <action id="-10" name="Set value" sid="655974126631656" type="Player">
                             <param id="0" name="Instance variable">Conversando</param>
                             <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="619198444939155" title="Missão">
+            <sub-events>
+                <event-block sid="900548732761511">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="261771166568832" type="System">
+                            <param id="0" name="Variable">Mission_State</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="LineOfSight" id="1" name="Set cone of view" sid="975083657947501" type="Enemy_4">
+                            <param id="0" name="Cone of view">0</param>
                         </action>
                     </actions>
                 </event-block>
