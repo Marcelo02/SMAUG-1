@@ -407,10 +407,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>145.489868164</x>
+                        <x>147.489868164</x>
                         <y>1882.835449219</y>
                         <z>0</z>
-                        <width>100</width>
+                        <width>96</width>
                         <height>4</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -429,7 +429,7 @@
                     <behavior-instances>
                         <behavior-instance type="Bullet">
                             <properties>
-                                <speed>4000</speed>
+                                <speed>3000</speed>
                                 <acceleration>0</acceleration>
                                 <gravity>0</gravity>
                                 <bounce-off-solids>No</bounce-off-solids>
@@ -441,10 +441,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>105.612297058</x>
+                        <x>147.612304688</x>
                         <y>1874.612426758</y>
                         <z>0</z>
-                        <width>180</width>
+                        <width>96</width>
                         <height>4</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>

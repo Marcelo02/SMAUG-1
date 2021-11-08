@@ -479,7 +479,7 @@
                         <action id="0" name="Spawn another object" sid="681257061013065" type="Player">
                             <param id="0" name="Object">bullet_player</param>
                             <param id="1" name="Layer">3</param>
-                            <param id="2" name="Image point">0</param>
+                            <param id="2" name="Image point">1</param>
                         </action>
                         <action id="-22" name="Set angle toward position" sid="810278101606226" type="bullet_player">
                             <param id="0" name="X">mouse.X</param>
@@ -696,7 +696,7 @@
                                 <action id="0" name="Spawn another object" sid="966349448334296" type="Enemy_1">
                                     <param id="0" name="Object">bullet_enemy</param>
                                     <param id="1" name="Layer">3</param>
-                                    <param id="2" name="Image point">0</param>
+                                    <param id="2" name="Image point">1</param>
                                 </action>
                             </actions>
                         </event-block>

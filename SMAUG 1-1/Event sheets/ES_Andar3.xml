@@ -194,6 +194,34 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="223615105201816">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="186776776539387" type="show_press_e">
+                            <param id="0" name="Instance variable">heshere_elevator_id</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">117</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="724464078284016" type="Player">
+                            <param id="0" name="Y">Player.Y + 574</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="565131955345355">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="531527512236633" type="show_press_e">
+                            <param id="0" name="Instance variable">heshere_elevator_id</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">116</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="568507691840785" type="Player">
+                            <param id="0" name="Y">Player.Y + 954</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-block>
         <event-block sid="846916002230851">
@@ -234,6 +262,34 @@
                     <actions>
                         <action id="-2" name="Set Y" sid="959989060065442" type="Player">
                             <param id="0" name="Y">Player.Y -320</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="931849176714409">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="294404480404523" type="show_press_e">
+                            <param id="0" name="Instance variable">heshere_elevator_id</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">118</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="849423065507667" type="Player">
+                            <param id="0" name="Y">Player.Y - 574</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="803806332186535">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="975395113103718" type="show_press_e">
+                            <param id="0" name="Instance variable">heshere_elevator_id</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">115</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="967683734918612" type="Player">
+                            <param id="0" name="Y">Player.Y -960</param>
                         </action>
                     </actions>
                 </event-block>
