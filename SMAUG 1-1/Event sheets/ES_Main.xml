@@ -1051,10 +1051,10 @@
                     </conditions>
                     <actions>
                         <action id="0" name="Set text" sid="257298172354180" type="Vida">
-                            <param id="0" name="Text">&quot;Vida:&quot; &amp;Life</param>
+                            <param id="0" name="Text">&quot;Vida&quot;</param>
                         </action>
-                        <action id="-5" name="Set width" sid="638715772391366" type="Lifebar">
-                            <param id="0" name="Width">Lifebar.MaxWidth*Life/10</param>
+                        <action id="-6" name="Set height" sid="638715772391366" type="Lifebar">
+                            <param id="0" name="Height">Lifebar.MaxWidth*Life/10</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1137,26 +1137,26 @@
                 <action id="-3" name="Create object" sid="432681965014136" type="System">
                     <param id="0" name="Object to create">Vida</param>
                     <param id="1" name="Layer">5</param>
-                    <param id="2" name="X">0</param>
+                    <param id="2" name="X">768</param>
                     <param id="3" name="Y">0</param>
                 </action>
                 <action id="-3" name="Create object" sid="305109178889575" type="System">
                     <param id="0" name="Object to create">Ammo</param>
                     <param id="1" name="Layer">5</param>
                     <param id="2" name="X">0</param>
-                    <param id="3" name="Y">32</param>
+                    <param id="3" name="Y">0</param>
                 </action>
                 <action id="-3" name="Create object" sid="772061511085906" type="System">
                     <param id="0" name="Object to create">DEBUG</param>
                     <param id="1" name="Layer">5</param>
                     <param id="2" name="X">0</param>
-                    <param id="3" name="Y">62</param>
+                    <param id="3" name="Y">30</param>
                 </action>
                 <action id="-3" name="Create object" sid="740429954615439" type="System">
                     <param id="0" name="Object to create">Lifebar</param>
                     <param id="1" name="Layer">5</param>
-                    <param id="2" name="X">64</param>
-                    <param id="3" name="Y">0</param>
+                    <param id="2" name="X">768</param>
+                    <param id="3" name="Y">32</param>
                 </action>
             </actions>
         </event-block>
