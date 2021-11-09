@@ -118,12 +118,12 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="812710405817926" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gabriel_local\Desktop\td_basic_towers\PNG\Bullet_Cannon.png">
                             <collision-poly>
-                                <point x="0.596" y="0" />
                                 <point x="1" y="0" />
                                 <point x="1" y="1" />
-                                <point x="0.596" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0.0190769" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -161,7 +161,18 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="759988522244812" speed="5">
-                        <frame duration="1" hotspotX="0.12" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.0197628" hotspotY="0.517986" original-source="C:\Users\gabriel_local\Desktop\td_basic_towers\PNG\Cannon.png">
+                            <collision-poly>
+                                <point x="0.822134" y="0.323741" />
+                                <point x="1" y="0.496403" />
+                                <point x="0.814229" y="0.661871" />
+                                <point x="0.490119" y="0.892087" />
+                                <point x="0.0592885" y="0.928058" />
+                                <point x="0" y="0.496403" />
+                                <point x="0.0434783" y="0.0791367" />
+                                <point x="0.501976" y="0.100719" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -308,7 +319,20 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="556319363987611" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.588235" original-source="C:\Users\gabriel_local\Pictures\securityrobot1.png">
+                            <collision-poly>
+                                <point x="0.595296" y="0.171587" />
+                                <point x="0.757896" y="0.341308" />
+                                <point x="0.893414" y="0.558824" />
+                                <point x="0.753125" y="0.775653" />
+                                <point x="0.592002" y="0.933659" />
+                                <point x="0.377352" y="0.942329" />
+                                <point x="0.207258" y="0.766517" />
+                                <point x="0.060753" y="0.5625" />
+                                <point x="0.198925" y="0.354807" />
+                                <point x="0.37621" y="0.172959" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
