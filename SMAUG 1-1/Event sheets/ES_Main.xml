@@ -473,6 +473,11 @@
                             <param id="1" name="Comparison">1</param>
                             <param id="2" name="Value">0</param>
                         </condition>
+                        <condition id="-7" name="Compare instance variable" sid="732971939534367" type="Player">
+                            <param id="0" name="Instance variable">Recarregando</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                         <condition id="-9" name="Is visible" sid="622579043156853" type="Braço" />
                     </conditions>
                     <actions>
@@ -647,16 +652,44 @@
                                     <param id="0" name="Instance variable">Recarregando</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="-16" name="Wait" sid="764602559725011" type="System">
-                                    <param id="0" name="Seconds">2.5</param>
+                                <action behavior="Reloading" id="0" name="Start timer" sid="737339500663347" type="Player">
+                                    <param id="0" name="Duration">2.5</param>
+                                    <param id="1" name="Type">0</param>
+                                    <param id="2" name="Tag">&quot;reloading&quot;</param>
                                 </action>
-                                <action id="-9" name="Set value" sid="626535039440954" type="System">
-                                    <param id="0" name="Variable">Pistol_ammo</param>
-                                    <param id="1" name="Value">7</param>
+                                <action id="-3" name="Create object" sid="957690574548904" type="System">
+                                    <param id="0" name="Object to create">reloadbar</param>
+                                    <param id="1" name="Layer">4</param>
+                                    <param id="2" name="X">player.X-16</param>
+                                    <param id="3" name="Y">player.Y-26</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="698096057967691" type="Player">
+                                <action id="-5" name="Set width" sid="353298269198629" type="reloadbar">
+                                    <param id="0" name="Width">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="907840404438646">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="499517731902448" type="reloadbar" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="692703139189080" type="reloadbar">
+                                    <param id="0" name="Pin to">Player</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="919493733587497">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="649634974274196" type="Player">
                                     <param id="0" name="Instance variable">Recarregando</param>
-                                    <param id="1" name="Value">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-5" name="Set width" sid="974870387780370" type="reloadbar">
+                                    <param id="0" name="Width">reloadbar.Width+12*dt</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -668,6 +701,24 @@
                                 <action id="0" name="Set text" sid="107710405746063" type="Ammo">
                                     <param id="0" name="Text">&quot;Ammo:&quot;&amp;Pistol_ammo &amp;&quot;/7&quot;</param>
                                 </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="851137134244529">
+                            <conditions>
+                                <condition behavior="Reloading" id="0" name="On timer" sid="950030155694499" type="Player">
+                                    <param id="0" name="Tag">&quot;reloading&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="835021311451636" type="Player">
+                                    <param id="0" name="Instance variable">Recarregando</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="197686099533580" type="System">
+                                    <param id="0" name="Variable">Pistol_ammo</param>
+                                    <param id="1" name="Value">7</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="233161133242767" type="reloadbar" />
                             </actions>
                         </event-block>
                     </sub-events>
