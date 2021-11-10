@@ -666,6 +666,9 @@
                                 <action id="-5" name="Set width" sid="353298269198629" type="reloadbar">
                                     <param id="0" name="Width">0</param>
                                 </action>
+                                <action id="-15" name="Set visible" sid="496227459494766" type="reloadbar">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="907840404438646">
