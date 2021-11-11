@@ -529,6 +529,16 @@
                         <action id="-9" name="Destroy" sid="346936208609715" type="bullet_player" />
                     </actions>
                 </event-block>
+                <event-block any="1" sid="704728746701564">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="257002897701948" type="bullet_player">
+                            <param id="0" name="Object">Andar3_terrainPlatform</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="542927737479819" type="bullet_player" />
+                    </actions>
+                </event-block>
                 <event-block sid="101013276987383">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="809092823911310" type="bullet_player">
@@ -558,6 +568,16 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="304412581172406" type="bullet_enemy" />
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="977781556690355">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="398697535770164" type="bullet_enemy">
+                            <param id="0" name="Object">Andar3_terrainPlatform</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="291936708493869" type="bullet_enemy" />
                     </actions>
                 </event-block>
                 <event-block sid="427336249136125">
@@ -822,6 +842,9 @@
                                 <action behavior="Bullet" id="5" name="Set enabled" sid="479795306750147" type="Enemy_2">
                                     <param id="0" name="State">0</param>
                                 </action>
+                                <action id="5" name="Set frame" sid="340895687484206" type="Enemy_2">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="136570814197378">
@@ -843,6 +866,9 @@
                                     <param id="0" name="Degrees">10</param>
                                     <param id="1" name="X">Player.X</param>
                                     <param id="2" name="Y">Player.Y</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="575449497585123" type="Enemy_2">
+                                    <param id="0" name="Frame number">1</param>
                                 </action>
                             </actions>
                         </event-block>
