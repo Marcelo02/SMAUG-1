@@ -954,6 +954,25 @@
                 <event-group description="" sid="670326600129185" title="Inimigo 4: Atirador">
                     <sub-events>
                         <comment>Comando de movimento</comment>
+                        <event-block sid="278941343009565">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="747588205851633" type="Enemy_4">
+                                    <param id="0" name="Instance variable">Dir</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Standing&quot;</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="855457430317008" type="Enemy_4">
+                                    <param id="0" name="Instance variable">Atacando</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="235303305041096" type="Enemy_4">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="735061134626306">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="166251855700064" type="Enemy_4">
