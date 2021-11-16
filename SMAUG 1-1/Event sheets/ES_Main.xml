@@ -755,6 +755,11 @@
                         <event-block sid="604271559194613">
                             <conditions>
                                 <condition id="-1" name="Every tick" sid="623097307772426" type="System" />
+                                <condition id="-8" name="Compare two values" sid="801392979231745" type="System">
+                                    <param id="0" name="First value">Enemy_1.faccao</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Second value">Player.faccao</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action behavior="Turret" id="0" name="Acquire target" sid="206770842335024" type="Enemy_1">
@@ -819,6 +824,11 @@
                                 </condition>
                                 <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="140194519830938" type="Player" />
                                 <condition id="-9" name="Is visible" sid="533145209093624" type="Player" />
+                                <condition id="-8" name="Compare two values" sid="661924052128325" type="System">
+                                    <param id="0" name="First value">Enemy_2.faccao</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Second value">Player.faccao</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="-10" name="Set value" sid="978411677259279" type="Enemy_2">
@@ -941,8 +951,8 @@
                                         <action id="-3" name="Create object" sid="789162755345861" type="System">
                                             <param id="0" name="Object to create">Enemy_1</param>
                                             <param id="1" name="Layer">4</param>
-                                            <param id="2" name="X">1200</param>
-                                            <param id="3" name="Y">1792</param>
+                                            <param id="2" name="X">Trap.X</param>
+                                            <param id="3" name="Y">trap.Y</param>
                                         </action>
                                         <action id="-9" name="Destroy" sid="679397880977433" type="Trap" />
                                     </actions>
@@ -1037,6 +1047,16 @@
                                     <param id="0" name="Object">Player</param>
                                 </condition>
                                 <condition id="-9" name="Is visible" sid="957323095696009" type="Player" />
+                                <condition id="-7" name="Compare instance variable" sid="400151191741926" type="Player">
+                                    <param id="0" name="Instance variable">faccao</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="605267630501240" type="System">
+                                    <param id="0" name="First value">Enemy_4.faccao</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Second value">Player.faccao</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="-10" name="Set value" sid="740323268528467" type="Enemy_4">
@@ -1097,6 +1117,21 @@
                                         </action>
                                     </actions>
                                 </event-block>
+                                <event-block sid="827193625932085">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="234434491128275" type="Enemy_4">
+                                            <param id="0" name="Instance variable">faccao</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">Player.faccao</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="240759450643532" type="Enemy_4">
+                                            <param id="0" name="Instance variable">Atacando</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                             </sub-events>
                         </event-block>
                         <event-block sid="400107237429923">
@@ -1111,10 +1146,65 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="480475075729626">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="790469487673100" type="bullet_player">
+                                    <param id="0" name="Object">Enemy_4</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="258603280332241">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="693394722476417" type="Player">
+                                            <param id="0" name="Instance variable">faccao</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="974910626786134" type="Enemy_4">
+                                            <param id="0" name="Instance variable">faccao</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="809370658343258" type="Player">
+                                            <param id="0" name="Instance variable">faccao</param>
+                                            <param id="1" name="Value">2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="533211155387421">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="785073794118797" type="Player">
+                                            <param id="0" name="Instance variable">faccao</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="267092688040901" type="Enemy_4">
+                                            <param id="0" name="Instance variable">faccao</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="380751508015436" type="Player">
+                                            <param id="0" name="Instance variable">faccao</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
                         <event-block sid="601213375517147">
                             <conditions>
                                 <condition id="0" name="On collision with another object" sid="609753662528297" type="bullet_player">
                                     <param id="0" name="Object">Enemy_4</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="631944782710527" type="System">
+                                    <param id="0" name="First value">Enemy_4.faccao</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Second value">Player.faccao</param>
                                 </condition>
                             </conditions>
                             <actions>

@@ -428,7 +428,7 @@
                     </properties>
                     <instance-variables>
                         <Life_turret>3</Life_turret>
-                        <Variable1>0</Variable1>
+                        <faccao>0</faccao>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Turret">
@@ -909,7 +909,7 @@
                     </properties>
                     <instance-variables>
                         <Life_turret>3</Life_turret>
-                        <Variable1>0</Variable1>
+                        <faccao>0</faccao>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Turret">

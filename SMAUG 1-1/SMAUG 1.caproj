@@ -139,7 +139,7 @@
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable comment="Life total of enemy" name="Life_turret" sid="659221338730407" type="number" />
-                    <instance-variable name="Variable1" sid="785883451086157" type="number" />
+                    <instance-variable comment="0=Karla 1+Sinistro 2=Maldolaire" name="faccao" sid="785883451086157" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Turret" sid="373438193090406">
@@ -321,7 +321,7 @@
                                 <point x="0.037037" y="0.466667" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="-1.#IND" hotspotY="-1.#IND" original-source="D:\W10SSD-Energumeno\Documents\GOONGIT\smaug-1\SMAUG-1\SMAUG 1-1\Animations\Enemy_2\Default\000.png">
+                        <frame duration="1" hotspotX="-1" hotspotY="-1" original-source="D:\W10SSD-Energumeno\Documents\GOONGIT\smaug-1\SMAUG-1\SMAUG 1-1\Animations\Enemy_2\Default\000.png">
                             <collision-poly>
                                 <point x="0.2" y="0.352941" />
                                 <point x="0.5" y="0.176471" />
@@ -2957,6 +2957,14 @@
             <plugin id="Tilemap" />
             <texture />
             <tiles />
+        </object-type>
+        <object-type name="Sprite2" sid="889192785690239">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="811252598616908" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families />

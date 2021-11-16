@@ -432,10 +432,18 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="LineOfSight" id="1" name="Set cone of view" sid="975083657947501" type="Enemy_4">
+                        <action behavior="LineOfSight" disabled="1" id="1" name="Set cone of view" sid="975083657947501" type="Enemy_4">
                             <param id="0" name="Cone of view">0</param>
                         </action>
                     </actions>
+                </event-block>
+                <event-block sid="361522175290066">
+                    <conditions>
+                        <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="476865571923718" type="Enemy_4">
+                            <param id="0" name="Object">Player</param>
+                        </condition>
+                    </conditions>
+                    <actions />
                 </event-block>
             </sub-events>
         </event-group>
