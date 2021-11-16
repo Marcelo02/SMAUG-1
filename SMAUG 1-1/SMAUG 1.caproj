@@ -118,7 +118,15 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="812710405817926" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Marcelo\Desktop\SMAUG\Artes\BulletEnemy (18x6).png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\boolet.png">
+                            <collision-poly>
+                                <point x="0.5" y="0" />
+                                <point x="0.979167" y="0.5" />
+                                <point x="0.979167" y="0.5" />
+                                <point x="0.5" y="1" />
+                                <point x="0.322917" y="0.5" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -131,7 +139,15 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="992655586569412" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\boolet.png">
+                            <collision-poly>
+                                <point x="0.5" y="0" />
+                                <point x="0.979167" y="0.5" />
+                                <point x="0.979167" y="0.5" />
+                                <point x="0.5" y="1" />
+                                <point x="0.322917" y="0.5" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -452,12 +468,13 @@
                 </instance-variables>
                 <texture />
             </object-type>
-            <object-type name="ronaldo" sid="686747133058883">
+            <object-type name="Poi" sid="686747133058883">
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="Dir" sid="693139152155523" type="string" />
                     <instance-variable name="Atacando" sid="141126867141795" type="number" />
                     <instance-variable name="Life" sid="859030424901886" type="number" />
+                    <instance-variable comment="0=Ronaldo 1=Maldolaire" name="poi_id" sid="979869698518088" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Platform" sid="306691743650392">
@@ -933,6 +950,9 @@
             </object-type>
             <object-type name="gate_sewer" sid="693371545720600">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="open" sid="661760116218484" type="boolean" />
+                </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="965643991406839" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -1969,6 +1989,9 @@
             </object-type>
             <object-type name="gate_apartments2" sid="303289977890323">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="open" sid="102392445003461" type="boolean" />
+                </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="920508382112358" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -2900,6 +2923,12 @@
                             <image-point name="Imagepoint 6" x="0.763209" y="0.950172" />
                             <image-point name="Imagepoint 7" x="0.88454" y="0.939863" />
                             <image-point name="Imagepoint 8" x="0.912916" y="0.927835" />
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.0489237" y="0" />
+                                <point x="0.0489237" y="0.171821" />
+                                <point x="0" y="0.171821" />
+                            </collision-poly>
                         </frame>
                     </animation>
                 </animation-folder>
@@ -2958,8 +2987,11 @@
             <texture />
             <tiles />
         </object-type>
-        <object-type name="Sprite2" sid="889192785690239">
+        <object-type name="TASKSTATE" sid="889192785690239">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="ts_id" sid="792235818097590" type="number" />
+            </instance-variables>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="811252598616908" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
