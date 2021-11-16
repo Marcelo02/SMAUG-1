@@ -55,7 +55,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Enemy_Arm/" />
         <folder expanded="1" path="animation-folder/takemeto_andar3/" />
         <folder expanded="1" path="animation-folder/covr_crate/" />
-        <folder expanded="1" path="animation-folder/ronaldo/" />
+        <folder expanded="1" path="animation-folder/Poi/" />
         <folder expanded="1" path="animation-folder/reloadbar/" />
         <folder expanded="1" path="animation-folder/Sprite/" />
         <folder expanded="1" path="animation-folder/Cursor2/" />
@@ -71,6 +71,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/DialogueBox/" />
         <folder expanded="1" path="animation-folder/andar3_tirolesa/" />
         <folder expanded="1" path="animation-folder/Sprite3/" />
-        <folder expanded="1" path="animation-folder/Sprite2/" />
+        <folder expanded="1" path="animation-folder/TASKSTATE/" />
     </folders-expanded>
 </c2uistate>
