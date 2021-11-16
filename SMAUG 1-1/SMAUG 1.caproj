@@ -139,6 +139,7 @@
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable comment="Life total of enemy" name="Life_turret" sid="659221338730407" type="number" />
+                    <instance-variable comment="0=Karla 1+Sinistro 2=Maldolaire" name="faccao" sid="785883451086157" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Turret" sid="373438193090406">
@@ -185,6 +186,7 @@
                     <instance-variable comment="0 = N; 1 = S;" name="Subindo_Escada" sid="132084229248435" type="number" />
                     <instance-variable name="Recarregando" sid="461316750234606" type="number" />
                     <instance-variable name="Conversando" sid="174877224387660" type="number" />
+                    <instance-variable comment="0=Karla, 1=Sinistro, 2=Maldolaire" name="faccao" sid="803440949794398" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="BoundToLayout" sid="999814832154253">
@@ -289,6 +291,7 @@
                 <instance-variables>
                     <instance-variable name="Idle" sid="915020940382890" type="number" />
                     <instance-variable name="Vida" sid="188850948528738" type="number" />
+                    <instance-variable comment="0=Karla, 1=Sinistro, 2=Maldolaire" name="faccao" sid="317692050543497" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="LineOfSight" sid="578113254332937">
@@ -306,7 +309,7 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="0" repeatto="0" sid="556319363987611" speed="5">
-                        <frame duration="1" hotspotX="0.518519" hotspotY="0.533333">
+                        <frame duration="1" hotspotX="0.533333" hotspotY="0.529412">
                             <collision-poly>
                                 <point x="0.185185" y="0.333333" />
                                 <point x="0.481481" y="0.133333" />
@@ -318,7 +321,18 @@
                                 <point x="0.037037" y="0.466667" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.52" hotspotY="0.538462" />
+                        <frame duration="1" hotspotX="-1" hotspotY="-1" original-source="D:\W10SSD-Energumeno\Documents\GOONGIT\smaug-1\SMAUG-1\SMAUG 1-1\Animations\Enemy_2\Default\000.png">
+                            <collision-poly>
+                                <point x="0.2" y="0.352941" />
+                                <point x="0.5" y="0.176471" />
+                                <point x="0.766667" y="0.411765" />
+                                <point x="0.866667" y="0.470588" />
+                                <point x="0.8" y="0.647059" />
+                                <point x="0.5" y="0.941176" />
+                                <point x="0.166667" y="0.705882" />
+                                <point x="0.1" y="0.470588" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -337,6 +351,7 @@
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable comment="Life total of enemy" name="Life_turret" sid="620304627112773" type="number" />
+                    <instance-variable comment="0=Karla, 1=Sinistro, 2=Maldolaire" name="faccao" sid="223254689184364" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Turret" sid="439170965002521">
@@ -355,6 +370,7 @@
                     <instance-variable name="Dir" sid="112560891309022" type="string" />
                     <instance-variable name="Atacando" sid="368639267162695" type="number" />
                     <instance-variable name="Life" sid="509103160525295" type="number" />
+                    <instance-variable comment="0=Karla, 1=Sinistro, 2=Maldolaire" name="faccao" sid="221563738667952" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Platform" sid="630640943218123">
@@ -2941,6 +2957,14 @@
             <plugin id="Tilemap" />
             <texture />
             <tiles />
+        </object-type>
+        <object-type name="Sprite2" sid="889192785690239">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="811252598616908" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families />
