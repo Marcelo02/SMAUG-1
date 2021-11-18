@@ -605,7 +605,18 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="660277358144610" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.502778" original-source="C:\Users\gabriel_local\Pictures\Camera Roll\WIN_20210923_12_50_17_Pro.jpg" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.503" original-source="C:\Users\gabriel_local\Downloads\sky_BG3.png">
+                            <collision-poly>
+                                <point x="0.386667" y="0.297436" />
+                                <point x="0.5" y="0.0846154" />
+                                <point x="0.536667" y="0.35641" />
+                                <point x="0.58" y="0.5" />
+                                <point x="0.713333" y="0.779487" />
+                                <point x="0.5" y="0.947436" />
+                                <point x="0.205" y="0.842308" />
+                                <point x="0.331667" y="0.5" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -3065,6 +3076,42 @@
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="811252598616908" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite2" sid="369106146289358">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="361604089991384" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gabriel_local\Downloads\sky_BG3-1.png (3).png">
+                        <collision-poly>
+                            <point x="0.386667" y="0.297436" />
+                            <point x="0.5" y="0.0846154" />
+                            <point x="0.536667" y="0.35641" />
+                            <point x="0.58" y="0.5" />
+                            <point x="0.713333" y="0.779487" />
+                            <point x="0.5" y="0.947436" />
+                            <point x="0.205" y="0.842308" />
+                            <point x="0.331667" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite5" sid="421833284627942">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="525248718793913" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gabriel_local\Downloads\7thcoll_logo_2.png">
+                        <collision-poly>
+                            <point x="0.0867188" y="0.154167" />
+                            <point x="0.913281" y="0.154167" />
+                            <point x="1" y="0.5" />
+                            <point x="0.849219" y="0.731944" />
+                            <point x="0.150781" y="0.731944" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
