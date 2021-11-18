@@ -11,8 +11,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout order="1">L_MenuTeclas</layout>
-        <layout order="3">L_Menu</layout>
-        <layout active="1" order="5">L_Teste</layout>
+        <layout active="1" order="3">L_Menu</layout>
+        <layout order="5">L_Teste</layout>
         <layout order="7">L_Andar3</layout>
         <event-sheet order="0">ES_MenuTeclas</event-sheet>
         <event-sheet order="2">ES_Menu</event-sheet>
@@ -71,5 +71,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/DialogueBox/" />
         <folder expanded="1" path="animation-folder/andar3_tirolesa/" />
         <folder expanded="1" path="animation-folder/Sprite3/" />
+        <folder expanded="1" path="animation-folder/Sprite2/" />
+        <folder expanded="1" path="animation-folder/sky_BG31png/" />
+        <folder expanded="1" path="animation-folder/Sprite5/" />
+        <folder expanded="1" path="animation-folder/Sprite6/" />
     </folders-expanded>
 </c2uistate>
