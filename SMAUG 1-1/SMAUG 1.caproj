@@ -230,7 +230,7 @@
                     <type>Aim</type>
                 </container>
                 <animation-folder>
-                    <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="801194729870401" speed="5">
+                    <animation framecount="1" loop="0" name="Parada" pingpong="0" repeatcount="1" repeatto="0" sid="801194729870401" speed="5">
                         <frame duration="1" hotspotX="0.52381" hotspotY="0.5" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\karla_susplaceholder.png">
                             <collision-poly>
                                 <point x="0.047619" y="0.0277778" />
@@ -239,20 +239,82 @@
                                 <point x="0.047619" y="0.972222" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.52381" hotspotY="0.25">
+                    </animation>
+                    <animation framecount="2" loop="1" name="Correndo" pingpong="0" repeatcount="1" repeatto="0" sid="348722496338049" speed="8">
+                        <frame duration="1" hotspotX="0.52381" hotspotY="0.5" original-source="D:\W10SSD-Energumeno\Documents\GOONGIT\smaug-1\SMAUG-1\SMAUG 1-1\Animations\Player\Default\000.png">
                             <collision-poly>
-                                <point x="0.0476191" y="0.0416667" />
+                                <point x="0.047619" y="0.0277778" />
+                                <point x="0.952381" y="0.0277778" />
+                                <point x="0.952381" y="0.972222" />
+                                <point x="0.047619" y="0.972222" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.52381" hotspotY="0.5" original-source="D:\W10SSD-Energumeno\Documents\GOONGIT\smaug-1\SMAUG-1\SMAUG 1-1\Animations\Player\Default\000.png">
+                            <collision-poly>
+                                <point x="0.047619" y="0.0277778" />
+                                <point x="0.952381" y="0.0277778" />
+                                <point x="0.952381" y="0.972222" />
+                                <point x="0.047619" y="0.972222" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Deslizando" pingpong="0" repeatcount="1" repeatto="0" sid="557531308871757" speed="5">
+                        <frame duration="1" hotspotX="0.533333" hotspotY="0.25" original-source="D:\W10SSD-Energumeno\Documents\GOONGIT\smaug-1\SMAUG-1\SMAUG 1-1\Animations\Player\Default\002.png">
+                            <collision-poly>
+                                <point x="0.0333333" y="0.0416667" />
+                                <point x="0.566667" y="0.0416667" />
+                                <point x="0.566667" y="0.458333" />
+                                <point x="0.966667" y="0.458333" />
+                                <point x="0.966667" y="0.958333" />
+                                <point x="0.5" y="0.958333" />
+                                <point x="0.0333333" y="0.958333" />
+                                <point x="0.0333333" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="2" loop="0" name="Escadas" pingpong="0" repeatcount="1" repeatto="0" sid="944433706808234" speed="5">
+                        <frame duration="1" hotspotX="0.52381" hotspotY="0.5" original-source="D:\W10SSD-Energumeno\Documents\GOONGIT\smaug-1\SMAUG-1\SMAUG 1-1\Animations\Player\Default\000.png">
+                            <collision-poly>
+                                <point x="0.047619" y="0.0277778" />
+                                <point x="0.952381" y="0.0277778" />
+                                <point x="0.952381" y="0.972222" />
+                                <point x="0.047619" y="0.972222" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.52381" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.952381" y="0.972222" />
+                                <point x="0.047619" y="0.972222" />
+                                <point x="0.047619" y="0.0277778" />
+                                <point x="0.952381" y="0.0277778" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Agachada" pingpong="0" repeatcount="1" repeatto="0" sid="209382679915143" speed="5">
+                        <frame duration="1" hotspotX="0.52381" hotspotY="0.25" original-source="D:\W10SSD-Energumeno\Documents\GOONGIT\smaug-1\SMAUG-1\SMAUG 1-1\Animations\Player\Default\001.png">
+                            <collision-poly>
+                                <point x="0.047619" y="0.0416667" />
                                 <point x="0.952381" y="0.0416667" />
                                 <point x="0.952381" y="0.958333" />
                                 <point x="0.047619" y="0.958333" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.533333" hotspotY="0.25">
+                    </animation>
+                    <animation framecount="2" loop="1" name="Andando" pingpong="0" repeatcount="1" repeatto="0" sid="532913543888225" speed="5">
+                        <frame duration="1" hotspotX="0.52381" hotspotY="0.5">
                             <collision-poly>
-                                <point x="0.2" y="0.0416667" />
-                                <point x="0.833333" y="0.0416667" />
-                                <point x="0.833333" y="0.958333" />
-                                <point x="0.2" y="0.958333" />
+                                <point x="0.047619" y="0.0277778" />
+                                <point x="0.952381" y="0.0277778" />
+                                <point x="0.952381" y="0.972222" />
+                                <point x="0.047619" y="0.972222" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.52381" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.047619" y="0.0277778" />
+                                <point x="0.952381" y="0.0277778" />
+                                <point x="0.952381" y="0.972222" />
+                                <point x="0.047619" y="0.972222" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -508,6 +570,14 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="772491557730791" speed="5">
                         <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="stairbottom" sid="221707668866535">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="645857952936389" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
             </object-type>
