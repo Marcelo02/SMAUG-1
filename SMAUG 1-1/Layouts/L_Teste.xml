@@ -508,7 +508,7 @@
                                 <deceleration>5000</deceleration>
                                 <directions>4 directions</directions>
                                 <set-angle>No</set-angle>
-                                <default-controls>Yes</default-controls>
+                                <default-controls>No</default-controls>
                                 <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>

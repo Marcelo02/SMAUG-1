@@ -250,9 +250,6 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="5" name="Set frame" sid="476713385333627" type="Player">
-                                    <param id="0" name="Frame number">1</param>
-                                </action>
                                 <action behavior="Platform" id="4" name="Set jump strength" sid="977702785210804" type="Player">
                                     <param id="0" name="Jump strength">600</param>
                                 </action>
@@ -270,9 +267,6 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="5" name="Set frame" sid="558517856241218" type="Player">
-                                    <param id="0" name="Frame number">0</param>
-                                </action>
                                 <action behavior="Platform" id="4" name="Set jump strength" sid="580586070710270" type="Player">
                                     <param id="0" name="Jump strength">500</param>
                                 </action>
@@ -288,9 +282,6 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="5" name="Set frame" sid="673754791926230" type="Player">
-                                    <param id="0" name="Frame number">2</param>
-                                </action>
                                 <action behavior="Platform" id="3" name="Set deceleration" sid="549096519523956" type="Player">
                                     <param id="0" name="Deceleration">450</param>
                                 </action>
@@ -341,6 +332,51 @@
                     </sub-events>
                 </event-block>
                 <comment>Movimentação da escada</comment>
+                <event-block sid="525502470430832">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="819247006219966" type="Player">
+                            <param id="0" name="Object">stairbottom</param>
+                        </condition>
+                        <condition id="1" name="Is overlapping another object" sid="327719548265605" type="Player">
+                            <param id="0" name="Object">stair_collision</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="4" name="Set max speed" sid="984288427706181" type="Player">
+                            <param id="0" name="Max Speed">Player.Platform.MaxSpeed - 80</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="890250578539144">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="138667289180714" type="Player">
+                            <param id="0" name="Object">stairbottom</param>
+                        </condition>
+                        <condition id="1" name="Is overlapping another object" sid="826507588120842" type="Player">
+                            <param id="0" name="Object">stair_collision</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="359090455562880" type="Player">
+                            <param id="0" name="Instance variable">Subindo_Escada</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="8Direction" id="4" name="Set max speed" sid="151840492306371" type="Player">
+                            <param id="0" name="Max Speed">360</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="582489814456176">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="633937696581120" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="584454074509605" type="Player">
+                            <param id="0" name="Instance variable">Subindo_Escada</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="283426479087807">
                     <conditions>
                         <condition id="1" name="Is overlapping another object" sid="318886354478006" type="Player">
@@ -1324,16 +1360,6 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="989325346925117">
-                    <conditions>
-                        <condition id="-1" name="Every tick" sid="410218189791892" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Set text" sid="132233518124329" type="DEBUG">
-                            <param id="0" name="Text">&quot;Correndo: &quot;&amp;Player.Correndo&amp;&quot;  Agachada: &quot;&amp;Player.Agachando&amp;&quot; Deslizando: &quot;&amp;Player.Deslizando&amp;&quot;  Velocidade Maxima: &quot;&amp;Player.Platform.MaxSpeed&amp;&quot; Velocidade: &quot;&amp;Player.Platform.Speed</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <event-block sid="175512563638359">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="820604203941426" type="System">
@@ -1349,6 +1375,16 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="989325346925117">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="410218189791892" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="132233518124329" type="DEBUG">
+                    <param id="0" name="Text">&quot;Sprint: &quot;&amp;Player.Correndo&amp;&quot;  Crouch: &quot;&amp;Player.Agachando&amp;&quot; Slide: &quot;&amp;Player.Deslizando&amp;&quot;  MSpeedP: &quot;&amp;Player.Platform.MaxSpeed&amp;&quot; SpeedP: &quot;&amp;Player.Platform.Speed&amp;&quot;  MSpeed8D: &quot;&amp;Player.8Direction.MaxSpeed&amp;&quot; Speed8D: &quot;&amp;Player.8Direction.Speed</param>
+                </action>
+            </actions>
+        </event-block>
         <comment>Interação com o menu</comment>
         <event-block sid="346726265483208">
             <conditions>
@@ -1406,5 +1442,182 @@
                 </action>
             </actions>
         </event-block>
+        <event-group description="" sid="521898735428528" title="Animações">
+            <sub-events>
+                <event-block sid="612187179660708">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="992837740267584" type="Player">
+                            <param id="0" name="Instance variable">Correndo</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="467037575472893" type="Player">
+                            <param id="0" name="Instance variable">Agachando</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="284241728777169" type="Player">
+                            <param id="0" name="Instance variable">Deslizando</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="597031806775236" type="Player">
+                            <param id="0" name="Instance variable">Subindo_Escada</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="123363698741095">
+                            <conditions>
+                                <condition behavior="Platform" id="1" name="Compare speed" sid="824938938641169" type="Player">
+                                    <param id="0" name="Comparison">1</param>
+                                    <param id="1" name="Speed">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="146072330679243" type="Player">
+                                    <param id="0" name="Animation">&quot;Andando&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="320619248032071">
+                            <conditions>
+                                <condition behavior="Platform" id="1" name="Compare speed" sid="684024609037113" type="Player">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Speed">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="671260611999620" type="Player">
+                                    <param id="0" name="Animation">&quot;Parada&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="907621407087596">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="329678833621190" type="Player">
+                            <param id="0" name="Instance variable">Correndo</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="866646621842890" type="Player">
+                            <param id="0" name="Instance variable">Agachando</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="516147913738855" type="Player">
+                            <param id="0" name="Instance variable">Deslizando</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="634571847439555">
+                            <conditions>
+                                <condition behavior="Platform" id="1" name="Compare speed" sid="317924413322509" type="Player">
+                                    <param id="0" name="Comparison">1</param>
+                                    <param id="1" name="Speed">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="692218160758707" type="Player">
+                                    <param id="0" name="Animation">&quot;Correndo&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="219306327970397">
+                            <conditions>
+                                <condition behavior="Platform" id="1" name="Compare speed" sid="819542597673001" type="Player">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Speed">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="717506077456862" type="Player">
+                                    <param id="0" name="Animation">&quot;Parada&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="715149948751435">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="482491917070285" type="Player">
+                            <param id="0" name="Instance variable">Agachando</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="109251232587924" type="Player">
+                            <param id="0" name="Instance variable">Correndo</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="210883781887123" type="Player">
+                            <param id="0" name="Instance variable">Deslizando</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="541110899425420" type="Player">
+                            <param id="0" name="Animation">&quot;Agachada&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="838848928596543">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="577579252203816" type="Player">
+                            <param id="0" name="Instance variable">Deslizando</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="902395360927103" type="Player">
+                            <param id="0" name="Animation">&quot;Deslizando&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="610546664671474">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="505826865700740" type="Player">
+                            <param id="0" name="Instance variable">Subindo_Escada</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="546147004749578" type="Player">
+                            <param id="0" name="Animation">&quot;Escadas&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="168031053731026">
+                            <conditions>
+                                <condition behavior="8Direction" id="1" name="Compare speed" sid="595372087254264" type="Player">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Speed">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="2" name="Stop" sid="343915263337689" type="Player" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
