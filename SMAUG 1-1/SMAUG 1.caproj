@@ -582,6 +582,22 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="TIROLESA_TP" sid="912194938843842">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="605897680968607" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TP_OUT" sid="529891126474221">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="288678460841016" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Menu">
             <object-type name="OpçaoMenu" sid="781360183141348">
@@ -3084,16 +3100,16 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="361604089991384" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gabriel_local\Downloads\sky_BG3-1.png (3).png">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Marcelo\Desktop\SMAUG\Artes\ateoi_covertower.png">
                         <collision-poly>
-                            <point x="0.386667" y="0.297436" />
-                            <point x="0.5" y="0.0846154" />
-                            <point x="0.536667" y="0.35641" />
-                            <point x="0.58" y="0.5" />
-                            <point x="0.713333" y="0.779487" />
-                            <point x="0.5" y="0.947436" />
-                            <point x="0.205" y="0.842308" />
-                            <point x="0.331667" y="0.5" />
+                            <point x="0.2725" y="0.176566" />
+                            <point x="0.5" y="0.426026" />
+                            <point x="0.453333" y="0.354212" />
+                            <point x="0.691667" y="0.5" />
+                            <point x="0.2975" y="0.544816" />
+                            <point x="0.5" y="0.555076" />
+                            <point x="0.645" y="0.582073" />
+                            <point x="0" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>

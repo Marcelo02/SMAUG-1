@@ -447,5 +447,45 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="810061762432343">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="211561992125818" type="Player">
+                    <param id="0" name="Object">TIROLESA_TP</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="728456250021799" type="PressE">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="312489368515619">
+            <conditions>
+                <condition id="1" inverted="1" name="Is overlapping another object" sid="516657854721103" type="Player">
+                    <param id="0" name="Object">TIROLESA_TP</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="895967793543197" type="PressE">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="435237992413280">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="475466910514569" type="Keyboard">
+                    <param id="0" name="Key">69</param>
+                </condition>
+                <condition id="1" name="Is overlapping another object" sid="802294776307297" type="Player">
+                    <param id="0" name="Object">TIROLESA_TP</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="335545752086999" type="Player">
+                    <param id="0" name="Object">TP_OUT</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

@@ -11,9 +11,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout order="1">L_MenuTeclas</layout>
-        <layout order="3">L_Menu</layout>
+        <layout active="1" order="3">L_Menu</layout>
         <layout order="5">L_Teste</layout>
-        <layout active="1" order="7">L_Andar3</layout>
+        <layout order="7">L_Andar3</layout>
         <event-sheet order="0">ES_MenuTeclas</event-sheet>
         <event-sheet order="2">ES_Menu</event-sheet>
         <event-sheet order="4">ES_Main</event-sheet>
@@ -58,6 +58,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Poi/" />
         <folder expanded="1" path="animation-folder/reloadbar/" />
         <folder expanded="1" path="animation-folder/stairbottom/" />
+        <folder expanded="1" path="animation-folder/TIROLESA_TP/" />
+        <folder expanded="1" path="animation-folder/TP_OUT/" />
         <folder expanded="1" path="animation-folder/Sprite/" />
         <folder expanded="1" path="animation-folder/Cursor2/" />
         <folder expanded="1" path="animation-folder/Sprite4/" />
