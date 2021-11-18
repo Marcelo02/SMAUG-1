@@ -133,7 +133,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>0</x>
+                        <x>32</x>
                         <y>0</y>
                         <z>0</z>
                         <width>1500</width>
@@ -395,7 +395,7 @@
                     <behavior-instances>
                         <behavior-instance type="Bullet">
                             <properties>
-                                <speed>3000</speed>
+                                <speed>5000</speed>
                                 <acceleration>0</acceleration>
                                 <gravity>0</gravity>
                                 <bounce-off-solids>No</bounce-off-solids>
@@ -428,6 +428,7 @@
                     </properties>
                     <instance-variables>
                         <Life_turret>3</Life_turret>
+                        <faccao>0</faccao>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Turret">
@@ -473,6 +474,7 @@
                         <Subindo_Escada>0</Subindo_Escada>
                         <Recarregando>0</Recarregando>
                         <Conversando>0</Conversando>
+                        <faccao>0</faccao>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="BoundToLayout">
@@ -677,6 +679,7 @@
                     <instance-variables>
                         <Idle>1</Idle>
                         <Vida>3</Vida>
+                        <faccao>0</faccao>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="LineOfSight">
@@ -725,8 +728,8 @@
                         <width>31.378582001</width>
                         <height>16.316862106</height>
                         <depth>0</depth>
-                        <hotspotX>0.518518507</hotspotX>
-                        <hotspotY>0.533333361</hotspotY>
+                        <hotspotX>0.533333361</hotspotX>
+                        <hotspotY>0.529411793</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -767,6 +770,7 @@
                         <Dir>Right</Dir>
                         <Atacando>0</Atacando>
                         <Life>3</Life>
+                        <faccao>0</faccao>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -905,6 +909,7 @@
                     </properties>
                     <instance-variables>
                         <Life_turret>3</Life_turret>
+                        <faccao>0</faccao>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Turret">
