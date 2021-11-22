@@ -872,7 +872,7 @@
                 </instance>
                 <instance type="Enemy_Arm" uid="73">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -1108,10 +1108,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>-160</x>
-                        <y>-80</y>
+                        <y>-80.163208008</y>
                         <z>0</z>
-                        <width>640</width>
-                        <height>21.673576355</height>
+                        <width>800</width>
+                        <height>22</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>

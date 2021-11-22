@@ -351,18 +351,6 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="157472117403411">
-                    <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="740676055938128" type="Player">
-                            <param id="0" name="Object">Interactionbox</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-15" name="Set visible" sid="471210135613814" type="PressE">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <event-block sid="269695821696414">
                     <conditions>
                         <condition id="1" inverted="1" name="Is overlapping another object" sid="470509105469136" type="Player">
@@ -375,6 +363,18 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="157472117403411">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="740676055938128" type="Player">
+                            <param id="0" name="Object">Interactionbox</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="471210135613814" type="PressE">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="831803736351707">
                     <conditions>
                         <condition id="0" name="On key pressed" sid="512041783160175" type="Keyboard">
@@ -382,6 +382,11 @@
                         </condition>
                         <condition id="1" name="Is overlapping another object" sid="507457399171144" type="Player">
                             <param id="0" name="Object">Interactionbox</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="666443692675294" type="Interactionbox">
+                            <param id="0" name="Instance variable">PressE_Function</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
