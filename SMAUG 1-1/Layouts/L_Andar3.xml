@@ -808,7 +808,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Dir>StandL</Dir>
+                        <Dir>Left</Dir>
                         <Atacando>0</Atacando>
                         <Life>3</Life>
                         <faccao>1</faccao>
@@ -1426,7 +1426,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Dir>StandR</Dir>
+                        <Dir>Right</Dir>
                         <Atacando>0</Atacando>
                         <Life>3</Life>
                         <faccao>1</faccao>
@@ -7584,6 +7584,56 @@
                     <world>
                         <x>4713</x>
                         <y>3640</y>
+                        <z>0</z>
+                        <width>22.627416611</width>
+                        <height>22.627416611</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Pivot_Point" uid="254">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <ID>Right</ID>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>368</x>
+                        <y>4658</y>
+                        <z>0</z>
+                        <width>22.627416611</width>
+                        <height>22.627416611</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Pivot_Point" uid="255">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <ID>Left</ID>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>672</x>
+                        <y>4652</y>
                         <z>0</z>
                         <width>22.627416611</width>
                         <height>22.627416611</height>
