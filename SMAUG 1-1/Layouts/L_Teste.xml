@@ -346,7 +346,7 @@
                 </instance>
                 <instance type="stair_collision" uid="57">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -395,7 +395,7 @@
                     <behavior-instances>
                         <behavior-instance type="Bullet">
                             <properties>
-                                <speed>5000</speed>
+                                <speed>4000</speed>
                                 <acceleration>0</acceleration>
                                 <gravity>0</gravity>
                                 <bounce-off-solids>No</bounce-off-solids>
@@ -433,14 +433,22 @@
                     <behavior-instances>
                         <behavior-instance type="Turret">
                             <properties>
-                                <range>1000</range>
+                                <range>450</range>
                                 <rate-of-fire>1</rate-of-fire>
                                 <rotate>Yes</rotate>
                                 <rotate-speed>180</rotate-speed>
                                 <target-mode>Nearest</target-mode>
-                                <predictive-aim>Yes</predictive-aim>
+                                <predictive-aim>No</predictive-aim>
                                 <projectile-speed>500</projectile-speed>
                                 <initial-state>Enabled</initial-state>
+                                <use-collision-cells>Yes</use-collision-cells>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="LineOfSight">
+                            <properties>
+                                <obstacles>Solids</obstacles>
+                                <range>450</range>
+                                <cone-of-view>360</cone-of-view>
                                 <use-collision-cells>Yes</use-collision-cells>
                             </properties>
                         </behavior-instance>
@@ -678,7 +686,7 @@
                     </properties>
                     <instance-variables>
                         <Idle>1</Idle>
-                        <Vida>3</Vida>
+                        <Vida>2</Vida>
                         <faccao>0</faccao>
                     </instance-variables>
                     <behavior-instances>
@@ -710,7 +718,7 @@
                         </behavior-instance>
                         <behavior-instance type="Bullet">
                             <properties>
-                                <speed>275</speed>
+                                <speed>540</speed>
                                 <acceleration>0</acceleration>
                                 <gravity>0</gravity>
                                 <bounce-off-solids>No</bounce-off-solids>
@@ -725,11 +733,11 @@
                         <x>755.307495117</x>
                         <y>1742.452148438</y>
                         <z>0</z>
-                        <width>31.378582001</width>
-                        <height>16.316862106</height>
+                        <width>60</width>
+                        <height>34</height>
                         <depth>0</depth>
-                        <hotspotX>0.533333361</hotspotX>
-                        <hotspotY>0.529411793</hotspotY>
+                        <hotspotX>0.466666669</hotspotX>
+                        <hotspotY>0.470588237</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -791,7 +799,7 @@
                         <behavior-instance type="LineOfSight">
                             <properties>
                                 <obstacles>Solids</obstacles>
-                                <range>300</range>
+                                <range>500</range>
                                 <cone-of-view>360</cone-of-view>
                                 <use-collision-cells>Yes</use-collision-cells>
                             </properties>
@@ -873,10 +881,10 @@
                         <behavior-instance type="Pin" />
                         <behavior-instance type="Turret">
                             <properties>
-                                <range>300</range>
+                                <range>500</range>
                                 <rate-of-fire>1</rate-of-fire>
                                 <rotate>Yes</rotate>
-                                <rotate-speed>180</rotate-speed>
+                                <rotate-speed>270</rotate-speed>
                                 <target-mode>First in range</target-mode>
                                 <predictive-aim>No</predictive-aim>
                                 <projectile-speed>500</projectile-speed>
@@ -914,14 +922,22 @@
                     <behavior-instances>
                         <behavior-instance type="Turret">
                             <properties>
-                                <range>1000</range>
+                                <range>450</range>
                                 <rate-of-fire>1</rate-of-fire>
                                 <rotate>Yes</rotate>
                                 <rotate-speed>180</rotate-speed>
                                 <target-mode>Nearest</target-mode>
-                                <predictive-aim>Yes</predictive-aim>
+                                <predictive-aim>No</predictive-aim>
                                 <projectile-speed>500</projectile-speed>
                                 <initial-state>Enabled</initial-state>
+                                <use-collision-cells>Yes</use-collision-cells>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="LineOfSight">
+                            <properties>
+                                <obstacles>Solids</obstacles>
+                                <range>450</range>
+                                <cone-of-view>360</cone-of-view>
                                 <use-collision-cells>Yes</use-collision-cells>
                             </properties>
                         </behavior-instance>
@@ -979,7 +995,7 @@
                     <behavior-instances>
                         <behavior-instance type="Bullet">
                             <properties>
-                                <speed>3000</speed>
+                                <speed>2000</speed>
                                 <acceleration>0</acceleration>
                                 <gravity>0</gravity>
                                 <bounce-off-solids>No</bounce-off-solids>

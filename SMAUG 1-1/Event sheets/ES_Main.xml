@@ -3,10 +3,12 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>ES_Main</name>
     <events>
+        <variable constant="0" name="ROFMOD" sid="209664343625197" static="0" type="number">1</variable>
+        <variable constant="0" name="RANGEMOD" sid="600916251122373" static="0" type="number">1</variable>
         <variable constant="0" name="Life" sid="441775076286705" static="0" type="number">10</variable>
         <variable comment="Munição da pistola" constant="0" name="Pistol_ammo" sid="796144984213042" static="0" type="number">7</variable>
         <comment>COMANDO DE DEBUG PARA FLUTUAR, REMOVER NO FINAL DO DESENVOLVIMENTO</comment>
-        <event-block sid="173305970528910">
+        <event-block disabled="1" sid="173305970528910">
             <conditions>
                 <condition id="2" name="Key is down" sid="905536553705085" type="Keyboard">
                     <param id="0" name="Key">186</param>
@@ -565,6 +567,36 @@
                         <action id="-9" name="Destroy" sid="346936208609715" type="bullet_player" />
                     </actions>
                 </event-block>
+                <event-block any="1" sid="663953265470491">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="168572861475397" type="bullet_player">
+                            <param id="0" name="Object">andar3_operation16</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="989825763471203" type="bullet_player" />
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="621332388385423">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="573568958196090" type="bullet_player">
+                            <param id="0" name="Object">andar3_operation64</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="448154485557437" type="bullet_player" />
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="179579129226227">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="203804197719538" type="bullet_player">
+                            <param id="0" name="Object">andar3_residential_mansion64</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="668780300699451" type="bullet_player" />
+                    </actions>
+                </event-block>
                 <event-block any="1" sid="704728746701564">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="257002897701948" type="bullet_player">
@@ -606,6 +638,36 @@
                         <action id="-9" name="Destroy" sid="304412581172406" type="bullet_enemy" />
                     </actions>
                 </event-block>
+                <event-block sid="757931827807095">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="351162918803029" type="bullet_enemy">
+                            <param id="0" name="Object">andar3_operation16</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="367132172801352" type="bullet_enemy" />
+                    </actions>
+                </event-block>
+                <event-block sid="287339021571784">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="975019825709897" type="bullet_enemy">
+                            <param id="0" name="Object">andar3_operation64</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="176982968574641" type="bullet_enemy" />
+                    </actions>
+                </event-block>
+                <event-block sid="355179407315723">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="495062022543222" type="bullet_enemy">
+                            <param id="0" name="Object">andar3_residential_mansion64</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="626241179918210" type="bullet_enemy" />
+                    </actions>
+                </event-block>
                 <event-block any="1" sid="977781556690355">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="398697535770164" type="bullet_enemy">
@@ -645,6 +707,14 @@
                             <param id="0" name="Width">15</param>
                             <param id="1" name="Height">15</param>
                         </action>
+                        <action id="-9" name="Set value" sid="514133242262311" type="System">
+                            <param id="0" name="Variable">RANGEMOD</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="840890698477017" type="System">
+                            <param id="0" name="Variable">ROFMOD</param>
+                            <param id="1" name="Value">0.5</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="645178702816181">
@@ -660,6 +730,14 @@
                         <action id="-7" name="Set size" sid="823645201218437" type="Aim">
                             <param id="0" name="Width">10</param>
                             <param id="1" name="Height">10</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="138462719651825" type="System">
+                            <param id="0" name="Variable">RANGEMOD</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="116539432473765" type="System">
+                            <param id="0" name="Variable">ROFMOD</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -791,6 +869,9 @@
                         <event-block sid="604271559194613">
                             <conditions>
                                 <condition id="-1" name="Every tick" sid="623097307772426" type="System" />
+                                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="272730511479633" type="Enemy_1">
+                                    <param id="0" name="Object">Player</param>
+                                </condition>
                                 <condition id="-8" name="Compare two values" sid="801392979231745" type="System">
                                     <param id="0" name="First value">Enemy_1.faccao</param>
                                     <param id="1" name="Comparison">1</param>
@@ -873,6 +954,21 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="826419259292793">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="446251387223985" type="Enemy_2">
+                                    <param id="0" name="Instance variable">faccao</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">Player.faccao</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="781002924597841" type="Enemy_2">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="795716231232129">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="727707378727504" type="Enemy_2">
@@ -888,9 +984,6 @@
                                 <action behavior="Bullet" id="5" name="Set enabled" sid="479795306750147" type="Enemy_2">
                                     <param id="0" name="State">0</param>
                                 </action>
-                                <action id="5" name="Set frame" sid="340895687484206" type="Enemy_2">
-                                    <param id="0" name="Frame number">0</param>
-                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="136570814197378">
@@ -902,19 +995,21 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="Bullet" id="5" name="Set enabled" sid="360126427418356" type="Enemy_2">
-                                    <param id="0" name="State">1</param>
-                                </action>
                                 <action behavior="Sine" id="0" name="Set active" sid="679793476802509" type="Enemy_2">
                                     <param id="0" name="State">0</param>
                                 </action>
-                                <action id="-21" name="Rotate toward position" sid="890881045281701" type="Enemy_2">
-                                    <param id="0" name="Degrees">10</param>
-                                    <param id="1" name="X">Player.X</param>
-                                    <param id="2" name="Y">Player.Y</param>
-                                </action>
-                                <action id="5" name="Set frame" sid="575449497585123" type="Enemy_2">
+                                <action id="5" name="Set frame" sid="391587079948038" type="Enemy_2">
                                     <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action id="-22" name="Set angle toward position" sid="890881045281701" type="Enemy_2">
+                                    <param id="0" name="X">Player.X</param>
+                                    <param id="1" name="Y">Player.Y</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="223440018683305" type="System">
+                                    <param id="0" name="Seconds">0.3</param>
+                                </action>
+                                <action behavior="Bullet" id="5" name="Set enabled" sid="360126427418356" type="Enemy_2">
+                                    <param id="0" name="State">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -961,6 +1056,66 @@
                                     <param id="0" name="Variable">Life</param>
                                     <param id="1" name="Value">2</param>
                                 </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="417138962470185">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="297423177912724" type="Enemy_2">
+                                    <param id="0" name="Object">Andar3_Tiles1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="376850284065809" type="Enemy_2" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="739016995401854">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="620328155278320" type="Enemy_2">
+                                    <param id="0" name="Object">andar3_operation16</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="295570053556126" type="Enemy_2" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="631762553341951">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="203013172228809" type="Enemy_2">
+                                    <param id="0" name="Object">andar3_operation64</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="178475651686292" type="Enemy_2" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="704606309706001">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="691855871326250" type="Enemy_2">
+                                    <param id="0" name="Object">andar3_residential_mansion64</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="481998889288381" type="Enemy_2" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="900722628144575">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="829618056682222" type="Enemy_2">
+                                    <param id="0" name="Object">Andar3_terrainPlatform</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="564801333232111" type="Enemy_2" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="399993590062498">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="168336094659112" type="Enemy_2">
+                                    <param id="0" name="Object">covr_crate</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="549604259623081" type="Enemy_2" />
                             </actions>
                         </event-block>
                     </sub-events>
@@ -1052,8 +1207,8 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="7" name="Set mirrored" sid="620724621168836" type="Enemy_4">
-                                    <param id="0" name="State">1</param>
+                                <action id="7" name="Set mirrored" sid="303600168260806" type="Enemy_4">
+                                    <param id="0" name="State">0</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1616,6 +1771,41 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" disabled="1" sid="993253897303443" title="RANGE/ROFMOD">
+            <sub-events>
+                <event-block sid="737968624497567">
+                    <conditions>
+                        <condition id="0" name="On click" sid="807406751530903" type="Mouse">
+                            <param id="0" name="Mouse button">2</param>
+                            <param id="1" name="Click type">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="LineOfSight" id="0" name="Set range" sid="331146805266086" type="Enemy_1">
+                            <param id="0" name="Range">450 * RANGEMOD</param>
+                        </action>
+                        <action behavior="Turret" id="6" name="Set range" sid="660340178576629" type="Enemy_1">
+                            <param id="0" name="Range">450*RANGEMOD</param>
+                        </action>
+                        <action behavior="Turret" id="7" name="Set rate of fire" sid="152274009160515" type="Enemy_1">
+                            <param id="0" name="Rate of fire">1*ROFMOD</param>
+                        </action>
+                        <action behavior="LineOfSight" id="0" name="Set range" sid="871962173753830" type="Enemy_4">
+                            <param id="0" name="Range">500 * RANGEMOD</param>
+                        </action>
+                        <action behavior="Turret" id="6" name="Set range" sid="309842027831643" type="Enemy_Arm">
+                            <param id="0" name="Range">1*RANGEMOD</param>
+                        </action>
+                        <action behavior="Turret" id="7" name="Set rate of fire" sid="238411149144693" type="Enemy_Arm">
+                            <param id="0" name="Rate of fire">1*ROFMOD</param>
+                        </action>
+                        <action behavior="LineOfSight" id="0" name="Set range" sid="714303060795131" type="Enemy_2">
+                            <param id="0" name="Range">300 * RANGEMOD</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
