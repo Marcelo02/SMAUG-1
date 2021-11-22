@@ -261,14 +261,10 @@
                     <animation framecount="1" loop="0" name="Deslizando" pingpong="0" repeatcount="1" repeatto="0" sid="557531308871757" speed="5">
                         <frame duration="1" hotspotX="0.533333" hotspotY="0.25" original-source="D:\W10SSD-Energumeno\Documents\GOONGIT\smaug-1\SMAUG-1\SMAUG 1-1\Animations\Player\Default\002.png">
                             <collision-poly>
-                                <point x="0.0333333" y="0.0416667" />
-                                <point x="0.566667" y="0.0416667" />
-                                <point x="0.566667" y="0.458333" />
-                                <point x="0.966667" y="0.458333" />
+                                <point x="0.966667" y="0.791666" />
                                 <point x="0.966667" y="0.958333" />
-                                <point x="0.5" y="0.958333" />
                                 <point x="0.0333333" y="0.958333" />
-                                <point x="0.0333333" y="0.5" />
+                                <point x="0.0333333" y="0.791667" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -454,6 +450,10 @@
                         <behavior id="LOS" />
                     </behavior-type>
                 </behaviors>
+                <container>
+                    <type>Enemy_4</type>
+                    <type>Enemy_Arm</type>
+                </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="914723938692249" speed="5">
                         <frame duration="1" hotspotX="0.52381" hotspotY="0.5">
@@ -489,6 +489,10 @@
                         <behavior id="Turret" />
                     </behavior-type>
                 </behaviors>
+                <container>
+                    <type>Enemy_4</type>
+                    <type>Enemy_Arm</type>
+                </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="379200796735014" speed="5">
                         <frame duration="1" hotspotX="0" hotspotY="0.5" />
@@ -888,16 +892,14 @@
                     <tile id="3">
                         <collision-poly>
                             <point x="0" y="0" />
-                            <point x="0.580078" y="0.492188" />
                             <point x="1" y="1" />
                             <point x="0" y="1" />
                         </collision-poly>
                     </tile>
                     <tile id="4">
                         <collision-poly>
-                            <point x="0" y="0.755859" />
-                            <point x="0.578125" y="0.511719" />
-                            <point x="1" y="0.355469" />
+                            <point x="0" y="0.75" />
+                            <point x="1" y="0.375" />
                             <point x="1" y="1" />
                             <point x="0" y="1" />
                         </collision-poly>
@@ -920,20 +922,17 @@
                     </tile>
                     <tile id="7">
                         <collision-poly>
-                            <point x="0" y="0.363281" />
-                            <point x="0.488281" y="0.533203" />
-                            <point x="1" y="0.757813" />
+                            <point x="0" y="0.375" />
+                            <point x="1" y="0.75" />
                             <point x="1" y="1" />
                             <point x="0" y="1" />
                         </collision-poly>
                     </tile>
                     <tile id="8">
                         <collision-poly>
-                            <point x="0.796875" y="0.761719" />
                             <point x="1" y="0.753906" />
                             <point x="1" y="1" />
                             <point x="0" y="1" />
-                            <point x="0.197266" y="0.871094" />
                         </collision-poly>
                     </tile>
                     <tile id="9">
@@ -954,16 +953,16 @@
                     </tile>
                     <tile id="11">
                         <collision-poly>
-                            <point x="0" y="0.757813" />
-                            <point x="1" y="0.9375" />
+                            <point x="0" y="0.75" />
                             <point x="1" y="1" />
                             <point x="0" y="1" />
                         </collision-poly>
                     </tile>
                     <tile id="12">
                         <collision-poly>
-                            <point x="0" y="0.388672" />
-                            <point x="1" y="0.0566406" />
+                            <point x="0" y="0.375" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.52832" />
                             <point x="1" y="1" />
                             <point x="0" y="1" />
                         </collision-poly>
@@ -972,8 +971,6 @@
                         <collision-poly>
                             <point x="0" y="0" />
                             <point x="1" y="0" />
-                            <point x="0.851563" y="0.203125" />
-                            <point x="0.355469" y="0.765625" />
                             <point x="0" y="1" />
                         </collision-poly>
                     </tile>
@@ -988,9 +985,8 @@
                     </tile>
                     <tile id="15">
                         <collision-poly>
-                            <point x="0" y="0.0585938" />
-                            <point x="0.539063" y="0.205078" />
-                            <point x="1" y="0.378906" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0.375" />
                             <point x="1" y="1" />
                             <point x="0" y="1" />
                         </collision-poly>
@@ -2645,6 +2641,9 @@
             </object-type>
             <object-type name="Interactionbox" sid="324326860774000">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable comment="0=teste 1=elevator 2=opendoor to ronaldo 3=opendoor to sewer 4= opendoor to mansion" name="PressE_Function" sid="763173114392769" type="number" />
+                </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="656078434549046" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -3088,11 +3087,6 @@
         </object-type>
         <object-type name="elevator_debug" sid="132053200704265">
             <plugin id="Text" />
-        </object-type>
-        <object-type name="Tilemap" sid="482843747468034">
-            <plugin id="Tilemap" />
-            <texture />
-            <tiles />
         </object-type>
         <object-type name="TASKSTATE" sid="889192785690239">
             <plugin id="Sprite" />

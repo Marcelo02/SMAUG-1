@@ -3,8 +3,6 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>ES_Main</name>
     <events>
-        <variable constant="0" name="ROFMOD" sid="209664343625197" static="0" type="number">1</variable>
-        <variable constant="0" name="RANGEMOD" sid="600916251122373" static="0" type="number">1</variable>
         <variable constant="0" name="Life" sid="441775076286705" static="0" type="number">10</variable>
         <variable comment="Munição da pistola" constant="0" name="Pistol_ammo" sid="796144984213042" static="0" type="number">7</variable>
         <comment>COMANDO DE DEBUG PARA FLUTUAR, REMOVER NO FINAL DO DESENVOLVIMENTO</comment>
@@ -707,14 +705,6 @@
                             <param id="0" name="Width">15</param>
                             <param id="1" name="Height">15</param>
                         </action>
-                        <action id="-9" name="Set value" sid="514133242262311" type="System">
-                            <param id="0" name="Variable">RANGEMOD</param>
-                            <param id="1" name="Value">2</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="840890698477017" type="System">
-                            <param id="0" name="Variable">ROFMOD</param>
-                            <param id="1" name="Value">0.5</param>
-                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="645178702816181">
@@ -730,14 +720,6 @@
                         <action id="-7" name="Set size" sid="823645201218437" type="Aim">
                             <param id="0" name="Width">10</param>
                             <param id="1" name="Height">10</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="138462719651825" type="System">
-                            <param id="0" name="Variable">RANGEMOD</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="116539432473765" type="System">
-                            <param id="0" name="Variable">ROFMOD</param>
-                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -787,7 +769,7 @@
                                     <param id="1" name="Value">1</param>
                                 </action>
                                 <action behavior="Reloading" id="0" name="Start timer" sid="737339500663347" type="Player">
-                                    <param id="0" name="Duration">2.5</param>
+                                    <param id="0" name="Duration">1.2</param>
                                     <param id="1" name="Type">0</param>
                                     <param id="2" name="Tag">&quot;reloading&quot;</param>
                                 </action>
@@ -826,7 +808,7 @@
                             </conditions>
                             <actions>
                                 <action id="-5" name="Set width" sid="974870387780370" type="reloadbar">
-                                    <param id="0" name="Width">reloadbar.Width+12*dt</param>
+                                    <param id="0" name="Width">reloadbar.Width+24*dt</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1025,6 +1007,15 @@
                                     <param id="1" name="Value">1</param>
                                 </action>
                                 <action id="-9" name="Destroy" sid="776121498532852" type="bullet_player" />
+                                <action behavior="LineOfSight" id="0" name="Set range" sid="101759992125766" type="Enemy_2">
+                                    <param id="0" name="Range">1000</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="185380970416725" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action behavior="LineOfSight" id="0" name="Set range" sid="905902464767895" type="Enemy_2">
+                                    <param id="0" name="Range">300</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="324242708445914">
@@ -1289,6 +1280,17 @@
                             </actions>
                         </event-block>
                         <comment>Mudança para modo de ataque</comment>
+                        <event-block sid="920334521763202">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="556724089813059" type="Enemy_4" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="887732959184139" type="Enemy_Arm">
+                                    <param id="0" name="Pin to">Enemy_4</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="614912649418857">
                             <conditions>
                                 <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="123774270847094" type="Enemy_4">
@@ -1311,17 +1313,8 @@
                                     <param id="0" name="Instance variable">Atacando</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="0" name="Spawn another object" sid="691402722825399" type="Enemy_4">
-                                    <param id="0" name="Object">Enemy_Arm</param>
-                                    <param id="1" name="Layer">4</param>
-                                    <param id="2" name="Image point">0</param>
-                                </action>
-                                <action behavior="Pin" id="0" name="Pin to object" sid="887732959184139" type="Enemy_Arm">
-                                    <param id="0" name="Pin to">Enemy_Arm</param>
-                                    <param id="1" name="Mode">1</param>
-                                </action>
-                                <action behavior="LineOfSight" id="1" name="Set cone of view" sid="361479966627870" type="Enemy_4">
-                                    <param id="0" name="Cone of view">0</param>
+                                <action id="-15" name="Set visible" sid="381401417378680" type="Enemy_Arm">
+                                    <param id="0" name="Visibility">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1382,6 +1375,26 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
+                        <event-block sid="697565714995272">
+                            <conditions>
+                                <condition behavior="LineOfSight" id="0" inverted="1" name="Has LOS to object" sid="440329955891621" type="Enemy_4">
+                                    <param id="0" name="Object">Player</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Turret" id="2" name="Clear targets" sid="639217624063780" type="Enemy_Arm" />
+                                <action id="-15" name="Set visible" sid="887213726287073" type="Enemy_Arm">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="644735029537609" type="Enemy_4">
+                                    <param id="0" name="Instance variable">Atacando</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="921870370856538" type="Enemy_Arm">
+                                    <param id="0" name="Angle">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="400107237429923">
                             <conditions>
                                 <condition behavior="Turret" id="1" name="On shoot" sid="791131929103164" type="Enemy_Arm" />
@@ -1391,6 +1404,70 @@
                                     <param id="0" name="Object">bullet_enemy</param>
                                     <param id="1" name="Layer">4</param>
                                     <param id="2" name="Image point">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="933794979692629">
+                            <conditions>
+                                <condition id="-19" name="On destroyed" sid="734605005048956" type="Player" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="536479590409347" type="Enemy_4">
+                                    <param id="0" name="Instance variable">Atacando</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="879045046680477">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="912711048054570" type="Enemy_4">
+                                    <param id="0" name="Instance variable">Atacando</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Turret" id="2" name="Clear targets" sid="578324283042925" type="Enemy_Arm" />
+                                <action id="-15" name="Set visible" sid="683514104429516" type="Enemy_Arm">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="882237455482782">
+                                    <conditions>
+                                        <condition id="7" inverted="1" name="Is mirrored" sid="979219437123534" type="Enemy_4" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="967077499604802" type="Enemy_4">
+                                            <param id="0" name="Control">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="617551079010318">
+                                    <conditions>
+                                        <condition id="7" name="Is mirrored" sid="927335514391219" type="Enemy_4" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="194971735464544" type="Enemy_4">
+                                            <param id="0" name="Control">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="428612414766849">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="491438654865036" type="Enemy_4">
+                                    <param id="0" name="Instance variable">Atacando</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-9" inverted="1" name="Is visible" sid="315385452445295" type="Player" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="655134915381069" type="Enemy_4">
+                                    <param id="0" name="Instance variable">Atacando</param>
+                                    <param id="1" name="Value">2</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1456,6 +1533,9 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action behavior="LineOfSight" id="0" name="Set range" sid="731785936624519" type="Enemy_4">
+                                    <param id="0" name="Range">1000</param>
+                                </action>
                                 <action id="-12" name="Subtract from" sid="318852394022649" type="Enemy_4">
                                     <param id="0" name="Instance variable">Life</param>
                                     <param id="1" name="Value">1</param>
@@ -1473,7 +1553,7 @@
                             </conditions>
                             <actions>
                                 <action id="-9" name="Destroy" sid="588031585977986" type="Enemy_4" />
-                                <action id="-9" name="Destroy" sid="238102190374816" type="Enemy_Arm" />
+                                <action id="-9" name="Destroy" sid="926991616599895" type="Enemy_Arm" />
                             </actions>
                         </event-block>
                     </sub-events>
@@ -1536,7 +1616,7 @@
             </conditions>
             <actions>
                 <action id="0" name="Set text" sid="132233518124329" type="DEBUG">
-                    <param id="0" name="Text">&quot;Sprint: &quot;&amp;Player.Correndo&amp;&quot;  Crouch: &quot;&amp;Player.Agachando&amp;&quot; Slide: &quot;&amp;Player.Deslizando&amp;&quot;  MSpeedP: &quot;&amp;Player.Platform.MaxSpeed&amp;&quot; SpeedP: &quot;&amp;Player.Platform.Speed&amp;&quot;  MSpeed8D: &quot;&amp;Player.8Direction.MaxSpeed&amp;&quot; Speed8D: &quot;&amp;Player.8Direction.Speed</param>
+                    <param id="0" name="Text">&quot;Sprint: &quot;&amp;Player.Correndo&amp;&quot;  Crouch: &quot;&amp;Player.Agachando&amp;&quot; Slide: &quot;&amp;Player.Deslizando&amp;&quot;  MSpeedP: &quot;&amp;Player.Platform.MaxSpeed&amp;&quot; SpeedP: &quot;&amp;Player.Platform.Speed&amp;&quot;  MSpeed8D: &quot;&amp;Player.8Direction.MaxSpeed&amp;&quot; Speed8D: &quot;&amp;Player.8Direction.Speed&amp;&quot; faccao: &quot;&amp;Player.faccao</param>
                 </action>
             </actions>
         </event-block>
@@ -1771,41 +1851,6 @@
                             </actions>
                         </event-block>
                     </sub-events>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="" disabled="1" sid="993253897303443" title="RANGE/ROFMOD">
-            <sub-events>
-                <event-block sid="737968624497567">
-                    <conditions>
-                        <condition id="0" name="On click" sid="807406751530903" type="Mouse">
-                            <param id="0" name="Mouse button">2</param>
-                            <param id="1" name="Click type">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="LineOfSight" id="0" name="Set range" sid="331146805266086" type="Enemy_1">
-                            <param id="0" name="Range">450 * RANGEMOD</param>
-                        </action>
-                        <action behavior="Turret" id="6" name="Set range" sid="660340178576629" type="Enemy_1">
-                            <param id="0" name="Range">450*RANGEMOD</param>
-                        </action>
-                        <action behavior="Turret" id="7" name="Set rate of fire" sid="152274009160515" type="Enemy_1">
-                            <param id="0" name="Rate of fire">1*ROFMOD</param>
-                        </action>
-                        <action behavior="LineOfSight" id="0" name="Set range" sid="871962173753830" type="Enemy_4">
-                            <param id="0" name="Range">500 * RANGEMOD</param>
-                        </action>
-                        <action behavior="Turret" id="6" name="Set range" sid="309842027831643" type="Enemy_Arm">
-                            <param id="0" name="Range">1*RANGEMOD</param>
-                        </action>
-                        <action behavior="Turret" id="7" name="Set rate of fire" sid="238411149144693" type="Enemy_Arm">
-                            <param id="0" name="Rate of fire">1*ROFMOD</param>
-                        </action>
-                        <action behavior="LineOfSight" id="0" name="Set range" sid="714303060795131" type="Enemy_2">
-                            <param id="0" name="Range">300 * RANGEMOD</param>
-                        </action>
-                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
