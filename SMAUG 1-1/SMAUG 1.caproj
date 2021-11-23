@@ -630,7 +630,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="660277358144610" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.503" original-source="C:\Users\gabriel_local\Downloads\sky_BG3.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.503" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\andar3_skybg.png">
                             <collision-poly>
                                 <point x="0.386667" y="0.297436" />
                                 <point x="0.5" y="0.0846154" />
@@ -1060,7 +1060,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="466131842641663" speed="5">
-                        <frame duration="1" hotspotX="0.501" hotspotY="0.5" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\sky_BG3.png" />
+                        <frame duration="1" hotspotX="0.501" hotspotY="0.5" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\andar3_skybg.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1068,7 +1068,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="469770644974107" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\line_BG2.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\andar3_bg.png">
                             <collision-poly>
                                 <point x="0.222" y="0.569231" />
                                 <point x="0.5" y="0.776923" />
@@ -3159,7 +3159,7 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="361604089991384" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Marcelo\Desktop\SMAUG\Artes\ateoi_covertower.png">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\ateoi_toweronly.png">
                         <collision-poly>
                             <point x="0.2725" y="0.176566" />
                             <point x="0.5" y="0.426026" />
