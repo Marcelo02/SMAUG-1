@@ -48,7 +48,7 @@
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
-    <first-layout>L_Menu</first-layout>
+    <first-layout>L_Intro</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -121,8 +121,8 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\boolet.png">
                             <collision-poly>
                                 <point x="0.5" y="0" />
-                                <point x="0.979167" y="0.5" />
-                                <point x="0.979167" y="0.5" />
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
                                 <point x="0.5" y="1" />
                                 <point x="0.322917" y="0.5" />
                             </collision-poly>
@@ -142,8 +142,8 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\boolet.png">
                             <collision-poly>
                                 <point x="0.5" y="0" />
-                                <point x="0.979167" y="0.5" />
-                                <point x="0.979167" y="0.5" />
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
                                 <point x="0.5" y="1" />
                                 <point x="0.322917" y="0.5" />
                             </collision-poly>
@@ -438,6 +438,7 @@
                     <instance-variable name="Atacando" sid="368639267162695" type="number" />
                     <instance-variable name="Life" sid="509103160525295" type="number" />
                     <instance-variable comment="0=Karla, 1=Sinistro, 2=Maldolaire" name="faccao" sid="221563738667952" type="number" />
+                    <instance-variable comment="0=left 1=right 2=standingleft 3=standingright" name="goingwhere" sid="770708211320566" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Platform" sid="630640943218123">
@@ -461,7 +462,6 @@
                                 <point x="0.047619" y="0.0277778" />
                                 <point x="0.952381" y="0.0277778" />
                                 <point x="0.952381" y="0.972222" />
-                                <point x="0.47619" y="0.861111" />
                                 <point x="0.047619" y="0.972222" />
                             </collision-poly>
                         </frame>
@@ -472,6 +472,7 @@
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="ID" sid="539052566764154" type="string" />
+                    <instance-variable comment="0=left 1=right" name="whereto" sid="796409749685846" type="number" />
                 </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="729259214730971" speed="5">
@@ -594,6 +595,17 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="helth" sid="317997261049544">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="615758523924130" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="text_teclas" sid="457746219500680">
+                <plugin id="Text" />
+            </object-type>
         </object-folder>
         <object-folder name="Menu">
             <object-type name="OpçaoMenu" sid="781360183141348">
@@ -667,6 +679,42 @@
                                 <point x="0.8625" y="0.04375" />
                                 <point x="0.843751" y="0.18125" />
                                 <point x="0.0625001" y="0.18125" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="keyboard_sprite" sid="869359398699767">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="158457738491318" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.505155" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\key.png">
+                            <collision-poly>
+                                <point x="0.041958" y="0.0906344" />
+                                <point x="0.958042" y="0.0906344" />
+                                <point x="0.984615" y="0.498489" />
+                                <point x="0.953846" y="0.900302" />
+                                <point x="0.0461538" y="0.900302" />
+                                <point x="0.0167832" y="0.498489" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="maus" sid="302251506964804">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="249073580986564" speed="5">
+                        <frame duration="1" hotspotX="0.503546" hotspotY="0.502513" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\maus.png">
+                            <collision-poly>
+                                <point x="0.315" y="0.223404" />
+                                <point x="0.5" y="0.0992908" />
+                                <point x="0.685" y="0.223404" />
+                                <point x="0.78" y="0.5" />
+                                <point x="0.735" y="0.812057" />
+                                <point x="0.5" y="0.900709" />
+                                <point x="0.27" y="0.808511" />
+                                <point x="0.225" y="0.5" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -1447,28 +1495,28 @@
                     <tile id="64">
                         <collision-poly>
                             <point x="0" y="0" />
-                            <point x="1" y="0.515625" />
+                            <point x="1" y="0.5" />
                             <point x="1" y="1" />
                             <point x="0" y="1" />
                         </collision-poly>
                     </tile>
                     <tile id="65">
                         <collision-poly>
-                            <point x="0" y="0.515625" />
+                            <point x="0" y="0.5" />
                             <point x="1" y="1" />
                             <point x="0" y="1" />
                         </collision-poly>
                     </tile>
                     <tile id="66">
                         <collision-poly>
-                            <point x="1" y="0.484375" />
+                            <point x="1" y="0.5" />
                             <point x="1" y="1" />
                             <point x="0" y="1" />
                         </collision-poly>
                     </tile>
                     <tile id="67">
                         <collision-poly>
-                            <point x="0.015625" y="0.484375" />
+                            <point x="0.015625" y="0.5" />
                             <point x="1" y="0" />
                             <point x="1" y="1" />
                             <point x="0" y="1" />
@@ -1494,15 +1542,15 @@
                     <tile id="80">
                         <collision-poly>
                             <point x="0" y="0" />
-                            <point x="1" y="0.359375" />
+                            <point x="1" y="0.3125" />
                             <point x="1" y="1" />
                             <point x="0" y="1" />
                         </collision-poly>
                     </tile>
                     <tile id="81">
                         <collision-poly>
-                            <point x="0" y="0.28125" />
-                            <point x="1" y="0.59375" />
+                            <point x="0" y="0.3125" />
+                            <point x="1" y="0.625" />
                             <point x="1" y="1" />
                             <point x="0" y="1" />
                         </collision-poly>
@@ -1523,15 +1571,15 @@
                     </tile>
                     <tile id="84">
                         <collision-poly>
-                            <point x="0" y="0.65625" />
-                            <point x="1" y="0.296875" />
+                            <point x="0" y="0.625" />
+                            <point x="1" y="0.3125" />
                             <point x="1" y="1" />
                             <point x="0" y="1" />
                         </collision-poly>
                     </tile>
                     <tile id="85">
                         <collision-poly>
-                            <point x="0" y="0.296875" />
+                            <point x="0" y="0.3125" />
                             <point x="1" y="0" />
                             <point x="1" y="1" />
                             <point x="0" y="1" />
@@ -1540,23 +1588,23 @@
                     <tile id="96">
                         <collision-poly>
                             <point x="0" y="0" />
-                            <point x="1" y="0.140625" />
+                            <point x="1" y="0.1875" />
                             <point x="1" y="1" />
                             <point x="0" y="1" />
                         </collision-poly>
                     </tile>
                     <tile id="97">
                         <collision-poly>
-                            <point x="0" y="0.234375" />
-                            <point x="1" y="0.453125" />
+                            <point x="0" y="0.1875" />
+                            <point x="1" y="0.5" />
                             <point x="1" y="1" />
                             <point x="0" y="1" />
                         </collision-poly>
                     </tile>
                     <tile id="98">
                         <collision-poly>
-                            <point x="0" y="0.515625" />
-                            <point x="1" y="0.703125" />
+                            <point x="0" y="0.5" />
+                            <point x="1" y="0.75" />
                             <point x="1" y="1" />
                             <point x="0" y="1" />
                         </collision-poly>
@@ -1570,30 +1618,30 @@
                     </tile>
                     <tile id="100">
                         <collision-poly>
-                            <point x="1" y="0.703125" />
+                            <point x="1" y="0.75" />
                             <point x="1" y="1" />
                             <point x="0" y="1" />
                         </collision-poly>
                     </tile>
                     <tile id="101">
                         <collision-poly>
-                            <point x="0" y="0.703125" />
-                            <point x="1" y="0.453125" />
+                            <point x="0" y="0.75" />
+                            <point x="1" y="0.5" />
                             <point x="1" y="1" />
                             <point x="0" y="1" />
                         </collision-poly>
                     </tile>
                     <tile id="102">
                         <collision-poly>
-                            <point x="0" y="0.453125" />
-                            <point x="1" y="0.21875" />
+                            <point x="0" y="0.5" />
+                            <point x="1" y="0.25" />
                             <point x="1" y="1" />
                             <point x="0" y="1" />
                         </collision-poly>
                     </tile>
                     <tile id="103">
                         <collision-poly>
-                            <point x="0" y="0.21875" />
+                            <point x="0" y="0.25" />
                             <point x="1" y="0" />
                             <point x="1" y="1" />
                             <point x="0" y="1" />
@@ -3040,6 +3088,22 @@
                 </animation-folder>
             </object-type>
         </object-folder>
+        <object-folder name="Intro">
+            <object-type name="IntroText" sid="622879006526249">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="IntroText2" sid="307817009757120">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="Tower" sid="488547766991115">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="167069290343817" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\ateoi_towerintro.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
         <object-type name="Mouse" sid="769142461874338">
             <plugin id="Mouse" />
         </object-type>
@@ -3064,14 +3128,6 @@
                     </frame>
                 </animation>
             </animation-folder>
-        </object-type>
-        <object-type name="SpriteFont" sid="516516618267488">
-            <plugin id="Spritefont2" />
-            <texture />
-        </object-type>
-        <object-type name="SpriteFont2" sid="606809001159170">
-            <plugin id="Spritefont2" />
-            <texture />
         </object-type>
         <object-type name="show_press_e" sid="887299648304240">
             <plugin id="Text" />
@@ -3135,6 +3191,23 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="milenio" sid="925572069977535">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="Text2" sid="712745691232755">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Andar3_OperationProps" sid="652276195647866">
+            <plugin id="Tilemap" />
+            <texture original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\LDTK_FILE\tiles7_ogalab.png" />
+            <tiles />
+        </object-type>
+        <object-type name="Andar3_OperationProps2" sid="682205652950611">
+            <plugin id="Tilemap" />
+            <texture original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\LDTK_FILE\tiles7_ogalab.png" />
+            <tiles />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -3142,12 +3215,14 @@
         <layout>L_Teste.xml</layout>
         <layout>L_MenuTeclas.xml</layout>
         <layout>L_Andar3.xml</layout>
+        <layout>L_Intro.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>ES_Main.xml</event-sheet>
         <event-sheet>ES_Menu.xml</event-sheet>
         <event-sheet>ES_MenuTeclas.xml</event-sheet>
         <event-sheet>ES_Andar3.xml</event-sheet>
+        <event-sheet>ES_Intro.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="6" />

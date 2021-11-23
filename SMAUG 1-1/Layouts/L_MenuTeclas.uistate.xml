@@ -4,17 +4,17 @@
 It is entirely optional and the project will load without it.  If you are placing the project under source control,
 you probably do not want to add any .uistate.xml files to the repository.-->
     <camera>
-        <position-x>427</position-x>
-        <position-y>289.913</position-y>
-        <position-z>100</position-z>
-        <lookat-x>427</lookat-x>
-        <lookat-y>289.913</lookat-y>
+        <position-x>457.887</position-x>
+        <position-y>202.047</position-y>
+        <position-z>59.5682</position-z>
+        <lookat-x>457.887</lookat-x>
+        <lookat-y>202.047</lookat-y>
         <lookat-z>0</lookat-z>
     </camera>
     <snap-to-grid>1</snap-to-grid>
-    <show-grid>1</show-grid>
-    <snap-width>32</snap-width>
-    <snap-height>32</snap-height>
+    <show-grid>0</show-grid>
+    <snap-width>1</snap-width>
+    <snap-height>1</snap-height>
     <show-collision-polys>0</show-collision-polys>
     <translucent-inactive-layers>0</translucent-inactive-layers>
     <properties>
@@ -23,10 +23,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="0" name="Margins" />
         <property expanded="1" name="Effects" />
     </properties>
-    <active-layer name="fundo" />
+    <active-layer name="descrições" />
     <layers>
-        <layer locked="1" name="fundo" parallax-in-editor="0" visible="1" />
-        <layer locked="1" name="tabela" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="fundo" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="tabela" parallax-in-editor="0" visible="1" />
         <layer locked="0" name="descrições" parallax-in-editor="0" visible="1" />
     </layers>
 </c2uistate>

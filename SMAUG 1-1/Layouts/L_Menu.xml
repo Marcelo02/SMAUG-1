@@ -39,11 +39,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>400.002441406</x>
-                        <y>227.059814453</y>
+                        <x>399</x>
+                        <y>227.509002686</y>
                         <z>0</z>
-                        <width>800</width>
-                        <height>450</height>
+                        <width>802</width>
+                        <height>453</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.503000021</hotspotY>
@@ -145,8 +145,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>20</x>
-                        <y>58</y>
+                        <x>26</x>
+                        <y>180</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>
@@ -169,7 +169,7 @@
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
                         <wrapping>Word</wrapping>
-                        <character-spacing>-2</character-spacing>
+                        <character-spacing>-3</character-spacing>
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
@@ -186,7 +186,7 @@
                                 <period-random>0</period-random>
                                 <period-offset>0</period-offset>
                                 <period-offset-random>0</period-offset-random>
-                                <magnitude>20</magnitude>
+                                <magnitude>8</magnitude>
                                 <magnitude-random>0</magnitude-random>
                             </properties>
                         </behavior-instance>
@@ -201,10 +201,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>120</x>
-                        <y>61.205001831</y>
+                        <x>126</x>
+                        <y>180</y>
                         <z>0</z>
-                        <width>160</width>
+                        <width>152</width>
                         <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -218,14 +218,14 @@
                         <character-width>16</character-width>
                         <character-height>16</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
-                        <text>Teclas</text>
+                        <text>Como Jogar</text>
                         <scale>2</scale>
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
                         <wrapping>Word</wrapping>
-                        <character-spacing>-2</character-spacing>
+                        <character-spacing>-3</character-spacing>
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
@@ -242,7 +242,7 @@
                                 <period-random>0</period-random>
                                 <period-offset>0</period-offset>
                                 <period-offset-random>0</period-offset-random>
-                                <magnitude>20</magnitude>
+                                <magnitude>8</magnitude>
                                 <magnitude-random>0</magnitude-random>
                             </properties>
                         </behavior-instance>
@@ -257,10 +257,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>135</x>
-                        <y>229</y>
+                        <x>198</x>
+                        <y>220</y>
                         <z>0</z>
-                        <width>190</width>
+                        <width>296</width>
                         <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -274,14 +274,14 @@
                         <character-width>16</character-width>
                         <character-height>16</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
-                        <text>Sair</text>
+                        <text>Fechar</text>
                         <scale>2</scale>
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Left</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
                         <wrapping>Word</wrapping>
-                        <character-spacing>-2</character-spacing>
+                        <character-spacing>-3</character-spacing>
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
@@ -298,7 +298,7 @@
                                 <period-random>0</period-random>
                                 <period-offset>0</period-offset>
                                 <period-offset-random>0</period-offset-random>
-                                <magnitude>20</magnitude>
+                                <magnitude>8</magnitude>
                                 <magnitude-random>0</magnitude-random>
                             </properties>
                         </behavior-instance>
@@ -313,10 +313,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>105</x>
-                        <y>390</y>
+                        <x>146</x>
+                        <y>260</y>
                         <z>0</z>
-                        <width>130</width>
+                        <width>192</width>
                         <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
