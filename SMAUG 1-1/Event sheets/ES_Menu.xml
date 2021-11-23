@@ -122,7 +122,7 @@
                     </conditions>
                     <actions>
                         <action id="-2" name="Go to layout" sid="977714435836044" type="System">
-                            <param id="0" name="Layout">L_Teste</param>
+                            <param id="0" name="Layout">L_Andar3</param>
                         </action>
                     </actions>
                 </event-block>

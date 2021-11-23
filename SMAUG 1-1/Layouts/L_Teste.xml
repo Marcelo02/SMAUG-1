@@ -411,7 +411,7 @@
                         <y>1874.612426758</y>
                         <z>0</z>
                         <width>96</width>
-                        <height>4</height>
+                        <height>6</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -779,6 +779,7 @@
                         <Atacando>0</Atacando>
                         <Life>3</Life>
                         <faccao>0</faccao>
+                        <goingwhere>0</goingwhere>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -822,13 +823,14 @@
                 </instance>
                 <instance type="Pivot_Point" uid="71">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
                         <ID>Right</ID>
+                        <whereto>0</whereto>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -847,13 +849,14 @@
                 </instance>
                 <instance type="Pivot_Point" uid="72">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
                         <ID>Left</ID>
+                        <whereto>0</whereto>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1011,7 +1014,7 @@
                         <y>1888</y>
                         <z>0</z>
                         <width>96</width>
-                        <height>4</height>
+                        <height>6</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>

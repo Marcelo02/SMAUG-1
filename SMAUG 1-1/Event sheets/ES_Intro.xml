@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ES_Intro</name>
+    <events>
+        <event-block sid="345824312685839">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="908352365629983" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="521837638791594" type="System">
+                    <param id="0" name="Seconds">5</param>
+                </action>
+                <action id="-15" name="Set visible" sid="577252975781921" type="text_teclas">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="230364095029535">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="438881178032894" type="Keyboard">
+                    <param id="0" name="Key">69</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="620048739253923" type="System">
+                    <param id="0" name="Layout">L_Menu</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
