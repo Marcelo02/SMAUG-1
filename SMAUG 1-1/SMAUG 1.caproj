@@ -3300,10 +3300,10 @@
         <event-sheet>ES_Intro.xml</event-sheet>
     </event-folder>
     <global-instances>
-        <global-instance type="Keyboard" uid="6" />
-        <global-instance type="Mouse" uid="22" />
-        <global-instance type="Browser" uid="65" />
-        <global-instance type="Climb" uid="66" />
+        <global-instance type="Keyboard" uid="22" />
+        <global-instance type="Mouse" uid="65" />
+        <global-instance type="Browser" uid="66" />
+        <global-instance type="Climb" uid="384" />
     </global-instances>
     <sounds-folder />
     <music-folder />
