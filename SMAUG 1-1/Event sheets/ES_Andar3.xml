@@ -492,5 +492,31 @@
                 </action>
             </actions>
         </event-block>
+        <event-group description="" sid="758357332513995" title="Narrativa" />
+        <event-block sid="753727494825536">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="771700593705105" type="runningaway">
+                    <param id="0" name="Instance variable">active</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">Player.faccao</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="290900672792914" type="runningaway" />
+            </actions>
+        </event-block>
+        <event-block sid="253209169079532">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="433326497017984" type="runningaway">
+                    <param id="0" name="Object">Player</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="107595404300993" type="Player">
+                    <param id="0" name="Instance variable">faccao</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

@@ -755,11 +755,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1120</x>
-                        <y>1792</y>
+                        <x>1131</x>
+                        <y>1787</y>
                         <z>0</z>
-                        <width>2.048000097</width>
-                        <height>0.319999993</height>
+                        <width>32</width>
+                        <height>5</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.600000024</hotspotY>
@@ -778,7 +778,7 @@
                         <Dir>Right</Dir>
                         <Atacando>0</Atacando>
                         <Life>3</Life>
-                        <faccao>0</faccao>
+                        <faccao>1</faccao>
                         <goingwhere>0</goingwhere>
                     </instance-variables>
                     <behavior-instances>
@@ -830,7 +830,7 @@
                     </properties>
                     <instance-variables>
                         <ID>Right</ID>
-                        <whereto>0</whereto>
+                        <whereto>1</whereto>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
