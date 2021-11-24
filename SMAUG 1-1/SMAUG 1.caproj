@@ -38,6 +38,7 @@
     </used-behaviors>
     <used-effects>
         <effect author="Scirra" id="brightness">Brightness</effect>
+        <effect author="Scirra" id="hardlight">Hard Light</effect>
     </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
@@ -605,6 +606,19 @@
             </object-type>
             <object-type name="text_teclas" sid="457746219500680">
                 <plugin id="Text" />
+            </object-type>
+            <object-type name="covr_crate2" sid="855175586165672">
+                <plugin id="Sprite" />
+                <effects>
+                    <effect-type name="HardLight">
+                        <effect id="hardlight" />
+                    </effect-type>
+                </effects>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="536416287278324" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\covercrate.png" />
+                    </animation>
+                </animation-folder>
             </object-type>
         </object-folder>
         <object-folder name="Menu">
@@ -3228,6 +3242,14 @@
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="474112036453818" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ce_storage" sid="319171723213780">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="793789954278284" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.502564" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\crackstorage.png" />
                 </animation>
             </animation-folder>
         </object-type>

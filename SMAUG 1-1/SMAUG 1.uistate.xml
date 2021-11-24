@@ -64,6 +64,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/TIROLESA_TP/" />
         <folder expanded="1" path="animation-folder/TP_OUT/" />
         <folder expanded="1" path="animation-folder/helth/" />
+        <folder expanded="1" path="animation-folder/covr_crate2/" />
         <folder expanded="1" path="animation-folder/Sprite/" />
         <folder expanded="1" path="animation-folder/Cursor2/" />
         <folder expanded="1" path="animation-folder/Sprite4/" />
@@ -85,5 +86,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Sprite2/" />
         <folder expanded="1" path="animation-folder/Sprite5/" />
         <folder expanded="1" path="animation-folder/runningaway/" />
+        <folder expanded="1" path="animation-folder/ce_storage/" />
     </folders-expanded>
 </c2uistate>
