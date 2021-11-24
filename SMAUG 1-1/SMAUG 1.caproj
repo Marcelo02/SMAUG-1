@@ -543,14 +543,31 @@
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="619674856914736" speed="5">
-                        <frame duration="1" hotspotX="0.47619" hotspotY="0.5">
+                    <animation framecount="2" loop="1" name="Maldolaire" pingpong="0" repeatcount="1" repeatto="0" sid="619674856914736" speed="4">
+                        <frame duration="1" hotspotX="0.514286" hotspotY="0.479167" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\doods\srMaldolaire.png">
                             <collision-poly>
-                                <point x="0.952381" y="0.972222" />
-                                <point x="0.52381" y="0.861111" />
-                                <point x="0.047619" y="0.972222" />
-                                <point x="0.047619" y="0.0277778" />
-                                <point x="0.952381" y="0.0277778" />
+                                <point x="1" y="0.979167" />
+                                <point x="0" y="0.979167" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.514286" hotspotY="0.479167" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\doods\srMaldolaire.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="0.979167" />
+                                <point x="0" y="0.979167" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="1" name="Ronaldo" pingpong="0" repeatcount="1" repeatto="0" sid="921708343515500" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\doods\ronaldin.png">
+                            <collision-poly>
+                                <point x="0.0625" y="0.03125" />
+                                <point x="0.9375" y="0.03125" />
+                                <point x="0.9375" y="0.96875" />
+                                <point x="0.0625" y="0.96875" />
                             </collision-poly>
                         </frame>
                     </animation>
