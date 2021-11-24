@@ -680,6 +680,19 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="PAUSE" sid="155449925688972">
+                <plugin id="Spritefont2" />
+                <instance-variables>
+                    <instance-variable name="opcao" sid="484294800052038" type="number" />
+                    <instance-variable name="Acao" sid="876745684358989" type="string" />
+                </instance-variables>
+                <effects>
+                    <effect-type name="Brightness">
+                        <effect id="brightness" />
+                    </effect-type>
+                </effects>
+                <texture />
+            </object-type>
         </object-folder>
         <object-folder name="MenuTeclas">
             <object-type name="Sprite4" sid="613864681812041">

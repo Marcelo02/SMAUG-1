@@ -4,6 +4,7 @@
     <name>ES_Main</name>
     <events>
         <variable constant="0" name="Life" sid="441775076286705" static="0" type="number">10</variable>
+        <variable constant="0" name="Pause" sid="273694498913111" static="0" type="number">0</variable>
         <variable comment="Munição da pistola" constant="0" name="Pistol_ammo" sid="796144984213042" static="0" type="number">7</variable>
         <comment>COMANDO DE DEBUG PARA FLUTUAR, REMOVER NO FINAL DO DESENVOLVIMENTO</comment>
         <event-block disabled="1" sid="173305970528910">
@@ -218,6 +219,11 @@
                                             <param id="0" name="Comparison">2</param>
                                             <param id="1" name="X co-ordinate">player.X</param>
                                         </condition>
+                                        <condition id="-14" name="Compare variable" sid="244548843279950" type="System">
+                                            <param id="0" name="Variable">Pause</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="7" name="Set mirrored" sid="209344327884401" type="Player">
@@ -230,6 +236,11 @@
                                         <condition id="-1" name="Compare X" sid="111825385430220" type="Aim">
                                             <param id="0" name="Comparison">4</param>
                                             <param id="1" name="X co-ordinate">player.X</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="818691944815783" type="System">
+                                            <param id="0" name="Variable">Pause</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -528,6 +539,11 @@
                             <param id="2" name="Value">0</param>
                         </condition>
                         <condition id="-9" name="Is visible" sid="622579043156853" type="Braço" />
+                        <condition id="-14" name="Compare variable" sid="585102040868247" type="System">
+                            <param id="0" name="Variable">Pause</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="0" name="Spawn another object" sid="681257061013065" type="Player">
@@ -705,6 +721,11 @@
                         <condition id="2" name="Mouse button is down" sid="572489318245257" type="Mouse">
                             <param id="0" name="Mouse button">2</param>
                         </condition>
+                        <condition id="-14" name="Compare variable" sid="424212621678893" type="System">
+                            <param id="0" name="Variable">Pause</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-10" name="Set value" sid="317555943353631" type="Player">
@@ -750,6 +771,11 @@
                 <event-block sid="136298287376348">
                     <conditions>
                         <condition id="-1" name="Every tick" sid="301942718644683" type="System" />
+                        <condition id="-14" name="Compare variable" sid="368956499131097" type="System">
+                            <param id="0" name="Variable">Pause</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-22" name="Set angle toward position" sid="287113265407745" type="Braço">
@@ -1670,6 +1696,21 @@
                         <action id="-9" name="Destroy" sid="750584571406888" type="Braço" />
                     </actions>
                 </event-block>
+                <event-block sid="111243691629257">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="574249646902872" type="System">
+                            <param id="0" name="Variable">Life</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="385536918126635" type="System">
+                            <param id="0" name="Variable">Life</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
         <event-block sid="338718582027607">
@@ -1696,16 +1737,70 @@
                 </action>
             </actions>
         </event-block>
-        <comment>Interação com o menu</comment>
-        <event-block sid="346726265483208">
+        <comment>Sistema de pause</comment>
+        <event-block sid="950319009939564">
             <conditions>
-                <condition id="0" name="On key pressed" sid="975080926610942" type="Keyboard">
+                <condition id="0" name="On key pressed" sid="633798724768270" type="Keyboard">
                     <param id="0" name="Key">27</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-2" name="Go to layout" sid="693939328912408" type="System">
-                    <param id="0" name="Layout">L_Menu</param>
+                <action id="-10" name="Add to" sid="173825070868143" type="System">
+                    <param id="0" name="Variable">Pause</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="346726265483208">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="572190127002538" type="System">
+                    <param id="0" name="Variable">Pause</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set time scale" sid="548731417379951" type="System">
+                    <param id="0" name="Time scale">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="978120559319759">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="627094926780805" type="System">
+                    <param id="0" name="Variable">Pause</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set time scale" sid="300855638108463" type="System">
+                    <param id="0" name="Time scale">0</param>
+                </action>
+                <action id="-3" name="Create object" sid="644874560767377" type="System">
+                    <param id="0" name="Object to create">PAUSE</param>
+                    <param id="1" name="Layer">5</param>
+                    <param id="2" name="X">400</param>
+                    <param id="3" name="Y">225</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="345437305946349">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="685956965757600" type="System">
+                    <param id="0" name="Variable">Pause</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set time scale" sid="657856173186448" type="System">
+                    <param id="0" name="Time scale">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="655427641515136" type="PAUSE" />
+                <action id="-9" name="Set value" sid="429662582852198" type="System">
+                    <param id="0" name="Variable">Pause</param>
+                    <param id="1" name="Value">0</param>
                 </action>
             </actions>
         </event-block>
