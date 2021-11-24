@@ -7804,19 +7804,16 @@
                         <opacity>0.699999988</opacity>
                     </world>
                 </instance>
-                <instance type="Name" uid="112">
+                <instance type="Nome" uid="44">
                     <properties>
-                        <character-width>16</character-width>
-                        <character-height>16</character-height>
-                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
                         <text>Ronaldo</text>
-                        <scale>1.5</scale>
                         <initial-visibility>Invisible</initial-visibility>
+                        <font>Courier New,-19,700,0</font>
+                        <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
-                        <character-spacing>0</character-spacing>
                         <line-height>0</line-height>
                     </properties>
                     <blend-mode>0</blend-mode>
@@ -7826,7 +7823,7 @@
                         <y>285</y>
                         <z>0</z>
                         <width>799</width>
-                        <height>27</height>
+                        <height>18</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -7834,29 +7831,26 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Dialogue" uid="113">
+                <instance type="Dialogo" uid="43">
                     <properties>
-                        <character-width>16</character-width>
-                        <character-height>16</character-height>
-                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
-                        <text></text>
-                        <scale>1.25</scale>
-                        <initial-visibility>Visible</initial-visibility>
+                        <text>Text</text>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <font>Courier New,-21,700,0</font>
+                        <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
-                        <character-spacing>0</character-spacing>
                         <line-height>0</line-height>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>0</x>
-                        <y>306</y>
+                        <x>1</x>
+                        <y>304</y>
                         <z>0</z>
-                        <width>800</width>
-                        <height>144</height>
+                        <width>799</width>
+                        <height>145</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>

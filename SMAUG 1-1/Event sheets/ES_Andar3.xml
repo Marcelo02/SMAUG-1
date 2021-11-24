@@ -393,13 +393,13 @@
                         <action id="-15" name="Set visible" sid="363832588347234" type="DialogueBox">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="992843612827698" type="Dialogue">
+                        <action id="-15" name="Set visible" sid="992843612827698" type="Nome">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="790024545673711" type="Name">
+                        <action id="-15" name="Set visible" sid="790024545673711" type="Dialogo">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action id="0" name="Set text" sid="383767453222977" type="Dialogue">
+                        <action id="0" name="Set text" sid="383767453222977" type="Dialogo">
                             <param id="0" name="Text">&quot;Isso é um teste daora :)&quot;</param>
                         </action>
                         <action id="-10" name="Set value" sid="687718776968677" type="Player">
@@ -409,13 +409,13 @@
                         <action id="-16" name="Wait" sid="315825709722510" type="System">
                             <param id="0" name="Seconds">3</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="437351205026455" type="Name">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
                         <action id="-15" name="Set visible" sid="978718003967730" type="DialogueBox">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="431664847911812" type="Dialogue">
+                        <action id="-15" name="Set visible" sid="828770238478943" type="Nome">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="427605612599584" type="Dialogo">
                             <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="-10" name="Set value" sid="655974126631656" type="Player">

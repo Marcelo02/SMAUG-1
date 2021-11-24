@@ -2698,10 +2698,6 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="Name" sid="745717464117658">
-                <plugin id="Spritefont2" />
-                <texture />
-            </object-type>
             <object-type name="DialogueBox" sid="510814293783965">
                 <plugin id="Sprite" />
                 <animation-folder>
@@ -2709,10 +2705,6 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
-            </object-type>
-            <object-type name="Dialogue" sid="221942926739257">
-                <plugin id="Spritefont2" />
-                <texture />
             </object-type>
             <object-type name="andar3_operation64" sid="528089311511483">
                 <plugin id="Tilemap" />
@@ -3086,6 +3078,12 @@
                         </frame>
                     </animation>
                 </animation-folder>
+            </object-type>
+            <object-type name="Dialogo" sid="403110312581990">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="Nome" sid="620894094705204">
+                <plugin id="Text" />
             </object-type>
         </object-folder>
         <object-folder name="Intro">
