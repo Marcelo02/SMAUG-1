@@ -91,7 +91,7 @@
                     <properties>
                         <text>Comandos</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Consolas,-24,400,0</font>
+                        <font>Courier New,-24,400,0</font>
                         <color>255,255,255</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
@@ -105,8 +105,8 @@
                         <x>11</x>
                         <y>11</y>
                         <z>0</z>
-                        <width>243</width>
-                        <height>32</height>
+                        <width>280</width>
+                        <height>54</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -118,7 +118,7 @@
                     <properties>
                         <text>[A] e [D] Andar para a Esquerda e a Direita</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Consolas,-16,400,0</font>
+                        <font>Courier New,-16,400,0</font>
                         <color>255,255,255</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -132,7 +132,7 @@
                         <x>260</x>
                         <y>45</y>
                         <z>0</z>
-                        <width>396</width>
+                        <width>497</width>
                         <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -145,7 +145,7 @@
                     <properties>
                         <text>[W] e [S] Subir e Descer Escadas</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Consolas,-16,400,0</font>
+                        <font>Courier New,-16,400,0</font>
                         <color>255,255,255</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -172,7 +172,7 @@
                     <properties>
                         <text>[SHIFT] Correr</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Consolas,-16,400,0</font>
+                        <font>Courier New,-16,400,0</font>
                         <color>255,255,255</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -199,7 +199,7 @@
                     <properties>
                         <text>[CTRL] Agachar</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Consolas,-16,400,0</font>
+                        <font>Courier New,-16,400,0</font>
                         <color>255,255,255</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -226,7 +226,7 @@
                     <properties>
                         <text>[BARRA DE ESPAÇO] Pular</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Consolas,-16,400,0</font>
+                        <font>Courier New,-16,400,0</font>
                         <color>255,255,255</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -240,7 +240,7 @@
                         <x>260</x>
                         <y>145</y>
                         <z>0</z>
-                        <width>243</width>
+                        <width>276</width>
                         <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -253,7 +253,7 @@
                     <properties>
                         <text>[CTRL] + [BARRA DE ESPAÇO] Pular mais alto</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Consolas,-16,400,0</font>
+                        <font>Courier New,-16,400,0</font>
                         <color>255,255,255</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -267,7 +267,7 @@
                         <x>260</x>
                         <y>165</y>
                         <z>0</z>
-                        <width>377</width>
+                        <width>476</width>
                         <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -280,7 +280,7 @@
                     <properties>
                         <text>[E] Interagir</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Consolas,-16,400,0</font>
+                        <font>Courier New,-16,400,0</font>
                         <color>255,255,255</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -329,7 +329,7 @@
                     <properties>
                         <text>[Botão Esquerdo] Atirar</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Consolas,-16,400,0</font>
+                        <font>Courier New,-16,400,0</font>
                         <color>255,255,255</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -356,7 +356,7 @@
                     <properties>
                         <text>[Botão Direito] Extender Mira</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Consolas,-16,400,0</font>
+                        <font>Courier New,-16,400,0</font>
                         <color>255,255,255</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -383,7 +383,7 @@
                     <properties>
                         <text>[Mover o Mouse] Mirar</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Consolas,-16,400,0</font>
+                        <font>Courier New,-16,400,0</font>
                         <color>255,255,255</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -410,10 +410,10 @@
                     <properties>
                         <text>[E] Para voltar ao Menu</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Consolas,-24,400,0</font>
+                        <font>Courier New,-24,400,0</font>
                         <color>255,255,255</color>
                         <horizontal-alignment>Right</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
+                        <vertical-alignment>Bottom</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
@@ -421,11 +421,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>328</x>
-                        <y>411</y>
+                        <x>268</x>
+                        <y>368</y>
                         <z>0</z>
-                        <width>465</width>
-                        <height>32</height>
+                        <width>524</width>
+                        <height>80</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -437,7 +437,7 @@
                     <properties>
                         <text>[SHIFT] + {ANDAR} + [CTRL] Deslizar</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Consolas,-16,400,0</font>
+                        <font>Courier New,-16,400,0</font>
                         <color>255,255,255</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -451,7 +451,7 @@
                         <x>260</x>
                         <y>125</y>
                         <z>0</z>
-                        <width>377</width>
+                        <width>464</width>
                         <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -464,7 +464,7 @@
                     <properties>
                         <text>[Esc] Pausar</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Consolas,-16,400,0</font>
+                        <font>Courier New,-16,400,0</font>
                         <color>255,255,255</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>

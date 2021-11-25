@@ -295,42 +295,6 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="778015183755168">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="315982509745020" type="Player">
-                    <param id="0" name="Object">gate_sewer</param>
-                </condition>
-                <condition id="-7" name="Compare instance variable" sid="651985238743545" type="Player">
-                    <param id="0" name="Instance variable">faccao</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">1</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-4" name="Set position to another object" sid="368815116354716" type="Player">
-                    <param id="0" name="Object">gate_apartment</param>
-                    <param id="1" name="Image point (optional)">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="668580574949774">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="240734449933109" type="Player">
-                    <param id="0" name="Object">gate_apartments2</param>
-                </condition>
-                <condition id="-7" name="Compare instance variable" sid="944058754435083" type="Player">
-                    <param id="0" name="Instance variable">faccao</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">1</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-4" name="Set position to another object" sid="266070334376404" type="Player">
-                    <param id="0" name="Object">gate_sewer2</param>
-                    <param id="1" name="Image point (optional)">0</param>
-                </action>
-            </actions>
-        </event-block>
         <event-group description="" sid="330907947329516" title="Dialogo">
             <sub-events>
                 <event-block sid="640043612551232">
@@ -361,6 +325,18 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="157472117403411">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="740676055938128" type="Player">
+                            <param id="0" name="Object">Interactionbox</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="471210135613814" type="PressE">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="269695821696414">
                     <conditions>
                         <condition id="1" inverted="1" name="Is overlapping another object" sid="470509105469136" type="Player">
@@ -370,18 +346,6 @@
                     <actions>
                         <action id="-15" name="Set visible" sid="560111876610473" type="PressE">
                             <param id="0" name="Visibility">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="157472117403411">
-                    <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="740676055938128" type="Player">
-                            <param id="0" name="Object">Interactionbox</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-15" name="Set visible" sid="471210135613814" type="PressE">
-                            <param id="0" name="Visibility">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -466,37 +430,18 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="810061762432343">
-            <conditions>
-                <condition id="1" name="Is overlapping another object" sid="211561992125818" type="Player">
-                    <param id="0" name="Object">TIROLESA_TP</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-15" name="Set visible" sid="728456250021799" type="PressE">
-                    <param id="0" name="Visibility">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="312489368515619">
-            <conditions>
-                <condition id="1" inverted="1" name="Is overlapping another object" sid="516657854721103" type="Player">
-                    <param id="0" name="Object">TIROLESA_TP</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-15" name="Set visible" sid="895967793543197" type="PressE">
-                    <param id="0" name="Visibility">0</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="435237992413280">
             <conditions>
                 <condition id="0" name="On key pressed" sid="475466910514569" type="Keyboard">
                     <param id="0" name="Key">69</param>
                 </condition>
                 <condition id="1" name="Is overlapping another object" sid="802294776307297" type="Player">
-                    <param id="0" name="Object">TIROLESA_TP</param>
+                    <param id="0" name="Object">Interactionbox</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="904546660914872" type="Interactionbox">
+                    <param id="0" name="Instance variable">PressE_Function</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">5</param>
                 </condition>
             </conditions>
             <actions>

@@ -1115,6 +1115,11 @@
                                 <condition id="0" name="On collision with another object" sid="195995452947236" type="bullet_player">
                                     <param id="0" name="Object">Enemy_2</param>
                                 </condition>
+                                <condition id="-7" name="Compare instance variable" sid="528895902737795" type="Player">
+                                    <param id="0" name="Instance variable">faccao</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">Enemy_2.faccao</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="-12" name="Subtract from" sid="115827165718969" type="Enemy_2">

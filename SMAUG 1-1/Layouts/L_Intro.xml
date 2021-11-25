@@ -156,7 +156,7 @@
                     <properties>
                         <text>TERCEIRO MILÊNIO</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Consolas,-29,700,0</font>
+                        <font>Courier New,-29,400,0</font>
                         <color>255,255,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -183,10 +183,10 @@
                     <properties>
                         <text>[E] Para pular a Introdução</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Consolas,-24,400,0</font>
+                        <font>Courier New,-24,400,0</font>
                         <color>255,255,255</color>
                         <horizontal-alignment>Right</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
+                        <vertical-alignment>Bottom</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
@@ -195,10 +195,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>327</x>
-                        <y>409</y>
+                        <y>384</y>
                         <z>0</z>
-                        <width>465</width>
-                        <height>32</height>
+                        <width>472</width>
+                        <height>66</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -210,7 +210,7 @@
                     <properties>
                         <text>Text</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Consolas,-24,400,0</font>
+                        <font>Courier New,-24,400,0</font>
                         <color>255,255,255</color>
                         <horizontal-alignment>Right</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>

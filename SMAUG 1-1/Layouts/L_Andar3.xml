@@ -520,11 +520,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>39</x>
-                        <y>4336</y>
+                        <x>117.5</x>
+                        <y>4333.5</y>
                         <z>0</z>
-                        <width>32</width>
-                        <height>36</height>
+                        <width>81</width>
+                        <height>47</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1158,53 +1158,6 @@
                         <opacity>0.5</opacity>
                     </world>
                 </instance>
-                <instance type="gate_apartments2" uid="94">
-                    <properties>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <open>false</open>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1119</x>
-                        <y>4974</y>
-                        <z>0</z>
-                        <width>40</width>
-                        <height>56</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>0.5</opacity>
-                    </world>
-                </instance>
-                <instance type="gate_sewer2" uid="95">
-                    <properties>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>674</x>
-                        <y>4966</y>
-                        <z>0</z>
-                        <width>60</width>
-                        <height>60</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>0.5</opacity>
-                    </world>
-                </instance>
                 <instance type="stair_collision" uid="96">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
@@ -1391,7 +1344,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>40</x>
+                        <x>92</x>
                         <y>4333</y>
                         <z>0</z>
                         <width>35</width>
@@ -1436,8 +1389,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>28</x>
-                        <y>4278</y>
+                        <x>87</x>
+                        <y>4280</y>
                         <z>0</z>
                         <width>20</width>
                         <height>30</height>
@@ -4133,28 +4086,6 @@
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>0.5</opacity>
-                    </world>
-                </instance>
-                <instance type="TIROLESA_TP" uid="198">
-                    <properties>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>945</x>
-                        <y>3048</y>
-                        <z>0</z>
-                        <width>34.052215576</width>
-                        <height>66</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
                     </world>
                 </instance>
                 <instance type="TP_OUT" uid="199">
@@ -12639,6 +12570,31 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="Interactionbox" uid="198">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <PressE_Function>5</PressE_Function>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>919</x>
+                        <y>3044</y>
+                        <z>0</z>
+                        <width>81</width>
+                        <height>70</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0.300000012</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -12658,6 +12614,50 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
+                <instance type="ZEBLACKSCHKREEN" uid="405">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>400</x>
+                        <y>225</y>
+                        <z>0</z>
+                        <width>800</width>
+                        <height>450</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="MANSIONGOBOOM" uid="406">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>400</x>
+                        <y>225</y>
+                        <z>0</z>
+                        <width>800</width>
+                        <height>450</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="DialogueBox" uid="111">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
@@ -12677,17 +12677,17 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
-                        <opacity>0.699999988</opacity>
+                        <opacity>0.649999976</opacity>
                     </world>
                 </instance>
                 <instance type="Nome" uid="44">
                     <properties>
                         <text>Ronaldo</text>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <font>Courier New,-19,700,0</font>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Courier New,-16,700,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
@@ -12695,11 +12695,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>0</x>
+                        <x>12</x>
                         <y>285</y>
                         <z>0</z>
-                        <width>799</width>
-                        <height>18</height>
+                        <width>774</width>
+                        <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -12722,11 +12722,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1</x>
-                        <y>304</y>
+                        <x>10</x>
+                        <y>313</y>
                         <z>0</z>
-                        <width>799</width>
-                        <height>145</height>
+                        <width>781</width>
+                        <height>127</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
