@@ -23,6 +23,7 @@
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
@@ -692,6 +693,11 @@
             </object-type>
             <object-type name="ZEBLACKSCHKREEN" sid="299340556626892">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="513290396747588">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="262438862495538" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -3213,6 +3219,9 @@
             </object-type>
             <object-type name="PressE" sid="781504027023937">
                 <plugin id="Spritefont2" />
+                <instance-variables>
+                    <instance-variable name="uiE" sid="505524377183672" type="number" />
+                </instance-variables>
                 <behaviors>
                     <behavior-type name="Sine" sid="325576975898272">
                         <behavior id="Sin" />
