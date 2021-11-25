@@ -20,18 +20,41 @@
                 <action id="0" name="Set text" sid="418546680525260" type="IntroText">
                     <param id="0" name="Text">&quot;&quot;</param>
                 </action>
+                <action id="0" name="Set text" sid="524898772632465" type="IntroText2">
+                    <param id="0" name="Text">&quot;SOBRE A ATMOSFERA TÓXICA DO PLANETA,&quot;&amp;newline&amp;newline&amp;&quot;OS HUMANOS PRECISAM VIVEM EM UMA TORRE&quot;&amp;newline&amp;newline&amp;&quot;ANTIGAMENTE CHAMADA DE “CASSIOPEIA”.&quot;</param>
+                </action>
                 <action id="-16" name="Wait" sid="677451292084884" type="System">
-                    <param id="0" name="Seconds">60</param>
+                    <param id="0" name="Seconds">9</param>
                 </action>
-                <action id="-9" name="Destroy" sid="261545611981379" type="Tower" />
-                <action id="0" name="Set text" sid="390395196001279" type="IntroText">
-                    <param id="0" name="Text">&quot;A TORRE E OS IMPERFEITOS&quot;</param>
+                <action id="0" name="Set text" sid="652660994288224" type="IntroText2">
+                    <param id="0" name="Text">&quot;SUA BELEZA E PERFEIÇÃO...&quot;&amp;newline&amp;newline&amp;&quot;EXCLUSIVA A POPULAÇÃO NO TOPO.&quot;&amp;newline&amp;newline&amp;&quot;AOS IMPERFEITOS, SEU CASTIGO.&quot;&#x0D;&#x0A;</param>
                 </action>
-                <action id="-16" name="Wait" sid="360915000939860" type="System">
-                    <param id="0" name="Seconds">5</param>
+                <action id="-16" name="Wait" sid="611242545946392" type="System">
+                    <param id="0" name="Seconds">9</param>
                 </action>
-                <action id="-2" name="Go to layout" sid="801741506353565" type="System">
-                    <param id="0" name="Layout">L_Menu</param>
+                <action id="0" name="Set text" sid="108112765225147" type="IntroText2">
+                    <param id="0" name="Text">&quot;O ANDAR MAIS FUNDO&quot;&amp;newline&amp;newline&amp;&quot;É O LUGAR MAIS EXPOSTO&quot;&amp;newline&amp;newline&amp;&quot;AO SEU AR MUTANTE.&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="903969050822484" type="System">
+                    <param id="0" name="Seconds">9</param>
+                </action>
+                <action id="0" name="Set text" sid="757143188112601" type="IntroText2">
+                    <param id="0" name="Text">&quot;A LUTA POR UMA VIDA MELHOR&quot;&amp;newline&amp;newline&amp;&quot;NECESSITA NÃO SÓ DE ESFORÇO,&quot;&amp;newline&amp;newline&amp;&quot;MAS TAMBÉM DE SACRIFÍCIO.&quot;&#x0D;&#x0A;</param>
+                </action>
+                <action id="-16" name="Wait" sid="225246671640772" type="System">
+                    <param id="0" name="Seconds">9</param>
+                </action>
+                <action id="0" name="Set text" sid="452904713156140" type="IntroText2">
+                    <param id="0" name="Text">&quot;SEJA MISÉRIA OU MORTE,&quot;&amp;newline&amp;newline&amp;&quot;O DESTINO DA VIDA AQUI&quot;&amp;newline&amp;newline&amp;&quot;ESTARÁ SEMPRE SELADO.&quot;&#x0D;&#x0A;</param>
+                </action>
+                <action id="-16" name="Wait" sid="358952340176444" type="System">
+                    <param id="0" name="Seconds">9</param>
+                </action>
+                <action id="0" name="Set text" sid="765657326332733" type="IntroText2">
+                    <param id="0" name="Text">&quot;APENAS UMA MANEIRA&quot;&amp;newline&amp;newline&amp;&quot;DE CHEGAR AO TOPO...&quot;&amp;newline&amp;newline&amp;&quot;DE CHEGAR À PERFEIÇÃO...&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="875101125734810" type="System">
+                    <param id="0" name="Seconds">9</param>
                 </action>
             </actions>
         </event-block>
@@ -57,15 +80,29 @@
                 </action>
             </actions>
         </event-block>
-        <event-block disabled="1" sid="142159710097893">
+        <event-block sid="142159710097893">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="992249780839109" type="Tower">
                     <param id="0" name="Object">blocka</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-16" name="Wait" sid="414190410645604" type="System">
-                    <param id="0" name="Seconds">1.0</param>
+                <action id="0" name="Set text" sid="109053936017180" type="IntroText2">
+                    <param id="0" name="Text">&quot;...A LUTA.&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="560673262701026" type="System">
+                    <param id="0" name="Seconds">7</param>
+                </action>
+                <action id="-9" name="Destroy" sid="883052097278678" type="IntroText2" />
+                <action id="-9" name="Destroy" sid="261545611981379" type="Tower" />
+                <action id="0" name="Set text" sid="390395196001279" type="IntroText">
+                    <param id="0" name="Text">&quot;A TORRE E OS IMPERFEITOS&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="360915000939860" type="System">
+                    <param id="0" name="Seconds">5</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="801741506353565" type="System">
+                    <param id="0" name="Layout">L_Menu</param>
                 </action>
             </actions>
         </event-block>

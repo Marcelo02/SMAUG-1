@@ -14,9 +14,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout order="3">L_Menu</layout>
         <layout order="5">L_MenuTeclas</layout>
         <layout order="7">L_Teste</layout>
-        <layout active="1" order="9">L_Andar3</layout>
+        <layout order="9">L_Andar3</layout>
         <event-sheet order="0">ES_Intro</event-sheet>
-        <event-sheet order="2">ES_Menu</event-sheet>
+        <event-sheet active="1" order="2">ES_Menu</event-sheet>
         <event-sheet order="4">ES_MenuTeclas</event-sheet>
         <event-sheet order="6">ES_Main</event-sheet>
         <event-sheet order="8">ES_Andar3</event-sheet>
