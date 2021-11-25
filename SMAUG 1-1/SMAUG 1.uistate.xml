@@ -10,16 +10,16 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="2">L_Intro</layout>
-        <layout order="4">L_Menu</layout>
-        <layout order="6">L_MenuTeclas</layout>
-        <layout order="8">L_Teste</layout>
-        <layout active="1" order="10">L_Andar3</layout>
-        <event-sheet order="1">ES_Intro</event-sheet>
-        <event-sheet order="3">ES_Menu</event-sheet>
-        <event-sheet order="5">ES_MenuTeclas</event-sheet>
-        <event-sheet order="7">ES_Main</event-sheet>
-        <event-sheet order="9">ES_Andar3</event-sheet>
+        <layout active="1" order="1">L_Intro</layout>
+        <layout order="3">L_Menu</layout>
+        <layout order="5">L_MenuTeclas</layout>
+        <layout order="7">L_Teste</layout>
+        <layout order="9">L_Andar3</layout>
+        <event-sheet order="0">ES_Intro</event-sheet>
+        <event-sheet order="2">ES_Menu</event-sheet>
+        <event-sheet order="4">ES_MenuTeclas</event-sheet>
+        <event-sheet order="6">ES_Main</event-sheet>
+        <event-sheet order="8">ES_Andar3</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -31,9 +31,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
         <folder expanded="1" path="object-folder/Objetos_Gerais/" />
+        <folder expanded="1" path="object-folder/Objetos_Gerais/Enemies/" />
         <folder expanded="1" path="object-folder/Menu/" />
         <folder expanded="0" path="object-folder/MenuTeclas/" />
         <folder expanded="1" path="object-folder/Objetos_Andar3/" />
+        <folder expanded="1" path="object-folder/Objetos_Andar3/Tilesets/" />
         <folder expanded="1" path="object-folder/Intro/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
@@ -41,19 +43,19 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
         <folder expanded="1" path="file-folder/Icons/" />
+        <folder expanded="1" path="animation-folder/Enemy_4/" />
+        <folder expanded="1" path="animation-folder/Enemy_1/" />
+        <folder expanded="1" path="animation-folder/Enemy_2/" />
+        <folder expanded="1" path="animation-folder/Trap/" />
         <folder expanded="1" path="animation-folder/Aim/" />
         <folder expanded="1" path="animation-folder/Braço/" />
         <folder expanded="1" path="animation-folder/bullet_enemy/" />
         <folder expanded="1" path="animation-folder/bullet_player/" />
-        <folder expanded="1" path="animation-folder/Enemy_1/" />
         <folder expanded="1" path="animation-folder/Plataform/" />
         <folder expanded="1" path="animation-folder/Player/" />
         <folder expanded="1" path="animation-folder/Wall/" />
         <folder expanded="1" path="animation-folder/stair_collision/" />
-        <folder expanded="1" path="animation-folder/Enemy_2/" />
-        <folder expanded="1" path="animation-folder/Trap/" />
         <folder expanded="1" path="animation-folder/Enemy_3/" />
-        <folder expanded="1" path="animation-folder/Enemy_4/" />
         <folder expanded="1" path="animation-folder/Pivot_Point/" />
         <folder expanded="1" path="animation-folder/Enemy_Arm/" />
         <folder expanded="1" path="animation-folder/takemeto_andar3/" />
@@ -65,8 +67,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/TP_OUT/" />
         <folder expanded="1" path="animation-folder/helth/" />
         <folder expanded="1" path="animation-folder/covr_crate2/" />
+        <folder expanded="1" path="animation-folder/TASKSTATE/" />
         <folder expanded="1" path="animation-folder/Sprite/" />
         <folder expanded="1" path="animation-folder/Cursor2/" />
+        <folder expanded="1" path="animation-folder/dontmindme/" />
+        <folder expanded="1" path="animation-folder/Sprite2/" />
+        <folder expanded="1" path="animation-folder/Sprite5/" />
         <folder expanded="1" path="animation-folder/Sprite4/" />
         <folder expanded="1" path="animation-folder/keyboard_sprite/" />
         <folder expanded="1" path="animation-folder/maus/" />
@@ -80,12 +86,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Interactionbox/" />
         <folder expanded="1" path="animation-folder/DialogueBox/" />
         <folder expanded="1" path="animation-folder/andar3_tirolesa/" />
+        <folder expanded="1" path="animation-folder/ce_storage/" />
+        <folder expanded="1" path="animation-folder/runningaway/" />
         <folder expanded="1" path="animation-folder/Tower/" />
         <folder expanded="1" path="animation-folder/Sprite3/" />
-        <folder expanded="1" path="animation-folder/TASKSTATE/" />
-        <folder expanded="1" path="animation-folder/Sprite2/" />
-        <folder expanded="1" path="animation-folder/Sprite5/" />
-        <folder expanded="1" path="animation-folder/runningaway/" />
-        <folder expanded="1" path="animation-folder/ce_storage/" />
+        <folder expanded="1" path="animation-folder/blocka/" />
     </folders-expanded>
 </c2uistate>
