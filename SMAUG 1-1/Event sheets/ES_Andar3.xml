@@ -300,6 +300,11 @@
                 <condition id="0" name="On collision with another object" sid="315982509745020" type="Player">
                     <param id="0" name="Object">gate_sewer</param>
                 </condition>
+                <condition id="-7" name="Compare instance variable" sid="651985238743545" type="Player">
+                    <param id="0" name="Instance variable">faccao</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="-4" name="Set position to another object" sid="368815116354716" type="Player">
@@ -312,6 +317,11 @@
             <conditions>
                 <condition id="0" name="On collision with another object" sid="240734449933109" type="Player">
                     <param id="0" name="Object">gate_apartments2</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="944058754435083" type="Player">
+                    <param id="0" name="Instance variable">faccao</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
                 </condition>
             </conditions>
             <actions>
@@ -422,6 +432,10 @@
                             <param id="0" name="Instance variable">Conversando</param>
                             <param id="1" name="Value">0</param>
                         </action>
+                        <action id="-10" name="Set value" sid="676880750608260" type="Player">
+                            <param id="0" name="Instance variable">faccao</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -495,10 +509,10 @@
         <event-group description="" sid="758357332513995" title="Narrativa" />
         <event-block sid="753727494825536">
             <conditions>
-                <condition id="-7" name="Compare instance variable" sid="771700593705105" type="runningaway">
-                    <param id="0" name="Instance variable">active</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">Player.faccao</param>
+                <condition id="-7" name="Compare instance variable" sid="771700593705105" type="Player">
+                    <param id="0" name="Instance variable">faccao</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
                 </condition>
             </conditions>
             <actions>
@@ -515,6 +529,36 @@
                 <action id="-10" name="Set value" sid="107595404300993" type="Player">
                     <param id="0" name="Instance variable">faccao</param>
                     <param id="1" name="Value">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="179903231600758">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="465469316415687" type="Poi">
+                    <param id="0" name="Instance variable">poi_id</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="715004818042033" type="Poi">
+                    <param id="0" name="Animation">&quot;Maldolaire&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="648953826821265">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="491842650411533" type="Poi">
+                    <param id="0" name="Instance variable">poi_id</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="551198597994124" type="Poi">
+                    <param id="0" name="Animation">&quot;Ronaldo&quot;</param>
+                    <param id="1" name="From">1</param>
                 </action>
             </actions>
         </event-block>

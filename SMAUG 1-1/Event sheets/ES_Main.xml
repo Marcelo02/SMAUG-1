@@ -1074,6 +1074,11 @@
                                 <condition id="0" name="On collision with another object" sid="748455851790860" type="Enemy_2">
                                     <param id="0" name="Object">Player</param>
                                 </condition>
+                                <condition id="-8" name="Compare two values" sid="183659775414666" type="System">
+                                    <param id="0" name="First value">Player.faccao</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Second value">Enemy_2.faccao</param>
+                                </condition>
                             </conditions>
                             <actions />
                             <sub-events>
