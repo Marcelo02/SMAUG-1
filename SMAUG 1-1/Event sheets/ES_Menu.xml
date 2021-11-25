@@ -3,6 +3,19 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>ES_Menu</name>
     <events>
+        <event-block sid="664928700717578">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="963655632821761" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="468750672711293" type="IntroText">
+                    <param id="0" name="Text">&quot;TERCEIRO MILÊNIO&quot; &amp; newline &amp; &quot;TERCEIRO ANDAR / SETOR DZ7&quot; &amp; newline &amp; &quot;KARLA PEIXOTO&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="290488859126761" type="IntroText2">
+                    <param id="0" name="Text">&quot;KARLA TEM UMA ENTREGA A FAZER.&quot;&amp;newline&amp;newline&amp;&quot;UM PACOTE FECHADO DO SEGUNDO ANDAR&quot;&amp;newline&amp;newline&amp;&quot;PARA A &quot;&quot;MÁFIA MALDOLAIRE&quot;&quot; NO TOPO DO MORRO.&quot;&amp;newline&amp;newline&amp;&quot;ELA ESTÁ DE ESTADIA EM UM APARTAMENTO&quot;&amp;newline&amp;newline&amp;&quot;OCUPADO PELO SEU RIVAL, A GANGUE &quot;&quot;SINISTRO&quot;&quot;.&quot;&amp;newline&amp;newline&amp;&quot;SE TE ABORDAREM, VOCÊ PODE PEGAR LEVE&quot;&amp;newline&amp;newline&amp;&quot;OU TENTAR FUGIR.&quot;&#x0D;&#x0A;</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="158012045558285">
             <conditions>
                 <condition id="-7" name="Compare instance variable" sid="478834515388076" type="OpçaoMenu">
@@ -121,6 +134,24 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-15" name="Set visible" sid="215423132091618" type="ZEBLACKSCHKREEN">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="718201777860666" type="IntroText">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="410605496503368" type="System">
+                            <param id="0" name="Seconds">4</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="490974936727131" type="IntroText">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="116671804470250" type="IntroText2">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="246807578307746" type="System">
+                            <param id="0" name="Seconds">9</param>
+                        </action>
                         <action id="-2" name="Go to layout" sid="977714435836044" type="System">
                             <param id="0" name="Layout">L_Andar3</param>
                         </action>

@@ -887,6 +887,44 @@
             <sub-events>
                 <event-group description="" sid="202133821647708" title="Inimigo 1: A turret">
                     <sub-events>
+                        <event-block sid="588621045634056">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="103825906365756" type="Enemy_1" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="690701950107071">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="679655491036363" type="Enemy_1">
+                                            <param id="0" name="Instance variable">faccao</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="904754123627675" type="Enemy_1">
+                                            <param id="0" name="Animation">&quot;Sinistro1&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="972024709116595">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="346247258649652" type="Enemy_1">
+                                            <param id="0" name="Instance variable">faccao</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="696644949125718" type="Enemy_1">
+                                            <param id="0" name="Animation">&quot;Mafia1&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
                         <event-block sid="604271559194613">
                             <conditions>
                                 <condition id="-1" name="Every tick" sid="623097307772426" type="System" />
@@ -955,6 +993,44 @@
                 </event-group>
                 <event-group description="" sid="428544868867620" title="Inimigo 2: O Drone Explosivo">
                     <sub-events>
+                        <event-block sid="394725190832525">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="892143366708329" type="Enemy_2" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="210084233911896">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="864374266322426" type="Enemy_2">
+                                            <param id="0" name="Instance variable">faccao</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="484541201556277" type="Enemy_2">
+                                            <param id="0" name="Animation">&quot;Sinistro1&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="427387191873624">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="662797103920506" type="Enemy_2">
+                                            <param id="0" name="Instance variable">faccao</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="863302381408532" type="Enemy_2">
+                                            <param id="0" name="Animation">&quot;Mafia1&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
                         <event-block sid="679436246599048">
                             <conditions>
                                 <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="456093024948317" type="Enemy_2">
@@ -1355,6 +1431,38 @@
                                     <param id="1" name="Mode">1</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="894229373257601">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="567538789231554" type="Enemy_4">
+                                            <param id="0" name="Instance variable">faccao</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="895602256511305" type="Enemy_4">
+                                            <param id="0" name="Animation">&quot;Sinistro1&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="358478528190403">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="498211212158324" type="Enemy_4">
+                                            <param id="0" name="Instance variable">faccao</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="358650780223277" type="Enemy_4">
+                                            <param id="0" name="Animation">&quot;Mafia1&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="614912649418857">
                             <conditions>
@@ -1536,6 +1644,21 @@
                                         <action id="-10" name="Set value" sid="972126449706313" type="Enemy_4">
                                             <param id="0" name="Instance variable">Atacando</param>
                                             <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="369706581787847">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="794290490834952" type="Enemy_4">
+                                            <param id="0" name="Instance variable">faccao</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">Player.faccao</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="979969519667402" type="Enemy_4">
+                                            <param id="0" name="Instance variable">Atacando</param>
+                                            <param id="1" name="Value">0</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1722,6 +1845,11 @@
             <conditions>
                 <condition id="0" name="On collision with another object" sid="642999268399200" type="Player">
                     <param id="0" name="Object">helth</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="926172821189574" type="System">
+                    <param id="0" name="Variable">Life</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">10</param>
                 </condition>
             </conditions>
             <actions>

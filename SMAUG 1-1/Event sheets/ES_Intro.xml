@@ -8,6 +8,9 @@
                 <condition id="-2" name="On start of layout" sid="908352365629983" type="System" />
             </conditions>
             <actions>
+                <action id="0" name="Set text" sid="804195336173580" type="IntroText2">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
                 <action id="-16" name="Wait" sid="521837638791594" type="System">
                     <param id="0" name="Seconds">5</param>
                 </action>
@@ -16,6 +19,19 @@
                 </action>
                 <action id="0" name="Set text" sid="418546680525260" type="IntroText">
                     <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="677451292084884" type="System">
+                    <param id="0" name="Seconds">60</param>
+                </action>
+                <action id="-9" name="Destroy" sid="261545611981379" type="Tower" />
+                <action id="0" name="Set text" sid="390395196001279" type="IntroText">
+                    <param id="0" name="Text">&quot;A TORRE E OS IMPERFEITOS&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="360915000939860" type="System">
+                    <param id="0" name="Seconds">5</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="801741506353565" type="System">
+                    <param id="0" name="Layout">L_Menu</param>
                 </action>
             </actions>
         </event-block>
@@ -41,29 +57,37 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="142159710097893">
+        <event-block disabled="1" sid="142159710097893">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="992249780839109" type="Tower">
                     <param id="0" name="Object">blocka</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Destroy" sid="261545611981379" type="Tower" />
-                <action id="-16" name="Wait" sid="360915000939860" type="System">
-                    <param id="0" name="Seconds">5</param>
-                </action>
-                <action id="-2" name="Go to layout" sid="801741506353565" type="System">
-                    <param id="0" name="Layout">L_Menu</param>
+                <action id="-16" name="Wait" sid="414190410645604" type="System">
+                    <param id="0" name="Seconds">1.0</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="649320226416218">
+        <event-block disabled="1" sid="649320226416218">
             <conditions>
                 <condition id="-19" name="On destroyed" sid="955137559513209" type="Tower" />
             </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="865252538441414">
+            <conditions>
+                <condition id="1" name="On any key pressed" sid="778612909886723" type="Keyboard" />
+            </conditions>
             <actions>
-                <action id="0" name="Set text" sid="390395196001279" type="IntroText">
-                    <param id="0" name="Text">&quot;A TORRE E OS IMPERFEITOS&quot;</param>
+                <action id="-15" name="Set visible" sid="284156546110929" type="text_teclas">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="295610997633249" type="System">
+                    <param id="0" name="Seconds">3</param>
+                </action>
+                <action id="-15" name="Set visible" sid="260065491792581" type="text_teclas">
+                    <param id="0" name="Visibility">0</param>
                 </action>
             </actions>
         </event-block>
