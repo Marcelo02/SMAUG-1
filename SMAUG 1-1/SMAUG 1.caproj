@@ -10,6 +10,7 @@
     <unique-id>32n957n0kaoez</unique-id>
     <saved-with-version>28000</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
@@ -3369,6 +3370,9 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Audio" sid="697329823778281">
+            <plugin id="Audio" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -3390,8 +3394,29 @@
         <global-instance type="Mouse" uid="65" />
         <global-instance type="Browser" uid="66" />
         <global-instance type="Climb" uid="384" />
+        <global-instance type="Audio" uid="94">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
     </global-instances>
-    <sounds-folder />
+    <sounds-folder>
+        <file name="SOM DE TIRO.ogg" />
+        <file name="Karla Running.ogg" />
+        <file name="FASTER Reload.ogg" />
+        <file name="alarme.ogg" />
+        <file name="Drone.ogg" />
+        <file name="slide.ogg" />
+    </sounds-folder>
     <music-folder />
     <files-folder>
         <file-folder name="Icons">
