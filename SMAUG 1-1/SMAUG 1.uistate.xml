@@ -10,10 +10,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1" order="2">L_Intro</layout>
+        <layout order="2">L_Intro</layout>
         <layout order="4">L_Menu</layout>
         <layout order="6">L_MenuTeclas</layout>
-        <layout order="8">L_Teste</layout>
+        <layout active="1" order="8">L_Teste</layout>
         <layout order="10">L_Andar3</layout>
         <event-sheet order="1">ES_Intro</event-sheet>
         <event-sheet order="3">ES_Menu</event-sheet>
@@ -48,7 +48,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Enemy_2/" />
         <folder expanded="1" path="animation-folder/Trap/" />
         <folder expanded="1" path="animation-folder/Aim/" />
-        <folder expanded="1" path="animation-folder/Braço/" />
+        <folder expanded="1" path="animation-folder/Player_Arm/" />
         <folder expanded="1" path="animation-folder/bullet_enemy/" />
         <folder expanded="1" path="animation-folder/bullet_player/" />
         <folder expanded="1" path="animation-folder/Plataform/" />
@@ -70,6 +70,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/TASKSTATE/" />
         <folder expanded="1" path="animation-folder/ZEBLACKSCHKREEN/" />
         <folder expanded="1" path="animation-folder/MANSIONGOBOOM/" />
+        <folder expanded="1" path="animation-folder/PlayerTorso/" />
+        <folder expanded="1" path="animation-folder/ZEBLACKSCHKREEN2/" />
         <folder expanded="1" path="animation-folder/Sprite/" />
         <folder expanded="1" path="animation-folder/Cursor2/" />
         <folder expanded="1" path="animation-folder/dontmindme/" />

@@ -134,7 +134,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-15" name="Set visible" sid="215423132091618" type="ZEBLACKSCHKREEN">
+                        <action id="-15" name="Set visible" sid="215423132091618" type="ZEBLACKSCHKREEN2">
                             <param id="0" name="Visibility">1</param>
                         </action>
                         <action id="-15" name="Set visible" sid="718201777860666" type="IntroText">
