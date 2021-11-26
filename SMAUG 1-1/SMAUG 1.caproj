@@ -245,8 +245,9 @@
                 </behaviors>
                 <container>
                     <type>Player</type>
-                    <type>Braço</type>
+                    <type>Player_Arm</type>
                     <type>Aim</type>
+                    <type>PlayerTorso</type>
                 </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="397904654121539" speed="5">
@@ -273,21 +274,57 @@
                     </effect-type>
                 </effects>
             </object-type>
-            <object-type name="Braço" sid="495835837900849">
+            <object-type name="Player_Arm" sid="495835837900849">
                 <plugin id="Sprite" />
                 <behaviors>
-                    <behavior-type name="Pin" sid="586059349740031">
+                    <behavior-type name="Pin" sid="281206158263480">
                         <behavior id="Pin" />
                     </behavior-type>
                 </behaviors>
                 <container>
                     <type>Player</type>
-                    <type>Braço</type>
+                    <type>Player_Arm</type>
                     <type>Aim</type>
+                    <type>PlayerTorso</type>
                 </container>
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="599619897456000" speed="5">
-                        <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                    <animation framecount="1" loop="0" name="ArmadaRight" pingpong="0" repeatcount="1" repeatto="0" sid="599619897456000" speed="5">
+                        <frame duration="1" hotspotX="0.538462" hotspotY="0.4" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\dekarla\karlinhabraco3.png">
+                            <collision-poly>
+                                <point x="0.541667" y="0.3075" />
+                                <point x="0.942308" y="0.315" />
+                                <point x="0.939103" y="0.4425" />
+                                <point x="0.50641" y="0.445" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="ArmadaLeft" pingpong="0" repeatcount="1" repeatto="0" sid="110109377686400" speed="5">
+                        <frame duration="1" hotspotX="0.384615" hotspotY="0.36" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\dekarla\karlinhabraco3esquerda.png">
+                            <collision-poly>
+                                <point x="0.589744" y="0.54" />
+                                <point x="0.323718" y="0.435" />
+                                <point x="0.676282" y="0.4125" />
+                                <point x="0.692308" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="BolsoRight" pingpong="0" repeatcount="1" repeatto="0" sid="719379592002436" speed="5">
+                        <frame duration="1" hotspotX="0.538462" hotspotY="0.4" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\dekarla\karlinhabracobolso3.png">
+                            <collision-poly>
+                                <point x="0.53125" y="0.473125" />
+                                <point x="0.685898" y="0.35875" />
+                                <point x="0.641026" y="0.509375" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="BolsoLeft" pingpong="0" repeatcount="1" repeatto="0" sid="221349752690449" speed="5">
+                        <frame duration="1" hotspotX="0.461538" hotspotY="0.4" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\dekarla\karlinhabracobolso3esquerda.png">
+                            <collision-poly>
+                                <point x="0.358974" y="0.509375" />
+                                <point x="0.314102" y="0.35875" />
+                                <point x="0.46875" y="0.473125" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -356,6 +393,7 @@
                     <instance-variable name="Recarregando" sid="461316750234606" type="number" />
                     <instance-variable name="Conversando" sid="174877224387660" type="number" />
                     <instance-variable comment="0=Karla, 1=Sinistro, 2=Maldolaire" name="faccao" sid="803440949794398" type="number" />
+                    <instance-variable name="Weaponized" sid="163786210490004" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="BoundToLayout" sid="999814832154253">
@@ -379,10 +417,21 @@
                 </behaviors>
                 <container>
                     <type>Player</type>
-                    <type>Braço</type>
+                    <type>Player_Arm</type>
                     <type>Aim</type>
+                    <type>PlayerTorso</type>
                 </container>
                 <animation-folder>
+                    <animation framecount="1" loop="0" name="Deslizando" pingpong="0" repeatcount="1" repeatto="0" sid="557531308871757" speed="5">
+                        <frame duration="1" hotspotX="0.282051" hotspotY="0.48" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\dekarla\karlinhasliders.png">
+                            <collision-poly>
+                                <point x="0.0769231" y="0.82" />
+                                <point x="0.0769231" y="0.62" />
+                                <point x="0.512821" y="0.62" />
+                                <point x="0.512821" y="0.82" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
                     <animation framecount="1" loop="0" name="Parada" pingpong="0" repeatcount="1" repeatto="0" sid="801194729870401" speed="5">
                         <frame duration="1" hotspotX="0.282051" hotspotY="0.48" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\dekarla\karlinhapernas.png">
                             <collision-poly>
@@ -424,16 +473,6 @@
                                 <point x="0.487179" y="0.2" />
                                 <point x="0.487179" y="0.86" />
                                 <point x="0.153846" y="0.86" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                    <animation framecount="1" loop="0" name="Deslizando" pingpong="0" repeatcount="1" repeatto="0" sid="557531308871757" speed="5">
-                        <frame duration="1" hotspotX="0.282051" hotspotY="0.48" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\dekarla\karlinhasliders.png">
-                            <collision-poly>
-                                <point x="0.0769231" y="0.82" />
-                                <point x="0.0769231" y="0.62" />
-                                <point x="0.512821" y="0.62" />
-                                <point x="0.512821" y="0.82" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -779,6 +818,74 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="877241600468626" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\ateoi_mansiongoboom.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="PlayerTorso" sid="743407695091178">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="566593855393250">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <container>
+                    <type>Player</type>
+                    <type>Player_Arm</type>
+                    <type>Aim</type>
+                    <type>PlayerTorso</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="SlideRight" pingpong="0" repeatcount="1" repeatto="0" sid="639489122161232" speed="5">
+                        <frame duration="1" hotspotX="0.307692" hotspotY="0.5" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\dekarla\karlinhaTorsoSliderRight.png">
+                            <image-point name="Imagepoint 1" x="0.461538" y="0.38" />
+                            <collision-poly>
+                                <point x="0.153846" y="0.3" />
+                                <point x="0.487179" y="0.3" />
+                                <point x="0.487179" y="0.56" />
+                                <point x="0.153846" y="0.56" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="TorsoRight" pingpong="0" repeatcount="1" repeatto="0" sid="939248287362781" speed="5">
+                        <frame duration="1" hotspotX="0.307692" hotspotY="0.5" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\dekarla\karlinhacorpo3.png">
+                            <image-point name="Imagepoint 1" x="0.461538" y="0.38" />
+                            <collision-poly>
+                                <point x="0.153846" y="0.3" />
+                                <point x="0.487179" y="0.3" />
+                                <point x="0.487179" y="0.56" />
+                                <point x="0.153846" y="0.56" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="TorsoLeft" pingpong="0" repeatcount="1" repeatto="0" sid="766844769854229" speed="5">
+                        <frame duration="1" hotspotX="0.307692" hotspotY="0.5" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\dekarla\karlinha3corpoesquerda3.png">
+                            <image-point name="Imagepoint 1" x="0.205128" y="0.38" />
+                            <collision-poly>
+                                <point x="0.153846" y="0.3" />
+                                <point x="0.487179" y="0.3" />
+                                <point x="0.487179" y="0.56" />
+                                <point x="0.153846" y="0.56" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="SlideLeft" pingpong="0" repeatcount="1" repeatto="0" sid="546359232818036" speed="5">
+                        <frame duration="1" hotspotX="0.307692" hotspotY="0.5" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\dekarla\karlinhaTorsoSliderLeft.png">
+                            <image-point name="Imagepoint 1" x="0.205128" y="0.38" />
+                            <collision-poly>
+                                <point x="0.153846" y="0.3" />
+                                <point x="0.487179" y="0.3" />
+                                <point x="0.487179" y="0.56" />
+                                <point x="0.153846" y="0.56" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ZEBLACKSCHKREEN2" sid="227540124992038">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="761090616574431" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
             </object-type>

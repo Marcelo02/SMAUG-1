@@ -80,7 +80,7 @@
                 <action id="-15" name="Set visible" sid="112833972139187" type="Player">
                     <param id="0" name="Visibility">0</param>
                 </action>
-                <action id="-15" name="Set visible" sid="978354451662292" type="Braço">
+                <action id="-15" name="Set visible" sid="978354451662292" type="Player_Arm">
                     <param id="0" name="Visibility">0</param>
                 </action>
                 <action disabled="1" id="11" name="Set collisions enabled" sid="509845151997679" type="Player">
@@ -137,7 +137,7 @@
                     <param id="0" name="Instance variable">hesin</param>
                     <param id="1" name="Value">0</param>
                 </action>
-                <action id="-15" name="Set visible" sid="614344705780542" type="Braço">
+                <action id="-15" name="Set visible" sid="614344705780542" type="Player_Arm">
                     <param id="0" name="Visibility">1</param>
                 </action>
             </actions>

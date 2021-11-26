@@ -468,76 +468,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Player" uid="0">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Correndo>0</Correndo>
-                        <Agachando>0</Agachando>
-                        <Deslizando>0</Deslizando>
-                        <Subindo_Escada>0</Subindo_Escada>
-                        <Recarregando>0</Recarregando>
-                        <Conversando>0</Conversando>
-                        <faccao>0</faccao>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="BoundToLayout">
-                            <properties>
-                                <bound-by>Origin</bound-by>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Platform">
-                            <properties>
-                                <max-speed>360</max-speed>
-                                <acceleration>10000</acceleration>
-                                <deceleration>5000</deceleration>
-                                <jump-strength>500</jump-strength>
-                                <gravity>1500</gravity>
-                                <max-fall-speed>2000</max-fall-speed>
-                                <double-jump>Disabled</double-jump>
-                                <jump-sustain>0</jump-sustain>
-                                <default-controls>No</default-controls>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="ScrollTo">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="8Direction">
-                            <properties>
-                                <max-speed>360</max-speed>
-                                <acceleration>10000</acceleration>
-                                <deceleration>5000</deceleration>
-                                <directions>4 directions</directions>
-                                <set-angle>No</set-angle>
-                                <default-controls>No</default-controls>
-                                <initial-state>Disabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Flash" />
-                        <behavior-instance type="Reloading" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>304</x>
-                        <y>1760</y>
-                        <z>0</z>
-                        <width>46.428569794</width>
-                        <height>62.5</height>
-                        <depth>0</depth>
-                        <hotspotX>0.282051295</hotspotX>
-                        <hotspotY>0.479999989</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="Wall" uid="8">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -625,31 +555,6 @@
                         <height>2.559999943</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Braço" uid="16">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Pin" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>304</x>
-                        <y>1760</y>
-                        <z>0</z>
-                        <width>35</width>
-                        <height>4</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -1042,6 +947,127 @@
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>0.25</opacity>
+                    </world>
+                </instance>
+                <instance type="Player" uid="0">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Correndo>0</Correndo>
+                        <Agachando>0</Agachando>
+                        <Deslizando>0</Deslizando>
+                        <Subindo_Escada>0</Subindo_Escada>
+                        <Recarregando>0</Recarregando>
+                        <Conversando>0</Conversando>
+                        <faccao>0</faccao>
+                        <Weaponized>0</Weaponized>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="BoundToLayout">
+                            <properties>
+                                <bound-by>Origin</bound-by>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Platform">
+                            <properties>
+                                <max-speed>360</max-speed>
+                                <acceleration>10000</acceleration>
+                                <deceleration>5000</deceleration>
+                                <jump-strength>500</jump-strength>
+                                <gravity>1500</gravity>
+                                <max-fall-speed>2000</max-fall-speed>
+                                <double-jump>Disabled</double-jump>
+                                <jump-sustain>0</jump-sustain>
+                                <default-controls>No</default-controls>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="ScrollTo">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>360</max-speed>
+                                <acceleration>10000</acceleration>
+                                <deceleration>5000</deceleration>
+                                <directions>4 directions</directions>
+                                <set-angle>No</set-angle>
+                                <default-controls>No</default-controls>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Flash" />
+                        <behavior-instance type="Reloading" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>328</x>
+                        <y>1770</y>
+                        <z>0</z>
+                        <width>39</width>
+                        <height>50</height>
+                        <depth>0</depth>
+                        <hotspotX>0.282051295</hotspotX>
+                        <hotspotY>0.479999989</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="PlayerTorso" uid="432">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>327</x>
+                        <y>1774</y>
+                        <z>0</z>
+                        <width>39</width>
+                        <height>50</height>
+                        <depth>0</depth>
+                        <hotspotX>0.307692319</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Player_Arm" uid="16">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>363</x>
+                        <y>1768</y>
+                        <z>0</z>
+                        <width>39</width>
+                        <height>50</height>
+                        <depth>0</depth>
+                        <hotspotX>0.538461566</hotspotX>
+                        <hotspotY>0.400000006</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
                     </world>
                 </instance>
             </instances>
