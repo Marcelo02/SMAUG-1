@@ -3417,7 +3417,14 @@
         <file name="Drone.ogg" />
         <file name="slide.ogg" />
     </sounds-folder>
-    <music-folder />
+    <music-folder>
+        <file name="mais_umMP3_160K_1.ogg" />
+        <file name="piquerj1.ogg" />
+        <file name="renegadeMP3_160K_1.ogg" />
+        <file name="sem_hi_hatMP3_160K_1.ogg" />
+        <file name="submundodadz7.ogg" />
+        <file name="trap_sinistroMP3_160K_1.ogg" />
+    </music-folder>
     <files-folder>
         <file-folder name="Icons">
             <file name="icon-16.png" />
