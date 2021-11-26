@@ -3424,6 +3424,13 @@
         <file name="sem_hi_hatMP3_160K_1.ogg" />
         <file name="submundodadz7.ogg" />
         <file name="trap_sinistroMP3_160K_1.ogg" />
+        <file name="mais_um_praloop.ogg" />
+        <file name="outro_praloop.ogg" />
+        <file name="piquerj1_praloop.ogg" />
+        <file name="renegade_praloop.ogg" />
+        <file name="sem_hi_hat_praloop.ogg" />
+        <file name="submundodadz7_praloop.ogg" />
+        <file name="trap_sinistro_praloop.ogg" />
     </music-folder>
     <files-folder>
         <file-folder name="Icons">
