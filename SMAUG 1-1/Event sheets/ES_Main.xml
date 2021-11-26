@@ -196,6 +196,36 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
+                        <event-block sid="571762547146156">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="348297426670620" type="Player">
+                                    <param id="0" name="Instance variable">Correndo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="5" inverted="1" name="Is tag playing" sid="860404840264671" type="Audio">
+                                    <param id="0" name="Tag">&quot;Running&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="832493787317601" type="Audio">
+                                    <param id="0" name="Audio file">Karla Running</param>
+                                    <param id="2" name="Loop">1</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;Running&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="191323620437701">
+                            <conditions>
+                                <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="778508461104432" type="Player" />
+                            </conditions>
+                            <actions>
+                                <action id="6" name="Stop" sid="514198520616658" type="Audio">
+                                    <param id="0" name="Tag">&quot;Running&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="389763694143886">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="168078984543881" type="Player">
@@ -210,6 +240,9 @@
                                 </action>
                                 <action id="-15" name="Set visible" sid="536149154286132" type="Braço">
                                     <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="6" name="Stop" sid="247695286154644" type="Audio">
+                                    <param id="0" name="Tag">&quot;Running&quot;</param>
                                 </action>
                             </actions>
                             <sub-events>
@@ -293,6 +326,9 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="6" name="Stop" sid="656202098487702" type="Audio">
+                                    <param id="0" name="Tag">&quot;Running&quot;</param>
+                                </action>
                                 <action behavior="Platform" id="3" name="Set deceleration" sid="549096519523956" type="Player">
                                     <param id="0" name="Deceleration">450</param>
                                 </action>
@@ -387,6 +423,9 @@
                         </action>
                         <action behavior="8Direction" id="4" name="Set max speed" sid="151840492306371" type="Player">
                             <param id="0" name="Max Speed">360</param>
+                        </action>
+                        <action id="6" name="Stop" sid="204801340896754" type="Audio">
+                            <param id="0" name="Tag">&quot;Running&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -507,6 +546,12 @@
                                     <param id="0" name="Instance variable">Deslizando</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
+                                <action id="0" name="Play" sid="890382138835103" type="Audio">
+                                    <param id="0" name="Audio file">slide</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-5</param>
+                                    <param id="1" name="Tag (optional)">&quot;Sliding&quot;</param>
+                                </action>
                                 <action id="-16" name="Wait" sid="880482508379725" type="System">
                                     <param id="0" name="Seconds">0.35</param>
                                 </action>
@@ -558,6 +603,12 @@
                         <action id="-11" name="Subtract from" sid="785783556958233" type="System">
                             <param id="0" name="Variable">Pistol_ammo</param>
                             <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="283365412785923" type="Audio">
+                            <param id="0" name="Audio file">SOM DE TIRO</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-5</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -824,6 +875,12 @@
                                 <action id="-15" name="Set visible" sid="496227459494766" type="reloadbar">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
+                                <action id="0" name="Play" sid="741100053724031" type="Audio">
+                                    <param id="0" name="Audio file">FASTER Reload</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-5</param>
+                                    <param id="1" name="Tag (optional)">&quot;reloading&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="907840404438646">
@@ -953,6 +1010,12 @@
                                     <param id="1" name="Layer">3</param>
                                     <param id="2" name="Image point">1</param>
                                 </action>
+                                <action id="0" name="Play" sid="353204219471344" type="Audio">
+                                    <param id="0" name="Audio file">SOM DE TIRO</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-5</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="726529855182037">
@@ -1043,11 +1106,20 @@
                                     <param id="1" name="Comparison">1</param>
                                     <param id="2" name="Second value">Player.faccao</param>
                                 </condition>
+                                <condition id="5" inverted="1" name="Is tag playing" sid="524669650014459" type="Audio">
+                                    <param id="0" name="Tag">&quot;Drone&quot;</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="-10" name="Set value" sid="978411677259279" type="Enemy_2">
                                     <param id="0" name="Instance variable">Idle</param>
                                     <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Play" sid="378830759557716" type="Audio">
+                                    <param id="0" name="Audio file">Drone</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-5</param>
+                                    <param id="1" name="Tag (optional)">&quot;Drone&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1260,7 +1332,14 @@
                                     <param id="0" name="Object">Trap</param>
                                 </condition>
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action id="0" name="Play" sid="267543164629587" type="Audio">
+                                    <param id="0" name="Audio file">alarme</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-5</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
                             <sub-events>
                                 <event-block sid="794921971073593">
                                     <conditions>
@@ -1591,6 +1670,12 @@
                                     <param id="1" name="Layer">4</param>
                                     <param id="2" name="Image point">0</param>
                                 </action>
+                                <action id="0" name="Play" sid="663123377052928" type="Audio">
+                                    <param id="0" name="Audio file">SOM DE TIRO</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-5</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="933794979692629">
@@ -1827,6 +1912,14 @@
                     <actions>
                         <action id="-9" name="Destroy" sid="266091085073060" type="Player" />
                         <action id="-9" name="Destroy" sid="750584571406888" type="Braço" />
+                        <action id="33" name="Stop all" sid="639644566424320" type="Audio" />
+                        <action id="-2" name="Go to layout" sid="975543244202246" type="System">
+                            <param id="0" name="Layout">L_Menu</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="649714461649112" type="System">
+                            <param id="0" name="Variable">Life</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="111243691629257">
