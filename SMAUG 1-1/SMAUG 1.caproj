@@ -24,6 +24,7 @@
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
@@ -40,6 +41,7 @@
     <used-effects>
         <effect author="Scirra" id="brightness">Brightness</effect>
         <effect author="Scirra" id="hardlight">Hard Light</effect>
+        <effect author="Scirra" id="inverse">Inverse</effect>
     </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
@@ -248,12 +250,28 @@
                 </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="397904654121539" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\target.png">
+                            <collision-poly>
+                                <point x="0.21875" y="0.21875" />
+                                <point x="0.5" y="0" />
+                                <point x="0.78125" y="0.21875" />
+                                <point x="1" y="0.5" />
+                                <point x="0.78125" y="0.78125" />
+                                <point x="0.5" y="1" />
+                                <point x="0.21875" y="0.78125" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
             <object-type global="1" name="Ammo" sid="823159024849677">
                 <plugin id="Text" />
+                <effects>
+                    <effect-type name="Inverse">
+                        <effect id="inverse" />
+                    </effect-type>
+                </effects>
             </object-type>
             <object-type name="Braço" sid="495835837900849">
                 <plugin id="Sprite" />
@@ -366,86 +384,128 @@
                 </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Parada" pingpong="0" repeatcount="1" repeatto="0" sid="801194729870401" speed="5">
-                        <frame duration="1" hotspotX="0.52381" hotspotY="0.5" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\karla_susplaceholder.png">
+                        <frame duration="1" hotspotX="0.282051" hotspotY="0.48" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\dekarla\karlinhapernas.png">
                             <collision-poly>
-                                <point x="0.047619" y="0.0277778" />
-                                <point x="0.952381" y="0.0277778" />
-                                <point x="0.952381" y="0.972222" />
-                                <point x="0.047619" y="0.972222" />
+                                <point x="0.153846" y="0.48" />
+                                <point x="0.487179" y="0.48" />
+                                <point x="0.487179" y="0.86" />
+                                <point x="0.153846" y="0.86" />
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="2" loop="1" name="Correndo" pingpong="0" repeatcount="1" repeatto="0" sid="348722496338049" speed="8">
-                        <frame duration="1" hotspotX="0.52381" hotspotY="0.5" original-source="D:\W10SSD-Energumeno\Documents\GOONGIT\smaug-1\SMAUG-1\SMAUG 1-1\Animations\Player\Default\000.png">
+                    <animation framecount="4" loop="1" name="Correndo" pingpong="0" repeatcount="1" repeatto="0" sid="284468225727519" speed="8">
+                        <frame duration="1" hotspotX="0.282051" hotspotY="0.48">
                             <collision-poly>
-                                <point x="0.047619" y="0.0277778" />
-                                <point x="0.952381" y="0.0277778" />
-                                <point x="0.952381" y="0.972222" />
-                                <point x="0.047619" y="0.972222" />
+                                <point x="0.153846" y="0.48" />
+                                <point x="0.487179" y="0.48" />
+                                <point x="0.487179" y="0.86" />
+                                <point x="0.153846" y="0.86" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.52381" hotspotY="0.5" original-source="D:\W10SSD-Energumeno\Documents\GOONGIT\smaug-1\SMAUG-1\SMAUG 1-1\Animations\Player\Default\000.png">
+                        <frame duration="1" hotspotX="0.282051" hotspotY="0.48">
                             <collision-poly>
-                                <point x="0.047619" y="0.0277778" />
-                                <point x="0.952381" y="0.0277778" />
-                                <point x="0.952381" y="0.972222" />
-                                <point x="0.047619" y="0.972222" />
+                                <point x="0.153846" y="0.48" />
+                                <point x="0.487179" y="0.48" />
+                                <point x="0.487179" y="0.86" />
+                                <point x="0.153846" y="0.86" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.282051" hotspotY="0.48">
+                            <collision-poly>
+                                <point x="0.153846" y="0.48" />
+                                <point x="0.487179" y="0.48" />
+                                <point x="0.487179" y="0.86" />
+                                <point x="0.153846" y="0.86" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.282051" hotspotY="0.48">
+                            <collision-poly>
+                                <point x="0.153846" y="0.2" />
+                                <point x="0.487179" y="0.2" />
+                                <point x="0.487179" y="0.86" />
+                                <point x="0.153846" y="0.86" />
                             </collision-poly>
                         </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="Deslizando" pingpong="0" repeatcount="1" repeatto="0" sid="557531308871757" speed="5">
-                        <frame duration="1" hotspotX="0.533333" hotspotY="0.25" original-source="D:\W10SSD-Energumeno\Documents\GOONGIT\smaug-1\SMAUG-1\SMAUG 1-1\Animations\Player\Default\002.png">
+                        <frame duration="1" hotspotX="0.282051" hotspotY="0.48" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\dekarla\karlinhasliders.png">
                             <collision-poly>
-                                <point x="0.966667" y="0.791666" />
-                                <point x="0.966667" y="0.958333" />
-                                <point x="0.0333333" y="0.958333" />
-                                <point x="0.0333333" y="0.791667" />
+                                <point x="0.0769231" y="0.82" />
+                                <point x="0.0769231" y="0.62" />
+                                <point x="0.512821" y="0.62" />
+                                <point x="0.512821" y="0.82" />
                             </collision-poly>
                         </frame>
                     </animation>
                     <animation framecount="2" loop="0" name="Escadas" pingpong="0" repeatcount="1" repeatto="0" sid="944433706808234" speed="5">
-                        <frame duration="1" hotspotX="0.52381" hotspotY="0.5" original-source="D:\W10SSD-Energumeno\Documents\GOONGIT\smaug-1\SMAUG-1\SMAUG 1-1\Animations\Player\Default\000.png">
+                        <frame duration="1" hotspotX="0.282051" hotspotY="0.48" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\dekarla\karlinhACLIMBERS1.png">
                             <collision-poly>
-                                <point x="0.047619" y="0.0277778" />
-                                <point x="0.952381" y="0.0277778" />
-                                <point x="0.952381" y="0.972222" />
-                                <point x="0.047619" y="0.972222" />
+                                <point x="0.153846" y="0.48" />
+                                <point x="0.487179" y="0.48" />
+                                <point x="0.487179" y="0.86" />
+                                <point x="0.153846" y="0.86" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.52381" hotspotY="0.5">
+                        <frame duration="1" hotspotX="0.282051" hotspotY="0.48" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\dekarla\karlinhACLIMBERS2.png">
                             <collision-poly>
-                                <point x="0.952381" y="0.972222" />
-                                <point x="0.047619" y="0.972222" />
-                                <point x="0.047619" y="0.0277778" />
-                                <point x="0.952381" y="0.0277778" />
+                                <point x="0.153846" y="0.48" />
+                                <point x="0.487179" y="0.48" />
+                                <point x="0.487179" y="0.86" />
+                                <point x="0.153846" y="0.86" />
                             </collision-poly>
                         </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="Agachada" pingpong="0" repeatcount="1" repeatto="0" sid="209382679915143" speed="5">
-                        <frame duration="1" hotspotX="0.52381" hotspotY="0.25" original-source="D:\W10SSD-Energumeno\Documents\GOONGIT\smaug-1\SMAUG-1\SMAUG 1-1\Animations\Player\Default\001.png">
+                        <frame duration="1" hotspotX="0.333333" hotspotY="0.5" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\dekarla\karlinhacrouchers.png">
                             <collision-poly>
-                                <point x="0.047619" y="0.0416667" />
-                                <point x="0.952381" y="0.0416667" />
-                                <point x="0.952381" y="0.958333" />
-                                <point x="0.047619" y="0.958333" />
+                                <point x="0.153846" y="0.2" />
+                                <point x="0.487179" y="0.2" />
+                                <point x="0.487179" y="0.86" />
+                                <point x="0.153846" y="0.86" />
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="2" loop="1" name="Andando" pingpong="0" repeatcount="1" repeatto="0" sid="532913543888225" speed="5">
-                        <frame duration="1" hotspotX="0.52381" hotspotY="0.5">
+                    <animation framecount="4" loop="1" name="Andando" pingpong="0" repeatcount="1" repeatto="0" sid="686580379791894" speed="5">
+                        <frame duration="1" hotspotX="0.282051" hotspotY="0.48">
                             <collision-poly>
-                                <point x="0.047619" y="0.0277778" />
-                                <point x="0.952381" y="0.0277778" />
-                                <point x="0.952381" y="0.972222" />
-                                <point x="0.047619" y="0.972222" />
+                                <point x="0.153846" y="0.48" />
+                                <point x="0.487179" y="0.48" />
+                                <point x="0.487179" y="0.86" />
+                                <point x="0.153846" y="0.86" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.52381" hotspotY="0.5">
+                        <frame duration="1" hotspotX="0.282051" hotspotY="0.48">
                             <collision-poly>
-                                <point x="0.047619" y="0.0277778" />
-                                <point x="0.952381" y="0.0277778" />
-                                <point x="0.952381" y="0.972222" />
-                                <point x="0.047619" y="0.972222" />
+                                <point x="0.153846" y="0.48" />
+                                <point x="0.487179" y="0.48" />
+                                <point x="0.487179" y="0.86" />
+                                <point x="0.153846" y="0.86" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.282051" hotspotY="0.48">
+                            <collision-poly>
+                                <point x="0.153846" y="0.48" />
+                                <point x="0.487179" y="0.48" />
+                                <point x="0.487179" y="0.86" />
+                                <point x="0.153846" y="0.86" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.282051" hotspotY="0.48">
+                            <collision-poly>
+                                <point x="0.153846" y="0.48" />
+                                <point x="0.487179" y="0.48" />
+                                <point x="0.487179" y="0.86" />
+                                <point x="0.153846" y="0.86" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Pulando" pingpong="0" repeatcount="1" repeatto="0" sid="779575169147099" speed="5">
+                        <frame duration="1" hotspotX="0.282051" hotspotY="0.5" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\dekarla\karlinhajumpaz.png">
+                            <collision-poly>
+                                <point x="0.153846" y="0.48" />
+                                <point x="0.487179" y="0.48" />
+                                <point x="0.487179" y="0.86" />
+                                <point x="0.153846" y="0.86" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -466,9 +526,19 @@
             </object-type>
             <object-type global="1" name="Vida" sid="889043364202022">
                 <plugin id="Text" />
+                <effects>
+                    <effect-type name="Inverse">
+                        <effect id="inverse" />
+                    </effect-type>
+                </effects>
             </object-type>
             <object-type global="1" name="DEBUG" sid="198438687164198">
                 <plugin id="Text" />
+                <effects>
+                    <effect-type name="Inverse">
+                        <effect id="inverse" />
+                    </effect-type>
+                </effects>
             </object-type>
             <object-type name="TiledBackground" sid="494622060616355">
                 <plugin id="TiledBg" />
@@ -693,6 +763,11 @@
             </object-type>
             <object-type name="ZEBLACKSCHKREEN" sid="299340556626892">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="513290396747588">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="262438862495538" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -3214,6 +3289,9 @@
             </object-type>
             <object-type name="PressE" sid="781504027023937">
                 <plugin id="Spritefont2" />
+                <instance-variables>
+                    <instance-variable name="uiE" sid="505524377183672" type="number" />
+                </instance-variables>
                 <behaviors>
                     <behavior-type name="Sine" sid="325576975898272">
                         <behavior id="Sin" />
@@ -3394,7 +3472,7 @@
         <global-instance type="Mouse" uid="65" />
         <global-instance type="Browser" uid="66" />
         <global-instance type="Climb" uid="384" />
-        <global-instance type="Audio" uid="94">
+        <global-instance type="Audio" uid="430">
             <properties>
                 <timescale-audio>Off</timescale-audio>
                 <saveload>All</saveload>

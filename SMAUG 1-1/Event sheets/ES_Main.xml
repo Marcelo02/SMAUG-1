@@ -163,7 +163,7 @@
                             </conditions>
                             <actions>
                                 <action behavior="Platform" id="1" name="Set max speed" sid="142328303308175" type="Player">
-                                    <param id="0" name="Max Speed">560</param>
+                                    <param id="0" name="Max Speed">420</param>
                                 </action>
                                 <action id="-15" name="Set visible" sid="710447324507348" type="Braço">
                                     <param id="0" name="Visibility">0</param>
