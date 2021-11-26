@@ -346,7 +346,7 @@
                 </instance>
                 <instance type="stair_collision" uid="57">
                     <properties>
-                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -487,7 +487,7 @@
                     <behavior-instances>
                         <behavior-instance type="BoundToLayout">
                             <properties>
-                                <bound-by>Edge</bound-by>
+                                <bound-by>Origin</bound-by>
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="Platform">
@@ -529,11 +529,11 @@
                         <x>304</x>
                         <y>1760</y>
                         <z>0</z>
-                        <width>25</width>
-                        <height>45</height>
+                        <width>46.428569794</width>
+                        <height>62.5</height>
                         <depth>0</depth>
-                        <hotspotX>0.523809552</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.282051295</hotspotX>
+                        <hotspotY>0.479999989</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -621,8 +621,8 @@
                         <x>448</x>
                         <y>1696</y>
                         <z>0</z>
-                        <width>10</width>
-                        <height>10</height>
+                        <width>2.559999943</width>
+                        <height>2.559999943</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1022,6 +1022,28 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="stairbottom" uid="431">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>223.5</x>
+                        <y>1786.5</y>
+                        <z>0</z>
+                        <width>57</width>
+                        <height>6</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0.25</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -1045,22 +1067,29 @@
                     <properties>
                         <text>Text</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-27,700,0</font>
-                        <color>0,0,0</color>
-                        <horizontal-alignment>Left</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
+                        <font>Courier New,-27,700,0</font>
+                        <color>255,255,255</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="Inverse">
+                            <parameters>
+                                <intensity>1</intensity>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>-208</x>
-                        <y>0</y>
+                        <y>-14.573684692</y>
                         <z>0</z>
                         <width>192</width>
-                        <height>38.426315308</height>
+                        <height>53</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -1072,22 +1101,29 @@
                     <properties>
                         <text>Vida</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-27,700,0</font>
-                        <color>0,0,0</color>
+                        <font>Courier New,-27,700,0</font>
+                        <color>255,255,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Top</hotspot>
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="Inverse">
+                            <parameters>
+                                <intensity>1</intensity>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-64</x>
-                        <y>0</y>
+                        <x>-72.5</x>
+                        <y>-14.799999237</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>38.200000763</height>
+                        <width>81</width>
+                        <height>53</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -1099,22 +1135,29 @@
                     <properties>
                         <text>Text</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-16</font>
-                        <color>0,0,0</color>
+                        <font>Courier New,-16,400,0</font>
+                        <color>255,255,255</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="Inverse">
+                            <parameters>
+                                <intensity>1</intensity>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>-160</x>
-                        <y>-80.163208008</y>
+                        <y>-86.163208008</y>
                         <z>0</z>
                         <width>800</width>
-                        <height>22</height>
+                        <height>28</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>

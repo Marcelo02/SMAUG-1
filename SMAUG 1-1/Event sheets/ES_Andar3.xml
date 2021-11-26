@@ -932,6 +932,7 @@
                                     <param id="0" name="Instance variable">Correndo</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
+                                <action id="-9" name="Destroy" sid="488737507299759" type="TASKSTATE" />
                             </actions>
                         </event-block>
                         <event-block sid="713745659437423">
