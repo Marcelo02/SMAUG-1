@@ -80,6 +80,7 @@
                         <instance-variable name="Life" sid="509103160525295" type="number" />
                         <instance-variable comment="0=Karla, 1=Sinistro, 2=Maldolaire" name="faccao" sid="221563738667952" type="number" />
                         <instance-variable comment="0=left 1=right 2=standingleft 3=standingright" name="goingwhere" sid="770708211320566" type="number" />
+                        <instance-variable name="Ded" sid="778453167027320" type="number" />
                     </instance-variables>
                     <behaviors>
                         <behavior-type name="Platform" sid="630640943218123">
@@ -91,6 +92,9 @@
                         <behavior-type name="LineOfSight" sid="354684391561277">
                             <behavior id="LOS" />
                         </behavior-type>
+                        <behavior-type name="Flash" sid="360153201539879">
+                            <behavior id="Flash" />
+                        </behavior-type>
                     </behaviors>
                     <container>
                         <type>Enemy_4</type>
@@ -98,22 +102,130 @@
                     </container>
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Sinistro1" pingpong="0" repeatcount="1" repeatto="0" sid="914723938692249" speed="5">
-                            <frame duration="1" hotspotX="0.52381" hotspotY="0.5">
+                            <frame duration="1" hotspotX="0.307692" hotspotY="0.32" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\deboyspritez\SinisStanding.png">
                                 <collision-poly>
-                                    <point x="0.047619" y="0.0277778" />
-                                    <point x="0.952381" y="0.0277778" />
-                                    <point x="0.952381" y="0.972222" />
-                                    <point x="0.047619" y="0.972222" />
+                                    <point x="0" y="0" />
+                                    <point x="0.615385" y="0" />
+                                    <point x="0.615385" y="0.82" />
+                                    <point x="0" y="0.82" />
                                 </collision-poly>
                             </frame>
                         </animation>
-                        <animation framecount="1" loop="0" name="Mafia1" pingpong="0" repeatcount="1" repeatto="0" sid="451542847948403" speed="5">
-                            <frame duration="1" hotspotX="0.52381" hotspotY="0.5">
+                        <animation framecount="1" loop="0" name="SinistroFire" pingpong="0" repeatcount="1" repeatto="0" sid="323139974596192" speed="5">
+                            <frame duration="1" hotspotX="0.307692" hotspotY="0.32" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\deboyspritez\SinisShoot.png">
                                 <collision-poly>
-                                    <point x="0.047619" y="0.0277778" />
-                                    <point x="0.952381" y="0.0277778" />
-                                    <point x="0.952381" y="0.972222" />
-                                    <point x="0.047619" y="0.972222" />
+                                    <point x="0" y="0" />
+                                    <point x="0.615385" y="0" />
+                                    <point x="0.615385" y="0.82" />
+                                    <point x="0" y="0.82" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Mafia1" pingpong="0" repeatcount="1" repeatto="0" sid="738358522412131" speed="5">
+                            <frame duration="1" hotspotX="0.307692" hotspotY="0.32" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\deboyspritez\MafiaStanding.png">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="0.615385" y="0" />
+                                    <point x="0.615385" y="0.82" />
+                                    <point x="0" y="0.82" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="MafiaFire" pingpong="0" repeatcount="1" repeatto="0" sid="123476556320756" speed="5">
+                            <frame duration="1" hotspotX="0.307692" hotspotY="0.32" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\deboyspritez\MafiaShoot.png">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="0.615385" y="0" />
+                                    <point x="0.615385" y="0.82" />
+                                    <point x="0" y="0.82" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="4" loop="0" name="SinistroWalk" pingpong="0" repeatcount="1" repeatto="0" sid="288994619901452" speed="5">
+                            <frame duration="1" hotspotX="0.307692" hotspotY="0.32" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\deboyspritez\SinisWalk1.png">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="0.615385" y="0" />
+                                    <point x="0.615385" y="0.82" />
+                                    <point x="0" y="0.82" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.307692" hotspotY="0.32" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\deboyspritez\SinisWalk2.png">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="0.615385" y="0" />
+                                    <point x="0.615385" y="0.82" />
+                                    <point x="0" y="0.82" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.307692" hotspotY="0.32" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\deboyspritez\SinisWalk3.png">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="0.615385" y="0" />
+                                    <point x="0.615385" y="0.82" />
+                                    <point x="0" y="0.82" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.307692" hotspotY="0.32" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\deboyspritez\SinisWalk4.png">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="0.615385" y="0" />
+                                    <point x="0.615385" y="0.82" />
+                                    <point x="0" y="0.82" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="4" loop="0" name="MafiaWalk" pingpong="0" repeatcount="1" repeatto="0" sid="285096897030283" speed="3">
+                            <frame duration="1" hotspotX="0.307692" hotspotY="0.32" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\deboyspritez\MafiaWalk1.png">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="0.615385" y="0" />
+                                    <point x="0.615385" y="0.82" />
+                                    <point x="0" y="0.82" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.307692" hotspotY="0.32" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\deboyspritez\MafiaWalk2.png">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="0.615385" y="0" />
+                                    <point x="0.615385" y="0.82" />
+                                    <point x="0" y="0.82" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.307692" hotspotY="0.32" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\deboyspritez\MafiaWalk3.png">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="0.615385" y="0" />
+                                    <point x="0.615385" y="0.82" />
+                                    <point x="0" y="0.82" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.307692" hotspotY="0.32" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\deboyspritez\MafiaWalk4.png">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="0.615385" y="0" />
+                                    <point x="0.615385" y="0.82" />
+                                    <point x="0" y="0.82" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="SinistroDead" pingpong="0" repeatcount="1" repeatto="0" sid="435137608356750" speed="5">
+                            <frame duration="1" hotspotX="0.307692" hotspotY="0.32" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\deboyspritez\SinisDead.png">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="1" y="0" />
+                                    <point x="1" y="0.82" />
+                                    <point x="0" y="0.82" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="MafiaDead" pingpong="0" repeatcount="1" repeatto="0" sid="985621315758757" speed="5">
+                            <frame duration="1" hotspotX="0.307692" hotspotY="0.32" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\deboyspritez\MafiaDead.png">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="1" y="0" />
+                                    <point x="1" y="0.82" />
+                                    <point x="0" y="0.82" />
                                 </collision-poly>
                             </frame>
                         </animation>
@@ -245,10 +357,10 @@
                 </behaviors>
                 <container>
                     <type>Player</type>
-                    <type>Player_Arm</type>
-                    <type>Aim</type>
                     <type>PlayerTorso</type>
+                    <type>Player_Arm</type>
                     <type>Player_Arm3</type>
+                    <type>Aim</type>
                 </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="397904654121539" speed="5">
@@ -284,10 +396,10 @@
                 </behaviors>
                 <container>
                     <type>Player</type>
-                    <type>Player_Arm</type>
-                    <type>Aim</type>
                     <type>PlayerTorso</type>
+                    <type>Player_Arm</type>
                     <type>Player_Arm3</type>
+                    <type>Aim</type>
                 </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="ArmadaRight" pingpong="0" repeatcount="1" repeatto="0" sid="599619897456000" speed="5">
@@ -420,10 +532,10 @@
                 </behaviors>
                 <container>
                     <type>Player</type>
-                    <type>Player_Arm</type>
-                    <type>Aim</type>
                     <type>PlayerTorso</type>
+                    <type>Player_Arm</type>
                     <type>Player_Arm3</type>
+                    <type>Aim</type>
                 </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Parada" pingpong="0" repeatcount="1" repeatto="0" sid="801194729870401" speed="5">
@@ -499,36 +611,36 @@
                         </frame>
                     </animation>
                     <animation framecount="3" loop="1" name="AndandoAgachada" pingpong="0" repeatcount="1" repeatto="0" sid="423252838540936" speed="5">
-                        <frame duration="1" hotspotX="0.282051" hotspotY="0.5">
+                        <frame duration="1" hotspotX="0.282051" hotspotY="0.48">
                             <collision-poly>
-                                <point x="0.153846" y="0.4" />
-                                <point x="0.487179" y="0.4" />
+                                <point x="0.153846" y="0.44" />
+                                <point x="0.487179" y="0.44" />
                                 <point x="0.487179" y="0.86" />
                                 <point x="0.153846" y="0.86" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.282051" hotspotY="0.5" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\dekarla\karlinhacrouchwalk1.png">
+                        <frame duration="1" hotspotX="0.282051" hotspotY="0.48" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\dekarla\karlinhacrouchwalk1.png">
                             <collision-poly>
-                                <point x="0.153846" y="0.4" />
-                                <point x="0.487179" y="0.4" />
+                                <point x="0.153846" y="0.44" />
+                                <point x="0.487179" y="0.44" />
                                 <point x="0.487179" y="0.86" />
                                 <point x="0.153846" y="0.86" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.282051" hotspotY="0.5" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\dekarla\karlinhacrouchwalk2.png">
+                        <frame duration="1" hotspotX="0.282051" hotspotY="0.48" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\dekarla\karlinhacrouchwalk2.png">
                             <collision-poly>
-                                <point x="0.153846" y="0.4" />
-                                <point x="0.487179" y="0.4" />
+                                <point x="0.153846" y="0.44" />
+                                <point x="0.487179" y="0.44" />
                                 <point x="0.487179" y="0.86" />
                                 <point x="0.153846" y="0.86" />
                             </collision-poly>
                         </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="Agachada" pingpong="0" repeatcount="1" repeatto="0" sid="209382679915143" speed="5">
-                        <frame duration="1" hotspotX="0.282051" hotspotY="0.5" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\dekarla\karlinhacrouchers.png">
+                        <frame duration="1" hotspotX="0.282051" hotspotY="0.48" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\dekarla\karlinhacrouchers.png">
                             <collision-poly>
-                                <point x="0.153846" y="0.4" />
-                                <point x="0.487179" y="0.4" />
+                                <point x="0.153846" y="0.44" />
+                                <point x="0.487179" y="0.44" />
                                 <point x="0.487179" y="0.86" />
                                 <point x="0.153846" y="0.86" />
                             </collision-poly>
@@ -678,8 +790,45 @@
                     <type>Enemy_Arm</type>
                 </container>
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="379200796735014" speed="5">
-                        <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                    <animation framecount="1" loop="0" name="SinisArm1" pingpong="0" repeatcount="1" repeatto="0" sid="379200796735014" speed="5">
+                        <frame duration="1" hotspotX="0.410256" hotspotY="0.36" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\deboyspritez\bracosinat.png">
+                            <collision-poly>
+                                <point x="0.410256" y="0.32" />
+                                <point x="0.392628" y="0.40125" />
+                                <point x="0.487179" y="0.4" />
+                                <point x="0.846154" y="0.34" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="SinisArm2" pingpong="0" repeatcount="1" repeatto="0" sid="355721537607809" speed="5">
+                        <frame duration="1" hotspotX="0.410256" hotspotY="0.64">
+                            <collision-poly>
+                                <point x="0.846154" y="0.66" />
+                                <point x="0.48718" y="0.6" />
+                                <point x="0.392628" y="0.59875" />
+                                <point x="0.410256" y="0.68" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="MafiaArm1" pingpong="0" repeatcount="1" repeatto="0" sid="719460456081566" speed="5">
+                        <frame duration="1" hotspotX="0.410256" hotspotY="0.36" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\deboyspritez\bracomafiat.png">
+                            <collision-poly>
+                                <point x="0.410256" y="0.32" />
+                                <point x="0.392628" y="0.40125" />
+                                <point x="0.487179" y="0.4" />
+                                <point x="0.846154" y="0.34" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="MafiaArm2" pingpong="0" repeatcount="1" repeatto="0" sid="260314157498137" speed="5">
+                        <frame duration="1" hotspotX="0.410256" hotspotY="0.64">
+                            <collision-poly>
+                                <point x="0.846154" y="0.66" />
+                                <point x="0.487179" y="0.6" />
+                                <point x="0.392628" y="0.59875" />
+                                <point x="0.410256" y="0.68" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -876,10 +1025,10 @@
                 </behaviors>
                 <container>
                     <type>Player</type>
-                    <type>Player_Arm</type>
-                    <type>Aim</type>
                     <type>PlayerTorso</type>
+                    <type>Player_Arm</type>
                     <type>Player_Arm3</type>
+                    <type>Aim</type>
                 </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="TorsoRight" pingpong="0" repeatcount="1" repeatto="0" sid="939248287362781" speed="5">
@@ -998,10 +1147,10 @@
                 </behaviors>
                 <container>
                     <type>Player</type>
-                    <type>Player_Arm</type>
-                    <type>Aim</type>
                     <type>PlayerTorso</type>
+                    <type>Player_Arm</type>
                     <type>Player_Arm3</type>
+                    <type>Aim</type>
                 </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="973120180522496" speed="5">
@@ -1791,15 +1940,15 @@
                         <tile id="112">
                             <collision-poly>
                                 <point x="0" y="0" />
-                                <point x="1" y="0.09375" />
+                                <point x="1" y="0.125" />
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
                             </collision-poly>
                         </tile>
                         <tile id="113">
                             <collision-poly>
-                                <point x="0" y="0.15625" />
-                                <point x="1" y="0.40625" />
+                                <point x="0" y="0.125" />
+                                <point x="1" y="0.375" />
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
                             </collision-poly>
@@ -1814,7 +1963,7 @@
                         </tile>
                         <tile id="115">
                             <collision-poly>
-                                <point x="0" y="0.5625" />
+                                <point x="0" y="0.625" />
                                 <point x="1" y="0.8125" />
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
@@ -1822,45 +1971,45 @@
                         </tile>
                         <tile id="116">
                             <collision-poly>
-                                <point x="0" y="0.75" />
+                                <point x="0" y="0.8125" />
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
                             </collision-poly>
                         </tile>
                         <tile id="117">
                             <collision-poly>
-                                <point x="0.984375" y="0.75" />
+                                <point x="1" y="0.8125" />
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
                             </collision-poly>
                         </tile>
                         <tile id="118">
                             <collision-poly>
-                                <point x="0" y="0.796875" />
-                                <point x="1" y="0.578125" />
+                                <point x="0" y="0.8125" />
+                                <point x="1" y="0.625" />
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
                             </collision-poly>
                         </tile>
                         <tile id="119">
                             <collision-poly>
-                                <point x="0" y="0.609375" />
-                                <point x="1" y="0.40625" />
+                                <point x="0" y="0.625" />
+                                <point x="1" y="0.375" />
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
                             </collision-poly>
                         </tile>
                         <tile id="120">
                             <collision-poly>
-                                <point x="0" y="0.421875" />
-                                <point x="1" y="0.203125" />
+                                <point x="0" y="0.375" />
+                                <point x="1" y="0.125" />
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
                             </collision-poly>
                         </tile>
                         <tile id="121">
                             <collision-poly>
-                                <point x="0" y="0.15625" />
+                                <point x="0" y="0.125" />
                                 <point x="1" y="0" />
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
@@ -1869,53 +2018,53 @@
                         <tile id="128">
                             <collision-poly>
                                 <point x="0" y="0" />
-                                <point x="1" y="0.078125" />
+                                <point x="1" y="0.125" />
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
                             </collision-poly>
                         </tile>
                         <tile id="129">
                             <collision-poly>
-                                <point x="0" y="0.0859375" />
-                                <point x="1" y="0.355469" />
+                                <point x="0" y="0.125" />
+                                <point x="1" y="0.3125" />
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
                             </collision-poly>
                         </tile>
                         <tile id="130">
                             <collision-poly>
-                                <point x="0" y="0.328125" />
-                                <point x="1" y="0.484375" />
+                                <point x="0" y="0.3125" />
+                                <point x="1" y="0.4375" />
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
                             </collision-poly>
                         </tile>
                         <tile id="131">
                             <collision-poly>
-                                <point x="0" y="0.5" />
-                                <point x="1" y="0.671875" />
+                                <point x="0" y="0.4375" />
+                                <point x="1" y="0.625" />
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
                             </collision-poly>
                         </tile>
                         <tile id="132">
                             <collision-poly>
-                                <point x="0" y="0.65625" />
-                                <point x="1" y="0.890625" />
+                                <point x="0" y="0.625" />
+                                <point x="1" y="0.8125" />
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
                             </collision-poly>
                         </tile>
                         <tile id="133">
                             <collision-poly>
-                                <point x="0" y="0.828125" />
+                                <point x="0" y="0.8125" />
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
                             </collision-poly>
                         </tile>
                         <tile id="134">
                             <collision-poly>
-                                <point x="1" y="0.765625" />
+                                <point x="1" y="0.8125" />
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
                             </collision-poly>
@@ -1923,31 +2072,31 @@
                         <tile id="135">
                             <collision-poly>
                                 <point x="0" y="0.8125" />
-                                <point x="1" y="0.632813" />
+                                <point x="1" y="0.625" />
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
                             </collision-poly>
                         </tile>
                         <tile id="136">
                             <collision-poly>
-                                <point x="0" y="0.6875" />
-                                <point x="1" y="0.515625" />
+                                <point x="0" y="0.625" />
+                                <point x="1" y="0.4375" />
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
                             </collision-poly>
                         </tile>
                         <tile id="137">
                             <collision-poly>
-                                <point x="0" y="0.515625" />
-                                <point x="1" y="0.328125" />
+                                <point x="0" y="0.4375" />
+                                <point x="1" y="0.3125" />
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
                             </collision-poly>
                         </tile>
                         <tile id="138">
                             <collision-poly>
-                                <point x="0" y="0.375" />
-                                <point x="1" y="0.109375" />
+                                <point x="0" y="0.3125" />
+                                <point x="1" y="0.125" />
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
                             </collision-poly>
@@ -1963,22 +2112,22 @@
                         <tile id="144">
                             <collision-poly>
                                 <point x="0" y="0" />
-                                <point x="1" y="0.109375" />
+                                <point x="1" y="0.0625" />
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
                             </collision-poly>
                         </tile>
                         <tile id="145">
                             <collision-poly>
-                                <point x="0" y="0.03125" />
-                                <point x="1" y="0.28125" />
+                                <point x="0" y="0.0625" />
+                                <point x="1" y="0.25" />
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
                             </collision-poly>
                         </tile>
                         <tile id="146">
                             <collision-poly>
-                                <point x="0" y="0.296875" />
+                                <point x="0" y="0.25" />
                                 <point x="1" y="0.4375" />
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
@@ -1987,37 +2136,37 @@
                         <tile id="147">
                             <collision-poly>
                                 <point x="0" y="0.4375" />
-                                <point x="1" y="0.578125" />
+                                <point x="1" y="0.5625" />
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
                             </collision-poly>
                         </tile>
                         <tile id="148">
                             <collision-poly>
-                                <point x="0" y="0.578125" />
-                                <point x="1" y="0.71875" />
+                                <point x="0" y="0.5625" />
+                                <point x="1" y="0.75" />
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
                             </collision-poly>
                         </tile>
                         <tile id="149">
                             <collision-poly>
-                                <point x="0" y="0.71875" />
-                                <point x="1" y="0.84375" />
+                                <point x="0" y="0.75" />
+                                <point x="1" y="0.875" />
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
                             </collision-poly>
                         </tile>
                         <tile id="150">
                             <collision-poly>
-                                <point x="0" y="0.78125" />
+                                <point x="0" y="0.875" />
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
                             </collision-poly>
                         </tile>
                         <tile id="151">
                             <collision-poly>
-                                <point x="1" y="0.796875" />
+                                <point x="1" y="0.875" />
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
                             </collision-poly>
@@ -2025,14 +2174,14 @@
                         <tile id="152">
                             <collision-poly>
                                 <point x="0" y="0.875" />
-                                <point x="1" y="0.703125" />
+                                <point x="1" y="0.75" />
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
                             </collision-poly>
                         </tile>
                         <tile id="153">
                             <collision-poly>
-                                <point x="0" y="0.765625" />
+                                <point x="0" y="0.75" />
                                 <point x="1" y="0.5625" />
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
@@ -2041,7 +2190,7 @@
                         <tile id="154">
                             <collision-poly>
                                 <point x="0" y="0.5625" />
-                                <point x="1" y="0.40625" />
+                                <point x="1" y="0.4375" />
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
                             </collision-poly>
@@ -2056,15 +2205,15 @@
                         </tile>
                         <tile id="156">
                             <collision-poly>
-                                <point x="0" y="0.296875" />
-                                <point x="1" y="0.109375" />
+                                <point x="0" y="0.25" />
+                                <point x="1" y="0.0625" />
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
                             </collision-poly>
                         </tile>
                         <tile id="157">
                             <collision-poly>
-                                <point x="0" y="0.140625" />
+                                <point x="0" y="0.0625" />
                                 <point x="1" y="0" />
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
@@ -2073,69 +2222,125 @@
                         <tile id="160">
                             <collision-poly>
                                 <point x="0" y="0" />
-                                <point x="1" y="0.078125" />
+                                <point x="1" y="0.0625" />
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
                             </collision-poly>
                         </tile>
                         <tile id="161">
                             <collision-poly>
-                                <point x="0" y="0.0585938" />
-                                <point x="1" y="0.203125" />
+                                <point x="0" y="0.0625" />
+                                <point x="1" y="0.1875" />
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
                             </collision-poly>
                         </tile>
                         <tile id="162">
                             <collision-poly>
-                                <point x="0" y="0.25" />
-                                <point x="1" y="0.320313" />
+                                <point x="0" y="0.1875" />
+                                <point x="1" y="0.3125" />
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
                             </collision-poly>
                         </tile>
                         <tile id="163">
                             <collision-poly>
-                                <point x="0" y="0.369141" />
-                                <point x="1" y="0.443359" />
+                                <point x="0" y="0.3125" />
+                                <point x="1" y="0.4375" />
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
                             </collision-poly>
                         </tile>
                         <tile id="164">
                             <collision-poly>
-                                <point x="0" y="0.507813" />
-                                <point x="1" y="0.582031" />
+                                <point x="0" y="0.4375" />
+                                <point x="1" y="0.5625" />
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
                             </collision-poly>
                         </tile>
                         <tile id="165">
                             <collision-poly>
-                                <point x="0" y="0.625" />
-                                <point x="1" y="0.695313" />
+                                <point x="0" y="0.5625" />
+                                <point x="1" y="0.6875" />
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
                             </collision-poly>
                         </tile>
                         <tile id="166">
                             <collision-poly>
-                                <point x="0" y="0.757813" />
-                                <point x="1" y="0.828125" />
+                                <point x="0" y="0.6875" />
+                                <point x="1" y="0.8125" />
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
                             </collision-poly>
                         </tile>
                         <tile id="167">
                             <collision-poly>
-                                <point x="0" y="0.84375" />
+                                <point x="0" y="0.8125" />
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
                             </collision-poly>
                         </tile>
                         <tile id="168">
                             <collision-poly>
-                                <point x="1" y="0.859375" />
+                                <point x="1" y="0.8125" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </tile>
+                        <tile id="169">
+                            <collision-poly>
+                                <point x="0" y="0.8125" />
+                                <point x="1" y="0.6875" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </tile>
+                        <tile id="170">
+                            <collision-poly>
+                                <point x="0" y="0.6875" />
+                                <point x="1" y="0.5625" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </tile>
+                        <tile id="171">
+                            <collision-poly>
+                                <point x="0" y="0.5625" />
+                                <point x="1" y="0.4375" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </tile>
+                        <tile id="172">
+                            <collision-poly>
+                                <point x="0" y="0.4375" />
+                                <point x="1" y="0.3125" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </tile>
+                        <tile id="173">
+                            <collision-poly>
+                                <point x="0" y="0.3125" />
+                                <point x="1" y="0.1875" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </tile>
+                        <tile id="174">
+                            <collision-poly>
+                                <point x="0" y="0.1875" />
+                                <point x="1" y="0.0625" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </tile>
+                        <tile id="175">
+                            <collision-poly>
+                                <point x="0" y="0.0625" />
+                                <point x="1" y="0" />
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
                             </collision-poly>
@@ -3677,6 +3882,33 @@
                     </behavior-type>
                 </behaviors>
             </object-type>
+            <object-type name="Gate" sid="195934926113606">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable comment="0=open 1=closed" name="dir" sid="359647738889514" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Solid" sid="828694339893279">
+                        <behavior id="solid" />
+                    </behavior-type>
+                    <behavior-type name="8Direction" sid="304646049436463">
+                        <behavior id="EightDir" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="144784527983697" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="opendoor" sid="780541311886294">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="472421227794609" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.509091" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\opendoor.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Intro">
             <object-type name="IntroText" sid="622879006526249">
@@ -3747,30 +3979,106 @@
         <object-type name="Audio" sid="697329823778281">
             <plugin id="Audio" />
         </object-type>
-        <object-type name="Gate" sid="195934926113606">
+        <object-type name="deadboys" sid="912460069219177">
             <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable comment="0=open 1=closed" name="dir" sid="359647738889514" type="number" />
-            </instance-variables>
             <behaviors>
-                <behavior-type name="Solid" sid="828694339893279">
-                    <behavior id="solid" />
+                <behavior-type name="Flash" sid="718271648239282">
+                    <behavior id="Flash" />
                 </behavior-type>
-                <behavior-type name="8Direction" sid="304646049436463">
-                    <behavior id="EightDir" />
+                <behavior-type name="Platform" sid="567143481782959">
+                    <behavior id="Platform" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="144784527983697" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="323085358563354" speed="5">
+                    <frame duration="1" hotspotX="0.282051" hotspotY="0.42" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\deboyspritez\MafiaDead.png">
+                        <collision-poly>
+                            <point x="0.102564" y="0.08" />
+                            <point x="0.487179" y="0.7" />
+                            <point x="0.769231" y="0.82" />
+                            <point x="0.230769" y="0.82" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="opendoor" sid="780541311886294">
+        <object-type name="deadweirds" sid="686350886565947">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Flash" sid="839887748443687">
+                    <behavior id="Flash" />
+                </behavior-type>
+                <behavior-type name="Platform" sid="437750460708192">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="142912268013237" speed="5">
+                    <frame duration="1" hotspotX="0.282051" hotspotY="0.42" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\deboyspritez\SinisDead.png">
+                        <collision-poly>
+                            <point x="0.102564" y="0.08" />
+                            <point x="0.487179" y="0.7" />
+                            <point x="0.769231" y="0.82" />
+                            <point x="0.230769" y="0.82" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="deadkarla" sid="338300095983119">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="820038956356822">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="ScrollTo" sid="773884139005739">
+                    <behavior id="scrollto" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="233645232127424" speed="5">
+                    <frame duration="1" hotspotX="0.512821" hotspotY="0.5" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\dekarla\karlinhaDEADLOL.png">
+                        <collision-poly>
+                            <point x="0.487179" y="0.7" />
+                            <point x="0.769231" y="0.82" />
+                            <point x="0.230769" y="0.82" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="KIA" sid="697670188647364">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="472421227794609" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.509091" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\opendoor.png" />
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="260595636063043" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\caveira.png">
+                        <collision-poly>
+                            <point x="0.28125" y="0.28125" />
+                            <point x="0.5" y="0.171875" />
+                            <point x="0.71875" y="0.28125" />
+                            <point x="0.703125" y="0.5" />
+                            <point x="0.671875" y="0.671875" />
+                            <point x="0.5" y="0.8125" />
+                            <point x="0.328125" y="0.671875" />
+                            <point x="0.296875" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ENDTEXT" sid="505544577685288">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="ZEWHITESCREEN" sid="458309394634382">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="727361963231263">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="796738915624749" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -3817,6 +4125,9 @@
         <file name="alarme.ogg" />
         <file name="Drone.ogg" />
         <file name="slide.ogg" />
+        <file name="587195__derplayer__explosion-07.ogg" />
+        <file name="DingElevator_Final.ogg" />
+        <file name="zipline.ogg" />
     </sounds-folder>
     <music-folder>
         <file name="mais_umMP3_160K_1.ogg" />
