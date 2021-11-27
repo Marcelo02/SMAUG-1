@@ -33,6 +33,16 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="889015121831432">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="928817654961221" type="boom">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="637966510660033" type="boom" />
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="759556685233396" title="Movimentação">
@@ -621,6 +631,11 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">0</param>
                         </condition>
+                        <condition id="-7" name="Compare instance variable" sid="538803946025423" type="Player">
+                            <param id="0" name="Instance variable">Subindo_Escada</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                         <condition id="-14" name="Compare variable" sid="585102040868247" type="System">
                             <param id="0" name="Variable">Pause</param>
                             <param id="1" name="Comparison">0</param>
@@ -992,7 +1007,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="107710405746063" type="Ammo">
-                                    <param id="0" name="Text">&quot;Ammo:&quot;&amp;Pistol_ammo &amp;&quot;/7&quot;</param>
+                                    <param id="0" name="Text">&quot;Munição:&quot;&amp;Pistol_ammo &amp;&quot;/7&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1119,6 +1134,11 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="0" name="Spawn another object" sid="448054610777277" type="Enemy_1">
+                                    <param id="0" name="Object">boom</param>
+                                    <param id="1" name="Layer">4</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
                                 <action id="-9" name="Destroy" sid="303095127771547" type="Enemy_1" />
                             </actions>
                         </event-block>
@@ -1298,6 +1318,11 @@
                             </conditions>
                             <actions>
                                 <action id="-9" name="Destroy" sid="884051197443498" type="Enemy_2" />
+                                <action id="0" name="Spawn another object" sid="166444627253963" type="Enemy_2">
+                                    <param id="0" name="Object">boom</param>
+                                    <param id="1" name="Layer">4</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="975773471397015">
@@ -1319,6 +1344,11 @@
                                     </conditions>
                                     <actions>
                                         <action id="-9" name="Destroy" sid="914986823067121" type="Enemy_2" />
+                                        <action id="0" name="Spawn another object" sid="303960591233835" type="Enemy_2">
+                                            <param id="0" name="Object">boom</param>
+                                            <param id="1" name="Layer">4</param>
+                                            <param id="2" name="Image point">0</param>
+                                        </action>
                                         <action behavior="Flash" id="0" name="Flash" sid="155732642817072" type="Player">
                                             <param id="0" name="&apos;On&apos; time">0.1</param>
                                             <param id="1" name="&apos;Off&apos; time">0.1</param>
@@ -1336,6 +1366,11 @@
                                     </conditions>
                                     <actions>
                                         <action id="-9" name="Destroy" sid="394565291743416" type="Enemy_2" />
+                                        <action id="0" name="Spawn another object" sid="759176539109559" type="Enemy_2">
+                                            <param id="0" name="Object">boom</param>
+                                            <param id="1" name="Layer">4</param>
+                                            <param id="2" name="Image point">0</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
@@ -2134,31 +2169,104 @@
                 <action id="-3" name="Create object" sid="432681965014136" type="System">
                     <param id="0" name="Object to create">Vida</param>
                     <param id="1" name="Layer">5</param>
-                    <param id="2" name="X">768</param>
+                    <param id="2" name="X">670</param>
                     <param id="3" name="Y">0</param>
                 </action>
                 <action id="-3" name="Create object" sid="305109178889575" type="System">
                     <param id="0" name="Object to create">Ammo</param>
                     <param id="1" name="Layer">5</param>
-                    <param id="2" name="X">0</param>
+                    <param id="2" name="X">10</param>
                     <param id="3" name="Y">0</param>
                 </action>
-                <action id="-3" name="Create object" sid="772061511085906" type="System">
+                <action disabled="1" id="-3" name="Create object" sid="772061511085906" type="System">
                     <param id="0" name="Object to create">DEBUG</param>
                     <param id="1" name="Layer">5</param>
-                    <param id="2" name="X">0</param>
-                    <param id="3" name="Y">30</param>
+                    <param id="2" name="X">1</param>
+                    <param id="3" name="Y">26</param>
                 </action>
                 <action id="-3" name="Create object" sid="740429954615439" type="System">
                     <param id="0" name="Object to create">Lifebar</param>
                     <param id="1" name="Layer">5</param>
-                    <param id="2" name="X">768</param>
-                    <param id="3" name="Y">32</param>
+                    <param id="2" name="X">775</param>
+                    <param id="3" name="Y">38</param>
                 </action>
             </actions>
         </event-block>
         <event-group description="" sid="521898735428528" title="Animações">
             <sub-events>
+                <event-block sid="671787715795695">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="956299096196348" type="Player_Arm3" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="236824842505518" type="Player_Arm3">
+                            <param id="0" name="X">Player.X-4</param>
+                            <param id="1" name="Y">Player.Y</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="605966572524983" type="Player_Arm3">
+                            <param id="0" name="Pin to">Player</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="809096165759889" type="Player_Arm3">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="655218661671646">
+                    <conditions>
+                        <condition id="-9" inverted="1" name="Is visible" sid="572108222279312" type="Player_Arm" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="412087913603370" type="Player_Arm3">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="122436496968781">
+                    <conditions>
+                        <condition id="-9" name="Is visible" sid="543572294209693" type="Player_Arm" />
+                    </conditions>
+                    <actions>
+                        <action id="-22" name="Set angle toward position" sid="387378416865453" type="Player_Arm3">
+                            <param id="0" name="X">Mouse.X</param>
+                            <param id="1" name="Y">Mouse.Y</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="893679403772968" type="Player_Arm3">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="137094314445727">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="687341606325354" type="Player">
+                                    <param id="0" name="Instance variable">Weaponized</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="7" name="Is mirrored" sid="805316964901472" type="Player" />
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="364461565516390" type="Player_Arm3">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="359881155134804">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="563876054185533" type="Player">
+                                    <param id="0" name="Instance variable">Weaponized</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="637111639887014" type="Player_Arm3">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
                 <event-block sid="603458423263154">
                     <conditions>
                         <condition id="7" inverted="1" name="Is mirrored" sid="490774569931170" type="Player" />
@@ -2452,15 +2560,6 @@
                                     <param id="0" name="Animation">&quot;SlideRight&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
-                                <action behavior="Pin" disabled="1" id="1" name="Unpin" sid="375526920208832" type="PlayerTorso" />
-                                <action disabled="1" id="-3" name="Set position" sid="531494817820565" type="PlayerTorso">
-                                    <param id="0" name="X">Player.X-4</param>
-                                    <param id="1" name="Y">Player.Y</param>
-                                </action>
-                                <action behavior="Pin" disabled="1" id="0" name="Pin to object" sid="266128204523562" type="PlayerTorso">
-                                    <param id="0" name="Pin to">Player</param>
-                                    <param id="1" name="Mode">0</param>
-                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="884624149370311">
@@ -2476,6 +2575,25 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block sid="376489478946238">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="777402278843749" type="Player">
+                            <param id="0" name="Instance variable">Subindo_Escada</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="371178036857618" type="Player">
+                            <param id="0" name="Instance variable">Deslizando</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="217809332455097" type="Player_Arm">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="610546664671474">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="505826865700740" type="Player">
@@ -2489,8 +2607,44 @@
                             <param id="0" name="Animation">&quot;Escadas&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
+                        <action id="7" name="Set mirrored" sid="121301080004468" type="Player">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="394723992233255" type="PlayerTorso">
+                            <param id="0" name="Animation">&quot;ClimbAnim&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="256127227869944" type="Player_Arm">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
                     </actions>
                     <sub-events>
+                        <event-block sid="713039484179767">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="234811834134351" type="Player">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="254530718790038" type="PlayerTorso">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="548134878536368">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="736616734540004" type="Player">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="751136479992809" type="PlayerTorso">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="168031053731026">
                             <conditions>
                                 <condition behavior="8Direction" id="1" name="Compare speed" sid="595372087254264" type="Player">
@@ -2500,11 +2654,74 @@
                             </conditions>
                             <actions>
                                 <action id="2" name="Stop" sid="343915263337689" type="Player" />
+                                <action id="2" name="Stop" sid="888607065431170" type="PlayerTorso" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="383623988388342">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="659990681194631" type="Player">
+                            <param id="0" name="Instance variable">Recarregando</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="437693036369310" type="Player_Arm">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="598519593071272" type="Player">
+                            <param id="0" name="Instance variable">Weaponized</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="583168097013134">
+                            <conditions>
+                                <condition id="7" inverted="1" name="Is mirrored" sid="635832165415997" type="Player" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="269350986534476" type="PlayerTorso">
+                                    <param id="0" name="Animation">&quot;TorsoRightReload&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="517255255911141">
+                            <conditions>
+                                <condition id="7" name="Is mirrored" sid="544588122281713" type="Player" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="124691408442018" type="PlayerTorso">
+                                    <param id="0" name="Animation">&quot;TorsoLeftReload&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="953745054187503">
+            <conditions>
+                <condition id="-9" inverted="1" name="Is visible" sid="953668730237862" type="Player" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="635142453010946" type="PlayerTorso">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="961145776102076">
+            <conditions>
+                <condition id="-9" name="Is visible" sid="223885260399312" type="Player" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="863226212987764" type="PlayerTorso">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
