@@ -15,7 +15,7 @@
                 </action>
                 <action behavior="Fade" id="1" name="Start fade" sid="822643749836577" type="ZEBLACKSCHKREEN" />
                 <action id="-3" name="Create object" sid="437057330979691" type="System">
-                    <param id="0" name="Object to create">Player</param>
+                    <param id="0" name="Object to create">PlayerTorso</param>
                     <param id="1" name="Layer">4</param>
                     <param id="2" name="X">667</param>
                     <param id="3" name="Y">4640</param>
@@ -513,6 +513,7 @@
                             <param id="0" name="Instance variable">Correndo</param>
                             <param id="1" name="Value">0</param>
                         </action>
+                        <action id="-9" name="Destroy" sid="478994119460122" type="TASKSTATE" />
                     </actions>
                 </event-block>
                 <event-group description="" sid="214847040218490" title="DIVISOR1">
@@ -930,6 +931,15 @@
                                 <action id="-41" name="Wait for signal" sid="412634951666647" type="System">
                                     <param id="0" name="Tag">&quot;NorG&quot;</param>
                                 </action>
+                                <action id="0" name="Set text" sid="448871649272296" type="Nome">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="751102518627265" type="Dialogo">
+                                    <param id="0" name="Text">&quot;VOCÊ ESCOLHEU UMA NARRATIVA ALTERNATIVA! MEMBROS DO SINISTRO NÃO VÂO TE ATACAR E A PORTA PRO ESGOTO FOI ABERTA.&quot;</param>
+                                </action>
+                                <action id="-41" name="Wait for signal" sid="406112085749815" type="System">
+                                    <param id="0" name="Tag">&quot;NorG&quot;</param>
+                                </action>
                                 <action behavior="Fade" id="1" name="Start fade" sid="630028341607556" type="ZEBLACKSCHKREEN" />
                                 <action id="-16" name="Wait" sid="881640118293868" type="System">
                                     <param id="0" name="Seconds">0.2</param>
@@ -976,14 +986,14 @@
                                     <param id="0" name="Text">&quot;&quot;</param>
                                 </action>
                                 <action id="0" name="Set text" sid="199553339704934" type="Dialogo">
-                                    <param id="0" name="Text">&quot;ELA TÁ FUGINDO!!!&quot;</param>
+                                    <param id="0" name="Text">&quot;ELA TÁ FUGINDO!!!&quot;&amp;newline&amp;&quot;(MEMBROS DO SINISTRO ESTÃO TE CAÇANDO!)&quot;</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="771704601446523" type="Player">
                                     <param id="0" name="Instance variable">Conversando</param>
                                     <param id="1" name="Value">2</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="611961691961648" type="System">
-                                    <param id="0" name="Seconds">1.2</param>
+                                    <param id="0" name="Seconds">1.7</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="414935116429284" type="Player">
                                     <param id="0" name="Instance variable">Conversando</param>
@@ -1085,10 +1095,10 @@
                                             <param id="0" name="Text">&quot;Sinistros&quot;</param>
                                         </action>
                                         <action id="0" name="Set text" sid="511677999798763" type="Dialogo">
-                                            <param id="0" name="Text">&quot;Carga!?&quot;</param>
+                                            <param id="0" name="Text">&quot;Carga!?&quot;&amp;newline&amp;&quot;(Essa não...)&quot;</param>
                                         </action>
                                         <action id="-16" name="Wait" sid="869709227220100" type="System">
-                                            <param id="0" name="Seconds">1.2</param>
+                                            <param id="0" name="Seconds">1.7</param>
                                         </action>
                                         <action id="-9" name="Destroy" sid="530011600549062" type="TASKSTATE" />
                                         <action id="-10" name="Set value" sid="159620222095754" type="Player">
@@ -1281,6 +1291,7 @@
                         <action id="-41" name="Wait for signal" sid="460749690116289" type="System">
                             <param id="0" name="Tag">&quot;NorG&quot;</param>
                         </action>
+                        <action id="-9" name="Destroy" sid="662026640250613" type="TASKSTATE" />
                         <action id="-10" name="Set value" sid="694189756852402" type="Player">
                             <param id="0" name="Instance variable">Conversando</param>
                             <param id="1" name="Value">0</param>
@@ -1323,6 +1334,7 @@
                                 <action id="-41" name="Wait for signal" sid="444799056227131" type="System">
                                     <param id="0" name="Tag">&quot;NorG&quot;</param>
                                 </action>
+                                <action id="-9" name="Destroy" sid="846338721349770" type="TASKSTATE" />
                                 <action id="-10" name="Set value" sid="101036809931108" type="Player">
                                     <param id="0" name="Instance variable">Conversando</param>
                                     <param id="1" name="Value">0</param>
@@ -1406,22 +1418,61 @@
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">3</param>
                 </condition>
-                <condition id="-7" name="Compare instance variable" sid="541901213888307" type="Player">
-                    <param id="0" name="Instance variable">faccao</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">1</param>
-                </condition>
             </conditions>
-            <actions>
-                <action behavior="Fade" id="1" name="Start fade" sid="438688546130195" type="ZEBLACKSCHKREEN" />
-                <action id="-16" name="Wait" sid="501311828320218" type="System">
-                    <param id="0" name="Seconds">0.2</param>
-                </action>
-                <action id="-4" name="Set position to another object" sid="346985650898055" type="Player">
-                    <param id="0" name="Object">gate_apartments2</param>
-                    <param id="1" name="Image point (optional)">0</param>
-                </action>
-            </actions>
+            <actions />
+            <sub-events>
+                <event-block sid="580712986414558">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="398100243852383" type="Player">
+                            <param id="0" name="Instance variable">faccao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Fade" id="1" name="Start fade" sid="438688546130195" type="ZEBLACKSCHKREEN" />
+                        <action id="-16" name="Wait" sid="501311828320218" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="346985650898055" type="Player">
+                            <param id="0" name="Object">gate_apartments2</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="934655346014572">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="202822369459608" type="Player">
+                            <param id="0" name="Instance variable">faccao</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="134238805395906" type="Nome">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="754166171095478" type="Dialogo">
+                            <param id="0" name="Text">&quot;A porta está trancada...&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="381027254270838" type="Player">
+                            <param id="0" name="Instance variable">Conversando</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="722564878877391" type="System">
+                            <param id="0" name="Seconds">1.2</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="854457592727287" type="Player">
+                            <param id="0" name="Instance variable">Conversando</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="717051208543602" type="Player">
+                            <param id="0" name="Instance variable">Correndo</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="660271703427251">
             <conditions>
@@ -1435,11 +1486,6 @@
                     <param id="0" name="Instance variable">PressE_Function</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">6</param>
-                </condition>
-                <condition id="-7" name="Compare instance variable" sid="398100243852383" type="Player">
-                    <param id="0" name="Instance variable">faccao</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">1</param>
                 </condition>
             </conditions>
             <actions>

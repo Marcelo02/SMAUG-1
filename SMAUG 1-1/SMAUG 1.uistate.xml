@@ -13,8 +13,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout order="2">L_Intro</layout>
         <layout order="4">L_Menu</layout>
         <layout order="6">L_MenuTeclas</layout>
-        <layout active="1" order="8">L_Teste</layout>
-        <layout order="10">L_Andar3</layout>
+        <layout order="8">L_Teste</layout>
+        <layout active="1" order="10">L_Andar3</layout>
         <event-sheet order="1">ES_Intro</event-sheet>
         <event-sheet order="3">ES_Menu</event-sheet>
         <event-sheet order="5">ES_MenuTeclas</event-sheet>
@@ -95,10 +95,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/andar3_tirolesa/" />
         <folder expanded="1" path="animation-folder/ce_storage/" />
         <folder expanded="1" path="animation-folder/runningaway/" />
+        <folder expanded="1" path="animation-folder/Gate/" />
+        <folder expanded="1" path="animation-folder/opendoor/" />
         <folder expanded="1" path="animation-folder/Tower/" />
         <folder expanded="1" path="animation-folder/Sprite3/" />
         <folder expanded="1" path="animation-folder/blocka/" />
-        <folder expanded="1" path="animation-folder/Gate/" />
-        <folder expanded="1" path="animation-folder/opendoor/" />
     </folders-expanded>
 </c2uistate>

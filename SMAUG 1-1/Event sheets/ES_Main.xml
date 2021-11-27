@@ -221,6 +221,10 @@
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">1</param>
                                 </condition>
+                                <condition behavior="Platform" id="1" name="Compare speed" sid="245882085784193" type="Player">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Speed">200</param>
+                                </condition>
                                 <condition id="5" inverted="1" name="Is tag playing" sid="860404840264671" type="Audio">
                                     <param id="0" name="Tag">&quot;Running&quot;</param>
                                 </condition>
@@ -229,7 +233,7 @@
                                 <action id="0" name="Play" sid="832493787317601" type="Audio">
                                     <param id="0" name="Audio file">Karla Running</param>
                                     <param id="2" name="Loop">1</param>
-                                    <param id="3" name="Volume">0</param>
+                                    <param id="3" name="Volume">-5</param>
                                     <param id="1" name="Tag (optional)">&quot;Running&quot;</param>
                                 </action>
                             </actions>
@@ -627,6 +631,7 @@
                             <param id="0" name="Mouse button">0</param>
                             <param id="1" name="Click type">0</param>
                         </condition>
+                        <condition id="-9" name="Is visible" sid="919944340144741" type="Player" />
                         <condition id="-14" name="Compare variable" sid="173995509526839" type="System">
                             <param id="0" name="Variable">Pistol_ammo</param>
                             <param id="1" name="Comparison">1</param>
@@ -652,6 +657,11 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">0</param>
                         </condition>
+                        <condition id="-7" name="Compare instance variable" sid="124488956933993" type="Player">
+                            <param id="0" name="Instance variable">Conversando</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="0" name="Spawn another object" sid="681257061013065" type="Player">
@@ -670,7 +680,7 @@
                         <action id="0" name="Play" sid="283365412785923" type="Audio">
                             <param id="0" name="Audio file">SOM DE TIRO</param>
                             <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">-5</param>
+                            <param id="3" name="Volume">-8</param>
                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                     </actions>
@@ -840,6 +850,22 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">0</param>
                         </condition>
+                        <condition id="-9" name="Is visible" sid="938782037408412" type="Player" />
+                        <condition id="-7" name="Compare instance variable" sid="562394324402735" type="Player">
+                            <param id="0" name="Instance variable">Subindo_Escada</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="148295873758215" type="System">
+                            <param id="0" name="Variable">Pause</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="877040426561125" type="Player">
+                            <param id="0" name="Instance variable">Conversando</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-10" name="Set value" sid="317555943353631" type="Player">
@@ -899,6 +925,7 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">0</param>
                         </condition>
+                        <condition id="-9" name="Is visible" sid="378925955099461" type="Player" />
                     </conditions>
                     <actions>
                         <action id="-10" name="Set value" sid="210833192547448" type="Player">
@@ -1489,6 +1516,73 @@
                 </event-group>
                 <event-group description="" sid="670326600129185" title="Inimigo 4: Atirador">
                     <sub-events>
+                        <event-block sid="920334521763202">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="556724089813059" type="Enemy_4" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="894229373257601">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="567538789231554" type="Enemy_4">
+                                            <param id="0" name="Instance variable">faccao</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="895602256511305" type="Enemy_4">
+                                            <param id="0" name="Animation">&quot;Sinistro1&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="358478528190403">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="498211212158324" type="Enemy_4">
+                                            <param id="0" name="Instance variable">faccao</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="358650780223277" type="Enemy_4">
+                                            <param id="0" name="Animation">&quot;Mafia1&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="587332789641616">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="353254382129630" type="Enemy_Arm" />
+                            </conditions>
+                            <actions>
+                                <action id="-7" name="Set size" sid="840482599485912" type="Enemy_Arm">
+                                    <param id="0" name="Width">39</param>
+                                    <param id="1" name="Height">50</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="797025286339063" type="Enemy_Arm">
+                                    <param id="0" name="X">Enemy_4.X-5</param>
+                                    <param id="1" name="Y">Enemy_4.Y</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="887732959184139" type="Enemy_Arm">
+                                    <param id="0" name="Pin to">Enemy_4</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="630230319051120">
+                                    <conditions />
+                                    <actions />
+                                </event-block>
+                                <event-block sid="486483533872371">
+                                    <conditions />
+                                    <actions />
+                                </event-block>
+                            </sub-events>
+                        </event-block>
                         <comment>Comando de movimento</comment>
                         <event-block sid="592111103207294">
                             <conditions>
@@ -1843,49 +1937,6 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="920334521763202">
-                            <conditions>
-                                <condition id="-18" name="On created" sid="556724089813059" type="Enemy_4" />
-                            </conditions>
-                            <actions>
-                                <action behavior="Pin" id="0" name="Pin to object" sid="887732959184139" type="Enemy_Arm">
-                                    <param id="0" name="Pin to">Enemy_4</param>
-                                    <param id="1" name="Mode">1</param>
-                                </action>
-                            </actions>
-                            <sub-events>
-                                <event-block sid="894229373257601">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="567538789231554" type="Enemy_4">
-                                            <param id="0" name="Instance variable">faccao</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="4" name="Set animation" sid="895602256511305" type="Enemy_4">
-                                            <param id="0" name="Animation">&quot;Sinistro1&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="358478528190403">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="498211212158324" type="Enemy_4">
-                                            <param id="0" name="Instance variable">faccao</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">2</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="4" name="Set animation" sid="358650780223277" type="Enemy_4">
-                                            <param id="0" name="Animation">&quot;Mafia1&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
                         <event-block sid="614912649418857">
                             <conditions>
                                 <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="123774270847094" type="Enemy_4">
@@ -1926,7 +1977,7 @@
                                 <action id="0" name="Play" sid="663123377052928" type="Audio">
                                     <param id="0" name="Audio file">SOM DE TIRO</param>
                                     <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">-5</param>
+                                    <param id="3" name="Volume">-8</param>
                                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                 </action>
                             </actions>
@@ -2637,6 +2688,15 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">0</param>
                         </condition>
+                        <condition behavior="Platform" id="1" name="Compare speed" sid="869633191858204" type="Player">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Speed">10</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="591511192892193" type="Player">
+                            <param id="0" name="Instance variable">Subindo_Escada</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="4" name="Set animation" sid="541110899425420" type="Player">
@@ -2850,6 +2910,16 @@
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">0</param>
                 </condition>
+                <condition id="-7" name="Compare instance variable" sid="679308542139124" type="Player">
+                    <param id="0" name="Instance variable">Subindo_Escada</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="642190636264552" type="Player">
+                    <param id="0" name="Instance variable">Conversando</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="4" name="Set animation" sid="549408898763554" type="Player">
@@ -2872,6 +2942,184 @@
                     <param id="1" name="From">1</param>
                 </action>
             </actions>
+        </event-block>
+        <event-block sid="787376801219547">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="568764567126981" type="Enemy_4">
+                    <param id="0" name="Instance variable">faccao</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="701707362655315">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="547284202626562" type="Enemy_4">
+                            <param id="0" name="Instance variable">Atacando</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="674657722917186" type="Enemy_4">
+                            <param id="0" name="Animation">&quot;SinistroFire&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="175260963192743">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="935309826749345" type="Enemy_4">
+                            <param id="0" name="Instance variable">Atacando</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="477907791086274">
+                            <conditions>
+                                <condition behavior="Platform" id="1" name="Compare speed" sid="397388810329681" type="Enemy_4">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="Speed">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="452674069691293" type="Enemy_4">
+                                    <param id="0" name="Animation">&quot;Sinistro1&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="309595878318336">
+                            <conditions>
+                                <condition behavior="Platform" id="1" name="Compare speed" sid="154665630494761" type="Enemy_4">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Speed">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="385205387287267" type="Enemy_4">
+                                    <param id="0" name="Animation">&quot;SinistroWalk&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="142497809045818">
+                    <conditions>
+                        <condition id="7" inverted="1" name="Is mirrored" sid="342765556489309" type="Enemy_4" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="595274330839800" type="Enemy_Arm">
+                            <param id="0" name="Animation">&quot;SinisArm1&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="817617838791309">
+                    <conditions>
+                        <condition id="7" name="Is mirrored" sid="226787548945341" type="Enemy_4" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="574483832741647" type="Enemy_Arm">
+                            <param id="0" name="Animation">&quot;SinisArm2&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="734492976103033">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="809478842447660" type="Enemy_4">
+                    <param id="0" name="Instance variable">faccao</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="461106675144736">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="511149931410125" type="Enemy_4">
+                            <param id="0" name="Instance variable">Atacando</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="933677427895201" type="Enemy_4">
+                            <param id="0" name="Animation">&quot;MafiaFire&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="629948487597520">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="777450076765070" type="Enemy_4">
+                            <param id="0" name="Instance variable">Atacando</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="839255929381885">
+                            <conditions>
+                                <condition behavior="Platform" id="1" name="Compare speed" sid="754816219041792" type="Enemy_4">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="Speed">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="886185028500040" type="Enemy_4">
+                                    <param id="0" name="Animation">&quot;Mafia1&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="281633801134425">
+                            <conditions>
+                                <condition behavior="Platform" id="1" name="Compare speed" sid="438509367085052" type="Enemy_4">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Speed">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="735145321315666" type="Enemy_4">
+                                    <param id="0" name="Animation">&quot;MafiaWalk&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="811029957627791">
+                    <conditions>
+                        <condition id="7" inverted="1" name="Is mirrored" sid="672730901781217" type="Enemy_4" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="697853255450855" type="Enemy_Arm">
+                            <param id="0" name="Animation">&quot;MafiaArm1&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="587933583967825">
+                    <conditions>
+                        <condition id="7" name="Is mirrored" sid="591548158649471" type="Enemy_4" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="669756086785175" type="Enemy_Arm">
+                            <param id="0" name="Animation">&quot;MafiaArm2&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>
