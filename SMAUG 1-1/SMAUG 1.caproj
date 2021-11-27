@@ -80,6 +80,7 @@
                         <instance-variable name="Life" sid="509103160525295" type="number" />
                         <instance-variable comment="0=Karla, 1=Sinistro, 2=Maldolaire" name="faccao" sid="221563738667952" type="number" />
                         <instance-variable comment="0=left 1=right 2=standingleft 3=standingright" name="goingwhere" sid="770708211320566" type="number" />
+                        <instance-variable name="Ded" sid="778453167027320" type="number" />
                     </instance-variables>
                     <behaviors>
                         <behavior-type name="Platform" sid="630640943218123">
@@ -90,6 +91,9 @@
                         </behavior-type>
                         <behavior-type name="LineOfSight" sid="354684391561277">
                             <behavior id="LOS" />
+                        </behavior-type>
+                        <behavior-type name="Flash" sid="360153201539879">
+                            <behavior id="Flash" />
                         </behavior-type>
                     </behaviors>
                     <container>
@@ -201,6 +205,26 @@
                                     <point x="0" y="0" />
                                     <point x="0.615385" y="0" />
                                     <point x="0.615385" y="0.82" />
+                                    <point x="0" y="0.82" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="SinistroDead" pingpong="0" repeatcount="1" repeatto="0" sid="435137608356750" speed="5">
+                            <frame duration="1" hotspotX="0.307692" hotspotY="0.32" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\deboyspritez\SinisDead.png">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="1" y="0" />
+                                    <point x="1" y="0.82" />
+                                    <point x="0" y="0.82" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="MafiaDead" pingpong="0" repeatcount="1" repeatto="0" sid="985621315758757" speed="5">
+                            <frame duration="1" hotspotX="0.307692" hotspotY="0.32" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\deboyspritez\MafiaDead.png">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="1" y="0" />
+                                    <point x="1" y="0.82" />
                                     <point x="0" y="0.82" />
                                 </collision-poly>
                             </frame>
@@ -3955,6 +3979,109 @@
         <object-type name="Audio" sid="697329823778281">
             <plugin id="Audio" />
         </object-type>
+        <object-type name="deadboys" sid="912460069219177">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Flash" sid="718271648239282">
+                    <behavior id="Flash" />
+                </behavior-type>
+                <behavior-type name="Platform" sid="567143481782959">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="323085358563354" speed="5">
+                    <frame duration="1" hotspotX="0.282051" hotspotY="0.42" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\deboyspritez\MafiaDead.png">
+                        <collision-poly>
+                            <point x="0.102564" y="0.08" />
+                            <point x="0.487179" y="0.7" />
+                            <point x="0.769231" y="0.82" />
+                            <point x="0.230769" y="0.82" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="deadweirds" sid="686350886565947">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Flash" sid="839887748443687">
+                    <behavior id="Flash" />
+                </behavior-type>
+                <behavior-type name="Platform" sid="437750460708192">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="142912268013237" speed="5">
+                    <frame duration="1" hotspotX="0.282051" hotspotY="0.42" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\deboyspritez\SinisDead.png">
+                        <collision-poly>
+                            <point x="0.102564" y="0.08" />
+                            <point x="0.487179" y="0.7" />
+                            <point x="0.769231" y="0.82" />
+                            <point x="0.230769" y="0.82" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="deadkarla" sid="338300095983119">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="820038956356822">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="ScrollTo" sid="773884139005739">
+                    <behavior id="scrollto" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="233645232127424" speed="5">
+                    <frame duration="1" hotspotX="0.512821" hotspotY="0.5" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\dekarla\karlinhaDEADLOL.png">
+                        <collision-poly>
+                            <point x="0.487179" y="0.7" />
+                            <point x="0.769231" y="0.82" />
+                            <point x="0.230769" y="0.82" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="KIA" sid="697670188647364">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="260595636063043" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\caveira.png">
+                        <collision-poly>
+                            <point x="0.28125" y="0.28125" />
+                            <point x="0.5" y="0.171875" />
+                            <point x="0.71875" y="0.28125" />
+                            <point x="0.703125" y="0.5" />
+                            <point x="0.671875" y="0.671875" />
+                            <point x="0.5" y="0.8125" />
+                            <point x="0.328125" y="0.671875" />
+                            <point x="0.296875" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ENDTEXT" sid="505544577685288">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="ZEWHITESCREEN" sid="458309394634382">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="727361963231263">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="796738915624749" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -3998,6 +4125,9 @@
         <file name="alarme.ogg" />
         <file name="Drone.ogg" />
         <file name="slide.ogg" />
+        <file name="587195__derplayer__explosion-07.ogg" />
+        <file name="DingElevator_Final.ogg" />
+        <file name="zipline.ogg" />
     </sounds-folder>
     <music-folder>
         <file name="mais_umMP3_160K_1.ogg" />

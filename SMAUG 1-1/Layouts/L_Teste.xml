@@ -685,6 +685,7 @@
                         <Life>3</Life>
                         <faccao>1</faccao>
                         <goingwhere>0</goingwhere>
+                        <Ded>0</Ded>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -710,6 +711,7 @@
                                 <use-collision-cells>Yes</use-collision-cells>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Flash" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1109,6 +1111,7 @@
                         <Life>3</Life>
                         <faccao>1</faccao>
                         <goingwhere>2</goingwhere>
+                        <Ded>0</Ded>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -1134,6 +1137,7 @@
                                 <use-collision-cells>Yes</use-collision-cells>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Flash" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1163,6 +1167,7 @@
                         <Life>3</Life>
                         <faccao>1</faccao>
                         <goingwhere>3</goingwhere>
+                        <Ded>0</Ded>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -1188,6 +1193,7 @@
                                 <use-collision-cells>Yes</use-collision-cells>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Flash" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1277,6 +1283,7 @@
                         <Life>3</Life>
                         <faccao>2</faccao>
                         <goingwhere>2</goingwhere>
+                        <Ded>0</Ded>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -1302,6 +1309,7 @@
                                 <use-collision-cells>Yes</use-collision-cells>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Flash" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1331,6 +1339,7 @@
                         <Life>3</Life>
                         <faccao>2</faccao>
                         <goingwhere>3</goingwhere>
+                        <Ded>0</Ded>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -1356,6 +1365,7 @@
                                 <use-collision-cells>Yes</use-collision-cells>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Flash" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1368,6 +1378,127 @@
                         <depth>0</depth>
                         <hotspotX>0.307692319</hotspotX>
                         <hotspotY>0.319999993</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="deadboys" uid="465">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Flash" />
+                        <behavior-instance type="Platform">
+                            <properties>
+                                <max-speed>0</max-speed>
+                                <acceleration>1500</acceleration>
+                                <deceleration>1500</deceleration>
+                                <jump-strength>650</jump-strength>
+                                <gravity>2555</gravity>
+                                <max-fall-speed>1000</max-fall-speed>
+                                <double-jump>Disabled</double-jump>
+                                <jump-sustain>0</jump-sustain>
+                                <default-controls>No</default-controls>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>374</x>
+                        <y>1588</y>
+                        <z>0</z>
+                        <width>39</width>
+                        <height>50</height>
+                        <depth>0</depth>
+                        <hotspotX>0.282051295</hotspotX>
+                        <hotspotY>0.419999987</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="deadweirds" uid="469">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Flash" />
+                        <behavior-instance type="Platform">
+                            <properties>
+                                <max-speed>0</max-speed>
+                                <acceleration>1500</acceleration>
+                                <deceleration>1500</deceleration>
+                                <jump-strength>650</jump-strength>
+                                <gravity>3000</gravity>
+                                <max-fall-speed>200</max-fall-speed>
+                                <double-jump>Disabled</double-jump>
+                                <jump-sustain>0</jump-sustain>
+                                <default-controls>No</default-controls>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>326</x>
+                        <y>1585</y>
+                        <z>0</z>
+                        <width>39</width>
+                        <height>50</height>
+                        <depth>0</depth>
+                        <hotspotX>0.282051295</hotspotX>
+                        <hotspotY>0.419999987</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="deadkarla" uid="470">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Platform">
+                            <properties>
+                                <max-speed>100</max-speed>
+                                <acceleration>1500</acceleration>
+                                <deceleration>1500</deceleration>
+                                <jump-strength>501</jump-strength>
+                                <gravity>1500</gravity>
+                                <max-fall-speed>1000</max-fall-speed>
+                                <double-jump>Disabled</double-jump>
+                                <jump-sustain>0</jump-sustain>
+                                <default-controls>Yes</default-controls>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="ScrollTo">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>415</x>
+                        <y>1773</y>
+                        <z>0</z>
+                        <width>39</width>
+                        <height>50</height>
+                        <depth>0</depth>
+                        <hotspotX>0.512820542</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

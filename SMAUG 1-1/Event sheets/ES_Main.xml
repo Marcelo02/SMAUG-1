@@ -1148,7 +1148,7 @@
                                 <action id="0" name="Play" sid="353204219471344" type="Audio">
                                     <param id="0" name="Audio file">SOM DE TIRO</param>
                                     <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">-5</param>
+                                    <param id="3" name="Volume">-7</param>
                                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                 </action>
                             </actions>
@@ -1180,6 +1180,12 @@
                                     <param id="0" name="Object">boom</param>
                                     <param id="1" name="Layer">4</param>
                                     <param id="2" name="Image point">1</param>
+                                </action>
+                                <action id="0" name="Play" sid="232004252221433" type="Audio">
+                                    <param id="0" name="Audio file">587195__derplayer__explosion-07</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-7</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                 </action>
                                 <action id="-9" name="Destroy" sid="303095127771547" type="Enemy_1" />
                             </actions>
@@ -1359,12 +1365,18 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Destroy" sid="884051197443498" type="Enemy_2" />
                                 <action id="0" name="Spawn another object" sid="166444627253963" type="Enemy_2">
                                     <param id="0" name="Object">boom</param>
                                     <param id="1" name="Layer">4</param>
                                     <param id="2" name="Image point">0</param>
                                 </action>
+                                <action id="0" name="Play" sid="261702871477876" type="Audio">
+                                    <param id="0" name="Audio file">587195__derplayer__explosion-07</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-6</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="884051197443498" type="Enemy_2" />
                             </actions>
                         </event-block>
                         <event-block sid="975773471397015">
@@ -1385,20 +1397,26 @@
                                         <condition id="-9" name="Is visible" sid="611309192006657" type="Player" />
                                     </conditions>
                                     <actions>
-                                        <action id="-9" name="Destroy" sid="914986823067121" type="Enemy_2" />
                                         <action id="0" name="Spawn another object" sid="303960591233835" type="Enemy_2">
                                             <param id="0" name="Object">boom</param>
                                             <param id="1" name="Layer">4</param>
                                             <param id="2" name="Image point">0</param>
                                         </action>
+                                        <action id="0" name="Play" sid="445166755735520" type="Audio">
+                                            <param id="0" name="Audio file">587195__derplayer__explosion-07</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">-6</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Destroy" sid="914986823067121" type="Enemy_2" />
+                                        <action id="-11" name="Subtract from" sid="552415988589688" type="System">
+                                            <param id="0" name="Variable">Life</param>
+                                            <param id="1" name="Value">2</param>
+                                        </action>
                                         <action behavior="Flash" id="0" name="Flash" sid="155732642817072" type="Player">
                                             <param id="0" name="&apos;On&apos; time">0.1</param>
                                             <param id="1" name="&apos;Off&apos; time">0.1</param>
                                             <param id="2" name="Duration">2</param>
-                                        </action>
-                                        <action id="-11" name="Subtract from" sid="552415988589688" type="System">
-                                            <param id="0" name="Variable">Life</param>
-                                            <param id="1" name="Value">2</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1407,12 +1425,18 @@
                                         <condition id="-9" inverted="1" name="Is visible" sid="308149146174858" type="Player" />
                                     </conditions>
                                     <actions>
-                                        <action id="-9" name="Destroy" sid="394565291743416" type="Enemy_2" />
                                         <action id="0" name="Spawn another object" sid="759176539109559" type="Enemy_2">
                                             <param id="0" name="Object">boom</param>
                                             <param id="1" name="Layer">4</param>
                                             <param id="2" name="Image point">0</param>
                                         </action>
+                                        <action id="0" name="Play" sid="863454546662750" type="Audio">
+                                            <param id="0" name="Audio file">587195__derplayer__explosion-07</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">-7</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Destroy" sid="394565291743416" type="Enemy_2" />
                                     </actions>
                                 </event-block>
                             </sub-events>
@@ -1572,16 +1596,6 @@
                                     <param id="1" name="Mode">1</param>
                                 </action>
                             </actions>
-                            <sub-events>
-                                <event-block sid="630230319051120">
-                                    <conditions />
-                                    <actions />
-                                </event-block>
-                                <event-block sid="486483533872371">
-                                    <conditions />
-                                    <actions />
-                                </event-block>
-                            </sub-events>
                         </event-block>
                         <comment>Comando de movimento</comment>
                         <event-block sid="592111103207294">
@@ -2060,29 +2074,29 @@
                                     <param id="1" name="Value">1</param>
                                 </action>
                                 <action id="-9" name="Destroy" sid="946785768859376" type="bullet_player" />
-                                <action behavior="LineOfSight" id="0" name="Set range" sid="731785936624519" type="Enemy_4">
-                                    <param id="0" name="Range">1000</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="529423399127325" type="System">
-                                    <param id="0" name="Seconds">0.16</param>
-                                </action>
-                                <action behavior="LineOfSight" id="0" name="Set range" sid="778562831028016" type="Enemy_4">
-                                    <param id="0" name="Range">500</param>
-                                </action>
                             </actions>
-                        </event-block>
-                        <event-block sid="362113489377674">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="770918660811334" type="Enemy_4">
-                                    <param id="0" name="Instance variable">Life</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Destroy" sid="588031585977986" type="Enemy_4" />
-                                <action id="-9" name="Destroy" sid="926991616599895" type="Enemy_Arm" />
-                            </actions>
+                            <sub-events>
+                                <event-block sid="875362909147961">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="883785365467110" type="Enemy_4">
+                                            <param id="0" name="Instance variable">Life</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="LineOfSight" id="0" name="Set range" sid="731785936624519" type="Enemy_4">
+                                            <param id="0" name="Range">1000</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="529423399127325" type="System">
+                                            <param id="0" name="Seconds">0.16</param>
+                                        </action>
+                                        <action behavior="LineOfSight" id="0" name="Set range" sid="778562831028016" type="Enemy_4">
+                                            <param id="0" name="Range">500</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="344326813551835">
                             <conditions>
@@ -2099,6 +2113,85 @@
                                     <param id="0" name="Instance variable">goingwhere</param>
                                     <param id="1" name="Value">EDGEBUGFIXLOL.youbettego</param>
                                 </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="159790258097585">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="273809951091950" type="Enemy_4">
+                                    <param id="0" name="Instance variable">Life</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="431734875039708" type="Enemy_4" />
+                                <action id="-9" name="Destroy" sid="146169075310585" type="Enemy_Arm" />
+                            </actions>
+                            <sub-events>
+                                <event-block sid="653106743778335">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="515659605895564" type="Enemy_4">
+                                            <param id="0" name="Instance variable">faccao</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Spawn another object" sid="439083966599509" type="Enemy_4">
+                                            <param id="0" name="Object">deadweirds</param>
+                                            <param id="1" name="Layer">4</param>
+                                            <param id="2" name="Image point">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="883980017135677">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="363257477860114" type="Enemy_4">
+                                            <param id="0" name="Instance variable">faccao</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Spawn another object" sid="948307119254278" type="Enemy_4">
+                                            <param id="0" name="Object">deadboys</param>
+                                            <param id="1" name="Layer">4</param>
+                                            <param id="2" name="Image point">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="805465220755771">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="817320631242841" type="deadboys" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Flash" id="0" name="Flash" sid="234503039929703" type="deadboys">
+                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                    <param id="2" name="Duration">1.0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="218925983637536" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="425824561402929" type="deadboys" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="432148382502489">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="396362961351927" type="deadweirds" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Flash" id="0" name="Flash" sid="807463971233949" type="deadweirds">
+                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                    <param id="2" name="Duration">1.0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="954316969594848" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="299982959939474" type="deadweirds" />
                             </actions>
                         </event-block>
                     </sub-events>
@@ -2150,15 +2243,33 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="0" name="Spawn another object" sid="329614800748166" type="Player">
+                            <param id="0" name="Object">deadkarla</param>
+                            <param id="1" name="Layer">4</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="140594455546594" type="deadkarla">
+                            <param id="0" name="Control">2</param>
+                        </action>
                         <action id="-9" name="Destroy" sid="266091085073060" type="Player" />
                         <action id="-9" name="Destroy" sid="750584571406888" type="Player_Arm" />
+                        <action id="-16" name="Wait" sid="934342746550711" type="System">
+                            <param id="0" name="Seconds">5.8</param>
+                        </action>
                         <action id="33" name="Stop all" sid="639644566424320" type="Audio" />
+                        <action id="-16" name="Wait" sid="319941277076731" type="System">
+                            <param id="0" name="Seconds">1.8</param>
+                        </action>
                         <action id="-2" name="Go to layout" sid="975543244202246" type="System">
                             <param id="0" name="Layout">L_Menu</param>
                         </action>
                         <action id="-9" name="Set value" sid="649714461649112" type="System">
                             <param id="0" name="Variable">Life</param>
                             <param id="1" name="Value">10</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="873203987929812" type="System">
+                            <param id="0" name="Variable">Pistol_ammo</param>
+                            <param id="1" name="Value">7</param>
                         </action>
                     </actions>
                 </event-block>
@@ -2974,6 +3085,11 @@
                             <param id="0" name="Instance variable">Atacando</param>
                             <param id="1" name="Comparison">1</param>
                             <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="588398945371258" type="Enemy_4">
+                            <param id="0" name="Instance variable">Ded</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions />
