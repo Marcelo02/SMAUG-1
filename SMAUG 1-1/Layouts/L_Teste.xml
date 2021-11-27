@@ -456,15 +456,15 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>12</x>
-                        <y>1664</y>
+                        <x>17</x>
+                        <y>1532</y>
                         <z>0</z>
                         <width>52</width>
                         <height>22</height>
                         <depth>0</depth>
                         <hotspotX>0.15384616</hotspotX>
                         <hotspotY>0.5</hotspotY>
-                        <angle>0.021010222</angle>
+                        <angle>0.847162306</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
@@ -965,6 +965,7 @@
                         <Conversando>0</Conversando>
                         <faccao>0</faccao>
                         <Weaponized>0</Weaponized>
+                        <Pulando>0</Pulando>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="BoundToLayout">
@@ -1220,6 +1221,44 @@
                         <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Enemy_Arm" uid="332">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                        <behavior-instance type="Turret">
+                            <properties>
+                                <range>500</range>
+                                <rate-of-fire>1</rate-of-fire>
+                                <rotate>Yes</rotate>
+                                <rotate-speed>270</rotate-speed>
+                                <target-mode>First in range</target-mode>
+                                <predictive-aim>No</predictive-aim>
+                                <projectile-speed>500</projectile-speed>
+                                <initial-state>Enabled</initial-state>
+                                <use-collision-cells>Yes</use-collision-cells>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>339</x>
+                        <y>1583</y>
+                        <z>0</z>
+                        <width>35</width>
+                        <height>4</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
