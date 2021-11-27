@@ -33,6 +33,16 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="889015121831432">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="928817654961221" type="boom">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="637966510660033" type="boom" />
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="759556685233396" title="Movimentação">
@@ -997,7 +1007,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="107710405746063" type="Ammo">
-                                    <param id="0" name="Text">&quot;Ammo:&quot;&amp;Pistol_ammo &amp;&quot;/7&quot;</param>
+                                    <param id="0" name="Text">&quot;Munição:&quot;&amp;Pistol_ammo &amp;&quot;/7&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1124,6 +1134,11 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="0" name="Spawn another object" sid="448054610777277" type="Enemy_1">
+                                    <param id="0" name="Object">boom</param>
+                                    <param id="1" name="Layer">4</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
                                 <action id="-9" name="Destroy" sid="303095127771547" type="Enemy_1" />
                             </actions>
                         </event-block>
@@ -1303,6 +1318,11 @@
                             </conditions>
                             <actions>
                                 <action id="-9" name="Destroy" sid="884051197443498" type="Enemy_2" />
+                                <action id="0" name="Spawn another object" sid="166444627253963" type="Enemy_2">
+                                    <param id="0" name="Object">boom</param>
+                                    <param id="1" name="Layer">4</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="975773471397015">
@@ -1324,6 +1344,11 @@
                                     </conditions>
                                     <actions>
                                         <action id="-9" name="Destroy" sid="914986823067121" type="Enemy_2" />
+                                        <action id="0" name="Spawn another object" sid="303960591233835" type="Enemy_2">
+                                            <param id="0" name="Object">boom</param>
+                                            <param id="1" name="Layer">4</param>
+                                            <param id="2" name="Image point">0</param>
+                                        </action>
                                         <action behavior="Flash" id="0" name="Flash" sid="155732642817072" type="Player">
                                             <param id="0" name="&apos;On&apos; time">0.1</param>
                                             <param id="1" name="&apos;Off&apos; time">0.1</param>
@@ -1341,6 +1366,11 @@
                                     </conditions>
                                     <actions>
                                         <action id="-9" name="Destroy" sid="394565291743416" type="Enemy_2" />
+                                        <action id="0" name="Spawn another object" sid="759176539109559" type="Enemy_2">
+                                            <param id="0" name="Object">boom</param>
+                                            <param id="1" name="Layer">4</param>
+                                            <param id="2" name="Image point">0</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
@@ -2139,26 +2169,26 @@
                 <action id="-3" name="Create object" sid="432681965014136" type="System">
                     <param id="0" name="Object to create">Vida</param>
                     <param id="1" name="Layer">5</param>
-                    <param id="2" name="X">768</param>
+                    <param id="2" name="X">670</param>
                     <param id="3" name="Y">0</param>
                 </action>
                 <action id="-3" name="Create object" sid="305109178889575" type="System">
                     <param id="0" name="Object to create">Ammo</param>
                     <param id="1" name="Layer">5</param>
-                    <param id="2" name="X">0</param>
+                    <param id="2" name="X">10</param>
                     <param id="3" name="Y">0</param>
                 </action>
-                <action id="-3" name="Create object" sid="772061511085906" type="System">
+                <action disabled="1" id="-3" name="Create object" sid="772061511085906" type="System">
                     <param id="0" name="Object to create">DEBUG</param>
                     <param id="1" name="Layer">5</param>
-                    <param id="2" name="X">0</param>
-                    <param id="3" name="Y">30</param>
+                    <param id="2" name="X">1</param>
+                    <param id="3" name="Y">26</param>
                 </action>
                 <action id="-3" name="Create object" sid="740429954615439" type="System">
                     <param id="0" name="Object to create">Lifebar</param>
                     <param id="1" name="Layer">5</param>
-                    <param id="2" name="X">768</param>
-                    <param id="3" name="Y">32</param>
+                    <param id="2" name="X">775</param>
+                    <param id="3" name="Y">38</param>
                 </action>
             </actions>
         </event-block>
@@ -2673,5 +2703,25 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="953745054187503">
+            <conditions>
+                <condition id="-9" inverted="1" name="Is visible" sid="953668730237862" type="Player" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="635142453010946" type="PlayerTorso">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="961145776102076">
+            <conditions>
+                <condition id="-9" name="Is visible" sid="223885260399312" type="Player" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="863226212987764" type="PlayerTorso">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
