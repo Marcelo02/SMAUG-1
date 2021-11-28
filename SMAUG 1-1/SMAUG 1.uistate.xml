@@ -15,11 +15,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout order="6">L_MenuTeclas</layout>
         <layout order="8">L_Teste</layout>
         <layout order="10">L_Andar3</layout>
+        <layout active="1" order="12">L_OUTRO</layout>
         <event-sheet order="1">ES_Intro</event-sheet>
         <event-sheet order="3">ES_Menu</event-sheet>
         <event-sheet order="5">ES_MenuTeclas</event-sheet>
         <event-sheet order="7">ES_Main</event-sheet>
-        <event-sheet active="1" order="9">ES_Andar3</event-sheet>
+        <event-sheet order="9">ES_Andar3</event-sheet>
+        <event-sheet order="11">ES_OUTRO</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -37,8 +39,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="object-folder/Objetos_Andar3/" />
         <folder expanded="1" path="object-folder/Objetos_Andar3/Tilesets/" />
         <folder expanded="1" path="object-folder/Intro/" />
-        <folder expanded="0" path="layout-folder/" />
-        <folder expanded="0" path="event-folder/" />
+        <folder expanded="1" path="layout-folder/" />
+        <folder expanded="1" path="event-folder/" />
         <folder expanded="0" path="file-folder/" />
         <folder expanded="0" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
@@ -105,5 +107,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/deadkarla/" />
         <folder expanded="1" path="animation-folder/KIA/" />
         <folder expanded="1" path="animation-folder/ZEWHITESCREEN/" />
+        <folder expanded="1" path="animation-folder/gamelogo/" />
     </folders-expanded>
 </c2uistate>

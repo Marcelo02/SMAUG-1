@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ES_OUTRO</name>
+    <events>
+        <event-block sid="253341811652181">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="312548072827800" type="System" />
+            </conditions>
+            <actions>
+                <action id="33" name="Stop all" sid="617232958505722" type="Audio" />
+                <action id="-16" name="Wait" sid="213791589044020" type="System">
+                    <param id="0" name="Seconds">8</param>
+                </action>
+                <action id="0" name="Play" sid="740092249629178" type="Audio">
+                    <param id="0" name="Audio file">piquerj1</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-5</param>
+                    <param id="1" name="Tag (optional)">&quot;holdup&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="589566201753983" type="IntroText">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="377901897871070" type="gamelogo">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="998740170033558" type="System">
+                    <param id="0" name="Seconds">10</param>
+                </action>
+                <action id="-15" name="Set visible" sid="609817852604722" type="gamelogo">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="0" name="Set text" sid="161082209822491" type="IntroText">
+                    <param id="0" name="Text">&quot;Produtor&quot;&amp;newline&amp;newline&amp;&quot;LUCAS CAMILLO DOS REIS&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="555493273937355" type="IntroText">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="465591170259771" type="System">
+                    <param id="0" name="Seconds">5</param>
+                </action>
+                <action id="0" name="Set text" sid="770433584404199" type="IntroText">
+                    <param id="0" name="Text">&quot;Roteiro:&quot;&amp;newline&amp;newline&amp;&quot;LUCAS CAMILLO DOS REIS&quot;&amp;newline&amp;&quot;MARCELO MANHÃES DE SOUZA JÚNIOR&quot;&amp;newline&amp;&quot;GABRIEL CAMARGO VASQUES&quot;&amp;newline&amp;&quot;LUIZ GUILHERME RIPKE CHIMINE&quot;&amp;newline&amp;&quot;JOÃO PEDRO VAZ DA SILVA&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="658328742604377" type="System">
+                    <param id="0" name="Seconds">6.6</param>
+                </action>
+                <action id="0" name="Set text" sid="688281314782014" type="IntroText">
+                    <param id="0" name="Text">&quot;Programação:&quot;&amp;newline&amp;newline&amp;&quot;MARCELO MANHÃES DE SOUZA JÚNIOR&quot;&amp;newline&amp;&quot;LUCAS CAMILLO DOS REIS&quot;&amp;newline&amp;&quot;GABRIEL CAMARGO VASQUES&quot;&amp;newline&amp;&quot;JOÃO PEDRO VAZ DA SILVA&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="963417477328634" type="System">
+                    <param id="0" name="Seconds">6.6</param>
+                </action>
+                <action id="0" name="Set text" sid="758237995987984" type="IntroText">
+                    <param id="0" name="Text">&quot;Design de Áudio e Música:&quot;&amp;newline&amp;newline&amp;&quot;JOÃO PEDRO VAZ DA SILVA&quot;&amp;newline&amp;&quot;MARCELO MANHÃES DE SOUZA JÚNIOR&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="511811362823622" type="System">
+                    <param id="0" name="Seconds">6.6</param>
+                </action>
+                <action id="0" name="Set text" sid="523666476276956" type="IntroText">
+                    <param id="0" name="Text">&quot;Design de Nível:&quot;&amp;newline&amp;newline&amp;&quot;LUCAS CAMILLO DOS REIS&quot;&amp;newline&amp;&quot;GABRIEL CAMARGO VASQUES&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="338742511916447" type="System">
+                    <param id="0" name="Seconds">6.6</param>
+                </action>
+                <action id="0" name="Set text" sid="314305086185374" type="IntroText">
+                    <param id="0" name="Text">&quot;Design de Arte:&quot;&amp;newline&amp;newline&amp;&quot;JOÃO PEDRO VAZ DA SILVA&quot;&amp;newline&amp;&quot;LUIZ GUILHERME RIPKE CHIMINE&quot;&amp;newline&amp;&quot;LUCAS CAMILLO DOS REIS&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="165778285999463" type="System">
+                    <param id="0" name="Seconds">6.6</param>
+                </action>
+                <action id="-15" name="Set visible" sid="440350900037832" type="IntroText">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="601025024981852" type="Sprite5">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="426423219210876" type="System">
+                    <param id="0" name="Seconds">6.6</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="720539482418994" type="System">
+                    <param id="0" name="Layout">L_Intro</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="544417292984102">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="710884269661666" type="Keyboard">
+                    <param id="0" name="Key">69</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="799934219087641" type="System">
+                    <param id="0" name="Layout">L_OUTRO</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

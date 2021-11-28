@@ -8,6 +8,12 @@
                 <condition id="-2" name="On start of layout" sid="908352365629983" type="System" />
             </conditions>
             <actions>
+                <action id="0" name="Play" sid="106530457302889" type="Audio">
+                    <param id="0" name="Audio file">renegade_praloop</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-12</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
                 <action id="0" name="Set text" sid="804195336173580" type="IntroText2">
                     <param id="0" name="Text">&quot;&quot;</param>
                 </action>
@@ -65,6 +71,7 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="33" name="Stop all" sid="631350602617450" type="Audio" />
                 <action id="-2" name="Go to layout" sid="620048739253923" type="System">
                     <param id="0" name="Layout">L_Menu</param>
                 </action>
@@ -87,6 +94,17 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="33" name="Stop all" sid="868899940712507" type="Audio" />
+                <action id="0" name="Play" sid="483403297824477" type="Audio">
+                    <param id="0" name="Audio file">piquerj1</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-12</param>
+                    <param id="1" name="Tag (optional)">&quot;like&quot;</param>
+                </action>
+                <action id="23" name="Seek to" sid="707702842064647" type="Audio">
+                    <param id="0" name="Tag">&quot;like&quot;</param>
+                    <param id="1" name="Position">41</param>
+                </action>
                 <action id="0" name="Set text" sid="109053936017180" type="IntroText2">
                     <param id="0" name="Text">&quot;...A LUTA.&quot;</param>
                 </action>
@@ -101,6 +119,7 @@
                 <action id="-16" name="Wait" sid="360915000939860" type="System">
                     <param id="0" name="Seconds">5</param>
                 </action>
+                <action id="33" name="Stop all" sid="260358600643470" type="Audio" />
                 <action id="-2" name="Go to layout" sid="801741506353565" type="System">
                     <param id="0" name="Layout">L_Menu</param>
                 </action>

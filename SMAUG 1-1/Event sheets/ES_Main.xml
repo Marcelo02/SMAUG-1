@@ -7,18 +7,6 @@
         <variable constant="0" name="Pause" sid="273694498913111" static="0" type="number">0</variable>
         <variable comment="Munição da pistola" constant="0" name="Pistol_ammo" sid="796144984213042" static="0" type="number">7</variable>
         <comment>COMANDO DE DEBUG PARA FLUTUAR, REMOVER NO FINAL DO DESENVOLVIMENTO</comment>
-        <event-block disabled="1" sid="173305970528910">
-            <conditions>
-                <condition id="2" name="Key is down" sid="905536553705085" type="Keyboard">
-                    <param id="0" name="Key">186</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-2" name="Set Y" sid="664118998674063" type="Player">
-                    <param id="0" name="Y">Player.Y-50</param>
-                </action>
-            </actions>
-        </event-block>
         <event-group description="" sid="514908993439039" title="Base">
             <sub-events>
                 <event-block sid="780154469662389">
@@ -1448,7 +1436,18 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Destroy" sid="376850284065809" type="Enemy_2" />
+                                <action id="0" name="Spawn another object" sid="980554453117594" type="Enemy_2">
+                                    <param id="0" name="Object">boom</param>
+                                    <param id="1" name="Layer">4</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="0" name="Play" sid="455679025094963" type="Audio">
+                                    <param id="0" name="Audio file">587195__derplayer__explosion-07</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-7</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="619194309863318" type="Enemy_2" />
                             </actions>
                         </event-block>
                         <event-block sid="739016995401854">
@@ -1458,7 +1457,18 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Destroy" sid="295570053556126" type="Enemy_2" />
+                                <action id="0" name="Spawn another object" sid="927765872757246" type="Enemy_2">
+                                    <param id="0" name="Object">boom</param>
+                                    <param id="1" name="Layer">4</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="0" name="Play" sid="675714948879807" type="Audio">
+                                    <param id="0" name="Audio file">587195__derplayer__explosion-07</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-7</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="311303444930956" type="Enemy_2" />
                             </actions>
                         </event-block>
                         <event-block sid="631762553341951">
@@ -1468,7 +1478,18 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Destroy" sid="178475651686292" type="Enemy_2" />
+                                <action id="0" name="Spawn another object" sid="241513306360642" type="Enemy_2">
+                                    <param id="0" name="Object">boom</param>
+                                    <param id="1" name="Layer">4</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="0" name="Play" sid="265709675121615" type="Audio">
+                                    <param id="0" name="Audio file">587195__derplayer__explosion-07</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-7</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="625691731248369" type="Enemy_2" />
                             </actions>
                         </event-block>
                         <event-block sid="704606309706001">
@@ -1478,7 +1499,18 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Destroy" sid="481998889288381" type="Enemy_2" />
+                                <action id="0" name="Spawn another object" sid="865247329196389" type="Enemy_2">
+                                    <param id="0" name="Object">boom</param>
+                                    <param id="1" name="Layer">4</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="0" name="Play" sid="101953342671939" type="Audio">
+                                    <param id="0" name="Audio file">587195__derplayer__explosion-07</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-7</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="449391788962967" type="Enemy_2" />
                             </actions>
                         </event-block>
                         <event-block sid="900722628144575">
@@ -1488,7 +1520,18 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Destroy" sid="564801333232111" type="Enemy_2" />
+                                <action id="0" name="Spawn another object" sid="230820211960954" type="Enemy_2">
+                                    <param id="0" name="Object">boom</param>
+                                    <param id="1" name="Layer">4</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="0" name="Play" sid="734980196731611" type="Audio">
+                                    <param id="0" name="Audio file">587195__derplayer__explosion-07</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-7</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="803419688036763" type="Enemy_2" />
                             </actions>
                         </event-block>
                         <event-block sid="399993590062498">
@@ -1498,7 +1541,18 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Destroy" sid="549604259623081" type="Enemy_2" />
+                                <action id="0" name="Spawn another object" sid="772346359720717" type="Enemy_2">
+                                    <param id="0" name="Object">boom</param>
+                                    <param id="1" name="Layer">4</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="0" name="Play" sid="741920493113355" type="Audio">
+                                    <param id="0" name="Audio file">587195__derplayer__explosion-07</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-7</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="604459665027954" type="Enemy_2" />
                             </actions>
                         </event-block>
                     </sub-events>

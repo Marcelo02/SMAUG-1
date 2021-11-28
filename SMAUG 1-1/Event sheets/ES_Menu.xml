@@ -8,6 +8,13 @@
                 <condition id="-2" name="On start of layout" sid="963655632821761" type="System" />
             </conditions>
             <actions>
+                <action id="33" name="Stop all" sid="596766873433180" type="Audio" />
+                <action id="0" name="Play" sid="691574621793299" type="Audio">
+                    <param id="0" name="Audio file">sem_hi_hat_praloop</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
                 <action id="0" name="Set text" sid="468750672711293" type="IntroText">
                     <param id="0" name="Text">&quot;TERCEIRO MILÊNIO&quot; &amp; newline &amp; &quot;TERCEIRO ANDAR / SETOR DZ7&quot; &amp; newline &amp; &quot;KARLA PEIXOTO&quot;</param>
                 </action>
@@ -152,6 +159,7 @@
                         <action id="-16" name="Wait" sid="246807578307746" type="System">
                             <param id="0" name="Seconds">9</param>
                         </action>
+                        <action id="33" name="Stop all" sid="325773085580076" type="Audio" />
                         <action id="-2" name="Go to layout" sid="977714435836044" type="System">
                             <param id="0" name="Layout">L_Andar3</param>
                         </action>

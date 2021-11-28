@@ -4082,6 +4082,14 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="gamelogo" sid="879889704940358">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="264319996521928" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\ateoi_logo.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -4090,6 +4098,7 @@
         <layout>L_MenuTeclas.xml</layout>
         <layout>L_Andar3.xml</layout>
         <layout>L_Intro.xml</layout>
+        <layout>L_OUTRO.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>ES_Main.xml</event-sheet>
@@ -4097,6 +4106,7 @@
         <event-sheet>ES_MenuTeclas.xml</event-sheet>
         <event-sheet>ES_Andar3.xml</event-sheet>
         <event-sheet>ES_Intro.xml</event-sheet>
+        <event-sheet>ES_OUTRO.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="22" />

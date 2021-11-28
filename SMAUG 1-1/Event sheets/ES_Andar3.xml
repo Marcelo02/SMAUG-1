@@ -10,6 +10,7 @@
                 <condition id="-2" name="On start of layout" sid="648465537646046" type="System" />
             </conditions>
             <actions>
+                <action id="33" name="Stop all" sid="698538742795236" type="Audio" />
                 <action behavior="Fade" id="2" name="Set fade-in time" sid="827331570173294" type="ZEBLACKSCHKREEN">
                     <param id="0" name="Fade-in time">0</param>
                 </action>
@@ -195,6 +196,12 @@
                 <action id="-10" name="Set value" sid="924327678360298" type="trigger_elevator">
                     <param id="0" name="Instance variable">hesin</param>
                     <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Play" sid="210372160724494" type="Audio">
+                    <param id="0" name="Audio file">DingElevator_Final</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-5</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -500,93 +507,96 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-group description="" sid="129442228218366" title="ABORDAGEM" />
-                <event-block sid="627606587377928">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="430145558824379" type="TASKSTATE">
-                            <param id="0" name="Object">Player</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="994421790020748" type="TASKSTATE">
-                            <param id="0" name="Instance variable">ts_id</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">86</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="357930509487492" type="Player">
-                            <param id="0" name="Instance variable">faccao</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Set text" sid="619748309925100" type="Nome">
-                            <param id="0" name="Text">&quot;Atirador Sinistro&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="332953828286728" type="Dialogo">
-                            <param id="0" name="Text">&quot;E aii, novinha? Precisa de alguém pra carregar sua bagagem?&quot;</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="732970645389226" type="Player">
-                            <param id="0" name="Instance variable">Conversando</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-41" name="Wait for signal" sid="803203579747206" type="System">
-                            <param id="0" name="Tag">&quot;NorG&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="404929981561845" type="Nome">
-                            <param id="0" name="Text">&quot;Karla&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="702577568003784" type="Dialogo">
-                            <param id="0" name="Text">&quot;...&quot;</param>
-                        </action>
-                        <action id="-41" name="Wait for signal" sid="974608860593721" type="System">
-                            <param id="0" name="Tag">&quot;NorG&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="210539842171130" type="Nome">
-                            <param id="0" name="Text">&quot;Atirador Sinistro&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="182363295884473" type="Dialogo">
-                            <param id="0" name="Text">&quot;Vai fica quietinha, ué?&quot;</param>
-                        </action>
-                        <action id="-41" name="Wait for signal" sid="570323046452739" type="System">
-                            <param id="0" name="Tag">&quot;NorG&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="174994251926586" type="Nome">
-                            <param id="0" name="Text">&quot;Operador Sinistro&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="948816930872567" type="Dialogo">
-                            <param id="0" name="Text">&quot;Só traz ela pra cima, porra. Ninguém cuma mala cheia de C.E vai fala merda alguma.&quot;</param>
-                        </action>
-                        <action id="-41" name="Wait for signal" sid="193068814210439" type="System">
-                            <param id="0" name="Tag">&quot;NorG&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="756856775448682" type="Nome">
-                            <param id="0" name="Text">&quot;Karla&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="259746188270948" type="Dialogo">
-                            <param id="0" name="Text">&quot;C.E.?&quot;</param>
-                        </action>
-                        <action id="-41" name="Wait for signal" sid="767065036382062" type="System">
-                            <param id="0" name="Tag">&quot;NorG&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="844660287641550" type="Nome">
-                            <param id="0" name="Text">&quot;Atirador Sinistro&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="279611942497442" type="Dialogo">
-                            <param id="0" name="Text">&quot;Novinha... se tu sabe u que é bom pra saúde, sobe lá e vai fala com o chefia.&quot;</param>
-                        </action>
-                        <action id="-41" name="Wait for signal" sid="664934576246817" type="System">
-                            <param id="0" name="Tag">&quot;NorG&quot;</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="613894832964458" type="Player">
-                            <param id="0" name="Instance variable">Conversando</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="183516370763803" type="Player">
-                            <param id="0" name="Instance variable">Correndo</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-9" name="Destroy" sid="478994119460122" type="TASKSTATE" />
-                    </actions>
-                </event-block>
+                <event-group description="" sid="129442228218366" title="ABORDAGEM">
+                    <sub-events>
+                        <event-block sid="627606587377928">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="430145558824379" type="TASKSTATE">
+                                    <param id="0" name="Object">Player</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="994421790020748" type="TASKSTATE">
+                                    <param id="0" name="Instance variable">ts_id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">86</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="357930509487492" type="Player">
+                                    <param id="0" name="Instance variable">faccao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="619748309925100" type="Nome">
+                                    <param id="0" name="Text">&quot;Atirador Sinistro&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="332953828286728" type="Dialogo">
+                                    <param id="0" name="Text">&quot;E aii, novinha? Precisa de alguém pra carregar sua bagagem?&quot;</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="732970645389226" type="Player">
+                                    <param id="0" name="Instance variable">Conversando</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-41" name="Wait for signal" sid="803203579747206" type="System">
+                                    <param id="0" name="Tag">&quot;NorG&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="404929981561845" type="Nome">
+                                    <param id="0" name="Text">&quot;Karla&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="702577568003784" type="Dialogo">
+                                    <param id="0" name="Text">&quot;...&quot;</param>
+                                </action>
+                                <action id="-41" name="Wait for signal" sid="974608860593721" type="System">
+                                    <param id="0" name="Tag">&quot;NorG&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="210539842171130" type="Nome">
+                                    <param id="0" name="Text">&quot;Atirador Sinistro&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="182363295884473" type="Dialogo">
+                                    <param id="0" name="Text">&quot;Vai fica quietinha, ué?&quot;</param>
+                                </action>
+                                <action id="-41" name="Wait for signal" sid="570323046452739" type="System">
+                                    <param id="0" name="Tag">&quot;NorG&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="174994251926586" type="Nome">
+                                    <param id="0" name="Text">&quot;Operador Sinistro&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="948816930872567" type="Dialogo">
+                                    <param id="0" name="Text">&quot;Só traz ela pra cima, porra. Ninguém cuma mala cheia de C.E vai fala merda alguma.&quot;</param>
+                                </action>
+                                <action id="-41" name="Wait for signal" sid="193068814210439" type="System">
+                                    <param id="0" name="Tag">&quot;NorG&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="756856775448682" type="Nome">
+                                    <param id="0" name="Text">&quot;Karla&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="259746188270948" type="Dialogo">
+                                    <param id="0" name="Text">&quot;C.E.?&quot;</param>
+                                </action>
+                                <action id="-41" name="Wait for signal" sid="767065036382062" type="System">
+                                    <param id="0" name="Tag">&quot;NorG&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="844660287641550" type="Nome">
+                                    <param id="0" name="Text">&quot;Atirador Sinistro&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="279611942497442" type="Dialogo">
+                                    <param id="0" name="Text">&quot;Novinha... se tu sabe u que é bom pra saúde, sobe lá e vai fala com o chefia.&quot;</param>
+                                </action>
+                                <action id="-41" name="Wait for signal" sid="664934576246817" type="System">
+                                    <param id="0" name="Tag">&quot;NorG&quot;</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="613894832964458" type="Player">
+                                    <param id="0" name="Instance variable">Conversando</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="183516370763803" type="Player">
+                                    <param id="0" name="Instance variable">Correndo</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="478994119460122" type="TASKSTATE" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
                 <event-group description="" sid="214847040218490" title="DIVISOR1">
                     <sub-events>
                         <event-block sid="831803736351707">
@@ -1015,6 +1025,12 @@
                                 <action id="-16" name="Wait" sid="881640118293868" type="System">
                                     <param id="0" name="Seconds">0.2</param>
                                 </action>
+                                <action id="0" name="Play" sid="751144291636633" type="Audio">
+                                    <param id="0" name="Audio file">renegade_praloop</param>
+                                    <param id="2" name="Loop">1</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;renegade&quot;</param>
+                                </action>
                                 <action id="-3" name="Set position" sid="521657324123674" type="Player">
                                     <param id="0" name="X">149</param>
                                     <param id="1" name="Y">4338</param>
@@ -1081,6 +1097,12 @@
                                 <action id="-10" name="Set value" sid="736777024518993" type="Gate">
                                     <param id="0" name="Instance variable">dir</param>
                                     <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Play" sid="871930801573646" type="Audio">
+                                    <param id="0" name="Audio file">submundodadz7_praloop</param>
+                                    <param id="2" name="Loop">1</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;dz7&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1276,6 +1298,12 @@
                                     <param id="0" name="Instance variable">dir</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
+                                <action id="0" name="Play" sid="605586988214174" type="Audio">
+                                    <param id="0" name="Audio file">submundodadz7_praloop</param>
+                                    <param id="2" name="Loop">1</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;dz7&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="289898368126790">
@@ -1309,6 +1337,7 @@
                                     <param id="0" name="Instance variable">dir</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
+                                <action id="33" name="Stop all" sid="246259587608061" type="Audio" />
                             </actions>
                         </event-block>
                         <event-block sid="192589044066055">
@@ -1331,422 +1360,445 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="941280671808761" title="FINAL1" />
-                <event-block sid="806103418910550">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="202792788459041" type="TASKSTATE">
-                            <param id="0" name="Object">Player</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="133430300249020" type="TASKSTATE">
-                            <param id="0" name="Instance variable">ts_id</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">385</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="311117558949426" type="Player">
-                            <param id="0" name="Instance variable">faccao</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Fade" id="2" name="Set fade-in time" sid="114123497216919" type="ZEBLACKSCHKREEN">
-                            <param id="0" name="Fade-in time">5</param>
-                        </action>
-                        <action behavior="Fade" id="4" name="Set fade-out time" sid="534029490719061" type="ZEBLACKSCHKREEN">
-                            <param id="0" name="Fade-out time">0</param>
-                        </action>
-                        <action id="0" name="Set text" sid="116142898934494" type="Nome">
-                            <param id="0" name="Text">&quot;&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="855721754604754" type="Dialogo">
-                            <param id="0" name="Text">&quot;Karla, Vaz e Zeca chegam ao armazém de produtos da operação.&quot;</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="683295897470831" type="Player">
-                            <param id="0" name="Instance variable">Conversando</param>
-                            <param id="1" name="Value">2</param>
-                        </action>
-                        <action behavior="Fade" id="0" name="Restart fade" sid="260691253504265" type="ZEBLACKSCHKREEN" />
-                        <action id="-16" name="Wait" sid="781701060272787" type="System">
-                            <param id="0" name="Seconds">5</param>
-                        </action>
-                        <action behavior="Platform" id="0" name="Set ignoring input" sid="935896188620456" type="Player">
-                            <param id="0" name="Input">1</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="630235362840194" type="Player">
-                            <param id="0" name="Instance variable">Conversando</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="0" name="Set text" sid="881904192028570" type="Nome">
-                            <param id="0" name="Text">&quot;Vaz&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="792776588821543" type="Dialogo">
-                            <param id="0" name="Text">&quot;Ok. Zeca! Detonador!&quot;</param>
-                        </action>
-                        <action id="-41" name="Wait for signal" sid="944235403310471" type="System">
-                            <param id="0" name="Tag">&quot;NorG&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="939665115753695" type="Nome">
-                            <param id="0" name="Text">&quot;Vaz&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="882687482139161" type="Dialogo">
-                            <param id="0" name="Text">&quot;Ok. Zeca! Detonador!&quot;</param>
-                        </action>
-                        <action id="-41" name="Wait for signal" sid="481102919587772" type="System">
-                            <param id="0" name="Tag">&quot;NorG&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="134412359051663" type="Nome">
-                            <param id="0" name="Text">&quot;Vaz&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="622294619395322" type="Dialogo">
-                            <param id="0" name="Text">&quot;Ok. Zeca! Detonador!&quot;</param>
-                        </action>
-                        <action id="-41" name="Wait for signal" sid="950419586750518" type="System">
-                            <param id="0" name="Tag">&quot;NorG&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="495948447758955" type="Nome">
-                            <param id="0" name="Text">&quot;Vaz&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="959906167436479" type="Dialogo">
-                            <param id="0" name="Text">&quot;Ok. Zeca! Detonador!&quot;</param>
-                        </action>
-                        <action id="-41" name="Wait for signal" sid="594891551127043" type="System">
-                            <param id="0" name="Tag">&quot;NorG&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="235867540757064" type="Nome">
-                            <param id="0" name="Text">&quot;Vaz&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="684560538430723" type="Dialogo">
-                            <param id="0" name="Text">&quot;Ok. Zeca! Detonador!&quot;</param>
-                        </action>
-                        <action id="-41" name="Wait for signal" sid="973138058870317" type="System">
-                            <param id="0" name="Tag">&quot;NorG&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="235207975512845" type="Nome">
-                            <param id="0" name="Text">&quot;Vaz&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="425791290182327" type="Dialogo">
-                            <param id="0" name="Text">&quot;Ok. Zeca! Detonador!&quot;</param>
-                        </action>
-                        <action id="-41" name="Wait for signal" sid="483709880541592" type="System">
-                            <param id="0" name="Tag">&quot;NorG&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="601790802649394" type="Nome">
-                            <param id="0" name="Text">&quot;Vaz&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="709902484314520" type="Dialogo">
-                            <param id="0" name="Text">&quot;Ok. Zeca! Detonador!&quot;</param>
-                        </action>
-                        <action id="-41" name="Wait for signal" sid="169943037414305" type="System">
-                            <param id="0" name="Tag">&quot;NorG&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="718102437314177" type="Nome">
-                            <param id="0" name="Text">&quot;Vaz&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="427920759756722" type="Dialogo">
-                            <param id="0" name="Text">&quot;Ok. Zeca! Detonador!&quot;</param>
-                        </action>
-                        <action id="-41" name="Wait for signal" sid="436839416659872" type="System">
-                            <param id="0" name="Tag">&quot;NorG&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="262905351591988" type="Nome">
-                            <param id="0" name="Text">&quot;Vaz&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="463945346592182" type="Dialogo">
-                            <param id="0" name="Text">&quot;Ok. Zeca! Detonador!&quot;</param>
-                        </action>
-                        <action id="-41" name="Wait for signal" sid="401292027388834" type="System">
-                            <param id="0" name="Tag">&quot;NorG&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="956467294942901" type="Nome">
-                            <param id="0" name="Text">&quot;Vaz&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="665518051138432" type="Dialogo">
-                            <param id="0" name="Text">&quot;Ok. Zeca! Detonador!&quot;</param>
-                        </action>
-                        <action id="-41" name="Wait for signal" sid="755379952000165" type="System">
-                            <param id="0" name="Tag">&quot;NorG&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="689998064565314" type="Nome">
-                            <param id="0" name="Text">&quot;Vaz&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="634702747603864" type="Dialogo">
-                            <param id="0" name="Text">&quot;Ok. Zeca! Detonador!&quot;</param>
-                        </action>
-                        <action id="-41" name="Wait for signal" sid="873285210696052" type="System">
-                            <param id="0" name="Tag">&quot;NorG&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="680077072611184" type="Nome">
-                            <param id="0" name="Text">&quot;Vaz&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="415179646959387" type="Dialogo">
-                            <param id="0" name="Text">&quot;Ok. Zeca! Detonador!&quot;</param>
-                        </action>
-                        <action id="-41" name="Wait for signal" sid="689223547013566" type="System">
-                            <param id="0" name="Tag">&quot;NorG&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="797565634038732" type="Nome">
-                            <param id="0" name="Text">&quot;Vaz&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="899543116944602" type="Dialogo">
-                            <param id="0" name="Text">&quot;Ok. Zeca! Detonador!&quot;</param>
-                        </action>
-                        <action id="-41" name="Wait for signal" sid="433797156330106" type="System">
-                            <param id="0" name="Tag">&quot;NorG&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="132677073851593" type="Nome">
-                            <param id="0" name="Text">&quot;Vaz&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="938185991618050" type="Dialogo">
-                            <param id="0" name="Text">&quot;Ok. Zeca! Detonador!&quot;</param>
-                        </action>
-                        <action id="-41" name="Wait for signal" sid="211004739634384" type="System">
-                            <param id="0" name="Tag">&quot;NorG&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="536419479650042" type="Nome">
-                            <param id="0" name="Text">&quot;Vaz&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="333209534594630" type="Dialogo">
-                            <param id="0" name="Text">&quot;Ok. Zeca! Detonador!&quot;</param>
-                        </action>
-                        <action id="-41" name="Wait for signal" sid="101599790828739" type="System">
-                            <param id="0" name="Tag">&quot;NorG&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="127079571966680" type="Nome">
-                            <param id="0" name="Text">&quot;Vaz&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="452947799616098" type="Dialogo">
-                            <param id="0" name="Text">&quot;Ok. Zeca! Detonador!&quot;</param>
-                        </action>
-                        <action id="-41" name="Wait for signal" sid="793738317124306" type="System">
-                            <param id="0" name="Tag">&quot;NorG&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="171960155525159" type="Nome">
-                            <param id="0" name="Text">&quot;Vaz&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="897351725985805" type="Dialogo">
-                            <param id="0" name="Text">&quot;Ok. Zeca! Detonador!&quot;</param>
-                        </action>
-                        <action id="-41" name="Wait for signal" sid="280855002481040" type="System">
-                            <param id="0" name="Tag">&quot;NorG&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="435767901402024" type="Nome">
-                            <param id="0" name="Text">&quot;Vaz&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="877550075203957" type="Dialogo">
-                            <param id="0" name="Text">&quot;Ok. Zeca! Detonador!&quot;</param>
-                        </action>
-                        <action id="-41" name="Wait for signal" sid="413771912698341" type="System">
-                            <param id="0" name="Tag">&quot;NorG&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="272800741473501" type="Nome">
-                            <param id="0" name="Text">&quot;Vaz&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="487124833177598" type="Dialogo">
-                            <param id="0" name="Text">&quot;Ok. Zeca! Detonador!&quot;</param>
-                        </action>
-                        <action id="-41" name="Wait for signal" sid="681186392688808" type="System">
-                            <param id="0" name="Tag">&quot;NorG&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="608544140848629" type="Nome">
-                            <param id="0" name="Text">&quot;Vaz&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="141712345919068" type="Dialogo">
-                            <param id="0" name="Text">&quot;Ok. Zeca! Detonador!&quot;</param>
-                        </action>
-                        <action id="-41" name="Wait for signal" sid="436703805840157" type="System">
-                            <param id="0" name="Tag">&quot;NorG&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="104397497560510" type="Nome">
-                            <param id="0" name="Text">&quot;Vaz&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="552908559085223" type="Dialogo">
-                            <param id="0" name="Text">&quot;Ok. Zeca! Detonador!&quot;</param>
-                        </action>
-                        <action id="-41" name="Wait for signal" sid="171765058458324" type="System">
-                            <param id="0" name="Tag">&quot;NorG&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="345150804189743" type="Nome">
-                            <param id="0" name="Text">&quot;&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="785483670116218" type="Dialogo">
-                            <param id="0" name="Text">&quot;PRINTF(&quot;&quot;boom&quot;&quot;);&quot;</param>
-                        </action>
-                        <action id="-41" name="Wait for signal" sid="422511030467335" type="System">
-                            <param id="0" name="Tag">&quot;NorG&quot;</param>
-                        </action>
-                        <action id="33" name="Stop all" sid="926672737648836" type="Audio" />
-                        <action id="-10" name="Set value" sid="299174275621080" type="Player">
-                            <param id="0" name="Instance variable">Conversando</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action behavior="Platform" id="0" name="Set ignoring input" sid="761654992084137" type="Player">
-                            <param id="0" name="Input">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="954646073906979" type="ZEBLACKSCHKREEN">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="843821314214972" type="ZEWHITESCREEN">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action behavior="Fade" id="0" name="Restart fade" sid="763297962365156" type="ZEWHITESCREEN" />
-                        <action id="-15" name="Set visible" sid="444818537483999" type="MANSIONGOBOOM">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="0" name="Play" sid="358334070595976" type="Audio">
-                            <param id="0" name="Audio file">587195__derplayer__explosion-07</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">3</param>
-                            <param id="1" name="Tag (optional)">&quot;HOLY&quot;</param>
-                        </action>
-                        <action id="31" name="Add distortion effect" sid="327511025811040" type="Audio">
-                            <param id="0" name="Tag">&quot;HOLY&quot;</param>
-                            <param id="1" name="Threshold">-27</param>
-                            <param id="2" name="Headroom">21</param>
-                            <param id="3" name="Drive">5</param>
-                            <param id="4" name="Make-up gain">3</param>
-                            <param id="5" name="Mix">100</param>
-                        </action>
-                        <action id="5" name="Set playback rate" sid="139286737258834" type="Audio">
-                            <param id="0" name="Tag">&quot;HOLY&quot;</param>
-                            <param id="1" name="Playback rate">0.2</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="622576080484050" type="System">
-                            <param id="0" name="Seconds">9</param>
-                        </action>
-                        <action id="0" name="Set text" sid="926469243169132" type="Nome">
-                            <param id="0" name="Text">&quot;Vaz&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="944712051374409" type="Dialogo">
-                            <param id="0" name="Text">&quot;Ok. Zeca! Detonador!&quot;</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="819142799660204" type="Player">
-                            <param id="0" name="Instance variable">Conversando</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-41" name="Wait for signal" sid="234998118795897" type="System">
-                            <param id="0" name="Tag">&quot;NorG&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="355592201698260" type="Nome">
-                            <param id="0" name="Text">&quot;Vaz&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="664852083062091" type="Dialogo">
-                            <param id="0" name="Text">&quot;Ok. Zeca! Detonador!&quot;</param>
-                        </action>
-                        <action id="-41" name="Wait for signal" sid="695448268293959" type="System">
-                            <param id="0" name="Tag">&quot;NorG&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="828650612844409" type="Nome">
-                            <param id="0" name="Text">&quot;Vaz&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="234674119265978" type="Dialogo">
-                            <param id="0" name="Text">&quot;Ok. Zeca! Detonador!&quot;</param>
-                        </action>
-                        <action id="-41" name="Wait for signal" sid="263830752199543" type="System">
-                            <param id="0" name="Tag">&quot;NorG&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="536212063472492" type="Nome">
-                            <param id="0" name="Text">&quot;Vaz&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="540238945203803" type="Dialogo">
-                            <param id="0" name="Text">&quot;Ok. Zeca! Detonador!&quot;</param>
-                        </action>
-                        <action id="-41" name="Wait for signal" sid="199120038472158" type="System">
-                            <param id="0" name="Tag">&quot;NorG&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="475213756655225" type="Nome">
-                            <param id="0" name="Text">&quot;Vaz&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="496948638590105" type="Dialogo">
-                            <param id="0" name="Text">&quot;Ok. Zeca! Detonador!&quot;</param>
-                        </action>
-                        <action id="-41" name="Wait for signal" sid="111585019782438" type="System">
-                            <param id="0" name="Tag">&quot;NorG&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="715065614688530" type="Nome">
-                            <param id="0" name="Text">&quot;Vaz&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="922474501921838" type="Dialogo">
-                            <param id="0" name="Text">&quot;Ok. Zeca! Detonador!&quot;</param>
-                        </action>
-                        <action id="-41" name="Wait for signal" sid="157849021642036" type="System">
-                            <param id="0" name="Tag">&quot;NorG&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="552941788306803" type="Nome">
-                            <param id="0" name="Text">&quot;Vaz&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="213630789827748" type="Dialogo">
-                            <param id="0" name="Text">&quot;Ok. Zeca! Detonador!&quot;</param>
-                        </action>
-                        <action id="-41" name="Wait for signal" sid="210511036652271" type="System">
-                            <param id="0" name="Tag">&quot;NorG&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="258541701771027" type="Nome">
-                            <param id="0" name="Text">&quot;Vaz&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="409965206047113" type="Dialogo">
-                            <param id="0" name="Text">&quot;Ok. Zeca! Detonador!&quot;</param>
-                        </action>
-                        <action id="-41" name="Wait for signal" sid="902341244518683" type="System">
-                            <param id="0" name="Tag">&quot;NorG&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="101822897653776" type="Nome">
-                            <param id="0" name="Text">&quot;Vaz&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="898209008507689" type="Dialogo">
-                            <param id="0" name="Text">&quot;Ok. Zeca! Detonador!&quot;</param>
-                        </action>
-                        <action id="-41" name="Wait for signal" sid="723362708599601" type="System">
-                            <param id="0" name="Tag">&quot;NorG&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="969624414402497" type="Nome">
-                            <param id="0" name="Text">&quot;&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="627623031680869" type="Dialogo">
-                            <param id="0" name="Text">&quot;cABANDO&quot;</param>
-                        </action>
-                        <action id="-41" name="Wait for signal" sid="326999387219759" type="System">
-                            <param id="0" name="Tag">&quot;NorG&quot;</param>
-                        </action>
-                        <action behavior="Fade" id="0" name="Restart fade" sid="139352796550559" type="ZEBLACKSCHKREEN" />
-                        <action id="-15" name="Set visible" sid="550254236379631" type="ZEBLACKSCHKREEN">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="0" name="Set text" sid="663365457194490" type="Nome">
-                            <param id="0" name="Text">&quot;Vaz&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="564990541728327" type="Dialogo">
-                            <param id="0" name="Text">&quot;Ok. Zeca! Detonador!&quot;</param>
-                        </action>
-                        <action id="-41" name="Wait for signal" sid="671162835862540" type="System">
-                            <param id="0" name="Tag">&quot;NorG&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="377891913218500" type="Nome">
-                            <param id="0" name="Text">&quot;Vaz&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="750326789968978" type="Dialogo">
-                            <param id="0" name="Text">&quot;Ok. Zeca! Detonador!&quot;</param>
-                        </action>
-                        <action id="-41" name="Wait for signal" sid="694552865707209" type="System">
-                            <param id="0" name="Tag">&quot;NorG&quot;</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="391670835937829" type="Player">
-                            <param id="0" name="Instance variable">Conversando</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="0" name="Set text" sid="498263176368786" type="ENDTEXT">
-                            <param id="0" name="Text">&quot;FINAL COLETIVISTA:&quot;&amp;newline&amp;&quot;&quot;&quot;MANSÃO AOS ARES&quot;&quot;&quot;</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="527162673909945" type="ENDTEXT">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="103823403319376" type="System">
-                            <param id="0" name="Seconds">5</param>
-                        </action>
-                        <action id="-2" name="Go to layout" sid="529701014435081" type="System">
-                            <param id="0" name="Layout">L_Intro</param>
-                        </action>
-                    </actions>
-                </event-block>
+                <event-group description="" sid="941280671808761" title="FINAL1">
+                    <sub-events>
+                        <event-block sid="680139775267339">
+                            <conditions>
+                                <condition id="12" name="Compare speed" sid="288830272280627" type="ZEWHITESCREEN">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                        </event-block>
+                        <event-block sid="806103418910550">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="202792788459041" type="TASKSTATE">
+                                    <param id="0" name="Object">Player</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="133430300249020" type="TASKSTATE">
+                                    <param id="0" name="Instance variable">ts_id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">385</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="311117558949426" type="Player">
+                                    <param id="0" name="Instance variable">faccao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Fade" id="2" name="Set fade-in time" sid="114123497216919" type="ZEBLACKSCHKREEN">
+                                    <param id="0" name="Fade-in time">5</param>
+                                </action>
+                                <action behavior="Fade" id="4" name="Set fade-out time" sid="534029490719061" type="ZEBLACKSCHKREEN">
+                                    <param id="0" name="Fade-out time">0</param>
+                                </action>
+                                <action id="0" name="Set text" sid="116142898934494" type="Nome">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="855721754604754" type="Dialogo">
+                                    <param id="0" name="Text">&quot;Karla, Vaz e Zeca chegam ao armazém de produtos da operação.&quot;</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="683295897470831" type="Player">
+                                    <param id="0" name="Instance variable">Conversando</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                                <action behavior="Fade" id="0" name="Restart fade" sid="260691253504265" type="ZEBLACKSCHKREEN" />
+                                <action id="-16" name="Wait" sid="781701060272787" type="System">
+                                    <param id="0" name="Seconds">5</param>
+                                </action>
+                                <action behavior="Platform" id="0" name="Set ignoring input" sid="935896188620456" type="Player">
+                                    <param id="0" name="Input">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="881904192028570" type="Nome">
+                                    <param id="0" name="Text">&quot;Vaz&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="792776588821543" type="Dialogo">
+                                    <param id="0" name="Text">&quot;Ok. Zeca! Detonador!&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="944235403310471" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                                <action id="0" name="Set text" sid="939665115753695" type="Nome">
+                                    <param id="0" name="Text">&quot;Zeca&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="882687482139161" type="Dialogo">
+                                    <param id="0" name="Text">&quot;Detonador?&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="443406814598563" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                                <action id="0" name="Set text" sid="134412359051663" type="Nome">
+                                    <param id="0" name="Text">&quot;Vaz&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="959906167436479" type="Dialogo">
+                                    <param id="0" name="Text">&quot;Detonador!&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="187536733811686" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                                <action id="0" name="Set text" sid="235867540757064" type="Nome">
+                                    <param id="0" name="Text">&quot;Zeca&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="684560538430723" type="Dialogo">
+                                    <param id="0" name="Text">&quot;Vixe, meu num me deram detonador nenhum, meu.&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="221589990634345" type="System">
+                                    <param id="0" name="Seconds">3</param>
+                                </action>
+                                <action id="0" name="Set text" sid="495948447758955" type="Nome">
+                                    <param id="0" name="Text">&quot;Vaz&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="425791290182327" type="Dialogo">
+                                    <param id="0" name="Text">&quot;Você esqueceu o DETONADOR de uma BOMBA, ZECA!?&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="758913562344344" type="System">
+                                    <param id="0" name="Seconds">3</param>
+                                </action>
+                                <action id="0" name="Set text" sid="601790802649394" type="Nome">
+                                    <param id="0" name="Text">&quot;Zeca&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="709902484314520" type="Dialogo">
+                                    <param id="0" name="Text">&quot;Esqueci o escambau meu! Num me deram porra nenhuma!&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="565002827055974" type="System">
+                                    <param id="0" name="Seconds">3</param>
+                                </action>
+                                <action id="0" name="Set text" sid="235207975512845" type="Nome">
+                                    <param id="0" name="Text">&quot;Vaz&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="622294619395322" type="Dialogo">
+                                    <param id="0" name="Text">&quot;SE VOCÊ TEM UMA BOMBA-&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="324443833018324" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                                <action id="0" name="Set text" sid="718102437314177" type="Nome">
+                                    <param id="0" name="Text">&quot;Karla&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="427920759756722" type="Dialogo">
+                                    <param id="0" name="Text">&quot;Vaz, Ronaldo não nos deu nenhum detonador mesmo.&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="247545926329415" type="System">
+                                    <param id="0" name="Seconds">4</param>
+                                </action>
+                                <action id="0" name="Set text" sid="262905351591988" type="Nome">
+                                    <param id="0" name="Text">&quot;Vaz&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="463945346592182" type="Dialogo">
+                                    <param id="0" name="Text">&quot;SÉRIO!? TEMOS UMA BOMBA E NÃO TEMOS A PORRA DE UM DETONADOR!?&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="178564766905985" type="System">
+                                    <param id="0" name="Seconds">5</param>
+                                </action>
+                                <action id="0" name="Set text" sid="956467294942901" type="Nome">
+                                    <param id="0" name="Text">&quot;Zeca&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="665518051138432" type="Dialogo">
+                                    <param id="0" name="Text">&quot;Então, meu! Não tem detonador não!&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="107584211633340" type="System">
+                                    <param id="0" name="Seconds">3</param>
+                                </action>
+                                <action id="0" name="Set text" sid="689998064565314" type="Nome">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="634702747603864" type="Dialogo">
+                                    <param id="0" name="Text">&quot;Vaz recebe uma mensagem no seu pager.&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="983014307056765" type="System">
+                                    <param id="0" name="Seconds">5</param>
+                                </action>
+                                <action id="0" name="Set text" sid="680077072611184" type="Nome">
+                                    <param id="0" name="Text">&quot;Zeca&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="415179646959387" type="Dialogo">
+                                    <param id="0" name="Text">&quot;Oia só, novinha, O Vaz tem um paiger mô moderniiin.&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="615871757803617" type="System">
+                                    <param id="0" name="Seconds">4</param>
+                                </action>
+                                <action id="0" name="Set text" sid="797565634038732" type="Nome">
+                                    <param id="0" name="Text">&quot;Karla&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="899543116944602" type="Dialogo">
+                                    <param id="0" name="Text">&quot;O nome é Karla, otário.&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="784829835077811" type="System">
+                                    <param id="0" name="Seconds">3</param>
+                                </action>
+                                <action id="0" name="Set text" sid="132677073851593" type="Nome">
+                                    <param id="0" name="Text">&quot;Vaz&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="938185991618050" type="Dialogo">
+                                    <param id="0" name="Text">&quot;Ronaldo esqueceu de nos dar um detonador.&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="959408996941381" type="System">
+                                    <param id="0" name="Seconds">3</param>
+                                </action>
+                                <action id="0" name="Set text" sid="536419479650042" type="Nome">
+                                    <param id="0" name="Text">&quot;Karla&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="333209534594630" type="Dialogo">
+                                    <param id="0" name="Text">&quot;Precisamos voltar, não há como-&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="773423241367788" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                                <action id="0" name="Set text" sid="127079571966680" type="Nome">
+                                    <param id="0" name="Text">&quot;Zeca&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="452947799616098" type="Dialogo">
+                                    <param id="0" name="Text">&quot;Quê isso, Karlita? Num vo faze um bate volta pros cara volta aqui não meu, presta tensão nisso!&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="924540203355787" type="System">
+                                    <param id="0" name="Seconds">5</param>
+                                </action>
+                                <action id="0" name="Set text" sid="171960155525159" type="Nome">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="897351725985805" type="Dialogo">
+                                    <param id="0" name="Text">&quot;Zeca acende um isqueiro e joga diretamente na mala&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="729295157441032" type="System">
+                                    <param id="0" name="Seconds">5</param>
+                                </action>
+                                <action id="0" name="Set text" sid="435767901402024" type="Nome">
+                                    <param id="0" name="Text">&quot;Vaz&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="877550075203957" type="Dialogo">
+                                    <param id="0" name="Text">&quot;SEU LOUCO!&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="281238906108477" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                                <action id="0" name="Set text" sid="272800741473501" type="Nome">
+                                    <param id="0" name="Text">&quot;Zeca&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="487124833177598" type="Dialogo">
+                                    <param id="0" name="Text">&quot;LOKO MEMO, FI!&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="878529096856444" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                                <action id="0" name="Set text" sid="608544140848629" type="Nome">
+                                    <param id="0" name="Text">&quot;Karla&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="141712345919068" type="Dialogo">
+                                    <param id="0" name="Text">&quot;CALA A BOCA E CORRE!&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="807312715172469" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                                <action id="0" name="Set text" sid="104397497560510" type="Nome">
+                                    <param id="0" name="Text">&quot;Vaz&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="552908559085223" type="Dialogo">
+                                    <param id="0" name="Text">&quot;Os três correm e sobem a escada enquanto estalos começam a sair da mala.&quot;</param>
+                                </action>
+                                <action id="0" name="Play" sid="248192480907380" type="Audio">
+                                    <param id="0" name="Audio file">Karla Running</param>
+                                    <param id="2" name="Loop">1</param>
+                                    <param id="3" name="Volume">-3</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="492760074576125" type="System">
+                                    <param id="0" name="Seconds">6</param>
+                                </action>
+                                <action id="0" name="Set text" sid="345150804189743" type="Nome">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="785483670116218" type="Dialogo">
+                                    <param id="0" name="Text">&quot;O esquadrão, após passerem pelas pilhas de corpos mafiosos, descem as escadas para o esgoto.  E quando menos se esperava...&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="550980499732689" type="System">
+                                    <param id="0" name="Seconds">6</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="339657581147624" type="Ammo">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="310710828326475" type="Lifebar">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="863261409900271" type="Vida">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="33" name="Stop all" sid="926672737648836" type="Audio" />
+                                <action id="-10" name="Set value" sid="299174275621080" type="Player">
+                                    <param id="0" name="Instance variable">Conversando</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action behavior="Platform" id="0" name="Set ignoring input" sid="761654992084137" type="Player">
+                                    <param id="0" name="Input">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="954646073906979" type="ZEBLACKSCHKREEN">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="843821314214972" type="ZEWHITESCREEN">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action behavior="Fade" id="0" name="Restart fade" sid="763297962365156" type="ZEWHITESCREEN" />
+                                <action id="-15" name="Set visible" sid="444818537483999" type="MANSIONGOBOOM">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="0" name="Play" sid="358334070595976" type="Audio">
+                                    <param id="0" name="Audio file">587195__derplayer__explosion-07</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">3</param>
+                                    <param id="1" name="Tag (optional)">&quot;HOLY&quot;</param>
+                                </action>
+                                <action id="31" name="Add distortion effect" sid="327511025811040" type="Audio">
+                                    <param id="0" name="Tag">&quot;HOLY&quot;</param>
+                                    <param id="1" name="Threshold">-27</param>
+                                    <param id="2" name="Headroom">21</param>
+                                    <param id="3" name="Drive">5</param>
+                                    <param id="4" name="Make-up gain">3</param>
+                                    <param id="5" name="Mix">100</param>
+                                </action>
+                                <action id="5" name="Set playback rate" sid="139286737258834" type="Audio">
+                                    <param id="0" name="Tag">&quot;HOLY&quot;</param>
+                                    <param id="1" name="Playback rate">0.13</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="622576080484050" type="System">
+                                    <param id="0" name="Seconds">9</param>
+                                </action>
+                                <action id="0" name="Set text" sid="926469243169132" type="Nome">
+                                    <param id="0" name="Text">&quot;Zeca&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="944712051374409" type="Dialogo">
+                                    <param id="0" name="Text">&quot;TÁ PORRA FI! NUM FALEI QUE IA DÀ CERTO MEU!?&quot;</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="819142799660204" type="Player">
+                                    <param id="0" name="Instance variable">Conversando</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="648951888481353" type="System">
+                                    <param id="0" name="Seconds">5</param>
+                                </action>
+                                <action id="0" name="Set text" sid="355592201698260" type="Nome">
+                                    <param id="0" name="Text">&quot;Karla&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="664852083062091" type="Dialogo">
+                                    <param id="0" name="Text">&quot;Você falou &quot;&quot;loko memo,fi&quot;&quot;.&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="952813910887371" type="System">
+                                    <param id="0" name="Seconds">3</param>
+                                </action>
+                                <action id="0" name="Set text" sid="828650612844409" type="Nome">
+                                    <param id="0" name="Text">&quot;Zeca&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="234674119265978" type="Dialogo">
+                                    <param id="0" name="Text">&quot;Então, meu, é isso memo!&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="380659663271384" type="System">
+                                    <param id="0" name="Seconds">3</param>
+                                </action>
+                                <action id="0" name="Set text" sid="536212063472492" type="Nome">
+                                    <param id="0" name="Text">&quot;Vaz&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="540238945203803" type="Dialogo">
+                                    <param id="0" name="Text">&quot;Karla você não acreditaria na sorte quesse otário tem toda santa hora.&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="691435814617064" type="System">
+                                    <param id="0" name="Seconds">5</param>
+                                </action>
+                                <action id="0" name="Set text" sid="475213756655225" type="Nome">
+                                    <param id="0" name="Text">&quot;Karla&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="496948638590105" type="Dialogo">
+                                    <param id="0" name="Text">&quot;Depois dessa? Eu acho que eu acreditaria, sim.&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="184089256557008" type="System">
+                                    <param id="0" name="Seconds">4</param>
+                                </action>
+                                <action id="0" name="Set text" sid="715065614688530" type="Nome">
+                                    <param id="0" name="Text">&quot;Zeca&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="922474501921838" type="Dialogo">
+                                    <param id="0" name="Text">&quot;Ah meu sorte é só parte, meu! Foi noís tudo que pipocamo os mafioso, meu!&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="721932048065437" type="System">
+                                    <param id="0" name="Seconds">5</param>
+                                </action>
+                                <action id="0" name="Set text" sid="552941788306803" type="Nome">
+                                    <param id="0" name="Text">&quot;Karla&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="213630789827748" type="Dialogo">
+                                    <param id="0" name="Text">&quot;É... metemos bala e bomba nesses mafioso. Nem vejo como a gente taria vivo se não fossemos três.&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="853649192968075" type="System">
+                                    <param id="0" name="Seconds">5</param>
+                                </action>
+                                <action id="0" name="Set text" sid="258541701771027" type="Nome">
+                                    <param id="0" name="Text">&quot;Karla&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="409965206047113" type="Dialogo">
+                                    <param id="0" name="Text">&quot;Valeu, galera.&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="565401098924474" type="System">
+                                    <param id="0" name="Seconds">4</param>
+                                </action>
+                                <action id="0" name="Set text" sid="101822897653776" type="Nome">
+                                    <param id="0" name="Text">&quot;Vaz&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="898209008507689" type="Dialogo">
+                                    <param id="0" name="Text">&quot;Aww...ah. Melhor avisa o resto dos sinistro que a gente ainda tá vivo.&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="823721830144981" type="System">
+                                    <param id="0" name="Seconds">5</param>
+                                </action>
+                                <action behavior="Fade" id="0" name="Restart fade" sid="139352796550559" type="ZEBLACKSCHKREEN" />
+                                <action id="-15" name="Set visible" sid="550254236379631" type="ZEBLACKSCHKREEN">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="969624414402497" type="Nome">
+                                    <param id="0" name="Text">&quot;Vaz&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="627623031680869" type="Dialogo">
+                                    <param id="0" name="Text">&quot;...Karla, você disso que precisava subir a torre, não é?&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="831795125177551" type="System">
+                                    <param id="0" name="Seconds">3</param>
+                                </action>
+                                <action id="0" name="Set text" sid="663365457194490" type="Nome">
+                                    <param id="0" name="Text">&quot;Karla&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="564990541728327" type="Dialogo">
+                                    <param id="0" name="Text">&quot;Bem, esse é o plano.&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="761949498946503" type="System">
+                                    <param id="0" name="Seconds">3</param>
+                                </action>
+                                <action id="0" name="Set text" sid="377891913218500" type="Nome">
+                                    <param id="0" name="Text">&quot;Vaz&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="750326789968978" type="Dialogo">
+                                    <param id="0" name="Text">&quot;Olha, eu também tava precisando sair dessa fossa...&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="580542563272064" type="System">
+                                    <param id="0" name="Seconds">5</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="391670835937829" type="Player">
+                                    <param id="0" name="Instance variable">Conversando</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Set text" sid="498263176368786" type="ENDTEXT">
+                                    <param id="0" name="Text">&quot;FINAL COLETIVISTA:&quot;&amp;newline&amp;&quot;&quot;&quot;MANSÃO AOS ARES&quot;&quot;&quot;</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="527162673909945" type="ENDTEXT">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="103823403319376" type="System">
+                                    <param id="0" name="Seconds">5</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="529701014435081" type="System">
+                                    <param id="0" name="Layout">L_OUTRO</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
                 <event-group description="" sid="412926723507996" title="FINAL2">
                     <sub-events>
                         <event-block sid="518864233494262">
@@ -1789,6 +1841,9 @@
                                     <param id="0" name="Instance variable">Conversando</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
+                                <action id="-15" name="Set visible" sid="129531305636436" type="Lifebar">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
                                 <action behavior="Fade" id="2" name="Set fade-in time" sid="982547731553673" type="ZEBLACKSCHKREEN">
                                     <param id="0" name="Fade-in time">5</param>
                                 </action>
@@ -1808,6 +1863,12 @@
                                 <action id="-16" name="Wait" sid="191931591295760" type="System">
                                     <param id="0" name="Seconds">5</param>
                                 </action>
+                                <action id="0" name="Play" sid="162572586550404" type="Audio">
+                                    <param id="0" name="Audio file">outro_praloop</param>
+                                    <param id="2" name="Loop">1</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
                                 <action id="-10" name="Set value" sid="459776048346028" type="Player">
                                     <param id="0" name="Instance variable">Conversando</param>
                                     <param id="1" name="Value">1</param>
@@ -1825,28 +1886,28 @@
                                     <param id="0" name="Tag">&quot;NorG&quot;</param>
                                 </action>
                                 <action id="0" name="Set text" sid="411183476829478" type="Nome">
-                                    <param id="0" name="Text">&quot;&quot;</param>
+                                    <param id="0" name="Text">&quot;Sr Maldolaire&quot;</param>
                                 </action>
                                 <action id="0" name="Set text" sid="824874218417131" type="Dialogo">
-                                    <param id="0" name="Text">&quot;Karla se senta de frente ao Sr. Maldolaire, deixando sua carga na mesa.&quot;</param>
+                                    <param id="0" name="Text">&quot;Quando fui informado que minha carga estava a caminho, também me contaram que, ao invés de ser paga, a entregadora queria passagem ao próximo andar como recompensa. Estou certo, Karla?&quot;</param>
                                 </action>
                                 <action id="-41" name="Wait for signal" sid="994812558223647" type="System">
                                     <param id="0" name="Tag">&quot;NorG&quot;</param>
                                 </action>
                                 <action id="0" name="Set text" sid="175455857713819" type="Nome">
-                                    <param id="0" name="Text">&quot;&quot;</param>
+                                    <param id="0" name="Text">&quot;Karla&quot;</param>
                                 </action>
                                 <action id="0" name="Set text" sid="315965526864289" type="Dialogo">
-                                    <param id="0" name="Text">&quot;Karla se senta de frente ao Sr. Maldolaire, deixando sua carga na mesa.&quot;</param>
+                                    <param id="0" name="Text">&quot;Sim, aprendi rápido que a grana aqui debaixo vale pouco pra mim&quot;</param>
                                 </action>
                                 <action id="-41" name="Wait for signal" sid="356050615821306" type="System">
                                     <param id="0" name="Tag">&quot;NorG&quot;</param>
                                 </action>
                                 <action id="0" name="Set text" sid="586467175937024" type="Nome">
-                                    <param id="0" name="Text">&quot;&quot;</param>
+                                    <param id="0" name="Text">&quot;Sr Maldolaire&quot;</param>
                                 </action>
                                 <action id="0" name="Set text" sid="150823572811523" type="Dialogo">
-                                    <param id="0" name="Text">&quot;Karla se senta de frente ao Sr. Maldolaire, deixando sua carga na mesa.&quot;</param>
+                                    <param id="0" name="Text">&quot;Está certa, Karla. Faz sentido que alguém subindo a torre saberia isso. Mas aqui está algo que talvez você não saiba.&quot;</param>
                                 </action>
                                 <action id="-41" name="Wait for signal" sid="935284562025780" type="System">
                                     <param id="0" name="Tag">&quot;NorG&quot;</param>
@@ -1855,16 +1916,16 @@
                                     <param id="0" name="Text">&quot;&quot;</param>
                                 </action>
                                 <action id="0" name="Set text" sid="101649436219716" type="Dialogo">
-                                    <param id="0" name="Text">&quot;Karla se senta de frente ao Sr. Maldolaire, deixando sua carga na mesa.&quot;</param>
+                                    <param id="0" name="Text">&quot;Maldolaire abre a mala, contendo dentro pedras empacotadas. Seu brilho e sua cor vermelha chama a atenção de Karla. Ele pega um punhado de pedras e entrega eles a Karla.&quot;</param>
                                 </action>
                                 <action id="-41" name="Wait for signal" sid="667219445895542" type="System">
                                     <param id="0" name="Tag">&quot;NorG&quot;</param>
                                 </action>
                                 <action id="0" name="Set text" sid="122491126995290" type="Nome">
-                                    <param id="0" name="Text">&quot;&quot;</param>
+                                    <param id="0" name="Text">&quot;Sr Maldolaire&quot;</param>
                                 </action>
                                 <action id="0" name="Set text" sid="666808769688605" type="Dialogo">
-                                    <param id="0" name="Text">&quot;Karla se senta de frente ao Sr. Maldolaire, deixando sua carga na mesa.&quot;</param>
+                                    <param id="0" name="Text">&quot;Chama se “Craque Escarlate”. C.E. Puro. Isso é o material mais valioso destes andares, até no topo da torre ela tem valor. Tome um pouco. Você vai precisar.&quot;</param>
                                 </action>
                                 <action id="-41" name="Wait for signal" sid="412413849899304" type="System">
                                     <param id="0" name="Tag">&quot;NorG&quot;</param>
@@ -1873,16 +1934,16 @@
                                     <param id="0" name="Text">&quot;&quot;</param>
                                 </action>
                                 <action id="0" name="Set text" sid="773935377515850" type="Dialogo">
-                                    <param id="0" name="Text">&quot;Karla se senta de frente ao Sr. Maldolaire, deixando sua carga na mesa.&quot;</param>
+                                    <param id="0" name="Text">&quot;Karla guarda 250 gramas de C.E. Puro.&quot;</param>
                                 </action>
                                 <action id="-41" name="Wait for signal" sid="677568501519497" type="System">
                                     <param id="0" name="Tag">&quot;NorG&quot;</param>
                                 </action>
                                 <action id="0" name="Set text" sid="512287841875813" type="Nome">
-                                    <param id="0" name="Text">&quot;&quot;</param>
+                                    <param id="0" name="Text">&quot;Sr Maldolaire&quot;</param>
                                 </action>
                                 <action id="0" name="Set text" sid="394210001505783" type="Dialogo">
-                                    <param id="0" name="Text">&quot;Karla se senta de frente ao Sr. Maldolaire, deixando sua carga na mesa.&quot;</param>
+                                    <param id="0" name="Text">&quot;Gosto de sua atitude, fazer o que precisa fazer, a qualquer custo. Precisa manter essa atitude para subir a torre.&quot;</param>
                                 </action>
                                 <action id="-41" name="Wait for signal" sid="616568314421784" type="System">
                                     <param id="0" name="Tag">&quot;NorG&quot;</param>
@@ -1897,19 +1958,19 @@
                                     <param id="0" name="Tag">&quot;NorG&quot;</param>
                                 </action>
                                 <action id="0" name="Set text" sid="458746535545924" type="Nome">
-                                    <param id="0" name="Text">&quot;&quot;</param>
+                                    <param id="0" name="Text">&quot;Sr Maldolaire&quot;</param>
                                 </action>
                                 <action id="0" name="Set text" sid="444796913119134" type="Dialogo">
-                                    <param id="0" name="Text">&quot;Karla se senta de frente ao Sr. Maldolaire, deixando sua carga na mesa.&quot;</param>
+                                    <param id="0" name="Text">&quot;Sim, você tem. Você nos deu C.E. suficiente para meses de produção, apenas justo fazermos nossa parte por você.&quot;</param>
                                 </action>
                                 <action id="-41" name="Wait for signal" sid="599163651405519" type="System">
                                     <param id="0" name="Tag">&quot;NorG&quot;</param>
                                 </action>
                                 <action id="0" name="Set text" sid="386379821845257" type="Nome">
-                                    <param id="0" name="Text">&quot;&quot;</param>
+                                    <param id="0" name="Text">&quot;Sr Maldolaire&quot;</param>
                                 </action>
                                 <action id="0" name="Set text" sid="605602728099957" type="Dialogo">
-                                    <param id="0" name="Text">&quot;Karla se senta de frente ao Sr. Maldolaire, deixando sua carga na mesa.&quot;</param>
+                                    <param id="0" name="Text">&quot;O caminho em frente será difícil, Karla. Terá de fazer tudo por você. &quot;</param>
                                 </action>
                                 <action id="-41" name="Wait for signal" sid="618309178146669" type="System">
                                     <param id="0" name="Tag">&quot;NorG&quot;</param>
@@ -1918,18 +1979,9 @@
                                     <param id="0" name="Text">&quot;&quot;</param>
                                 </action>
                                 <action id="0" name="Set text" sid="188791071016279" type="Dialogo">
-                                    <param id="0" name="Text">&quot;Karla se senta de frente ao Sr. Maldolaire, deixando sua carga na mesa.&quot;</param>
+                                    <param id="0" name="Text">&quot;&quot;&quot;Mesmo lá em cima, não há como ter confiança empática de ninguém. Confiança na torre é serviço pago.&quot;&quot;&quot;&amp;newline&amp;&quot;Estas palavras marcam Karla pelo resto de sua vida.&quot;</param>
                                 </action>
                                 <action id="-41" name="Wait for signal" sid="774062440180463" type="System">
-                                    <param id="0" name="Tag">&quot;NorG&quot;</param>
-                                </action>
-                                <action id="0" name="Set text" sid="587351289582239" type="Nome">
-                                    <param id="0" name="Text">&quot;&quot;</param>
-                                </action>
-                                <action id="0" name="Set text" sid="261732776674666" type="Dialogo">
-                                    <param id="0" name="Text">&quot;Karla se senta de frente ao Sr. Maldolaire, deixando sua carga na mesa.&quot;</param>
-                                </action>
-                                <action id="-41" name="Wait for signal" sid="498178857872386" type="System">
                                     <param id="0" name="Tag">&quot;NorG&quot;</param>
                                 </action>
                                 <action id="-9" name="Destroy" sid="846338721349770" type="TASKSTATE" />
@@ -1951,7 +2003,7 @@
                                     <param id="0" name="Seconds">5</param>
                                 </action>
                                 <action id="-2" name="Go to layout" sid="569592531885535" type="System">
-                                    <param id="0" name="Layout">L_Intro</param>
+                                    <param id="0" name="Layout">L_OUTRO</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1959,32 +2011,7 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group description="" sid="619198444939155" title="Missão">
-            <sub-events>
-                <event-block sid="900548732761511">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="261771166568832" type="System">
-                            <param id="0" name="Variable">Mission_State</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="LineOfSight" disabled="1" id="1" name="Set cone of view" sid="975083657947501" type="Enemy_4">
-                            <param id="0" name="Cone of view">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="361522175290066">
-                    <conditions>
-                        <condition behavior="LineOfSight" disabled="1" id="0" name="Has LOS to object" sid="476865571923718" type="Enemy_4">
-                            <param id="0" name="Object">Player</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                </event-block>
-            </sub-events>
-        </event-group>
+        <event-group description="" sid="619198444939155" title="Missão" />
         <event-block sid="435237992413280">
             <conditions>
                 <condition id="0" name="On key pressed" sid="475466910514569" type="Keyboard">
@@ -2001,6 +2028,12 @@
             </conditions>
             <actions>
                 <action behavior="Fade" id="1" name="Start fade" sid="606380531283093" type="ZEBLACKSCHKREEN" />
+                <action id="0" name="Play" sid="619551989430438" type="Audio">
+                    <param id="0" name="Audio file">zipline</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-5</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
                 <action behavior="Flash" id="0" name="Flash" sid="614544984517665" type="Player">
                     <param id="0" name="&apos;On&apos; time">0.1</param>
                     <param id="1" name="&apos;Off&apos; time">0.1</param>
@@ -2191,21 +2224,35 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="568430899630644">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="247523590345656" type="Player">
+                            <param id="0" name="Instance variable">faccao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Stop" sid="957500275506260" type="Audio">
+                            <param id="0" name="Tag">&quot;startsong&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="172603762806337">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="755800378918885" type="Player">
+                            <param id="0" name="Instance variable">faccao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Stop" sid="132217905985359" type="Audio">
+                            <param id="0" name="Tag">&quot;startsong&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="172603762806337">
-            <conditions>
-                <condition id="-7" name="Compare instance variable" sid="755800378918885" type="Player">
-                    <param id="0" name="Instance variable">faccao</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">2</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="6" name="Stop" sid="132217905985359" type="Audio">
-                    <param id="0" name="Tag">&quot;startsong&quot;</param>
-                </action>
-            </actions>
-        </event-block>
     </events>
 </c2eventsheet>

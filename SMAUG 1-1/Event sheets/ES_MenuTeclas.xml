@@ -3,6 +3,20 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>ES_MenuTeclas</name>
     <events>
+        <event-block sid="519590595539995">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="525083748607859" type="System" />
+            </conditions>
+            <actions>
+                <action id="33" name="Stop all" sid="278979030069420" type="Audio" />
+                <action id="0" name="Play" sid="551885930933322" type="Audio">
+                    <param id="0" name="Audio file">outro_praloop</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="180995189173816">
             <conditions>
                 <condition id="0" name="On key pressed" sid="402869570240634" type="Keyboard">
