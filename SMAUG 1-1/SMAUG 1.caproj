@@ -15,6 +15,7 @@
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="NodeWebkit" version="1">NW.js</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
@@ -4090,6 +4091,28 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="KIA2" sid="963237707580749">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="219919007759079" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\W10SSD-Energumeno\Documents\SCHOOLDOCZ\SMAUG_ATEOI\ARTWERK\caveira.png">
+                        <collision-poly>
+                            <point x="0.28125" y="0.28125" />
+                            <point x="0.5" y="0.171875" />
+                            <point x="0.71875" y="0.28125" />
+                            <point x="0.703125" y="0.5" />
+                            <point x="0.671875" y="0.671875" />
+                            <point x="0.5" y="0.8125" />
+                            <point x="0.328125" y="0.671875" />
+                            <point x="0.296875" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="NWjs" sid="219395566581264">
+            <plugin id="NodeWebkit" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -4127,6 +4150,7 @@
                 <roll-off-factor>1</roll-off-factor>
             </properties>
         </global-instance>
+        <global-instance type="NWjs" uid="247" />
     </global-instances>
     <sounds-folder>
         <file name="SOM DE TIRO.ogg" />
