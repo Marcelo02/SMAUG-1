@@ -10,18 +10,18 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1" order="1">L_Intro</layout>
-        <layout order="3">L_Menu</layout>
-        <layout order="5">L_MenuTeclas</layout>
-        <layout order="7">L_Teste</layout>
-        <layout order="9">L_Andar3</layout>
-        <layout order="11">L_OUTRO</layout>
-        <event-sheet order="0">ES_Intro</event-sheet>
-        <event-sheet order="2">ES_Menu</event-sheet>
-        <event-sheet order="4">ES_MenuTeclas</event-sheet>
-        <event-sheet order="6">ES_Main</event-sheet>
-        <event-sheet order="8">ES_Andar3</event-sheet>
-        <event-sheet order="10">ES_OUTRO</event-sheet>
+        <layout order="2">L_Intro</layout>
+        <layout order="4">L_Menu</layout>
+        <layout order="6">L_MenuTeclas</layout>
+        <layout order="8">L_Teste</layout>
+        <layout order="10">L_Andar3</layout>
+        <layout order="12">L_OUTRO</layout>
+        <event-sheet order="1">ES_Intro</event-sheet>
+        <event-sheet active="1" order="3">ES_Menu</event-sheet>
+        <event-sheet order="5">ES_MenuTeclas</event-sheet>
+        <event-sheet order="7">ES_Main</event-sheet>
+        <event-sheet order="9">ES_Andar3</event-sheet>
+        <event-sheet order="11">ES_OUTRO</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -108,6 +108,5 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/KIA/" />
         <folder expanded="1" path="animation-folder/ZEWHITESCREEN/" />
         <folder expanded="1" path="animation-folder/gamelogo/" />
-        <folder expanded="1" path="animation-folder/KIA2/" />
     </folders-expanded>
 </c2uistate>

@@ -8,10 +8,6 @@
                 <condition id="-2" name="On start of layout" sid="908352365629983" type="System" />
             </conditions>
             <actions>
-                <action id="18" name="Maximize" sid="680340848294802" type="NWjs" />
-                <action id="16" name="Set title" sid="472687335249507" type="NWjs">
-                    <param id="0" name="Title">&quot;A TORRE E OS IMPERFEITOS&quot;</param>
-                </action>
                 <action id="0" name="Play" sid="106530457302889" type="Audio">
                     <param id="0" name="Audio file">renegade_praloop</param>
                     <param id="2" name="Loop">1</param>
